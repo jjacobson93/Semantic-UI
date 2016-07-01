@@ -49,11 +49,6 @@ module.exports = function(callback) {
 
   console.info('Building Javascript');
 
-  if( !install.isSetup() ) {
-    console.error('Cannot build files. Run "gulp install" to set-up Semantic');
-    return;
-  }
-
   // copy source javascript
   gulp.src(source.definitions + '/**/' + globs.components + '.js')
     .pipe(plumber())

@@ -1,0 +1,6223 @@
+/*******************************
+             Reset
+*******************************/
+/*******************************
+         Site Settings
+*******************************/
+
+/*-------------------
+       Fonts
+--------------------*/
+
+@fontName          : 'Lato';
+@fontSmoothing     : antialiased;
+
+@headerFont        : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@pageFont          : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+
+@googleFontName    : @fontName;
+@importGoogleFonts : true;
+@googleFontSizes   : '400,700,400italic,700italic';
+@googleSubset      : 'latin';
+
+@googleProtocol    : 'https://';
+@googleFontRequest : '@{googleFontName}:@{googleFontSizes}&subset=@{googleSubset}';
+
+/*-------------------
+      Base Sizes
+--------------------*/
+
+/* This is the single variable that controls them all */
+@emSize   : 14px;
+
+/* The size of page text  */
+@fontSize : 14px;
+
+
+/*-------------------
+    Border Radius
+--------------------*/
+
+/* See Power-user section below
+   for explanation of @px variables
+*/
+@relativeBorderRadius: @relative4px;
+@absoluteBorderRadius: @4px;
+
+@defaultBorderRadius: @absoluteBorderRadius;
+
+/*-------------------
+    Brand Colors
+--------------------*/
+
+@primaryColor        : @blue;
+@secondaryColor      : @black;
+
+@lightPrimaryColor   : @lightBlue;
+@lightSecondaryColor : @lightBlack;
+
+/*--------------
+  Page Heading
+---------------*/
+
+@headerFontWeight : bold;
+@headerLineHeight : 1.2857em;
+
+@h1 : 2rem;
+@h2 : 1.714rem;
+@h3 : 1.28rem;
+@h4 : 1.071rem;
+@h5 : 1rem;
+
+/*--------------
+   Form Input
+---------------*/
+
+/* This adjusts the default form input across all elements */
+@inputBackground        : @white;
+@inputVerticalPadding   : @relative11px;
+@inputHorizontalPadding : @relative14px;
+@inputPadding           : @inputVerticalPadding @inputHorizontalPadding;
+
+/* Input Text Color */
+@inputColor: @textColor;
+@inputPlaceholderColor: lighten(@inputColor, 75);
+@inputPlaceholderFocusColor: lighten(@inputColor, 45);
+
+/* Line Height Default For Inputs in Browser */
+@inputLineHeight: 1.2142em;
+
+/*-------------------
+    Focused Input
+--------------------*/
+
+/* Used on inputs, textarea etc */
+@focusedFormBorderColor: #85B7D9;
+
+/* Used on dropdowns, other larger blocks */
+@focusedFormMutedBorderColor: #96C8DA;
+
+/*-------------------
+        Sizes
+--------------------*/
+
+/*
+  Sizes are all expressed in terms of 14px/em (default em)
+  This ensures these "ratios" remain constant despite changes in EM
+*/
+
+@miniSize        : (11 / 14);
+@tinySize        : (12 / 14);
+@smallSize       : (13 / 14);
+@mediumSize      : (14 / 14);
+@largeSize       : (16 / 14);
+@bigSize         : (18 / 14);
+@hugeSize        : (20 / 14);
+@massiveSize     : (24 / 14);
+
+
+/*-------------------
+        Page
+--------------------*/
+
+@pageBackground      : #FFFFFF;
+@pageOverflowX       : hidden;
+
+@lineHeight          : 1.4285em;
+@textColor           : rgba(0, 0, 0, 0.87);
+
+/*-------------------
+      Paragraph
+--------------------*/
+
+@paragraphMargin     : 0em 0em 1em;
+@paragraphLineHeight : @lineHeight;
+
+/*-------------------
+       Links
+--------------------*/
+
+@linkColor           : #4183C4;
+@linkUnderline       : none;
+@linkHoverColor      : darken(saturate(@linkColor, 20), 15, relative);
+@linkHoverUnderline  : @linkUnderline;
+
+/*-------------------
+  Highlighted Text
+--------------------*/
+
+@highlightBackground      : #CCE2FF;
+@highlightColor           : @textColor;
+
+@inputHighlightBackground : rgba(100, 100, 100, 0.4);
+@inputHighlightColor      : @textColor;
+
+
+/*-------------------
+       Loader
+--------------------*/
+
+@loaderSize              : @relativeBig;
+@loaderSpeed             : 0.6s;
+@loaderLineWidth         : 0.2em;
+@loaderFillColor         : rgba(0, 0, 0, 0.1);
+@loaderLineColor         : @grey;
+
+@invertedLoaderFillColor : rgba(255, 255, 255, 0.15);
+@invertedLoaderLineColor : @white;
+
+/*-------------------
+        Grid
+--------------------*/
+
+@columnCount: 16;
+
+/*-------------------
+     Transitions
+--------------------*/
+
+@defaultDuration : 0.1s;
+@defaultEasing   : ease;
+
+/*-------------------
+     Breakpoints
+--------------------*/
+
+@mobileBreakpoint            : 320px;
+@tabletBreakpoint            : 768px;
+@computerBreakpoint          : 992px;
+@largeMonitorBreakpoint      : 1200px;
+@widescreenMonitorBreakpoint : 1920px;
+
+/*-------------------
+      Site Colors
+--------------------*/
+
+/*---  Colors  ---*/
+@red              : #DB2828;
+@orange           : #F2711C;
+@yellow           : #FBBD08;
+@olive            : #B5CC18;
+@green            : #21BA45;
+@teal             : #00B5AD;
+@blue             : #2185D0;
+@violet           : #6435C9;
+@purple           : #A333C8;
+@pink             : #E03997;
+@brown            : #A5673F;
+@grey             : #767676;
+@black            : #1B1C1D;
+
+/*---  Light Colors  ---*/
+@lightRed         : #FF695E;
+@lightOrange      : #FF851B;
+@lightYellow      : #FFE21F;
+@lightOlive       : #D9E778;
+@lightGreen       : #2ECC40;
+@lightTeal        : #6DFFFF;
+@lightBlue        : #54C8FF;
+@lightViolet      : #A291FB;
+@lightPurple      : #DC73FF;
+@lightPink        : #FF8EDF;
+@lightBrown       : #D67C1C;
+@lightGrey        : #DCDDDE;
+@lightBlack       : #545454;
+
+/*---   Neutrals  ---*/
+@fullBlack        : #000000;
+@offWhite         : #F9FAFB;
+@darkWhite        : #F3F4F5;
+@midWhite         : #DCDDDE;
+@white            : #FFFFFF;
+
+/*--- Colored Backgrounds ---*/
+@redBackground    : #FFE8E6;
+@orangeBackground : #FFEDDE;
+@yellowBackground : #FFF8DB;
+@oliveBackground  : #FBFDEF;
+@greenBackground  : #E5F9E7;
+@tealBackground   : #E1F7F7;
+@blueBackground   : #DFF0FF;
+@violetBackground : #EAE7FF;
+@purpleBackground : #F6E7FF;
+@pinkBackground   : #FFE3FB;
+@brownBackground  : #F1E2D3;
+
+/*--- Colored Headers ---*/
+@redHeaderColor    : darken(@redTextColor, 5);
+@oliveHeaderColor  : darken(@oliveTextColor, 5);
+@greenHeaderColor  : darken(@greenTextColor, 5);
+@yellowHeaderColor : darken(@yellowTextColor, 5);
+@blueHeaderColor   : darken(@blueTextColor, 5);
+@tealHeaderColor   : darken(@tealTextColor, 5);
+@pinkHeaderColor   : darken(@pinkTextColor, 5);
+@violetHeaderColor : darken(@violetTextColor, 5);
+@purpleHeaderColor : darken(@purpleTextColor, 5);
+@orangeHeaderColor : darken(@orangeTextColor, 5);
+@brownHeaderColor  : darken(@brownTextColor, 5);
+
+/*--- Colored Text ---*/
+@redTextColor    : @red;
+@orangeTextColor : @orange;
+@yellowTextColor : #B58105; // Yellow text is difficult to read
+@oliveTextColor  : #8ABC1E; // Olive is difficult to read
+@greenTextColor  : #1EBC30; // Green is difficult to read
+@tealTextColor   : #10A3A3; // Teal text is difficult to read
+@blueTextColor   : @blue;
+@violetTextColor : @violet;
+@purpleTextColor : @purple;
+@pinkTextColor   : @pink;
+@brownTextColor  : @brown;
+
+/*--- Colored Border ---*/
+@redBorderColor    : @redTextColor;
+@orangeBorderColor : @orangeTextColor;
+@yellowBorderColor : @yellowTextColor;
+@oliveBorderColor  : @oliveTextColor;
+@greenBorderColor  : @greenTextColor;
+@tealBorderColor   : @tealTextColor;
+@blueBorderColor   : @blueTextColor;
+@violetBorderColor : @violetTextColor;
+@purpleBorderColor : @purpleTextColor;
+@pinkBorderColor   : @pinkTextColor;
+@brownBorderColor  : @brownTextColor;
+
+/*-------------------
+     Alpha Colors
+--------------------*/
+
+@subtleTransparentBlack     : rgba(0, 0, 0, 0.03);
+@transparentBlack           : rgba(0, 0, 0, 0.05);
+@strongTransparentBlack     : rgba(0, 0, 0, 0.10);
+@veryStrongTransparentBlack : rgba(0, 0, 0, 0.15);
+
+@subtleTransparentWhite     : rgba(255, 255, 255, 0.02);
+@transparentWhite           : rgba(255, 255, 255, 0.08);
+@strongTransparentWhite     : rgba(255, 255, 255, 0.15);
+
+/*-------------------
+       Accents
+--------------------*/
+
+/* Differentiating Neutrals */
+@subtleGradient: linear-gradient(transparent, @transparentBlack);
+
+/* Differentiating Layers */
+@subtleShadow:
+  0px 1px 2px 0 @borderColor
+;
+@floatingShadow:
+  0px 2px 4px 0px rgba(34, 36, 38, 0.12),
+  0px 2px 10px 0px rgba(34, 36, 38, 0.15)
+;
+
+/*******************************
+           Power-User
+*******************************/
+
+
+/*-------------------
+    Emotive Colors
+--------------------*/
+
+/* Positive */
+@positiveColor           : @green;
+@positiveBackgroundColor : #FCFFF5;
+@positiveBorderColor     : #A3C293;
+@positiveHeaderColor     : #1A531B;
+@positiveTextColor       : #2C662D;
+
+/* Negative */
+@negativeColor           : @red;
+@negativeBackgroundColor : #FFF6F6;
+@negativeBorderColor     : #E0B4B4;
+@negativeHeaderColor     : #912D2B;
+@negativeTextColor       : #9F3A38;
+
+/* Info */
+@infoColor              : #31CCEC;
+@infoBackgroundColor    : #F8FFFF;
+@infoBorderColor        : #A9D5DE;
+@infoHeaderColor        : #0E566C;
+@infoTextColor          : #276F86;
+
+/* Warning */
+@warningColor           : #F2C037;
+@warningBorderColor     : #C9BA9B;
+@warningBackgroundColor : #FFFAF3;
+@warningHeaderColor     : #794B02;
+@warningTextColor       : #573A08;
+
+/*-------------------
+        Paths
+--------------------*/
+
+/* For source only. Modified in gulp for dist */
+@imagePath : '../../themes/default/assets/images';
+@fontPath  : '../../themes/default/assets/fonts';
+
+/*-------------------
+       Em Sizes
+--------------------*/
+
+/*
+  This rounds @size values to the closest pixel then expresses that value in (r)em.
+  This ensures all size values round to exact pixels
+*/
+@mini            : unit( round(@miniSize * @emSize) / @emSize, rem);
+@tiny            : unit( round(@tinySize * @emSize) / @emSize, rem);
+@small           : unit( round(@smallSize * @emSize) / @emSize, rem);
+@medium          : unit( round(@mediumSize * @emSize) / @emSize, rem);
+@large           : unit( round(@largeSize * @emSize) / @emSize, rem);
+@big             : unit( round(@bigSize * @emSize) / @emSize, rem);
+@huge            : unit( round(@hugeSize * @emSize) / @emSize, rem);
+@massive         : unit( round(@massiveSize * @emSize) / @emSize, rem);
+
+/* em */
+@relativeMini    : unit( round(@miniSize * @emSize) / @emSize, em);
+@relativeTiny    : unit( round(@tinySize * @emSize) / @emSize, em);
+@relativeSmall   : unit( round(@smallSize * @emSize) / @emSize, em);
+@relativeMedium  : unit( round(@mediumSize * @emSize) / @emSize, em);
+@relativeLarge   : unit( round(@largeSize * @emSize) / @emSize, em);
+@relativeBig     : unit( round(@bigSize * @emSize) / @emSize, em);
+@relativeHuge    : unit( round(@hugeSize * @emSize) / @emSize, em);
+@relativeMassive : unit( round(@massiveSize * @emSize) / @emSize, em);
+
+/* rem */
+@absoluteMini    : unit( round(@miniSize * @emSize) / @emSize, rem);
+@absoluteTiny    : unit( round(@tinySize * @emSize) / @emSize, rem);
+@absoluteSmall   : unit( round(@smallSize * @emSize) / @emSize, rem);
+@absoluteMedium  : unit( round(@mediumSize * @emSize) / @emSize, rem);
+@absoluteLarge   : unit( round(@largeSize * @emSize) / @emSize, rem);
+@absoluteBig     : unit( round(@bigSize * @emSize) / @emSize, rem);
+@absoluteHuge    : unit( round(@hugeSize * @emSize) / @emSize, rem);
+@absoluteMassive : unit( round(@massiveSize * @emSize) / @emSize, rem);
+
+/*-------------------
+       Icons
+--------------------*/
+
+/* Maximum Glyph Width of Icon */
+@iconWidth : 1.18em;
+
+/*-------------------
+     Neutral Text
+--------------------*/
+
+@darkTextColor               : rgba(0, 0, 0, 0.85);
+@mutedTextColor              : rgba(0, 0, 0, 0.6);
+@lightTextColor              : rgba(0, 0, 0, 0.4);
+
+@unselectedTextColor         : rgba(0, 0, 0, 0.4);
+@hoveredTextColor            : rgba(0, 0, 0, 0.8);
+@pressedTextColor            : rgba(0, 0, 0, 0.9);
+@selectedTextColor           : rgba(0, 0, 0, 0.95);
+@disabledTextColor           : rgba(0, 0, 0, 0.2);
+
+@invertedTextColor           : rgba(255, 255, 255, 0.9);
+@invertedMutedTextColor      : rgba(255, 255, 255, 0.8);
+@invertedLightTextColor      : rgba(255, 255, 255, 0.7);
+@invertedUnselectedTextColor : rgba(255, 255, 255, 0.5);
+@invertedHoveredTextColor    : rgba(255, 255, 255, 1);
+@invertedPressedTextColor    : rgba(255, 255, 255, 1);
+@invertedSelectedTextColor   : rgba(255, 255, 255, 1);
+@invertedDisabledTextColor   : rgba(255, 255, 255, 0.2);
+
+/*-------------------
+     Brand Colors
+--------------------*/
+
+@facebookColor   : #3B5998;
+@twitterColor    : #0084B4;
+@googlePlusColor : #DC4A38;
+@linkedInColor   : #1F88BE;
+@youtubeColor    : #CC181E;
+@instagramColor  : #49769C;
+@pinterestColor  : #00ACED;
+@vkColor         : #4D7198;
+
+/*-------------------
+      Borders
+--------------------*/
+
+@circularRadius                : 500rem;
+
+@borderColor               : rgba(34, 36, 38, 0.15);
+@strongBorderColor         : rgba(34, 36, 38, 0.22);
+@internalBorderColor       : rgba(34, 36, 38, 0.1);
+@selectedBorderColor       : rgba(34, 36, 38, 0.35);
+@strongSelectedBorderColor : rgba(34, 36, 38, 0.5);
+@disabledBorderColor       : rgba(34, 36, 38, 0.5);
+
+@solidInternalBorderColor  : #FAFAFA;
+@solidBorderColor          : #D4D4D5;
+@solidSelectedBorderColor  : #BCBDBD;
+
+@whiteBorderColor              : rgba(255, 255, 255, 0.1);
+@selectedWhiteBorderColor      : rgba(255, 255, 255, 0.8);
+
+@solidWhiteBorderColor         : #555555;
+@selectedSolidWhiteBorderColor : #999999;
+
+
+/*-------------------
+    Derived Values
+--------------------*/
+
+/* Loaders Position Offset */
+@loaderOffset : -(@loaderSize / 2);
+@loaderMargin : @loaderOffset 0em 0em @loaderOffset;
+
+/* Rendered Scrollbar Width */
+@scrollbarWidth: 17px;
+
+/* Maximum Single Character Glyph Width, aka Capital "W" */
+@glyphWidth: 1.1em;
+
+/* Used to match floats with text */
+@lineHeightOffset       : ((@lineHeight - 1em) / 2);
+@headerLineHeightOffset : (@headerLineHeight - 1em) / 2;
+
+/* Header Spacing */
+@headerTopMargin    : ~"calc(2rem - "@headerLineHeightOffset~")";
+@headerBottomMargin : 1rem;
+@headerMargin       : @headerTopMargin 0em @headerBottomMargin;
+
+/* Minimum Mobile Width */
+@pageMinWidth       : 320px;
+
+/* Positive / Negative Dupes */
+@successBackgroundColor : @positiveBackgroundColor;
+@successColor           : @positiveColor;
+@successBorderColor     : @positiveBorderColor;
+@successHeaderColor     : @positiveHeaderColor;
+@successTextColor       : @positiveTextColor;
+
+@errorBackgroundColor   : @negativeBackgroundColor;
+@errorColor             : @negativeColor;
+@errorBorderColor       : @negativeBorderColor;
+@errorHeaderColor       : @negativeHeaderColor;
+@errorTextColor         : @negativeTextColor;
+
+
+/* Responsive */
+@largestMobileScreen : (@tabletBreakpoint - 1px);
+@largestTabletScreen : (@computerBreakpoint - 1px);
+@largestSmallMonitor : (@largeMonitorBreakpoint - 1px);
+@largestLargeMonitor : (@widescreenMonitorBreakpoint - 1px);
+
+
+/*-------------------
+  Exact Pixel Values
+--------------------*/
+/*
+  These are used to specify exact pixel values in em
+  for things like borders that remain constantly
+  sized as emSize adjusts
+
+  Since there are many more sizes than names for sizes,
+  these are named by their original pixel values.
+
+*/
+
+@1px  : unit( (1 / @emSize), rem);
+@2px  : unit( (2 / @emSize), rem);
+@3px  : unit( (3 / @emSize), rem);
+@4px  : unit( (4 / @emSize), rem);
+@5px  : unit( (5 / @emSize), rem);
+@6px  : unit( (6 / @emSize), rem);
+@7px  : unit( (7 / @emSize), rem);
+@8px  : unit( (8 / @emSize), rem);
+@9px  : unit( (9 / @emSize), rem);
+@10px : unit( (10 / @emSize), rem);
+@11px : unit( (11 / @emSize), rem);
+@12px : unit( (12 / @emSize), rem);
+@13px : unit( (13 / @emSize), rem);
+@14px : unit( (14 / @emSize), rem);
+@15px : unit( (15 / @emSize), rem);
+@16px : unit( (16 / @emSize), rem);
+@17px : unit( (17 / @emSize), rem);
+@18px : unit( (18 / @emSize), rem);
+@19px : unit( (19 / @emSize), rem);
+@20px : unit( (20 / @emSize), rem);
+@21px : unit( (21 / @emSize), rem);
+@22px : unit( (22 / @emSize), rem);
+@23px : unit( (23 / @emSize), rem);
+@24px : unit( (24 / @emSize), rem);
+@25px : unit( (25 / @emSize), rem);
+@26px : unit( (26 / @emSize), rem);
+@27px : unit( (27 / @emSize), rem);
+@28px : unit( (28 / @emSize), rem);
+@29px : unit( (29 / @emSize), rem);
+@30px : unit( (30 / @emSize), rem);
+@31px : unit( (31 / @emSize), rem);
+@32px : unit( (32 / @emSize), rem);
+@33px : unit( (33 / @emSize), rem);
+@34px : unit( (34 / @emSize), rem);
+@35px : unit( (35 / @emSize), rem);
+@36px : unit( (36 / @emSize), rem);
+@37px : unit( (37 / @emSize), rem);
+@38px : unit( (38 / @emSize), rem);
+@39px : unit( (39 / @emSize), rem);
+@40px : unit( (40 / @emSize), rem);
+@41px : unit( (41 / @emSize), rem);
+@42px : unit( (42 / @emSize), rem);
+@43px : unit( (43 / @emSize), rem);
+@44px : unit( (44 / @emSize), rem);
+@45px : unit( (45 / @emSize), rem);
+@46px : unit( (46 / @emSize), rem);
+@47px : unit( (47 / @emSize), rem);
+@48px : unit( (48 / @emSize), rem);
+@49px : unit( (49 / @emSize), rem);
+@50px : unit( (50 / @emSize), rem);
+@51px : unit( (51 / @emSize), rem);
+@52px : unit( (52 / @emSize), rem);
+@53px : unit( (53 / @emSize), rem);
+@54px : unit( (54 / @emSize), rem);
+@55px : unit( (55 / @emSize), rem);
+@56px : unit( (56 / @emSize), rem);
+@57px : unit( (57 / @emSize), rem);
+@58px : unit( (58 / @emSize), rem);
+@59px : unit( (59 / @emSize), rem);
+@60px : unit( (60 / @emSize), rem);
+@61px : unit( (61 / @emSize), rem);
+@62px : unit( (62 / @emSize), rem);
+@63px : unit( (63 / @emSize), rem);
+@64px : unit( (64 / @emSize), rem);
+
+@relative1px  : unit( (1 / @emSize), em);
+@relative2px  : unit( (2 / @emSize), em);
+@relative3px  : unit( (3 / @emSize), em);
+@relative4px  : unit( (4 / @emSize), em);
+@relative5px  : unit( (5 / @emSize), em);
+@relative6px  : unit( (6 / @emSize), em);
+@relative7px  : unit( (7 / @emSize), em);
+@relative8px  : unit( (8 / @emSize), em);
+@relative9px  : unit( (9 / @emSize), em);
+@relative10px : unit( (10 / @emSize), em);
+@relative11px : unit( (11 / @emSize), em);
+@relative12px : unit( (12 / @emSize), em);
+@relative13px : unit( (13 / @emSize), em);
+@relative14px : unit( (14 / @emSize), em);
+@relative15px : unit( (15 / @emSize), em);
+@relative16px : unit( (16 / @emSize), em);
+@relative17px : unit( (17 / @emSize), em);
+@relative18px : unit( (18 / @emSize), em);
+@relative19px : unit( (19 / @emSize), em);
+@relative20px : unit( (20 / @emSize), em);
+@relative21px : unit( (21 / @emSize), em);
+@relative22px : unit( (22 / @emSize), em);
+@relative23px : unit( (23 / @emSize), em);
+@relative24px : unit( (24 / @emSize), em);
+@relative25px : unit( (25 / @emSize), em);
+@relative26px : unit( (26 / @emSize), em);
+@relative27px : unit( (27 / @emSize), em);
+@relative28px : unit( (28 / @emSize), em);
+@relative29px : unit( (29 / @emSize), em);
+@relative30px : unit( (30 / @emSize), em);
+@relative31px : unit( (31 / @emSize), em);
+@relative32px : unit( (32 / @emSize), em);
+@relative33px : unit( (33 / @emSize), em);
+@relative34px : unit( (34 / @emSize), em);
+@relative35px : unit( (35 / @emSize), em);
+@relative36px : unit( (36 / @emSize), em);
+@relative37px : unit( (37 / @emSize), em);
+@relative38px : unit( (38 / @emSize), em);
+@relative39px : unit( (39 / @emSize), em);
+@relative40px : unit( (40 / @emSize), em);
+@relative41px : unit( (41 / @emSize), em);
+@relative42px : unit( (42 / @emSize), em);
+@relative43px : unit( (43 / @emSize), em);
+@relative44px : unit( (44 / @emSize), em);
+@relative45px : unit( (45 / @emSize), em);
+@relative46px : unit( (46 / @emSize), em);
+@relative47px : unit( (47 / @emSize), em);
+@relative48px : unit( (48 / @emSize), em);
+@relative49px : unit( (49 / @emSize), em);
+@relative50px : unit( (50 / @emSize), em);
+@relative51px : unit( (51 / @emSize), em);
+@relative52px : unit( (52 / @emSize), em);
+@relative53px : unit( (53 / @emSize), em);
+@relative54px : unit( (54 / @emSize), em);
+@relative55px : unit( (55 / @emSize), em);
+@relative56px : unit( (56 / @emSize), em);
+@relative57px : unit( (57 / @emSize), em);
+@relative58px : unit( (58 / @emSize), em);
+@relative59px : unit( (59 / @emSize), em);
+@relative60px : unit( (60 / @emSize), em);
+@relative61px : unit( (61 / @emSize), em);
+@relative62px : unit( (62 / @emSize), em);
+@relative63px : unit( (63 / @emSize), em);
+@relative64px : unit( (64 / @emSize), em);
+
+/* Columns */
+@oneWide        : (1 / @columnCount * 100%);
+@twoWide        : (2 / @columnCount * 100%);
+@threeWide      : (3 / @columnCount * 100%);
+@fourWide       : (4 / @columnCount * 100%);
+@fiveWide       : (5 / @columnCount * 100%);
+@sixWide        : (6 / @columnCount * 100%);
+@sevenWide      : (7 / @columnCount * 100%);
+@eightWide      : (8 / @columnCount * 100%);
+@nineWide       : (9 / @columnCount * 100%);
+@tenWide        : (10 / @columnCount * 100%);
+@elevenWide     : (11 / @columnCount * 100%);
+@twelveWide     : (12 / @columnCount * 100%);
+@thirteenWide   : (13 / @columnCount * 100%);
+@fourteenWide   : (14 / @columnCount * 100%);
+@fifteenWide    : (15 / @columnCount * 100%);
+@sixteenWide    : (16 / @columnCount * 100%);
+
+@oneColumn      : (1 / 1 * 100%);
+@twoColumn      : (1 / 2 * 100%);
+@threeColumn    : (1 / 3 * 100%);
+@fourColumn     : (1 / 4 * 100%);
+@fiveColumn     : (1 / 5 * 100%);
+@sixColumn      : (1 / 6 * 100%);
+@sevenColumn    : (1 / 7 * 100%);
+@eightColumn    : (1 / 8 * 100%);
+@nineColumn     : (1 / 9 * 100%);
+@tenColumn      : (1 / 10 * 100%);
+@elevenColumn   : (1 / 11 * 100%);
+@twelveColumn   : (1 / 12 * 100%);
+@thirteenColumn : (1 / 13 * 100%);
+@fourteenColumn : (1 / 14 * 100%);
+@fifteenColumn  : (1 / 15 * 100%);
+@sixteenColumn  : (1 / 16 * 100%);
+
+
+/*******************************
+             States
+*******************************/
+
+/*-------------------
+      Disabled
+--------------------*/
+
+@disabledOpacity: 0.45;
+@disabledTextColor: rgba(40, 40, 40, 0.3);
+@invertedDisabledTextColor: rgba(225, 225, 225, 0.3);
+
+/*-------------------
+        Hover
+--------------------*/
+
+/*---  Shadows  ---*/
+@floatingShadowHover:
+  0px 2px 4px 0px rgba(34, 36, 38, 0.15),
+  0px 2px 10px 0px rgba(34, 36, 38, 0.25)
+;
+
+/*---  Colors  ---*/
+@primaryColorHover    : saturate(darken(@primaryColor, 5), 10, relative);
+@secondaryColorHover  : saturate(lighten(@secondaryColor, 5), 10, relative);
+
+@redHover             : saturate(darken(@red, 5), 10, relative);
+@orangeHover          : saturate(darken(@orange, 5), 10, relative);
+@yellowHover          : saturate(darken(@yellow, 5), 10, relative);
+@oliveHover           : saturate(darken(@olive, 5), 10, relative);
+@greenHover           : saturate(darken(@green, 5), 10, relative);
+@tealHover            : saturate(darken(@teal, 5), 10, relative);
+@blueHover            : saturate(darken(@blue, 5), 10, relative);
+@violetHover          : saturate(darken(@violet, 5), 10, relative);
+@purpleHover          : saturate(darken(@purple, 5), 10, relative);
+@pinkHover            : saturate(darken(@pink, 5), 10, relative);
+@brownHover           : saturate(darken(@brown, 5), 10, relative);
+
+@lightRedHover        : saturate(darken(@lightRed, 5), 10, relative);
+@lightOrangeHover     : saturate(darken(@lightOrange, 5), 10, relative);
+@lightYellowHover     : saturate(darken(@lightYellow, 5), 10, relative);
+@lightOliveHover      : saturate(darken(@lightOlive, 5), 10, relative);
+@lightGreenHover      : saturate(darken(@lightGreen, 5), 10, relative);
+@lightTealHover       : saturate(darken(@lightTeal, 5), 10, relative);
+@lightBlueHover       : saturate(darken(@lightBlue, 5), 10, relative);
+@lightVioletHover     : saturate(darken(@lightViolet, 5), 10, relative);
+@lightPurpleHover     : saturate(darken(@lightPurple, 5), 10, relative);
+@lightPinkHover       : saturate(darken(@lightPink, 5), 10, relative);
+@lightBrownHover      : saturate(darken(@lightBrown, 5), 10, relative);
+@lightGreyHover       : saturate(darken(@lightGrey, 5), 10, relative);
+@lightBlackHover      : saturate(darken(@fullBlack, 5), 10, relative);
+
+/*---  Emotive  ---*/
+@positiveColorHover   : saturate(darken(@positiveColor, 5), 10, relative);
+@negativeColorHover   : saturate(darken(@negativeColor, 5), 10, relative);
+
+/*---  Brand   ---*/
+@facebookHoverColor   : saturate(darken(@facebookColor, 5), 10, relative);
+@twitterHoverColor    : saturate(darken(@twitterColor, 5), 10, relative);
+@googlePlusHoverColor : saturate(darken(@googlePlusColor, 5), 10, relative);
+@linkedInHoverColor   : saturate(darken(@linkedInColor, 5), 10, relative);
+@youtubeHoverColor    : saturate(darken(@youtubeColor, 5), 10, relative);
+@instagramHoverColor  : saturate(darken(@instagramColor, 5), 10, relative);
+@pinterestHoverColor  : saturate(darken(@pinterestColor, 5), 10, relative);
+@vkHoverColor         : saturate(darken(@vkColor, 5), 10, relative);
+
+/*---  Dark Tones  ---*/
+@fullBlackHover       : lighten(@fullBlack, 5);
+@blackHover           : lighten(@black, 5);
+@greyHover            : lighten(@grey, 5);
+
+/*---  Light Tones  ---*/
+@whiteHover           : darken(@white, 5);
+@offWhiteHover        : darken(@offWhite, 5);
+@darkWhiteHover       : darken(@darkWhite, 5);
+
+/*-------------------
+        Focus
+--------------------*/
+
+/*---  Colors  ---*/
+@primaryColorFocus    : saturate(darken(@primaryColor, 8), 20, relative);
+@secondaryColorFocus  : saturate(lighten(@secondaryColor, 8), 20, relative);
+
+@redFocus             : saturate(darken(@red, 8), 20, relative);
+@orangeFocus          : saturate(darken(@orange, 8), 20, relative);
+@yellowFocus          : saturate(darken(@yellow, 8), 20, relative);
+@oliveFocus           : saturate(darken(@olive, 8), 20, relative);
+@greenFocus           : saturate(darken(@green, 8), 20, relative);
+@tealFocus            : saturate(darken(@teal, 8), 20, relative);
+@blueFocus            : saturate(darken(@blue, 8), 20, relative);
+@violetFocus          : saturate(darken(@violet, 8), 20, relative);
+@purpleFocus          : saturate(darken(@purple, 8), 20, relative);
+@pinkFocus            : saturate(darken(@pink, 8), 20, relative);
+@brownFocus           : saturate(darken(@brown, 8), 20, relative);
+
+@lightRedFocus        : saturate(darken(@lightRed, 8), 20, relative);
+@lightOrangeFocus     : saturate(darken(@lightOrange, 8), 20, relative);
+@lightYellowFocus     : saturate(darken(@lightYellow, 8), 20, relative);
+@lightOliveFocus      : saturate(darken(@lightOlive, 8), 20, relative);
+@lightGreenFocus      : saturate(darken(@lightGreen, 8), 20, relative);
+@lightTealFocus       : saturate(darken(@lightTeal, 8), 20, relative);
+@lightBlueFocus       : saturate(darken(@lightBlue, 8), 20, relative);
+@lightVioletFocus     : saturate(darken(@lightViolet, 8), 20, relative);
+@lightPurpleFocus     : saturate(darken(@lightPurple, 8), 20, relative);
+@lightPinkFocus       : saturate(darken(@lightPink, 8), 20, relative);
+@lightBrownFocus      : saturate(darken(@lightBrown, 8), 20, relative);
+@lightGreyFocus       : saturate(darken(@lightGrey, 8), 20, relative);
+@lightBlackFocus      : saturate(darken(@fullBlack, 8), 20, relative);
+
+/*---  Emotive  ---*/
+@positiveColorFocus   : saturate(darken(@positiveColor, 8), 20, relative);
+@negativeColorFocus   : saturate(darken(@negativeColor, 8), 20, relative);
+
+/*---  Brand   ---*/
+@facebookFocusColor   : saturate(darken(@facebookColor, 8), 20, relative);
+@twitterFocusColor    : saturate(darken(@twitterColor, 8), 20, relative);
+@googlePlusFocusColor : saturate(darken(@googlePlusColor, 8), 20, relative);
+@linkedInFocusColor   : saturate(darken(@linkedInColor, 8), 20, relative);
+@youtubeFocusColor    : saturate(darken(@youtubeColor, 8), 20, relative);
+@instagramFocusColor  : saturate(darken(@instagramColor, 8), 20, relative);
+@pinterestFocusColor  : saturate(darken(@pinterestColor, 8), 20, relative);
+@vkFocusColor         : saturate(darken(@vkColor, 8), 20, relative);
+
+/*---  Dark Tones  ---*/
+@fullBlackFocus       : lighten(@fullBlack, 8);
+@blackFocus           : lighten(@black, 8);
+@greyFocus            : lighten(@grey, 8);
+
+/*---  Light Tones  ---*/
+@whiteFocus           : darken(@white, 8);
+@offWhiteFocus        : darken(@offWhite, 8);
+@darkWhiteFocus       : darken(@darkWhite, 8);
+
+
+/*-------------------
+    Down (:active)
+--------------------*/
+
+/*---  Colors  ---*/
+@primaryColorDown    : darken(@primaryColor, 10);
+@secondaryColorDown  : lighten(@secondaryColor, 10);
+
+@redDown             : darken(@red, 10);
+@orangeDown          : darken(@orange, 10);
+@yellowDown          : darken(@yellow, 10);
+@oliveDown           : darken(@olive, 10);
+@greenDown           : darken(@green, 10);
+@tealDown            : darken(@teal, 10);
+@blueDown            : darken(@blue, 10);
+@violetDown          : darken(@violet, 10);
+@purpleDown          : darken(@purple, 10);
+@pinkDown            : darken(@pink, 10);
+@brownDown           : darken(@brown, 10);
+
+@lightRedDown        : darken(@lightRed, 10);
+@lightOrangeDown     : darken(@lightOrange, 10);
+@lightYellowDown     : darken(@lightYellow, 10);
+@lightOliveDown      : darken(@lightOlive, 10);
+@lightGreenDown      : darken(@lightGreen, 10);
+@lightTealDown       : darken(@lightTeal, 10);
+@lightBlueDown       : darken(@lightBlue, 10);
+@lightVioletDown     : darken(@lightViolet, 10);
+@lightPurpleDown     : darken(@lightPurple, 10);
+@lightPinkDown       : darken(@lightPink, 10);
+@lightBrownDown      : darken(@lightBrown, 10);
+@lightGreyDown       : darken(@lightGrey, 10);
+@lightBlackDown      : darken(@fullBlack, 10);
+
+/*---  Emotive  ---*/
+@positiveColorDown   : darken(@positiveColor, 10);
+@negativeColorDown   : darken(@negativeColor, 10);
+
+/*---  Brand   ---*/
+@facebookDownColor   : darken(@facebookColor, 10);
+@twitterDownColor    : darken(@twitterColor, 10);
+@googlePlusDownColor : darken(@googlePlusColor, 10);
+@linkedInDownColor   : darken(@linkedInColor, 10);
+@youtubeDownColor    : darken(@youtubeColor, 10);
+@instagramDownColor  : darken(@instagramColor, 10);
+@pinterestDownColor  : darken(@pinterestColor, 10);
+@vkDownColor         : darken(@vkColor, 10);
+
+/*---  Dark Tones  ---*/
+@fullBlackDown       : lighten(@fullBlack, 10);
+@blackDown           : lighten(@black, 10);
+@greyDown            : lighten(@grey, 10);
+
+/*---  Light Tones  ---*/
+@whiteDown           : darken(@white, 10);
+@offWhiteDown        : darken(@offWhite, 10);
+@darkWhiteDown       : darken(@darkWhite, 10);
+
+
+/*-------------------
+        Active
+--------------------*/
+
+/*---  Colors  ---*/
+@primaryColorActive    : saturate(darken(@primaryColor, 5), 15, relative);
+@secondaryColorActive  : saturate(lighten(@secondaryColor, 5), 15, relative);
+
+@redActive             : saturate(darken(@red, 5), 15, relative);
+@orangeActive          : saturate(darken(@orange, 5), 15, relative);
+@yellowActive          : saturate(darken(@yellow, 5), 15, relative);
+@oliveActive           : saturate(darken(@olive, 5), 15, relative);
+@greenActive           : saturate(darken(@green, 5), 15, relative);
+@tealActive            : saturate(darken(@teal, 5), 15, relative);
+@blueActive            : saturate(darken(@blue, 5), 15, relative);
+@violetActive          : saturate(darken(@violet, 5), 15, relative);
+@purpleActive          : saturate(darken(@purple, 5), 15, relative);
+@pinkActive            : saturate(darken(@pink, 5), 15, relative);
+@brownActive           : saturate(darken(@brown, 5), 15, relative);
+
+@lightRedActive        : saturate(darken(@lightRed, 5), 15, relative);
+@lightOrangeActive     : saturate(darken(@lightOrange, 5), 15, relative);
+@lightYellowActive     : saturate(darken(@lightYellow, 5), 15, relative);
+@lightOliveActive      : saturate(darken(@lightOlive, 5), 15, relative);
+@lightGreenActive      : saturate(darken(@lightGreen, 5), 15, relative);
+@lightTealActive       : saturate(darken(@lightTeal, 5), 15, relative);
+@lightBlueActive       : saturate(darken(@lightBlue, 5), 15, relative);
+@lightVioletActive     : saturate(darken(@lightViolet, 5), 15, relative);
+@lightPurpleActive     : saturate(darken(@lightPurple, 5), 15, relative);
+@lightPinkActive       : saturate(darken(@lightPink, 5), 15, relative);
+@lightBrownActive      : saturate(darken(@lightBrown, 5), 15, relative);
+@lightGreyActive       : saturate(darken(@lightGrey, 5), 15, relative);
+@lightBlackActive      : saturate(darken(@fullBlack, 5), 15, relative);
+
+/*---  Emotive  ---*/
+@positiveColorActive   : saturate(darken(@positiveColor, 5), 15, relative);
+@negativeColorActive   : saturate(darken(@negativeColor, 5), 15, relative);
+
+/*---  Brand   ---*/
+@facebookActiveColor   : saturate(darken(@facebookColor, 5), 15, relative);
+@twitterActiveColor    : saturate(darken(@twitterColor, 5), 15, relative);
+@googlePlusActiveColor : saturate(darken(@googlePlusColor, 5), 15, relative);
+@linkedInActiveColor   : saturate(darken(@linkedInColor, 5), 15, relative);
+@youtubeActiveColor    : saturate(darken(@youtubeColor, 5), 15, relative);
+@instagramActiveColor  : saturate(darken(@instagramColor, 5), 15, relative);
+@pinterestActiveColor  : saturate(darken(@pinterestColor, 5), 15, relative);
+@vkActiveColor         : saturate(darken(@vkColor, 5), 15, relative);
+
+/*---  Dark Tones  ---*/
+@fullBlackActive       : darken(@fullBlack, 5);
+@blackActive           : darken(@black, 5);
+@greyActive            : darken(@grey, 5);
+
+/*---  Light Tones  ---*/
+@whiteActive           : darken(@white, 5);
+@offWhiteActive        : darken(@offWhite, 5);
+@darkWhiteActive       : darken(@darkWhite, 5);
+
+/*******************************
+            Button
+*******************************/
+
+/*-------------------
+       Element
+--------------------*/
+
+/* Button */
+@verticalMargin: 0em;
+@horizontalMargin: 0.25em;
+@backgroundColor: #E0E1E2;
+@backgroundImage: none;
+@background: @backgroundColor @backgroundImage;
+@lineHeight: 1em;
+
+/* Button defaults to using same height as input globally */
+@verticalPadding: @inputVerticalPadding;
+@horizontalPadding: 1.5em;
+
+/* Text */
+@textTransform: none;
+@tapColor: transparent;
+@fontFamily: @pageFont;
+@fontWeight: bold;
+@textColor: rgba(0, 0, 0, 0.6);
+@textShadow: none;
+@invertedTextShadow: @textShadow;
+@borderRadius: @defaultBorderRadius;
+@verticalAlign: baseline;
+
+/* Internal Shadow */
+@shadowDistance: 0em;
+@shadowOffset: (@shadowDistance / 2);
+@shadowBoxShadow: 0px -@shadowDistance 0px 0px @borderColor inset;
+
+/* Box Shadow */
+@borderBoxShadowColor: transparent;
+@borderBoxShadowWidth: 1px;
+@borderBoxShadow: 0px 0px 0px @borderBoxShadowWidth @borderBoxShadowColor inset;
+@boxShadow:
+  @borderBoxShadow,
+  @shadowBoxShadow
+;
+
+/* Icon */
+@iconHeight: @relativeTiny;
+@iconOpacity: 0.8;
+@iconDistance: @relative6px;
+@iconColor: '';
+@iconTransition: opacity @defaultDuration @defaultEasing;
+@iconVerticalAlign: '';
+
+@iconMargin: 0em @iconDistance 0em -(@iconDistance / 2);
+@rightIconMargin: 0em -(@iconDistance / 2) 0em @iconDistance;
+
+/* Loader */
+@invertedLoaderFillColor: rgba(0, 0, 0, 0.15);
+
+@transition:
+  opacity @defaultDuration @defaultEasing,
+  background-color @defaultDuration @defaultEasing,
+  color @defaultDuration @defaultEasing,
+  box-shadow @defaultDuration @defaultEasing,
+  background @defaultDuration @defaultEasing
+;
+/*
+@willChange: box-shadow, transform, opacity, color, background;
+*/
+@willChange: '';
+
+/*-------------------
+        Group
+--------------------*/
+
+@groupBoxShadow: none;
+@groupButtonBoxShadow: @boxShadow;
+@verticalBoxShadow: none;
+@groupButtonOffset: 0px 0px 0px 0px;
+@verticalGroupOffset: 0px 0px 0px 0px;
+
+/*-------------------
+        States
+--------------------*/
+
+/* Hovered */
+@hoverBackgroundColor: #CACBCD;
+@hoverBackgroundImage: @backgroundImage;
+@hoverBoxShadow: @boxShadow;
+@hoverColor: @hoveredTextColor;
+@iconHoverOpacity: 0.85;
+
+/* Focused */
+@focusBackgroundColor: @hoverBackgroundColor;
+@focusBackgroundImage: '';
+@focusBoxShadow: '';
+@focusColor: @hoveredTextColor;
+@iconFocusOpacity: 0.85;
+
+/* Disabled */
+@disabledBackgroundImage: none;
+@disabledBoxShadow: none;
+
+/* Pressed Down */
+@downBackgroundColor: #BABBBC;
+@downBackgroundImage: '';
+@downPressedShadow: none;
+@downBoxShadow:
+  @borderBoxShadow,
+  @downPressedShadow
+;
+@downColor: @pressedTextColor;
+
+/* Active */
+@activeBackgroundColor: #C0C1C2;
+@activeBackgroundImage: none;
+@activeColor: @selectedTextColor;
+@activeBoxShadow: @borderBoxShadow;
+
+/* Active + Hovered */
+@activeHoverBackgroundColor: @activeBackgroundColor;
+@activeHoverBackgroundImage: none;
+@activeHoverColor: @activeColor;
+@activeHoverBoxShadow: @activeBoxShadow;
+
+/* Loading */
+@loadingOpacity: 1;
+@loadingPointerEvents: auto;
+@loadingTransition:
+  all 0s linear,
+  opacity @defaultDuration @defaultEasing
+;
+
+/*-------------------
+        Types
+--------------------*/
+
+/* Or */
+@orText: 'or';
+
+@orGap: 0.3em;
+@orHeight: (@verticalPadding * 2) + 1em;
+@orZIndex: 3;
+
+@orCircleDistanceToEdge: (@verticalPadding);
+@orCircleSize: @orHeight - @orCircleDistanceToEdge;
+@orLineHeight: (@orCircleSize);
+@orBoxShadow: @borderBoxShadow;
+
+@orVerticalOffset: -(@orCircleSize / 2);
+@orHorizontalOffset: -(@orCircleSize / 2);
+
+@orBackgroundColor: @white;
+@orTextShadow: @invertedTextShadow;
+@orTextStyle: normal;
+@orTextWeight: bold;
+@orTextColor: @lightTextColor;
+
+
+@orSpacerHeight: @verticalPadding;
+@orSpacerColor: transparent;
+
+/* Icon */
+@iconButtonOpacity: 0.9;
+
+/* Labeled */
+@labeledLabelFontSize: @medium;
+@labeledLabelAlign: center;
+@labeledLabelPadding: '';
+@labeledLabelFontSize: @relativeMedium;
+@labeledLabelBorderColor: @borderColor;
+@labeledLabelBorderOffset: -@borderBoxShadowWidth;
+@labeledTagLabelSize: 1.85em; /* hypotenuse of triangle */
+@labeledIconMargin: 0em;
+
+/* Labeled Icon */
+@labeledIconWidth: 1em + (@verticalPadding * 2);
+@labeledIconBackgroundColor: rgba(0, 0, 0, 0.05);
+@labeledIconPadding: (@horizontalPadding + @labeledIconWidth);
+@labeledIconBorder: transparent;
+@labeledIconColor: '';
+
+@labeledIconLeftShadow: -1px 0px 0px 0px @labeledIconBorder inset;
+@labeledIconRightShadow: 1px 0px 0px 0px @labeledIconBorder inset;
+
+
+/* Inverted */
+@invertedBorderSize: 2px;
+@invertedTextColor: @white;
+@invertedTextHoverColor: @hoverColor;
+@invertedGroupButtonOffset: 0px 0px 0px -(@invertedBorderSize);
+@invertedVerticalGroupButtonOffset: 0px 0px -(@invertedBorderSize) 0px;
+
+/* Basic */
+@basicBorderRadius: @borderRadius;
+@basicBorderSize: 1px;
+@basicTextColor: @textColor;
+@basicColoredBorderSize: 1px;
+
+@basicBackground: transparent none;
+@basicFontWeight: normal;
+@basicBorder: 1px solid @borderColor;
+@basicBoxShadow: 0px 0px 0px @basicBorderSize @borderColor inset;
+@basicLoadingColor: @offWhite;
+@basicTextTransform: none;
+
+/* Basic Hover */
+@basicHoverBackground: #FFFFFF;
+@basicHoverTextColor: @hoveredTextColor;
+@basicHoverBoxShadow:
+  0px 0px 0px @basicBorderSize @selectedBorderColor inset,
+  0px 0px 0px 0px @borderColor inset
+;
+/* Basic Focus */
+@basicFocusBackground: @basicHoverBackground;
+@basicFocusTextColor: @basicHoverTextColor;
+@basicFocusBoxShadow: @basicHoverBoxShadow;
+
+/* Basic Down */
+@basicDownBackground: #F8F8F8;
+@basicDownTextColor: @pressedTextColor;
+@basicDownBoxShadow:
+  0px 0px 0px @basicBorderSize rgba(0, 0, 0, 0.15) inset,
+  0px 1px 4px 0px @borderColor inset
+;
+/* Basic Active */
+@basicActiveBackground: @transparentBlack;
+@basicActiveBoxShadow: '';
+@basicActiveTextColor: @selectedTextColor;
+
+/* Basic Inverted */
+@basicInvertedBackground: transparent;
+@basicInvertedFocusBackground: transparent;
+@basicInvertedDownBackground: @transparentWhite;
+@basicInvertedActiveBackground: @transparentWhite;
+
+@basicInvertedBoxShadow: 0px 0px 0px @invertedBorderSize rgba(255, 255, 255, 0.5) inset;
+@basicInvertedHoverBoxShadow: 0px 0px 0px @invertedBorderSize rgba(255, 255, 255, 1) inset;
+@basicInvertedFocusBoxShadow: 0px 0px 0px @invertedBorderSize rgba(255, 255, 255, 1) inset;
+@basicInvertedDownBoxShadow: 0px 0px 0px @invertedBorderSize rgba(255, 255, 255, 0.9) inset;
+@basicInvertedActiveBoxShadow: 0px 0px 0px @invertedBorderSize rgba(255, 255, 255, 0.7) inset;
+
+@basicInvertedColor: @darkWhite;
+@basicInvertedHoverColor: @darkWhiteHover;
+@basicInvertedDownColor: @darkWhiteActive;
+@basicInvertedActiveColor: @invertedTextColor;
+
+
+/* Basic Group */
+@basicGroupBorder: @basicBorderSize solid @borderColor;
+@basicGroupBoxShadow: none;
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Colors */
+@coloredBackgroundImage: none;
+@coloredBoxShadow: @shadowBoxShadow;
+
+/* Colored */
+@brownTextColor: @invertedTextColor;
+@brownTextShadow: @invertedTextShadow;
+@redTextColor: @invertedTextColor;
+@redTextShadow: @invertedTextShadow;
+@orangeTextColor: @invertedTextColor;
+@orangeTextShadow: @invertedTextShadow;
+@greenTextColor: @invertedTextColor;
+@greenTextShadow: @invertedTextShadow;
+@blueTextColor: @invertedTextColor;
+@blueTextShadow: @invertedTextShadow;
+@violetTextColor: @invertedTextColor;
+@violetTextShadow: @invertedTextShadow;
+@purpleTextColor: @invertedTextColor;
+@purpleTextShadow: @invertedTextShadow;
+@pinkTextColor: @invertedTextColor;
+@pinkTextShadow: @invertedTextShadow;
+@blackTextColor: @invertedTextColor;
+@blackTextShadow: @invertedTextShadow;
+@oliveTextColor: @invertedTextColor;
+@oliveTextShadow: @invertedTextShadow;
+@yellowTextColor: @invertedTextColor;
+@yellowTextShadow: @invertedTextShadow;
+@tealTextColor: @invertedTextColor;
+@tealTextShadow: @invertedTextShadow;
+@greyTextColor: @invertedTextColor;
+@greyTextShadow: @invertedTextShadow;
+
+/* Inverted */
+@lightBrownTextColor: @invertedTextColor;
+@lightBrownTextShadow: @invertedTextShadow;
+@lightRedTextColor: @invertedTextColor;
+@lightRedTextShadow: @invertedTextShadow;
+@lightOrangeTextColor: @invertedTextColor;
+@lightOrangeTextShadow: @invertedTextShadow;
+@lightGreenTextColor: @invertedTextColor;
+@lightGreenTextShadow: @invertedTextShadow;
+@lightBlueTextColor: @invertedTextColor;
+@lightBlueTextShadow: @invertedTextShadow;
+@lightVioletTextColor: @invertedTextColor;
+@lightVioletTextShadow: @invertedTextShadow;
+@lightPurpleTextColor: @invertedTextColor;
+@lightPurpleTextShadow: @invertedTextShadow;
+@lightPinkTextColor: @invertedTextColor;
+@lightPinkTextShadow: @invertedTextShadow;
+@lightBlackTextColor: @invertedTextColor;
+@lightBlackTextShadow: @invertedTextShadow;
+@lightOliveTextColor: @textColor;
+@lightOliveTextShadow: @textShadow;
+@lightYellowTextColor: @textColor;
+@lightYellowTextShadow: @textShadow;
+@lightTealTextColor: @textColor;
+@lightTealTextShadow: @textShadow;
+@lightGreyTextColor: @textColor;
+@lightGreyTextShadow: @textShadow;
+
+
+/* Ordinality */
+@primaryBackgroundImage: @coloredBackgroundImage;
+@primaryTextColor: @invertedTextColor;
+@primaryTextShadow: @invertedTextShadow;
+@primaryBoxShadow: @coloredBoxShadow;
+
+@secondaryBackgroundImage: @coloredBackgroundImage;
+@secondaryTextColor: @invertedTextColor;
+@secondaryTextShadow: @invertedTextShadow;
+@secondaryBoxShadow: @coloredBoxShadow;
+
+@positiveBackgroundImage: @coloredBackgroundImage;
+@positiveTextColor: @invertedTextColor;
+@positiveTextShadow: @invertedTextShadow;
+@positiveBoxShadow: @coloredBoxShadow;
+
+@negativeBackgroundImage: @coloredBackgroundImage;
+@negativeTextColor: @invertedTextColor;
+@negativeTextShadow: @invertedTextShadow;
+@negativeBoxShadow: @coloredBoxShadow;
+
+/* Compact */
+@compactVerticalPadding: (@verticalPadding * 0.75);
+@compactHorizontalPadding: (@horizontalPadding * 0.75);
+
+/* Attached */
+@attachedOffset: -1px;
+@attachedBoxShadow: 0px 0px 0px 1px @borderColor;
+@attachedHorizontalPadding: 0.75em;
+@attachedZIndex: 2;
+
+/* Floated */
+@floatedMargin: 0.25em;
+
+/* Animated */
+@animatedVerticalAlign: middle;
+@animatedZIndex: 1;
+@animationDuration: 0.3s;
+@animationEasing: ease;
+@fadeScaleHigh: 1.5;
+@fadeScaleLow: 0.75;
+
+/*******************************
+            Container
+*******************************/
+
+/*-------------------
+       Element
+--------------------*/
+
+/* Minimum Gutter is used to determine  the maximum container width for a given device */
+
+@maxWidth: 100%;
+
+/* Devices */
+@mobileMinimumGutter: 0em;
+@mobileWidth: auto;
+@mobileGutter: 1em;
+
+@tabletMinimumGutter: (@emSize  * 1);
+@tabletWidth: @tabletBreakpoint - (@tabletMinimumGutter * 2) - @scrollbarWidth;
+@tabletGutter: auto;
+
+@computerMinimumGutter: (@emSize  * 1.5);
+@computerWidth: @computerBreakpoint - (@computerMinimumGutter * 2) - @scrollbarWidth;
+@computerGutter: auto;
+
+@largeMonitorMinimumGutter: (@emSize  * 2);
+@largeMonitorWidth: @largeMonitorBreakpoint - (@largeMonitorMinimumGutter * 2) - @scrollbarWidth;
+@largeMonitorGutter: auto;
+
+/* Coupling (Add Negative Margin to container size) */
+@gridGutterWidth: 2rem;
+@relaxedGridGutterWidth: 3rem;
+@veryRelaxedGridGutterWidth: 5rem;
+
+@mobileGridWidth: @mobileWidth;
+@tabletGridWidth: ~"calc("@tabletWidth~" + "@gridGutterWidth~")";
+@computerGridWidth: ~"calc("@computerWidth~" + "@gridGutterWidth~")";
+@largeMonitorGridWidth: ~"calc("@largeMonitorWidth~" + "@gridGutterWidth~")";
+
+@mobileRelaxedGridWidth: @mobileWidth;
+@tabletRelaxedGridWidth: ~"calc("@tabletWidth~" + "@relaxedGridGutterWidth~")";
+@computerRelaxedGridWidth: ~"calc("@computerWidth~" + "@relaxedGridGutterWidth~")";
+@largeMonitorRelaxedGridWidth: ~"calc("@largeMonitorWidth~" + "@relaxedGridGutterWidth~")";
+
+@mobileVeryRelaxedGridWidth: @mobileWidth;
+@tabletVeryRelaxedGridWidth: ~"calc("@tabletWidth~" + "@veryRelaxedGridGutterWidth~")";
+@computerVeryRelaxedGridWidth: ~"calc("@computerWidth~" + "@veryRelaxedGridGutterWidth~")";
+@largeMonitorVeryRelaxedGridWidth: ~"calc("@largeMonitorWidth~" + "@veryRelaxedGridGutterWidth~")";
+
+/*-------------------
+       Types
+--------------------*/
+
+/* Text */
+@textWidth: 700px;
+@textFontFamily: @pageFont;
+@textLineHeight: 1.5;
+@textSize: @large;
+/*******************************
+            Divider
+*******************************/
+
+/*-------------------
+       Element
+--------------------*/
+
+@margin: 1rem 0rem;
+
+@highlightWidth: 1px;
+@highlightColor: @whiteBorderColor;
+
+@shadowWidth: 1px;
+@shadowColor: @borderColor;
+
+/* Text */
+@letterSpacing: 0.05em;
+@fontWeight: bold;
+@color: @darkTextColor;
+@textTransform: uppercase;
+
+/*-------------------
+       Coupling
+--------------------*/
+
+/* Icon */
+@dividerIconSize: 1rem;
+@dividerIconMargin: 0rem;
+
+
+/*******************************
+         Variations
+*******************************/
+
+/* Horizontal / Vertical */
+@horizontalMargin: '';
+@horizontalDividerMargin: 1em;
+@horizontalRulerOffset: ~"calc(-50% - "(@horizontalDividerMargin)~")";
+
+@verticalDividerMargin: 1rem;
+@verticalDividerHeight: ~"calc(100% - "(@verticalDividerMargin)~")";
+
+/* Inverted */
+@invertedTextColor: @white;
+@invertedHighlightColor: rgba(255, 255, 255, 0.15);
+@invertedShadowColor: @borderColor;
+
+/* Section */
+@sectionMargin: 2rem;
+
+/* Sizes */
+@medium: 1rem;
+/*******************************
+            Flag
+*******************************/
+
+/*-------------------
+       Element
+--------------------*/
+
+@spritePath: "@{imagePath}/flags.png";
+@width: 16px;
+@height: 11px;
+@verticalAlign: baseline;
+@margin: 0.5em;
+/*******************************
+            Header
+*******************************/
+
+/*-------------------
+       Element
+--------------------*/
+
+@textTransform: none;
+@fontFamily: @headerFont;
+@fontWeight: @headerFontWeight;
+@lineHeight: @headerLineHeight;
+@lineHeightOffset: @headerLineHeightOffset;
+
+@topMargin: @headerTopMargin;
+@bottomMargin: @headerBottomMargin;
+@margin: @topMargin 0em @bottomMargin;
+
+@firstMargin: -@lineHeightOffset;
+@lastMargin: 0em;
+@horizontalPadding: 0em;
+@verticalPadding: 0em;
+
+/* Sub Heading */
+@subHeadingDistance: @2px;
+@subHeadingFontSize: @relativeTiny;
+@subHeadingFontWeight: bold;
+@subHeadingTextTransform: uppercase;
+@subHeadingColor: '';
+
+@smallSubHeadingSize: @relativeMini;
+@largeSubHeadingSize: @relativeSmall;
+@hugeSubHeadingSize: @relativeMedium;
+
+/* Sub Header */
+@subHeaderMargin: 0em;
+@subHeaderLineHeight: 1.2em;
+@subHeaderColor: @mutedTextColor;
+
+/* Icon */
+@iconOpacity: 1;
+@iconSize: 1.5em;
+@iconOffset: @lineHeightOffset;
+@iconMargin: 0.75rem;
+@iconAlignment: middle;
+
+/* Image */
+@imageWidth: 2.5em;
+@imageHeight: auto;
+@imageOffset: @lineHeightOffset;
+@imageMargin: @iconMargin;
+@imageAlignment: middle;
+
+/* Label */
+@labelSize: '';
+@labelDistance: 0.5rem;
+@labelVerticalAlign: middle;
+
+/* Content */
+@contentAlignment: top;
+@contentIconAlignment: middle;
+@contentImageAlignment: middle;
+
+/* Paragraph after Header */
+@nextParagraphDistance: 0em;
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Sizing */
+@hugeFontSize   : unit(@h1, em);
+@largeFontSize  : unit(@h2, em);
+@mediumFontSize : unit(@h3, em);
+@smallFontSize  : unit(@h4, em);
+@tinyFontSize   : unit(@h5, em);
+
+/* Sub Header */
+@h1SubHeaderFontSize: @large;
+@h2SubHeaderFontSize: @large;
+@h3SubHeaderFontSize: @medium;
+@h4SubHeaderFontSize: @medium;
+@h5SubHeaderFontSize: @small;
+
+@hugeSubHeaderFontSize  : @h1SubHeaderFontSize;
+@largeSubHeaderFontSize : @h2SubHeaderFontSize;
+@subHeaderFontSize      : @h3SubHeaderFontSize;
+@smallSubHeaderFontSize : @h4SubHeaderFontSize;
+@tinySubHeaderFontSize  : @h5SubHeaderFontSize;
+
+/* Icon Header */
+@iconHeaderSize: 3em;
+@iconHeaderOpacity: 1;
+@iconHeaderMargin: 0.5rem;
+@circularHeaderIconSize: 2em;
+@squareHeaderIconSize: 2em;
+
+/* No Line Height Offset */
+@iconHeaderTopMargin: 2rem;
+@iconHeaderBottomMargin: @bottomMargin;
+@iconHeaderFirstMargin: 0em;
+
+/* Divided */
+@dividedBorderWidth: 1px;
+@dividedBorder: @dividedBorderWidth solid @borderColor;
+@dividedColoredBorderWidth: 2px;
+
+@dividedBorderPadding: @3px;
+@dividedSubHeaderPadding: @3px;
+@dividedIconPadding: 0em;
+
+/* Block */
+@blockBackground: @darkWhite;
+@blockBoxShadow: none;
+@blockBorderWidth: 1px;
+@blockBorder: @blockBorderWidth solid @solidBorderColor;
+@blockHorizontalPadding: @medium;
+@blockVerticalPadding: @mini;
+@blockBorderRadius: @defaultBorderRadius;
+
+@tinyBlock: @tiny;
+@smallBlock: @small;
+@mediumBlock: @medium;
+@largeBlock: @large;
+@hugeBlock: @huge;
+
+/* Attached */
+@attachedOffset: -1px;
+@attachedBoxShadow: none;
+@attachedBorder: 1px solid @solidBorderColor;
+@attachedVerticalPadding: @blockVerticalPadding;
+@attachedHorizontalPadding: @blockHorizontalPadding;
+@attachedBackground: @white;
+@attachedBorderRadius: @blockBorderRadius;
+
+@tinyAttachedSize: @relativeTiny;
+@smallAttachedSize: @relativeSmall;
+@mediumAttachedSize: @relativeMedium;
+@largeAttachedSize: @relativeLarge;
+@bigAttachedSize: @relativeBig;
+@hugeAttachedSize: @relativeHuge;
+
+/* Inverted */
+@invertedColor: @white;
+@invertedSubHeaderColor: @invertedMutedTextColor;
+@invertedDividedBorderColor: @whiteBorderColor;
+@invertedBlockBackground: @lightBlack @subtleGradient;
+@invertedAttachedBackground: @invertedBlockBackground;
+
+/* Floated */
+@floatedMargin: 0.5em;
+
+/*******************************
+             Icon
+*******************************/
+
+/*-------------------
+   Icon Variables
+--------------------*/
+
+@fontName: 'icons';
+@fallbackSRC: url("@{fontPath}/@{fontName}.eot");
+@src:
+  url("@{fontPath}/@{fontName}.eot?#iefix") format('embedded-opentype'),
+  url("@{fontPath}/@{fontName}.woff2") format('woff2'),
+  url("@{fontPath}/@{fontName}.woff") format('woff'),
+  url("@{fontPath}/@{fontName}.ttf") format('truetype'),
+  url("@{fontPath}/@{fontName}.svg#icons") format('svg')
+;
+
+@opacity: 1;
+@width: @iconWidth;
+@height: 1em;
+@distanceFromText: 0.25rem;
+
+
+/* Variations */
+
+@linkOpacity: 0.8;
+@linkDuration: 0.3s;
+@loadingDuration: 2s;
+
+@circularSize: 2em;
+@circularPadding: 0.5em 0.5em;
+@circularShadow: 0em 0em 0em 0.1em rgba(0, 0, 0, 0.1) inset;
+
+@borderedSize: 2em;
+@borderedVerticalPadding: ((@borderedSize - @height) / 2);
+@borderedHorizontalPadding: ((@borderedSize - @width) / 2);
+@borderedShadow: 0em 0em 0em 0.1em rgba(0, 0, 0, 0.1) inset;
+
+@cornerIconSize: 0.45em;
+@cornerIconStroke: 1px;
+@cornerIconShadow:
+  -@cornerIconStroke -@cornerIconStroke 0 @white,
+   @cornerIconStroke -@cornerIconStroke 0 @white,
+  -@cornerIconStroke  @cornerIconStroke 0 @white,
+   @cornerIconStroke  @cornerIconStroke 0 @white
+;
+@cornerIconInvertedShadow:
+  -@cornerIconStroke -@cornerIconStroke 0 @black,
+   @cornerIconStroke -@cornerIconStroke 0 @black,
+  -@cornerIconStroke  @cornerIconStroke 0 @black,
+   @cornerIconStroke  @cornerIconStroke 0 @black
+;
+
+@mini: 0.4em;
+@tiny: 0.5em;
+@small: 0.75em;
+@medium: 1em;
+@large: 1.5em;
+@big: 2em;
+@huge: 4em;
+@massive: 8em;
+
+/*******************************
+            Image
+*******************************/
+
+/*-------------------
+       Element
+--------------------*/
+
+@placeholderColor: transparent;
+@roundedBorderRadius: 0.3125em;
+
+@imageHorizontalMargin: 0.25rem;
+@imageVerticalMargin: 0.5rem;
+@imageBorder: 1px solid rgba(0, 0, 0, 0.1);
+
+/*-------------------
+       Types
+--------------------*/
+
+/* Avatar */
+@avatarSize: 2em;
+@avatarMargin: 0.25em;
+
+
+/*-------------------
+       Variations
+--------------------*/
+
+/* Spaced */
+@spacedDistance: 0.5em;
+
+/* Floated */
+@floatedHorizontalMargin: 1em;
+@floatedVerticalMargin: 1em;
+
+/* Size */
+@miniWidth: 35px;
+@tinyWidth: 80px;
+@smallWidth: 150px;
+@mediumWidth: 300px;
+@largeWidth: 450px;
+@bigWidth: 600px;
+@hugeWidth: 800px;
+@massiveWidth: 960px;
+
+/*******************************
+            Input
+*******************************/
+
+/*-------------------
+      Element
+--------------------*/
+
+@inputFont: @pageFont;
+@verticalPadding: @inputVerticalPadding;
+@horizontalPadding: @inputHorizontalPadding;
+
+@lineHeight: @inputLineHeight;
+@lineHeightOffset: ((@lineHeight - 1em) / 2);
+
+@padding: (@verticalPadding - @lineHeightOffset) @horizontalPadding;
+
+@textAlign: left;
+@background: @inputBackground;
+@borderWidth: 1px;
+@border: @borderWidth solid @borderColor;
+@boxShadow: none;
+
+@borderRadius: @defaultBorderRadius;
+@transition:
+  box-shadow @defaultDuration @defaultEasing,
+  border-color @defaultDuration @defaultEasing
+;
+
+/*-------------------
+        Types
+--------------------*/
+
+/* Icon Input */
+@iconWidth: (@verticalPadding * 2) + @glyphWidth;
+@iconOpacity: 0.5;
+@iconFocusOpacity: 1;
+@iconOffset: -0.5em;
+
+@iconDistance: 0em;
+@iconMargin: @iconWidth + @iconDistance;
+@iconTransition: opacity 0.3s @defaultEasing;
+
+@transparentIconWidth: @glyphWidth;
+@transparentIconMargin: 2em;
+
+/* Circular Icon Input */
+@circularIconVerticalOffset: 0.35em;
+@circularIconHorizontalOffset: 0.5em;
+
+/* Labeled Input */
+@labelCornerTop: @borderWidth;
+@labelCornerRight: @borderWidth;
+@labelCornerSize: @relative9px;
+@labelSize: 1em;
+@labelVerticalPadding: (@verticalPadding - @lineHeightOffset);
+
+@labeledMargin: 2.5em;
+@labeledIconInputMargin: 3.25em;
+@labeledIconMargin: 1.25em;
+
+/*-------------------
+        States
+--------------------*/
+
+/* Placeholder */
+@placeholderColor: @inputPlaceholderColor;
+@placeholderFocusColor: @inputPlaceholderFocusColor;
+
+/* Down */
+@downBorderColor: rgba(0, 0, 0, 0.3);
+@downBackground: #FAFAFA;
+@downColor: @textColor;
+@downBoxShadow: none;
+
+/* Focus */
+@focusBorderColor: @focusedFormBorderColor;
+@focusBackground: @background;
+@focusColor: @hoveredTextColor;
+@focusBoxShadow: none;
+
+/* Error */
+@errorBackground: @negativeBackgroundColor;
+@errorColor: @negativeTextColor;
+@errorBorder: @negativeBorderColor;
+@errorBoxShadow: none;
+
+@placeholderErrorColor: lighten(@errorColor, 40);
+@placeholderErrorFocusColor: lighten(@errorColor, 30);
+
+/* Loader */
+@invertedLoaderFillColor: rgba(0, 0, 0, 0.15);
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Inverted */
+@transparentInvertedPlaceholderColor: @invertedUnselectedTextColor;
+@transparentInvertedColor: @white;
+
+
+/*******************************
+             Label
+*******************************/
+
+/*-------------------
+       Element
+--------------------*/
+
+@verticalAlign: baseline;
+@verticalMargin: 0em;
+@horizontalMargin: @relative2px;
+@backgroundColor: #E8E8E8;
+@color: @mutedTextColor;
+@backgroundImage: none;
+@verticalPadding: 0.5833em; /* medium is not @emSize custom value required */
+@horizontalPadding: 0.833em;
+@borderRadius: @absoluteBorderRadius;
+@textTransform: none;
+@fontWeight: bold;
+@borderWidth: 1px;
+@border: 0px solid transparent;
+
+@lineHeightOffset: -(@verticalPadding / 2);
+
+@labelTransitionDuration: @defaultDuration;
+@labelTransitionEasing: @defaultEasing;
+@transition: background @labelTransitionDuration @labelTransitionEasing;
+
+/* Group */
+@groupVerticalMargin: 0.5em;
+@groupHorizontalMargin: 0.5em;
+
+/*-------------------
+        Parts
+--------------------*/
+
+/* Link */
+@linkOpacity: 0.5;
+@linkTransition: @labelTransitionDuration opacity @labelTransitionEasing;
+
+/* Icon */
+@iconDistance: 0.75em;
+
+/* Image */
+@imageHeight: (1em + @verticalPadding * 2);
+
+/* Detail */
+@detailFontWeight: bold;
+@detailOpacity: 0.8;
+@detailIconDistance: 0.25em;
+@detailMargin: 1em;
+
+/* Delete */
+@deleteOpacity: @linkOpacity;
+@deleteSize: @relativeSmall;
+@deleteMargin: 0.5em;
+@deleteTransition: background @labelTransitionDuration @labelTransitionEasing;
+
+/*-------------------
+        Types
+--------------------*/
+
+/* Image Label */
+@imageLabelBackground: @backgroundColor;
+@imageLabelVerticalPadding: @verticalPadding;
+@imageLabelHorizontalPadding: @horizontalPadding;
+@imageLabelTextDistance: 0.5em;
+@imageLabelDetailDistance: @imageLabelTextDistance;
+@imageLabelBorderRadius: @borderRadius;
+@imageLabelBoxShadow: none;
+@imageLabelPadding: @imageLabelVerticalPadding @imageLabelHorizontalPadding @imageLabelVerticalPadding @imageLabelTextDistance;
+
+@imageLabelImageMargin: -@verticalPadding @imageLabelTextDistance -@verticalPadding -@imageLabelTextDistance;
+@imageLabelImageBorderRadius: @imageLabelBorderRadius 0em 0em @imageLabelBorderRadius;
+@imageLabelImageHeight: @imageHeight;
+
+@imageLabelDetailBackground: @strongTransparentBlack;
+@imageLabelDetailPadding: @imageLabelVerticalPadding @imageLabelHorizontalPadding;
+@imageLabelDetailMargin: -@imageLabelVerticalPadding -@imageLabelHorizontalPadding -@imageLabelVerticalPadding @imageLabelDetailDistance;
+
+/*-------------------
+        States
+--------------------*/
+
+/* Hover */
+@labelHoverBackgroundColor: #E0E0E0;
+@labelHoverBackgroundImage: none;
+@labelHoverTextColor: @hoveredTextColor;
+
+/* Active */
+@labelActiveBackgroundColor: #D0D0D0;
+@labelActiveBackgroundImage: none;
+@labelActiveTextColor: @selectedTextColor;
+
+/* Active Hover */
+@labelActiveHoverBackgroundColor: #C8C8C8;
+@labelActiveHoverBackgroundImage: none;
+@labelActiveHoverTextColor: @selectedTextColor;
+
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Basic */
+@basicBackground: none @white;
+@basicBorderWidth: 1px;
+@basicBorder: @basicBorderWidth solid @borderColor;
+@basicColor: @textColor;
+@basicBoxShadow: none;
+
+@basicHoverBackground: @basicBackground;
+@basicHoverColor: @linkHoverColor;
+@basicHoverBorder: @basicBorder;
+@basicHoverBoxShadow: @basicBoxShadow;
+
+/* Tag */
+@tagCircleColor: @white;
+@tagCircleSize: 0.5em;
+@tagHorizontalPadding: 1.5em;
+@tagCircleBoxShadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.3);
+@tagTriangleRightOffset: 100%;
+@tagTriangleTopOffset: 50%;
+@tagTriangleSize: 1.56em;
+@tagTriangleBackgroundImage: none;
+@tagTransition: none; /* Avoids error with background: inherit; on animation */
+
+/* Ribbon */
+@ribbonTriangleSize: 1.2em;
+@ribbonShadowColor: rgba(0, 0, 0, 0.15);
+
+@ribbonMargin: 1rem;
+@ribbonOffset: ~"calc("-@ribbonMargin~" - "@ribbonTriangleSize~")";
+@ribbonDistance: ~"calc("@ribbonMargin~" + "@ribbonTriangleSize~")";
+@rightRibbonOffset:  ~"calc(100% + "@ribbonMargin~" + "@ribbonTriangleSize~")";
+
+@ribbonImageTopDistance: 1rem;
+@ribbonImageMargin: -0.05rem; /* Rounding Offset on Triangle */
+@ribbonImageOffset: ~"calc("-@ribbonImageMargin~" - "@ribbonTriangleSize~")";
+@rightRibbonImageOffset:  ~"calc(100% + "@ribbonImageMargin~" + "@ribbonTriangleSize~")";
+
+@ribbonTableMargin: @relativeMini; /* Rounding Offset on Triangle */
+@ribbonTableOffset: ~"calc("-@ribbonTableMargin~" - "@ribbonTriangleSize~")";
+@rightRibbonTableOffset:  ~"calc(100% + "@ribbonTableMargin~" + "@ribbonTriangleSize~")";
+
+
+/* Colors */
+@redTextColor: @white;
+@orangeTextColor: @white;
+@yellowTextColor: @white;
+@oliveTextColor: @white;
+@greenTextColor: @white;
+@tealTextColor: @white;
+@blueTextColor: @white;
+@violetTextColor: @white;
+@purpleTextColor: @white;
+@pinkTextColor: @white;
+@brownTextColor: @white;
+@greyTextColor: @white;
+@blackTextColor: @white;
+
+@redHoverTextColor: @white;
+@orangeHoverTextColor: @white;
+@yellowHoverTextColor: @white;
+@oliveHoverTextColor: @white;
+@greenHoverTextColor: @white;
+@tealHoverTextColor: @white;
+@blueHoverTextColor: @white;
+@violetHoverTextColor: @white;
+@purpleHoverTextColor: @white;
+@pinkHoverTextColor: @white;
+@brownHoverTextColor: @white;
+@greyHoverTextColor: @white;
+@blackHoverTextColor: @white;
+
+@redRibbonShadow: darken(@red, 10);
+@orangeRibbonShadow: darken(@orange, 10);
+@yellowRibbonShadow: darken(@yellow, 10);
+@oliveRibbonShadow: darken(@olive, 10);
+@greenRibbonShadow: darken(@green, 10);
+@tealRibbonShadow: darken(@teal, 10);
+@blueRibbonShadow: darken(@blue, 10);
+@violetRibbonShadow: darken(@violet, 10);
+@purpleRibbonShadow: darken(@purple, 10);
+@pinkRibbonShadow: darken(@pink, 10);
+@brownRibbonShadow: darken(@brown, 10);
+@greyRibbonShadow: darken(@grey, 10);
+@blackRibbonShadow: darken(@black, 10);
+
+/* Attached */
+@attachedSegmentPadding: 2rem;
+@attachedVerticalPadding: 0.75em;
+@attachedHorizontalPadding: 1em;
+
+@attachedCornerBorderRadius: @3px;
+@attachedBorderRadius: @borderRadius;
+
+/* Corner */
+@cornerSizeRatio: 1;
+@cornerTransition: color @labelTransitionDuration @labelTransitionEasing;
+@cornerTriangleSize: 4em;
+@cornerTriangleTransition: border-color @labelTransitionDuration @labelTransitionEasing;
+@cornerTriangleZIndex: 1;
+
+@cornerIconSize: @relativeLarge;
+@cornerIconTopOffset: @relative9px;
+@cornerIconLeftOffset: @relative11px;
+
+/* Corner Text */
+@cornerTextWidth: 3em;
+@cornerTextWeight: bold;
+@cornerTextSize: 1em;
+
+/* Horizontal */
+@horizontalLabelMinWidth: 3em;
+@horizontalLabelMargin: 0.5em;
+@horizontalLabelVerticalPadding: 0.4em;
+
+/* Circular Padding */
+@circularPadding: 0.5em;
+@circularMinSize: 2em;
+@emptyCircleSize: 0.5em;
+
+/* Pointing */
+@pointingBorderColor: inherit;
+@pointingBorderWidth: @borderWidth;
+@pointingVerticalDistance: 1em;
+@pointingTriangleSize: 0.6666em;
+@pointingHorizontalDistance: @pointingTriangleSize;
+
+@pointingTriangleTransition: background @labelTransitionDuration @labelTransitionEasing;
+@pointingTriangleZIndex: 2;
+
+/* Basic Pointing */
+@basicPointingTriangleOffset: -@pointingBorderWidth;
+
+/* Floating */
+@floatingTopOffset: -1em;
+@floatingLeftOffset: -1.5em;
+@floatingZIndex: 100;
+
+/*-------------------
+        Group
+--------------------*/
+
+/* Sizing */
+@mini    : @9px;
+@tiny    : @10px;
+@small   : @11px;
+@medium  : @12px;
+@large   : @absoluteMedium;
+@big     : @absoluteBig;
+@huge    : @absoluteHuge;
+@massive : @absoluteMassive;
+
+/*******************************
+             List
+*******************************/
+
+/*-------------------
+         View
+--------------------*/
+
+/* List */
+@listStyleType: none;
+@listStylePosition: outside;
+@margin: 1em 0em;
+@verticalPadding: 0em;
+@horizontalPadding: 0em;
+
+/* List Item */
+@itemVerticalPadding: @relative3px;
+@itemHorizontalPadding: 0em;
+@itemPadding: @itemVerticalPadding @itemHorizontalPadding;
+@itemLineHeight: @relativeLarge;
+
+/* Sub List */
+@childListPadding: 0.75em 0em 0.25em 0.5em;
+@childListIndent: 1em;
+
+/* Sub List Item */
+@childItemVerticalPadding: @relative2px;
+@childItemHorizontalPadding: 0em;
+@childItemPadding: @childItemVerticalPadding @childItemHorizontalPadding;
+@childItemLineHeight: inherit;
+
+/*-------------------
+      Elements
+--------------------*/
+
+/* Icon */
+@iconDistance: @relative4px;
+@iconOffset: ((@itemLineHeight - 1rem) / 2);
+@iconTransition: color @defaultDuration @defaultEasing;
+@iconVerticalAlign: top;
+@iconContentVerticalAlign: top;
+
+/* Image */
+@imageDistance: 0.5em;
+@imageAlign: top;
+
+/* Content */
+@contentDistance: 0.5em;
+@contentLineHeight: @itemLineHeight;
+@contentLineHeightOffset: (@contentLineHeight - 1em) / 2;
+@contentVerticalAlign: top;
+
+/* Header */
+@itemHeaderFontFamily: @headerFont;
+@itemHeaderFontWeight: bold;
+@itemHeaderColor: @textColor;
+
+/* Description */
+@itemDescriptionColor: rgba(0, 0, 0, 0.7);
+
+/* Link */
+@itemLinkColor: @linkColor;
+@itemLinkHoverColor: @linkHoverColor;
+
+/* Header Link */
+@itemHeaderLinkColor: @itemLinkColor;
+@itemHeaderLinkHoverColor: @itemLinkHoverColor;
+
+/* Linked Icon */
+@itemLinkIconColor: @lightTextColor;
+@itemLinkIconHoverColor: @textColor;
+@invertedIconLinkColor: @invertedLightTextColor;
+
+/*-------------------
+        States
+--------------------*/
+
+@disabledColor: @disabledTextColor;
+@invertedDisabledColor: @invertedDisabledTextColor;
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Float */
+@floatDistance: 1em;
+@leftFloatMargin: 0em @floatDistance 0em 0em;
+@rightFloatMargin: 0em 0em 0em @floatDistance;
+
+/* Horizontal */
+@horizontalSpacing: 1em;
+@horizontalIconDistance: 0.25em;
+@horizontalVerticalAlign: middle;
+
+/* Inverted */
+@invertedListIconColor: @invertedLightTextColor;
+@invertedHeaderColor: @invertedTextColor;
+@invertedDescriptionColor: @invertedLightTextColor;
+@invertedItemLinkColor: @invertedTextColor;
+@invertedItemLinkHoverColor: @linkHoverColor;
+
+/* Link List */
+@linkListItemColor: @unselectedTextColor;
+@linkListItemHoverColor: @hoveredTextColor;
+@linkListItemDownColor: @pressedTextColor;
+@linkListItemActiveColor: @selectedTextColor;
+@linkListTransition:
+  @defaultDuration color @defaultEasing
+;
+
+/* Inverted Link List */
+@invertedLinkListItemColor: @invertedUnselectedTextColor;
+@invertedLinkListItemHoverColor: @invertedHoveredTextColor;
+@invertedLinkListItemDownColor: @invertedPressedTextColor;
+@invertedLinkListItemActiveColor: @invertedSelectedTextColor;
+
+/* Selection List */
+@selectionListItemMargin: 0em;
+@selectionListItemBorderRadius: 0.5em;
+@selectionListItemVerticalPadding: 0.5em;
+@selectionListItemHorizontalPadding: 0.5em;
+@selectionListTransition:
+  @defaultDuration color @defaultEasing,
+  @defaultDuration padding-left @defaultEasing,
+  @defaultDuration background-color @defaultEasing
+;
+
+/* Selection List States */
+@selectionListBackground: transparent;
+@selectionListColor: @unselectedTextColor;
+@selectionListHoverBackground: @subtleTransparentBlack;
+@selectionListHoverColor: @hoveredTextColor;
+@selectionListDownBackground: @transparentBlack;
+@selectionListDownColor: @pressedTextColor;
+@selectionListActiveBackground: @transparentBlack;
+@selectionListActiveColor: @selectedTextColor;
+
+/* Inverted Selection List */
+@invertedSelectionListBackground: transparent;
+@invertedSelectionListColor: @invertedUnselectedTextColor;
+@invertedSelectionListHoverBackground: @subtleTransparentWhite;
+@invertedSelectionListHoverColor: @invertedHoveredTextColor;
+@invertedSelectionListDownBackground: @transparentWhite;
+@invertedSelectionListDownColor: @invertedPressedTextColor;
+@invertedSelectionListActiveBackground: @transparentWhite;
+@invertedSelectionListActiveColor: @invertedSelectedTextColor;
+
+/* Animated List */
+@animatedDuration: 0.25s;
+@animatedDelay: 0.1s;
+@animatedListTransition:
+  @animatedDuration color @defaultEasing @animatedDelay,
+  @animatedDuration padding-left @defaultEasing @animatedDelay,
+  @animatedDuration background-color @defaultEasing @animatedDelay
+;
+@animatedListIndent: 1em;
+
+/* Bulleted */
+@bulletDistance: 1.25rem;
+@bulletOffset: -@bulletDistance;
+
+@bulletOpacity: 1;
+@bulletCharacter: '•';
+@bulletColor: inherit;
+@bulletLinkColor: @textColor;
+@bulletVerticalAlign: top;
+@bulletChildDistance: @bulletDistance;
+
+/* Horizontal Bullets */
+@horizontalBulletColor: @textColor;
+@horizontalBulletSpacing: @bulletDistance + 0.5em;
+
+/* Ordered List */
+@orderedCountName: ordered;
+@orderedCountContent: counters(ordered, ".") " ";
+@orderedCountColor: @textColor;
+@orderedCountDistance: 1.25rem;
+@orderedCountOpacity: 0.8;
+@orderedCountTextAlign: right;
+@orderedCountVerticalAlign: middle;
+
+@orderedChildCountDistance: 1em;
+@orderedChildCountOffset: -2em;
+
+@orderedInvertedCountColor: @invertedLightTextColor;
+
+/* Horizontal Ordered */
+@horizontalOrderedCountDistance: 0.5em;
+
+/* Divided */
+@dividedBorderWidth: 1px;
+@dividedBorder: @dividedBorderWidth solid @borderColor;
+@dividedInvertedBorderColor: @whiteBorderColor;
+@dividedChildListBorder: none;
+@dividedChildItemBorder: none;
+
+/* Divided Horizontal */
+@horizontalDividedSpacing: (@horizontalSpacing / 2);
+@horizontalDividedLineHeight: 0.6;
+
+/* Divided */
+@celledBorderWidth: 1px;
+@celledBorder: @celledBorderWidth solid @borderColor;
+@celledInvertedBorder: @dividedBorderWidth solid @whiteBorderColor;
+@celledHorizontalPadding: 0.5em;
+@celledChildListBorder: none;
+@celledChildItemBorder: none;
+
+/* Divided Horizontal */
+@horizontalCelledSpacing: (@horizontalSpacing / 2);
+@horizontalCelledLineHeight: 0.6;
+
+/* Relaxed */
+@relaxedItemVerticalPadding: @relative6px;
+@relaxedChildItemVerticalPadding: @relative3px;
+@relaxedHeaderMargin: 0.25rem;
+@relaxedHorizontalPadding: 1rem;
+
+/* Very Relaxed */
+@veryRelaxedItemVerticalPadding: @relative12px;
+@veryRelaxedChildItemVerticalPadding: @relative4px;
+@veryRelaxedHeaderMargin: 0.5rem;
+@veryRelaxedHorizontalPadding: 1.5rem;
+
+
+/*******************************
+             Loader
+*******************************/
+
+/* Some global loader styles defined in site.variables */
+// @loaderSpeed
+// @loaderLineWidth
+// @loaderFillColor
+// @loaderLineColor
+// @invertedLoaderFillColor
+// @invertedLoaderLineColor
+
+/*-------------------
+      Standard
+--------------------*/
+
+@loaderTopOffset: 50%;
+@loaderLeftOffset: 50%;
+
+@shapeBorderColor: @loaderLineColor transparent transparent;
+@invertedShapeBorderColor: @invertedLoaderLineColor transparent transparent;
+
+/*-------------------
+        Types
+--------------------*/
+
+/* Text */
+@textDistance: @relativeMini;
+@loaderTextColor: @textColor;
+@invertedLoaderTextColor: @invertedTextColor;
+
+/*-------------------
+        States
+--------------------*/
+
+@indeterminateDirection: reverse;
+@indeterminateSpeed: (2 * @loaderSpeed);
+
+/*-------------------
+      Variations
+--------------------*/
+
+@inlineVerticalAlign: middle;
+@inlineMargin: 0em;
+
+/* Exact Sizes (Avoids Rounding Errors) */
+@mini    : @14px;
+@tiny    : @16px;
+@small   : @24px;
+@medium  : @32px;
+@large   : @48px;
+@big     : @52px;
+@huge    : @58px;
+@massive : @64px;
+
+@miniOffset: 0em 0em 0em -(@mini / 2);
+@tinyOffset: 0em 0em 0em -(@tiny / 2);
+@smallOffset: 0em 0em 0em -(@small / 2);
+@mediumOffset: 0em 0em 0em -(@medium / 2);
+@largeOffset: 0em 0em 0em -(@large / 2);
+@bigOffset: 0em 0em 0em -(@big / 2);
+@hugeOffset: 0em 0em 0em -(@huge / 2);
+@massiveOffset: 0em 0em 0em -(@massive / 2);
+
+@tinyFontSize: @relativeTiny;
+@miniFontSize: @relativeMini;
+@smallFontSize: @relativeSmall;
+@mediumFontSize: @relativeMedium;
+@largeFontSize: @relativeLarge;
+@bigFontSize: @relativeBig;
+@hugeFontSize: @relativeHuge;
+@massiveFontSize: @relativeMassive;
+
+/*******************************
+            Rail
+*******************************/
+
+/*-------------------
+       Element
+--------------------*/
+
+@width: 300px;
+@height: 100%;
+
+@distance: 4rem;
+@splitDistance: (@distance / 2);
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Close */
+@closeDistance: 2em;
+@veryCloseDistance: 1em;
+
+@splitCloseDistance: (@closeDistance / 2);
+@splitVeryCloseDistance: (@veryCloseDistance / 2);
+
+@closeWidth: ~"calc("@width~" + "@splitCloseDistance~")";
+@veryCloseWidth: ~"calc("@width~" + "@splitVeryCloseDistance~")";
+
+/* Dividing */
+@dividingBorder: 1px solid @borderColor;
+@dividingDistance: 5rem;
+@splitDividingDistance: (@dividingDistance / 2);
+@dividingWidth: @width + @splitDividingDistance;
+
+
+/*******************************
+            Reveal
+*******************************/
+
+@transitionDelay: 0.1s;
+@transitionDuration: 0.5s;
+@transitionEasing: cubic-bezier(0.175, 0.885, 0.320, 1);
+@transition: all @transitionDuration @defaultEasing @transitionDelay;
+
+@bottomZIndex: 2;
+@topZIndex: 3;
+@activeZIndex: 4;
+
+/* Types */
+@rotateDegrees: 110deg;
+@moveTransition: transform @transitionDuration @transitionEasing @transitionDelay;
+@slideTransition: transform @transitionDuration @defaultEasing @transitionDelay;
+/*******************************
+            Segment
+*******************************/
+
+/*-------------------
+       Element
+--------------------*/
+
+@background: @white;
+@borderWidth: 1px;
+@border: @borderWidth solid @borderColor;
+
+@boxShadow: @subtleShadow;
+@verticalPadding: 1em;
+@horizontalPadding: 1em;
+@padding: @verticalPadding @horizontalPadding;
+
+@verticalMargin: 1rem;
+@horizontalMargin: 0em;
+@margin: @verticalMargin @horizontalMargin;
+@borderRadius: @defaultBorderRadius;
+
+/*-------------------
+       Group
+--------------------*/
+
+@groupedMargin: @margin;
+@groupedBorder: @border;
+@groupedBoxShadow: @boxShadow;
+@groupedBorderRadius: @borderRadius;
+
+@nestedGroupMargin: @verticalMargin @verticalMargin;
+
+@groupedSegmentBorder: none;
+@groupedSegmentDivider: @border;
+@groupedSegmentMargin: 0em;
+@groupedSegmentWidth: auto;
+@groupedSegmentBoxShadow: none;
+
+/*-------------------
+       Coupling
+--------------------*/
+
+/* Page Grid Segment */
+@pageGridMargin: (2 * @verticalPadding);
+
+/*******************************
+            States
+*******************************/
+
+/* Loading Dimmer */
+@loaderDimmerColor: rgba(255, 255, 255, 0.8);
+@loaderDimmerZIndex: 100;
+
+/* Loading Spinner */
+@loaderSize: 3em;
+@loaderLineZIndex: 101;
+
+
+/*******************************
+            Variations
+*******************************/
+
+/* Piled */
+@piledZIndex: auto;
+@piledMargin: 3em;
+@piledBoxShadow: '';
+@piledDegrees: 1.2deg;
+@piledBorder: @border;
+
+/* Circular */
+@circularPadding: 2em;
+
+/* Stacked */
+@stackedHeight: 6px;
+@stackedPageBackground: @subtleTransparentBlack;
+@stackedPadding: @verticalPadding + (0.4em);
+@tallStackedPadding: @verticalPadding + (0.8em);
+
+/* Raised */
+@raisedBoxShadow: @floatingShadow;
+
+/* Padded */
+@paddedSegmentPadding: 1.5em;
+@veryPaddedSegmentPadding: 3em;
+
+/* Attached */
+@attachedTopOffset: 0px;
+@attachedBottomOffset: 0px;
+@attachedHorizontalOffset: -@borderWidth;
+@attachedWidth: ~"calc(100% + "-@attachedHorizontalOffset * 2~")";
+@attachedBoxShadow: none;
+@attachedBorder: @borderWidth solid @solidBorderColor;
+@attachedBottomBoxShadow:
+  @boxShadow,
+  @attachedBoxShadow
+;
+
+/* Inverted */
+@invertedBackground: @black;
+
+/* Floated */
+@floatedDistance: 1em;
+
+/* Basic */
+@basicBackground: none transparent;
+@basicBorder: none;
+@basicBoxShadow: none;
+@basicBorderRadius: 0px;
+
+/* Colors */
+@coloredBorderSize: 2px;
+
+/* Ordinality */
+@secondaryBackground: @darkWhite;
+@secondaryColor: @mutedTextColor;
+
+@tertiaryBackground:  @midWhite;
+@tertiaryColor: @mutedTextColor;
+
+@secondaryInvertedLightness: 0.2;
+@secondaryInvertedBackground:
+  lighten(@black, (@secondaryInvertedLightness * 100))
+  linear-gradient(
+    rgba(255, 255, 255, @secondaryInvertedLightness) 0%,
+    rgba(255, 255, 255, @secondaryInvertedLightness) 100%
+  )
+;
+@secondaryInvertedColor: @invertedMutedTextColor;
+
+@tertiaryInvertedLightness: 0.35;
+@tertiaryInvertedBackground:
+  lighten(@black, (@tertiaryInvertedLightness * 100))
+  linear-gradient(
+    rgba(255, 255, 255, @tertiaryInvertedLightness) 0%,
+    rgba(255, 255, 255, @tertiaryInvertedLightness) 100%
+  )
+;
+@tertiaryInvertedColor: @invertedMutedTextColor;
+
+/*******************************
+             Step
+*******************************/
+
+/*-------------------
+       Group
+--------------------*/
+
+@stepMargin: 1em 0em;
+@stepsBorderRadius: @defaultBorderRadius;
+@stepsBackground: '';
+@stepsBoxShadow: none;
+@stepsBorder: 1px solid @borderColor;
+
+/*-------------------
+      Element
+--------------------*/
+
+@verticalMargin: 0em;
+@horizontalMargin: 0em;
+
+@arrowSize: @relativeLarge;
+@verticalPadding: @relativeLarge;
+@horizontalPadding: 2em;
+
+@transition:
+  background-color @defaultDuration @defaultEasing,
+  opacity @defaultDuration @defaultEasing,
+  color @defaultDuration @defaultEasing,
+  box-shadow @defaultDuration @defaultEasing
+;
+@lineHeight: @relativeLarge;
+@alignItems: center;
+@justifyContent: center;
+@backgroundColor: @white;
+@background: @backgroundColor;
+@borderRadius: 0em;
+@borderWidth: 1px;
+@boxShadow: none;
+@border: none;
+@divider: @borderWidth solid @borderColor;
+
+/* Icon */
+@iconDistance: 1rem;
+@iconSize: 2.5em;
+@iconAlign: middle;
+
+/* Title */
+@titleFontFamily: @headerFont;
+@titleFontWeight: bold;
+@titleFontSize: @relativeLarge;
+@titleColor: @darkTextColor;
+
+/* Description */
+@descriptionDistance: 0.25em;
+@descriptionFontSize: @relativeSmall;
+@descriptionFontWeight: normal;
+@descriptionColor: @textColor;
+
+
+/* Arrow */
+@arrowBackgroundColor: @backgroundColor;
+@arrowTopOffset: 50%;
+@arrowRightOffset: 0%;
+@arrowBorderWidth: 0px @borderWidth @borderWidth 0px;
+
+@arrowDisplay: block;
+@lastArrowDisplay: none;
+
+@activeArrowDisplay: block;
+@activeLastArrowDisplay: none;
+
+/* Mobile */
+@mobileIconDistance: @iconDistance;
+
+/*-------------------
+       Types
+--------------------*/
+
+/* Vertical */
+@verticalDivider: @divider;
+@verticalArrowTopOffset: 50%;
+@verticalArrowRightOffset: 0%;
+@verticalArrowBorderWidth: 0px @borderWidth @borderWidth 0px;
+
+@verticalArrowDisplay: none;
+@verticalLastArrowDisplay: @verticalArrowDisplay;
+
+@verticalActiveArrowDisplay: block;
+@verticalActiveLastArrowDisplay: block;
+
+/*-------------------
+      Variations
+--------------------*/
+
+@attachedHorizontalOffset: -@borderWidth;
+@attachedVerticalOffset: 0;
+@attachedWidth: ~"calc(100% + "-@attachedHorizontalOffset * 2~")";
+
+@orderedFontFamily: inherit;
+@orderedFontWeight: bold;
+
+/*-------------------
+       States
+--------------------*/
+
+/* Completed */
+@completedColor: @positiveColor;
+
+/* Hover */
+@hoverBackground: @offWhite;
+@hoverColor: @hoveredTextColor;
+
+/* Down */
+@downBackground: @darkWhite;
+@downColor: @pressedTextColor;
+
+/* Active */
+@activeBackground: @darkWhite;
+@activeColor: @linkColor;
+@activeIconColor: @darkTextColor;
+
+/* Active + Hover */
+@activeHoverBackground: @lightGrey;
+@activeHoverColor: @textColor;
+
+
+/* Disabled */
+@disabledBackground: @background;
+@disabledColor: @disabledTextColor;
+
+/*******************************
+          Breadcrumb
+*******************************/
+
+/*-------------------
+     Breadcrumb
+--------------------*/
+
+@verticalMargin: 0em;
+@display: inline-block;
+@verticalAlign: middle;
+
+@dividerSpacing: @3px;
+@dividerOpacity: 0.7;
+@dividerColor: @lightTextColor;
+
+@dividerSize: @relativeSmall;
+@dividerVerticalAlign: baseline;
+
+@iconDividerSize: @relativeTiny;
+@iconDividerVerticalAlign: baseline;
+
+@sectionMargin: 0em;
+@sectionPadding: 0em;
+
+/* Coupling */
+@segmentPadding: @relativeMini @relativeMedium;
+
+/*-------------------
+       States
+--------------------*/
+
+@activeFontWeight: bold;
+/*******************************
+             Form
+*******************************/
+
+/*-------------------
+       Elements
+--------------------*/
+
+/* Form */
+@gutterWidth: 1em;
+@rowDistance: 1em;
+
+/* Text */
+@paragraphMargin: @rowDistance 0em;
+
+/* Field */
+@fieldMargin: 0em 0em @rowDistance;
+
+/* Fields */
+@fieldsMargin: 0em -(@gutterWidth / 2) @rowDistance;
+
+/* Form Label */
+@labelDistance: @4px;
+@labelMargin: 0em 0em @labelDistance 0em;
+@labelFontSize: @relativeSmall;
+@labelFontWeight: bold;
+@labelTextTransform: none;
+@labelColor: @textColor;
+
+/* Input */
+@inputFont: @pageFont;
+@inputWidth: 100%;
+@inputFontSize: 1em;
+@inputPadding: (@inputVerticalPadding + ((1em - @inputLineHeight) / 2)) @inputHorizontalPadding;
+@inputBorder: 1px solid @borderColor;
+@inputBorderRadius: @absoluteBorderRadius;
+@inputColor: @textColor;
+@inputTransition:
+  color @defaultDuration @defaultEasing,
+  border-color @defaultDuration @defaultEasing
+;
+@inputBoxShadow: 0em 0em 0em 0em transparent inset;
+
+/* Select */
+@selectBackground: @white;
+@selectBorderRadius: @inputBorderRadius;
+@selectBorder: @inputBorder;
+@selectPadding: 0.62em @inputHorizontalPadding;
+@selectBoxShadow: @inputBoxShadow;
+@selectTransition: @inputTransition;
+@selectColor: @inputColor;
+
+/* Text Area */
+@textAreaPadding: @inputVerticalPadding @inputHorizontalPadding;
+@textAreaHeight: 12em;
+@textAreaResize: vertical;
+@textAreaLineHeight: 1.2857;
+@textAreaMinHeight: 8em;
+@textAreaMaxHeight: 24em;
+@textAreaBackground: @inputBackground;
+@textAreaBorder: @inputBorder;
+@textAreaFontSize: @inputFontSize;
+@textAreaTransition: @inputTransition;
+
+/* Checkbox */
+@checkboxVerticalAlign: top;
+@checkboxLabelFontSize: 1em;
+@checkboxLabelTextTransform: @labelTextTransform;
+
+/* Inline Validation Prompt */
+@promptBackground: @white;
+@promptBorderColor: @formErrorBorder;
+@promptBorder: 1px solid @promptBorderColor;
+@promptTextColor: @formErrorColor;
+@inlinePromptMargin: -0.25em 0em -0.5em 0.5em;
+@inlinePromptBorderWidth: 1px;
+
+/*-------------------
+        States
+--------------------*/
+
+/* Focus */
+@inputFocusPointerSize: 0px;
+
+/* Input Focus */
+@inputFocusBackground: @inputBackground;
+@inputFocusBorderColor: @focusedFormBorderColor;
+@inputFocusColor: @selectedTextColor;
+@inputFocusBoxShadow: @inputFocusPointerSize 0em 0em 0em @selectedBorderColor inset;
+@inputFocusBorderRadius: @inputBorderRadius;
+
+/* Text Area Focus */
+@textAreaFocusBackground: @inputFocusBackground;
+@textAreaFocusBorderColor: @inputFocusBorderColor;
+@textAreaFocusColor: @inputFocusColor;
+@textAreaFocusBoxShadow: @inputFocusBoxShadow;
+@textAreaFocusBorderRadius: @inputFocusBorderRadius;
+
+/* Disabled */
+@disabledLabelOpacity: @disabledOpacity;
+
+/* Errored Input */
+@formErrorColor: @negativeTextColor;
+@formErrorBorder: @negativeBorderColor;
+@formErrorBackground: @negativeBackgroundColor;
+
+/* AutoFill */
+@inputAutoFillBackground: #FFFFF0;
+@inputAutoFillBorder: #E5DFA1;
+@inputAutoFillFocusBackground: @inputAutoFillBackground;
+@inputAutoFillFocusBorder: #D5C315;
+@inputAutoFillErrorBackground: #FFFAF0;
+@inputAutoFillErrorBorder: #E0B4B4;
+
+
+/* Input Error */
+@inputErrorBorderRadius: '';
+@inputErrorBoxShadow: none;
+
+/* Dropdown Error */
+@dropdownErrorHoverBackground: #FBE7E7;
+@dropdownErrorSelectedBackground: @dropdownErrorHoverBackground;
+@dropdownErrorActiveBackground: #FDCFCF;
+@dropdownErrorLabelBackground: #EACBCB;
+@dropdownErrorLabelColor: @errorTextColor;
+
+/* Focused Error */
+@inputErrorFocusBackground: @negativeBackgroundColor;
+@inputErrorFocusColor: @negativeTextColor;
+@inputErrorFocusBorder: @negativeBorderColor;
+@inputErrorFocusBoxShadow: none;
+
+/* Placeholder Error */
+@inputErrorPlaceholderColor: lighten(@formErrorColor, 40);
+@inputErrorPlaceholderFocusColor: lighten(@formErrorColor, 30);
+
+/* Loading Dimmer */
+@loaderDimmerColor: rgba(255, 255, 255, 0.8);
+@loaderDimmerZIndex: 100;
+
+/* Loading Spinner */
+@loaderSize: 3em;
+@loaderLineZIndex: 101;
+
+/*-------------------
+        Types
+--------------------*/
+
+/* Required */
+@requiredContent: '*';
+@requiredColor: @negativeColor;
+@requiredVerticalOffset: -0.2em;
+@requiredDistance: 0.2em;
+@requiredMargin: @requiredVerticalOffset 0em 0em @requiredDistance;
+
+/* Inverted */
+@invertedInputBackground: @inputBackground;
+@invertedInputBorderColor: @whiteBorderColor;
+@invertedInputBoxShadow: @inputBoxShadow;
+@invertedInputColor: @inputColor;
+@invertedLabelColor: @invertedTextColor;
+@invertedInputBoxShadow: none;
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Grouped Fields */
+@groupedMargin: @fieldMargin;
+@groupedFieldMargin: 0.5em 0em;
+
+@groupedLabelDistance: @labelDistance;
+@groupedLabelColor: @labelColor;
+@groupedLabelMargin: @labelMargin;
+@groupedLabelFontSize: @labelFontSize;
+@groupedLabelFontWeight: @labelFontWeight;
+@groupedLabelTextTransform: @labelTextTransform;
+
+
+/* Inline */
+@inlineInputSize: @relativeMedium;
+
+@inlineLabelDistance: @relativeTiny;
+@inlineLabelColor: @labelColor;
+@inlineLabelFontSize: @labelFontSize;
+@inlineLabelFontWeight: @labelFontWeight;
+@inlineLabelTextTransform: @labelTextTransform;
+
+@groupedInlineLabelMargin: 0.035714em 1em 0em 0em;
+
+/*-------------------
+       Groups
+--------------------*/
+
+@inlineFieldsMargin: 0em 1em 0em 0em;
+
+/*******************************
+             Grid
+*******************************/
+
+/* Inherited From Site */
+
+// @mobileBreakpoint
+// @tabletBreakpoint
+// @computerBreakpoint
+// @largeMonitorBreakpoint
+// @widescreenMonitorBreakpoint
+
+/*******************************
+            Grid
+*******************************/
+
+@minWidth: 320px;
+
+@gutterWidth: 2rem;
+@rowSpacing: 2rem;
+
+@tableWidth: ~"calc(100% + "@gutterWidth~")";
+@columnMaxImageWidth: 100%;
+
+@consecutiveGridDistance: (@rowSpacing / 2);
+
+/*******************************
+           Variations
+*******************************/
+
+/*--------------
+     Relaxed
+---------------*/
+
+@relaxedGutterWidth: 3rem;
+@veryRelaxedGutterWidth: 5rem;
+
+/*--------------
+     Divided
+---------------*/
+
+@dividedBorder: -1px 0px 0px 0px @borderColor;
+@verticallyDividedBorder: 0px -1px 0px 0px @borderColor;
+
+@dividedInvertedBorder: -1px 0px 0px 0px @whiteBorderColor;
+@verticallyDividedInvertedBorder: 0px -1px 0px 0px @whiteBorderColor;
+
+/*--------------
+    Celled
+---------------*/
+
+@celledMargin: 1em 0em;
+@celledWidth: 1px;
+@celledBorderColor: @solidBorderColor;
+
+@celledPadding: 1em;
+@celledRelaxedPadding: 1.5em;
+@celledVeryRelaxedPadding: 2em;
+
+@celledGridDivider: 0px 0px 0px @celledWidth @celledBorderColor;
+@celledRowDivider: 0px (-@celledWidth) 0px 0px @celledBorderColor;
+@celledColumnDivider: (-@celledWidth) 0px 0px 0px @celledBorderColor;
+
+
+/*--------------
+    Stackable
+---------------*/
+
+@stackableRowSpacing: @rowSpacing;
+@stackableGutter: @gutterWidth;
+@stackableMobileBorder: 1px solid @borderColor;
+@stackableInvertedMobileBorder: 1px solid @whiteBorderColor;
+
+
+/*******************************
+             Legacy
+*******************************/
+
+/*--------------
+     Page
+---------------*/
+
+/* Legacy (DO NOT USE)
+ */
+@mobileWidth: auto;
+@mobileMargin: 0em;
+@mobileGutter: 0em;
+
+@tabletWidth: auto;
+@tabletMargin: 0em;
+@tabletGutter: 2em;
+
+@computerWidth: auto;
+@computerMargin: 0em;
+@computerGutter: 3%;
+
+@largeMonitorWidth: auto;
+@largeMonitorMargin: 0em;
+@largeMonitorGutter: 15%;
+
+@widescreenMonitorWidth: auto;
+@widescreenMargin: 0em;
+@widescreenMonitorGutter: 23%;
+/*******************************
+             Menu
+*******************************/
+
+/*-------------------
+      Collection
+--------------------*/
+
+/* Menu */
+@verticalMargin: @medium;
+@horizontalMargin: 0em;
+@margin: @verticalMargin @horizontalMargin;
+@background: #FFFFFF;
+@fontFamily: @pageFont;
+@itemBackground: none;
+@fontWeight: normal;
+@borderWidth: 1px;
+@border: @borderWidth solid @borderColor;
+@boxShadow: @subtleShadow;
+@borderRadius: @defaultBorderRadius;
+@minHeight: (@itemVerticalPadding * 2) + 1em;
+
+/* Menu Item */
+@itemVerticalPadding: @relativeSmall;
+@itemHorizontalPadding: @relativeLarge;
+@itemTextTransform: none;
+@itemTransition:
+  background @defaultDuration @defaultEasing,
+  box-shadow @defaultDuration @defaultEasing,
+  color @defaultDuration @defaultEasing
+;
+@itemFontWeight: normal;
+@itemTextColor: @textColor;
+
+/* Divider */
+@dividerSize: 1px;
+@dividerBackground: @internalBorderColor;
+
+/* Sub Menu */
+@subMenuDistance: 0.5em;
+@subMenuMargin: @subMenuDistance -@itemHorizontalPadding 0em;
+@subMenuFontSize: @relativeTiny;
+@subMenuTextColor: rgba(0, 0, 0, 0.5);
+
+@subMenuIndent: 0em;
+@subMenuHorizontalPadding: (@itemHorizontalPadding / @tinySize) + @subMenuIndent;
+@subMenuVerticalPadding: 0.5em;
+
+/* Text Item */
+@textLineHeight: 1.3;
+
+/*--------------
+    Elements
+---------------*/
+
+/* Icon */
+@iconFloat: none;
+@iconMargin: 0em @relative5px 0em 0em;
+@iconOpacity: 0.9;
+
+/* Dropdown Icon */
+@dropdownIconFloat: right;
+@dropdownIconDistance: 1em;
+
+/* Header */
+@headerBackground: '';
+@headerWeight: bold;
+@headerTextTransform: normal;
+
+/* Vertical Icon */
+@verticalIconFloat: right;
+@verticalIconMargin: 0em 0em 0em 0.5em;
+
+/* Vertical Header */
+@verticalHeaderMargin: 0em 0em 0.5em;
+@verticalHeaderFontSize: @relativeMedium;
+@verticalHeaderFontWeight: bold;
+
+/* Pointing Arrow */
+@arrowSize: @relative8px;
+@arrowBorderWidth: 1px;
+@arrowBorder: @arrowBorderWidth solid @solidBorderColor;
+@arrowTransition: background @defaultDuration @defaultEasing;
+@arrowZIndex: 2;
+
+@arrowHoverColor: #F2F2F2;
+@arrowActiveColor: @arrowHoverColor;
+@arrowActiveHoverColor: @arrowActiveColor;
+
+@arrowVerticalHoverColor: @arrowHoverColor;
+@arrowVerticalActiveColor: @arrowActiveColor;
+@arrowVerticalSubMenuColor: @white;
+
+/*--------------
+    Couplings
+---------------*/
+
+/* Button */
+@buttonSize: @relativeMedium;
+@buttonOffset: 0em;
+@buttonMargin: -0.5em 0em;
+@buttonVerticalPadding: @relativeMini;
+
+/* Input */
+@inputSize: @relativeMedium;
+@inputVerticalMargin: -0.5em;
+@inputOffset: 0em;
+@inputVerticalPadding: @relative8px;
+
+/* Image */
+@imageMargin: -0.3em 0em;
+@imageWidth: 2.5em;
+@verticalImageWidth: auto;
+
+/* Label */
+@labelOffset: -0.15em;
+@labelBackground: #999999;
+@labelTextColor: @white;
+
+@labelTextMargin: 1em;
+@labelVerticalPadding: 0.3em;
+@labelHorizontalPadding: @relativeMini;
+
+@labelAndIconFloat: none;
+@labelAndIconMargin: 0em 0.5em 0em 0em;
+
+/* Dropdown in Menu */
+@dropdownMenuBoxShadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+
+@dropdownBackground: #FFFFFF;
+@dropdownMenuDistance: 0em;
+@dropdownMenuBorderRadius: @borderRadius;
+
+@dropdownItemFontSize: @relativeMedium;
+@dropdownItemPadding: @relativeMini @relativeLarge;
+@dropdownItemBackground: transparent;
+@dropdownItemColor: @textColor;
+@dropdownItemTextTransform: none;
+@dropdownItemFontWeight: normal;
+@dropdownItemBoxShadow: none;
+@dropdownItemTransition: none;
+
+@dropdownItemIconFloat: none;
+@dropdownItemIconFontSize: @relativeMedium;
+@dropdownItemIconMargin: 0em 0.75em 0em 0em;
+
+@dropdownHoveredItemBackground: @transparentBlack;
+@dropdownHoveredItemColor: @selectedTextColor;
+
+/* Dropdown Variations */
+@dropdownVerticalMenuBoxShadow: 0 1px 3px 0px rgba(0, 0, 0, 0.08);
+@secondaryDropdownMenuDistance: @relative5px;
+@pointingDropdownMenuDistance: 0.75em;
+@invertedSelectionDropdownColor: @invertedTextColor;
+
+/*--------------
+     States
+---------------*/
+
+/* Hovered Item */
+@hoverItemBackground: @subtleTransparentBlack;
+@hoverItemTextColor: @selectedTextColor;
+
+/* Pressed Item */
+@pressedItemBackground: @subtleTransparentBlack;
+@pressedItemTextColor: @hoverItemTextColor;
+
+
+/* Active Item */
+@activeItemBackground: @transparentBlack;
+@activeItemTextColor: @selectedTextColor;
+@activeItemFontWeight: normal;
+@activeIconOpacity: 1;
+@activeItemBoxShadow: none;
+
+/* Active Hovered Item */
+@activeHoverItemBackground: @transparentBlack;
+@activeHoverItemColor: @selectedTextColor;
+
+/* Selected Dropdown */
+@dropdownSelectedItemBackground: @transparentBlack;
+@dropdownSelectedItemColor: @selectedTextColor;
+
+/* Active Dropdown */
+@dropdownActiveItemBackground: @subtleTransparentBlack;
+@dropdownActiveItemColor: @selectedTextColor;
+@dropdownActiveItemFontWeight: bold;
+
+/* Active Sub Menu */
+@subMenuActiveBackground: transparent;
+@subMenuActiveTextColor: @activeItemTextColor;
+@subMenuActiveFontWeight: bold;
+
+
+/*--------------
+     Types
+---------------*/
+
+/* Vertical */
+@verticalBoxShadow: @boxShadow;
+@verticalPointerWidth: 2px;
+@verticalBackground: #FFFFFF;
+@verticalItemBackground: none;
+@verticalDividerBackground: @dividerBackground;
+
+@verticalActiveBoxShadow: none;
+
+
+/* Secondary */
+@secondaryBackground: none;
+@secondaryMargin: 0em -@secondaryItemSpacing;
+@secondaryItemBackground: none;
+@secondaryItemSpacing: @relative5px;
+@secondaryItemMargin: 0em @secondaryItemSpacing;
+@secondaryItemVerticalPadding: @relativeMini;
+@secondaryItemHorizontalPadding: @relativeSmall;
+@secondaryItemPadding: @relativeMini @relativeSmall;
+@secondaryItemBorderRadius: @defaultBorderRadius;
+@secondaryItemTransition: color @defaultDuration @defaultEasing;
+@secondaryItemColor: @unselectedTextColor;
+
+@secondaryHoverItemBackground: @transparentBlack;
+@secondaryHoverItemColor: @selectedTextColor;
+
+@secondaryActiveItemBackground: @transparentBlack;
+@secondaryActiveItemColor: @selectedTextColor;
+@secondaryActiveHoverItemBackground: @transparentBlack;
+@secondaryActiveHoverItemColor: @selectedTextColor;
+
+@secondaryActiveHoveredItemBackground: @transparentBlack;
+@secondaryActiveHoveredItemColor: @selectedTextColor;
+
+@secondaryHeaderBackground: none transparent;
+@secondaryHeaderBorder: none;
+
+@secondaryItemVerticalSpacing: @secondaryItemSpacing;
+@secondaryVerticalItemMargin: 0em 0em @secondaryItemVerticalSpacing;
+@secondaryVerticalItemBorderRadius: @defaultBorderRadius;
+
+@secondaryMenuSubMenuMargin: 0em -@secondaryItemHorizontalPadding;
+@secondaryMenuSubMenuItemMargin: 0em;
+@secondarySubMenuHorizontalPadding: (@itemHorizontalPadding / @tinySize) + @subMenuIndent;
+@secondaryMenuSubMenuItemPadding: @relative7px @secondarySubMenuHorizontalPadding;
+
+/* Pointing */
+@secondaryPointingBorderWidth: 2px;
+@secondaryPointingBorderColor: @borderColor;
+@secondaryPointingItemVerticalPadding: @relativeTiny;
+@secondaryPointingItemHorizontalPadding: @relativeLarge;
+
+@secondaryPointingHoverTextColor: @textColor;
+
+@secondaryPointingActiveBorderColor: @black;
+@secondaryPointingActiveTextColor: @selectedTextColor;
+@secondaryPointingActiveFontWeight: bold;
+
+@secondaryPointingActiveDropdownBorderColor: transparent;
+
+@secondaryPointingActiveHoverBorderColor: @secondaryPointingActiveBorderColor;
+@secondaryPointingActiveHoverTextColor: @secondaryPointingActiveTextColor;
+
+@secondaryPointingHeaderColor: @darkTextColor;
+@secondaryVerticalPointingItemMargin: 0em -@secondaryPointingBorderWidth 0em 0em;
+
+
+/* Inverted Secondary */
+@secondaryInvertedColor: @invertedLightTextColor;
+
+@secondaryInvertedHoverBackground: @transparentWhite;
+@secondaryInvertedHoverColor: @invertedSelectedTextColor;
+
+@secondaryInvertedActiveBackground: @strongTransparentWhite;
+@secondaryInvertedActiveColor: @invertedSelectedTextColor;
+
+/* Inverted Pointing */
+@secondaryPointingInvertedBorderColor: @whiteBorderColor;
+@secondaryPointingInvertedItemTextColor: @invertedTextColor;
+@secondaryPointingInvertedItemHeaderColor: @white;
+@secondaryPointingInvertedItemHoverTextColor: @selectedTextColor;
+@secondaryPointingInvertedActiveBorderColor: @white;
+@secondaryPointingInvertedActiveColor: @invertedSelectedTextColor;
+
+
+/* Tiered */
+@tieredActiveItemBackground: #FCFCFC;
+@tieredActiveMenuBackground: #FCFCFC;
+
+@tieredSubMenuTextTransform: normal;
+@tieredSubMenuFontWeight: normal;
+
+@tieredSubMenuColor: @lightTextColor;
+
+@tieredSubMenuHoverBackground: none transparent;
+@tieredSubMenuHoverColor: @hoveredTextColor;
+
+@tieredSubMenuActiveBackground: none transparent;
+@tieredSubMenuActiveColor: @selectedTextColor;
+
+@tieredInvertedSubMenuBackground: rgba(0, 0, 0, 0.2);
+
+
+/* Icon */
+@iconMenuTextAlign: center;
+@iconMenuItemColor: @black;
+@iconMenuInvertedItemColor: @white;
+
+
+/* Tabular */
+@tabularBorderColor: @solidBorderColor;
+@tabularBackgroundColor: transparent;
+@tabularBackground: none @tabularBackgroundColor;
+@tabularBorderWidth: 1px;
+@tabularOppositeBorderWidth: @tabularBorderWidth + 1px;
+@tabularVerticalPadding: @itemVerticalPadding;
+@tabularHorizontalPadding: @relativeHuge;
+@tabularBorderRadius: @defaultBorderRadius;
+@tabularTextColor: @itemTextColor;
+
+@tabularHoveredTextColor: @hoveredTextColor;
+
+@tabularVerticalBackground: none @tabularBackgroundColor;
+
+@tabularFluidOffset: 1px;
+@tabularFluidWidth: ~"calc(100% + "(@tabularFluidOffset * 2)~")";
+
+@tabularActiveBackground: none @white;
+@tabularActiveColor: @selectedTextColor;
+@tabularActiveBoxShadow: none;
+@tabularActiveWeight: bold;
+
+
+
+/* Pagination */
+@paginationMinWidth: 3em;
+@paginationActiveBackground: @transparentBlack;
+@paginationActiveTextColor: @selectedTextColor;
+
+/* Labeled Icon */
+@labeledIconItemHorizontalPadding: @relativeMassive;
+@labeledIconSize: @relativeMassive;
+@labeledIconMinWidth: 6em;
+@labeledIconTextMargin: 0.5rem;
+
+
+/* Text */
+@textMenuItemSpacing: @relative7px;
+@textMenuMargin: @relativeMedium -(@textMenuItemSpacing);
+@textMenuItemColor: @mutedTextColor;
+@textMenuItemFontWeight: normal;
+@textMenuItemMargin: 0em 0em;
+@textMenuItemPadding: @relative5px @textMenuItemSpacing;
+@textMenuItemTransition: opacity @defaultDuration @defaultEasing;
+
+@textMenuSubMenuMargin: 0em;
+@textMenuSubMenuItemMargin: 0em;
+@textMenuSubMenuItemPadding: @relative7px 0em;
+
+@textMenuActiveItemFontWeight: normal;
+@textMenuActiveItemColor: @selectedTextColor;
+
+@textMenuHeaderSize: @relativeSmall;
+@textMenuHeaderColor: @darkTextColor;
+@textMenuHeaderFontWeight: bold;
+@textMenuHeaderTextTransform: uppercase;
+
+@textVerticalMenuMargin: @relativeMedium 0em;
+@textVerticalMenuHeaderMargin: @relative8px 0em @relative10px;
+@textVerticalMenuItemMargin: @relative8px 0em;
+
+@textVerticalMenuIconFloat: none;
+@textVerticalMenuIconMargin: @iconMargin;
+
+
+/*--------------
+   Variations
+---------------*/
+
+/* Inverted */
+@invertedBackground: @black;
+@invertedBoxShadow: none;
+@invertedBorder: 0px solid transparent;
+@invertedHeaderBackground: transparent;
+
+@invertedItemBackground: transparent;
+@invertedItemTextColor: @invertedTextColor;
+
+/* Inverted Sub Menu */
+@invertedSubMenuBackground: transparent;
+@invertedSubMenuColor: @invertedUnselectedTextColor;
+
+/* Inverted Hover */
+@invertedHoverBackground: @transparentWhite;
+@invertedHoverColor: @invertedSelectedTextColor;
+
+@invertedSubMenuHoverBackground: transparent;
+@invertedSubMenuHoverColor: @invertedSelectedTextColor;
+
+/* Pressed */
+@invertedMenuPressedBackground: @transparentWhite;
+@invertedMenuPressedColor: @invertedSelectedTextColor;
+
+/* Inverted Active */
+@invertedActiveBackground: @strongTransparentWhite;
+@invertedActiveColor: @invertedSelectedTextColor;
+@invertedArrowActiveColor: #3D3E3F;
+
+/* Inverted Active Hover  */
+@invertedActiveHoverBackground: @invertedActiveBackground;
+@invertedActiveHoverColor: @white;
+@invertedArrowActiveHoverColor: @invertedArrowActiveColor;
+
+@invertedSubMenuActiveBackground: transparent;
+@invertedSubMenuActiveColor: @white;
+
+/* Inverted Menu Divider */
+@invertedDividerBackground: rgba(255, 255, 255, 0.08);
+@invertedVerticalDividerBackground: @invertedDividerBackground;
+
+/* Inverted Colored */
+@invertedColoredDividerBackground: @dividerBackground;
+@invertedColoredActiveBackground: @strongTransparentBlack;
+
+/* Fixed */
+@fixedPrecedingGridMargin: 2.75rem;
+
+/* Floated */
+@floatedDistance: 0.5rem;
+
+/* Attached */
+@attachedTopOffset: 0px;
+@attachedBottomOffset: 0px;
+@attachedHorizontalOffset: -@borderWidth;
+@attachedWidth: ~"calc(100% + "-@attachedHorizontalOffset * 2~")";
+@attachedBoxShadow: none;
+@attachedBorder: @borderWidth solid @solidBorderColor;
+@attachedBottomBoxShadow:
+  @boxShadow,
+  @attachedBoxShadow
+;
+
+/* Resize large sizes */
+@mini: @11px;
+@tiny: @12px;
+@small: @13px;
+@large: @15px;
+@huge: @16px;
+@big: @17px;
+@massive: @18px;
+
+/* Sizes */
+@miniWidth: 9rem;
+@tinyWidth: 11rem;
+@smallWidth: 13rem;
+@mediumWidth: 15rem;
+@largeWidth: 18rem;
+@hugeWidth: 20rem;
+@bigWidth: 22rem;
+@massiveWidth: 25rem;
+
+/*******************************
+            Message
+*******************************/
+
+// @textColor
+
+/*-------------------
+       Elements
+--------------------*/
+
+@verticalMargin: 1em;
+@verticalPadding: 1em;
+@horizontalPadding: 1.5em;
+@background: #F8F8F9;
+@lineHeightOffset: ((@lineHeight - 1em) / 2);
+
+@borderRadius: @defaultBorderRadius;
+@borderWidth: 1px;
+@borderShadow: 0px 0px 0px @borderWidth @strongBorderColor inset;
+@shadowShadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+@boxShadow:
+  @borderShadow,
+  @shadowShadow
+;
+
+@transition:
+  opacity @defaultDuration @defaultEasing,
+  color @defaultDuration @defaultEasing,
+  background @defaultDuration @defaultEasing,
+  box-shadow @defaultDuration @defaultEasing
+;
+
+/* Header */
+@headerFontSize: @relativeLarge;
+@headerFontWeight: bold;
+@headerDisplay: block;
+@headerDistance: 0rem;
+@headerMargin: -@headerLineHeightOffset 0em @headerDistance 0em;
+@headerParagraphDistance: 0.25em;
+
+/* Paragraph */
+@messageTextOpacity: 0.85;
+@messageParagraphMargin: 0.75em;
+
+/* List */
+@listOpacity: 0.85;
+@listStylePosition: inside;
+@listMargin: 0.5em;
+@listItemIndent: 1em;
+@listItemMargin: 0.3em;
+
+/* Icon */
+@iconDistance: 0.6em;
+
+/* Close Icon */
+@closeTopDistance: @verticalPadding - @lineHeightOffset;
+@closeRightDistance: 0.5em;
+@closeOpacity: 0.7;
+@closeTransition: opacity @defaultDuration @defaultEasing;
+
+
+/*-------------------
+        Types
+--------------------*/
+
+/* Icon Message */
+@iconSize: 3em;
+@iconOpacity: 0.8;
+@iconContentDistance: 0rem;
+@iconVerticalAlign: middle;
+
+/* Attached */
+@attachedXOffset: -1px;
+@attachedYOffset: -1px;
+@attachedBoxShadow: 0em 0em 0em @borderWidth @borderColor inset;
+@attachedBottomBoxShadow:
+  @attachedBoxShadow,
+  @subtleShadow
+;
+
+/* Floating */
+@floatingBoxShadow:
+  @borderShadow,
+  @floatingShadow
+;
+
+/* Colors */
+@redBoxShadow:
+  0px 0px 0px @borderWidth @redBorderColor inset,
+  @shadowShadow
+;
+@orangeBoxShadow:
+  0px 0px 0px @borderWidth @orangeBorderColor inset,
+  @shadowShadow
+;
+@yellowBoxShadow:
+  0px 0px 0px @borderWidth @yellowBorderColor inset,
+  @shadowShadow
+;
+@oliveBoxShadow:
+  0px 0px 0px @borderWidth @oliveBorderColor inset,
+  @shadowShadow
+;
+@greenBoxShadow:
+  0px 0px 0px @borderWidth @greenBorderColor inset,
+  @shadowShadow
+;
+@tealBoxShadow:
+  0px 0px 0px @borderWidth @tealBorderColor inset,
+  @shadowShadow
+;
+@blueBoxShadow:
+  0px 0px 0px @borderWidth @blueBorderColor inset,
+  @shadowShadow
+;
+@violetBoxShadow:
+  0px 0px 0px @borderWidth @violetBorderColor inset,
+  @shadowShadow
+;
+@purpleBoxShadow:
+  0px 0px 0px @borderWidth @purpleBorderColor inset,
+  @shadowShadow
+;
+@pinkBoxShadow:
+  0px 0px 0px @borderWidth @pinkBorderColor inset,
+  @shadowShadow
+;
+@brownBoxShadow:
+  0px 0px 0px @borderWidth @brownBorderColor inset,
+  @shadowShadow
+;
+
+/* Warning / Positive / Negative / Info */
+@positiveBoxShadow:
+  0px 0px 0px @borderWidth @positiveBorderColor inset,
+  @shadowShadow
+;
+@negativeBoxShadow:
+  0px 0px 0px @borderWidth @negativeBorderColor inset,
+  @shadowShadow
+;
+@infoBoxShadow:
+  0px 0px 0px @borderWidth @infoBorderColor inset,
+  @shadowShadow
+;
+@warningBoxShadow:
+  0px 0px 0px @borderWidth @warningBorderColor inset,
+  @shadowShadow
+;
+@errorBoxShadow:
+  0px 0px 0px @borderWidth @errorBorderColor inset,
+  @shadowShadow
+;
+@successBoxShadow:
+  0px 0px 0px @borderWidth @successBorderColor inset,
+  @shadowShadow
+;
+
+/*******************************
+             Table
+*******************************/
+
+/*-------------------
+       Element
+--------------------*/
+
+@verticalMargin: 1em;
+@horizontalMargin: 0em;
+@margin: @verticalMargin @horizontalMargin;
+@borderCollapse: separate;
+@borderSpacing: 0px;
+@borderRadius: @defaultBorderRadius;
+@transition:
+  background @defaultDuration @defaultEasing,
+  color @defaultDuration @defaultEasing
+;
+@background: @white;
+@color: @textColor;
+@borderWidth: 1px;
+@border: @borderWidth solid @borderColor;
+@boxShadow: none;
+@textAlign: left;
+
+/*--------------
+     Parts
+---------------*/
+
+/* Table Row */
+@rowBorder: 1px solid @internalBorderColor;
+
+/* Table Cell */
+@cellVerticalPadding: @relativeMini;
+@cellHorizontalPadding: @relativeMini;
+@cellVerticalAlign: inherit;
+@cellTextAlign: inherit;
+@cellBorder: 1px solid @internalBorderColor;
+
+/* Table Header */
+@headerBorder: 1px solid @internalBorderColor;
+@headerDivider: none;
+@headerBackground: @offWhite;
+@headerAlign: inherit;
+@headerVerticalAlign: inherit;
+@headerColor: @textColor;
+@headerVerticalPadding: @relativeSmall;
+@headerHorizontalPadding: @cellHorizontalPadding;
+@headerFontStyle: none;
+@headerFontWeight: bold;
+@headerTextTransform: none;
+@headerBoxShadow: none;
+
+/* Table Footer */
+@footerBoxShadow: none;
+@footerBorder: 1px solid @borderColor;
+@footerDivider: none;
+@footerBackground: @offWhite;
+@footerAlign: inherit;
+@footerVerticalAlign: middle;
+@footerColor: @textColor;
+@footerVerticalPadding: @cellVerticalPadding;
+@footerHorizontalPadding: @cellHorizontalPadding;
+@footerFontStyle: normal;
+@footerFontWeight: normal;
+@footerTextTransform: none;
+
+/* Responsive Size */
+@responsiveHeaderDisplay: block;
+@responsiveFooterDisplay: block;
+@responsiveRowVerticalPadding: 1em;
+@responsiveRowBoxShadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.1) inset !important;
+@responsiveCellVerticalPadding: 0.25em;
+@responsiveCellHorizontalPadding: 0.75em;
+@responsiveCellBoxShadow: none !important;
+
+/*-------------------
+       Types
+--------------------*/
+
+/* Definition */
+@definitionPageBackground: @white;
+
+@definitionHeaderBackground: transparent;
+@definitionHeaderColor: @unselectedTextColor;
+@definitionHeaderFontWeight: normal;
+
+@definitionFooterBackground: @definitionHeaderBackground;
+@definitionFooterColor: @definitionHeaderColor;
+@definitionFooterFontWeight: @definitionHeaderFontWeight;
+
+@definitionColumnBackground: @subtleTransparentBlack;
+@definitionColumnFontWeight: bold;
+@definitionColumnColor: @selectedTextColor;
+@definitionColumnFontSize: @relativeMedium;
+@definitionColumnTextTransform: '';
+@definitionColumnBoxShadow: '';
+@definitionColumnTextAlign: '';
+@definitionColumnHorizontalPadding: '';
+
+
+/*--------------
+    Couplings
+---------------*/
+
+@iconVerticalAlign: baseline;
+
+/*--------------
+     States
+---------------*/
+
+@stateMarkerWidth: 0px;
+
+/* Positive */
+@positiveColor: @positiveTextColor;
+@positiveBoxShadow: @stateMarkerWidth 0px 0px @positiveBorderColor inset;
+@positiveBackgroundHover: darken(@positiveBackgroundColor, 3);
+@positiveColorHover: darken(@positiveColor, 3);
+
+/* Negative */
+@negativeColor: @negativeTextColor;
+@negativeBoxShadow: @stateMarkerWidth 0px 0px @negativeBorderColor inset;
+@negativeBackgroundHover: darken(@negativeBackgroundColor, 3);
+@negativeColorHover: darken(@negativeColor, 3);
+
+/* Error */
+@errorColor: @errorTextColor;
+@errorBoxShadow: @stateMarkerWidth 0px 0px @errorBorderColor inset;
+@errorBackgroundHover: darken(@errorBackgroundColor, 3);
+@errorColorHover: darken(@errorColor, 3);
+
+/* Warning */
+@warningColor: @warningTextColor;
+@warningBoxShadow: @stateMarkerWidth 0px 0px @warningBorderColor inset;
+@warningBackgroundHover: darken(@warningBackgroundColor, 3);
+@warningColorHover: darken(@warningColor, 3);
+
+/* Active */
+@activeColor: @textColor;
+@activeBackgroundColor: #E0E0E0;
+@activeBoxShadow: @stateMarkerWidth 0px 0px @activeColor inset;
+
+@activeBackgroundHover: #EFEFEF;
+@activeColorHover: @selectedTextColor;
+
+/*--------------
+     Types
+---------------*/
+
+/* Attached */
+@attachedTopOffset: 0px;
+@attachedBottomOffset: 0px;
+@attachedHorizontalOffset: -@borderWidth;
+@attachedWidth: ~"calc(100% + "-@attachedHorizontalOffset * 2~")";
+@attachedBoxShadow: none;
+@attachedBorder: @borderWidth solid @solidBorderColor;
+@attachedBottomBoxShadow:
+  @boxShadow,
+  @attachedBoxShadow
+;
+
+/* Striped */
+@stripedBackground: rgba(0, 0, 50, 0.02);
+@invertedStripedBackground: rgba(255, 255, 255, 0.05);
+
+/* Selectable */
+@selectableBackground: @transparentBlack;
+@selectableTextColor: @selectedTextColor;
+@selectableInvertedBackground: @transparentWhite;
+@selectableInvertedTextColor: @invertedSelectedTextColor;
+
+/* Sortable */
+@sortableBackground: '';
+@sortableColor: @textColor;
+
+@sortableBorder: 1px solid @borderColor;
+@sortableIconWidth: auto;
+@sortableIconDistance: 0.5em;
+@sortableIconOpacity: 0.8;
+@sortableIconFont: 'Icons';
+@sortableIconAscending: '\f0d8';
+@sortableIconDescending: '\f0d7';
+@sortableDisabledColor: @disabledTextColor;
+
+@sortableHoverBackground: @transparentBlack;
+@sortableHoverColor: @hoveredTextColor;
+
+@sortableActiveBackground: @transparentBlack;
+@sortableActiveColor: @selectedTextColor;
+
+@sortableActiveHoverBackground: @transparentBlack;
+@sortableActiveHoverColor: @selectedTextColor;
+
+@sortableInvertedBorderColor: transparent;
+@sortableInvertedHoverBackground: @transparentWhite @subtleGradient;
+@sortableInvertedHoverColor: @invertedHoveredTextColor;
+@sortableInvertedActiveBackground: @strongTransparentWhite @subtleGradient;
+@sortableInvertedActiveColor: @invertedSelectedTextColor;
+
+/* Colors */
+@coloredBorderSize: 0.2em;
+@coloredBorderRadius: 0em 0em @borderRadius @borderRadius;
+
+/* Inverted */
+@invertedBackground: #333333;
+@invertedBorder: none;
+@invertedCellBorderColor: @whiteBorderColor;
+@invertedCellColor: @invertedTextColor;
+
+@invertedHeaderBackground: @veryStrongTransparentBlack;
+@invertedHeaderColor: @invertedTextColor;
+@invertedHeaderBorderColor: @invertedCellBorderColor;
+
+@invertedDefinitionColumnBackground: @subtleTransparentWhite;
+@invertedDefinitionColumnColor: @invertedSelectedTextColor;
+@invertedDefinitionColumnFontWeight: bold;
+
+/* Basic */
+@basicTableBackground: transparent;
+@basicTableBorder: @borderWidth solid @borderColor;
+@basicBoxShadow: none;
+
+@basicTableHeaderBackground: transparent;
+@basicTableCellBackground: transparent;
+@basicTableHeaderDivider: none;
+@basicTableCellBorder: 1px solid rgba(0, 0, 0, 0.1);
+@basicTableCellPadding: '';
+@basicTableStripedBackground: @transparentBlack;
+
+/* Padded */
+@paddedVerticalPadding: 1em;
+@paddedHorizontalPadding: 1em;
+@veryPaddedVerticalPadding: 1.5em;
+@veryPaddedHorizontalPadding: 1.5em;
+
+/* Compact */
+@compactVerticalPadding: 0.5em;
+@compactHorizontalPadding: 0.7em;
+@veryCompactVerticalPadding: 0.4em;
+@veryCompactHorizontalPadding: 0.6em;
+
+
+/* Sizes */
+@small: 0.9em;
+@medium: 1em;
+@large: 1.1em;
+
+/*******************************
+          Advertisement
+*******************************/
+
+@margin: 1em 0em;
+@overflow: hidden;
+
+@testBackground: @lightBlack;
+@testColor: @white;
+@testFontWeight: bold;
+@testText: 'Ad';
+@testFontSize: @relativeMedium;
+@testMobileFontSize: @relativeTiny;
+/*******************************
+             Card
+*******************************/
+
+/*-------------------
+         View
+--------------------*/
+
+/* Shadow */
+@shadowDistance: 1px;
+@shadowBoxShadow: 0px @shadowDistance 3px 0px @solidBorderColor;
+
+/* Card */
+@fontFamily: @pageFont;
+@display: flex;
+@background: @white;
+@borderRadius: @defaultBorderRadius;
+@margin: 1em 0em;
+@minHeight: 0px;
+@padding: 0em;
+@width: 290px;
+@borderWidth: 1px;
+@borderShadow: 0px 0px 0px @borderWidth @solidBorderColor;
+@boxShadow:
+  @shadowBoxShadow,
+  @borderShadow
+;
+@border: none;
+@zIndex: '';
+@transition:
+  box-shadow @defaultDuration @defaultEasing,
+  transform @defaultDuration @defaultEasing
+;
+
+/* Card Group */
+@horizontalSpacing: 1em;
+@rowSpacing: 1.75em;
+
+@groupMargin: -(@rowSpacing / 2) -(@horizontalSpacing / 2);
+@groupDisplay: flex;
+
+@groupCardFloat: none;
+@groupCardDisplay: flex;
+@groupCardMargin: (@rowSpacing / 2) (@horizontalSpacing / 2);
+
+/* Consecutive Cards */
+@consecutiveGroupDistance: (@rowSpacing / 2);
+
+/*-------------------
+       Content
+--------------------*/
+
+
+/* Image */
+@imageBackground: @transparentBlack;
+@imagePadding: 0em;
+@imageBorder: none;
+@imageBoxShadow: none;
+@imageBorder: none;
+
+/* Content */
+@contentDivider: @borderWidth solid @internalBorderColor;
+@contentMargin: 0em;
+@contentBackground: none;
+@contentPadding: 1em 1em;
+@contentFontSize: 1em;
+@contentBorderRadius: 0em;
+@contentBoxShadow: none;
+@contentBorder: none;
+
+
+/* Header */
+@headerMargin: '';
+@headerFontWeight: bold;
+@headerFontSize: @relativeBig;
+@headerLineHeightOffset: -(@lineHeight - 1em) / 2;
+@headerColor: @darkTextColor;
+
+/* Metadata */
+@metaFontSize: @relativeMedium;
+@metaSpacing: 0.3em;
+@metaColor: @lightTextColor;
+
+/* Icons */
+@actionOpacity: 0.75;
+@actionHoverOpacity: 1;
+@actionTransition: color @defaultDuration @defaultEasing;
+
+@starColor: #FFB70A;
+@starActiveColor: #FFE623;
+
+@likeColor: #FF2733;
+@likeActiveColor: #FF2733;
+
+/* Links */
+@contentLinkColor: '';
+@contentLinkHoverColor: '';
+@contentLinkTransition: color @defaultDuration @defaultEasing;
+
+@headerLinkColor: @headerColor;
+@headerLinkHoverColor: @linkHoverColor;
+
+@metaLinkColor: @lightTextColor;
+@metaLinkHoverColor: @textColor;
+
+/* Description */
+@descriptionDistance: 0.5em;
+@descriptionColor: rgba(0, 0, 0, 0.68);
+
+/* Content Image */
+@contentImageWidth: '';
+@contentImageVerticalAlign: middle;
+
+/* Avatar Image */
+@avatarSize: 2em;
+@avatarBorderRadius: @circularRadius;
+
+/* Paragraph */
+@paragraphDistance: 0.5em;
+
+/* Dimmer */
+@dimmerZIndex: 10;
+@dimmerColor: '';
+
+/* Additional Content */
+@extraDivider: 1px solid rgba(0, 0, 0, 0.05);
+@extraBackground: none;
+@extraPosition: static;
+@extraWidth: auto;
+@extraTop: 0em;
+@extraLeft: 0em;
+@extraMargin: 0em 0em;
+@extraPadding: 0.75em 1em;
+@extraBoxShadow: none;
+@extraColor: @lightTextColor;
+@extraTransition: color @defaultDuration @defaultEasing;
+
+/* Extra Links */
+@extraLinkColor: @unselectedTextColor;
+@extraLinkHoverColor: @linkHoverColor;
+
+/* Buttons */
+@buttonMargin: 0px -@borderWidth;
+@buttonWidth: ~"calc(100% + "(@borderWidth * 2)~")";
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Link */
+@linkHoverBackground: @white;
+@linkHoverBorder: @border;
+@linkHoverZIndex: 5;
+@linkHoverRaiseDistance: 3px;
+@linkHoverTransform: translateY(-@linkHoverRaiseDistance);
+
+@shadowHoverBoxShadow: 0px @shadowDistance @linkHoverRaiseDistance 0px @solidSelectedBorderColor;
+@linkHoverBoxShadow:
+  @shadowHoverBoxShadow,
+  @borderShadow
+;
+
+
+/* Raised */
+@raisedShadow:
+  @borderShadow,
+  @floatingShadow
+;
+@raisedShadowHover:
+  @borderShadow,
+  @floatingShadowHover
+;
+
+/* Card Count */
+@wideCardSpacing: 1em;
+@cardSpacing: 0.75em;
+@smallCardSpacing: 0.5em;
+
+@oneCardSpacing: 0em;
+@twoCardSpacing: @wideCardSpacing;
+@threeCardSpacing: @wideCardSpacing;
+@fourCardSpacing: @cardSpacing;
+@fiveCardSpacing: @cardSpacing;
+@sixCardSpacing: @cardSpacing;
+@sevenCardSpacing: @smallCardSpacing;
+@eightCardSpacing: @smallCardSpacing;
+@nineCardSpacing: @smallCardSpacing;
+@tenCardSpacing: @smallCardSpacing;
+
+@oneCard: @oneColumn;
+@oneCardOffset: 0em;
+@twoCard: ~"calc("@twoColumn~" - "(@twoCardSpacing * 2)~")";
+@twoCardOffset: -@twoCardSpacing;
+@threeCard: ~"calc("@threeColumn~" - "(@threeCardSpacing * 2)~")";
+@threeCardOffset: -@threeCardSpacing;
+@fourCard: ~"calc("@fourColumn~" - "(@fourCardSpacing * 2)~")";
+@fourCardOffset: -@fourCardSpacing;
+@fiveCard: ~"calc("@fiveColumn~" - "(@fiveCardSpacing * 2)~")";
+@fiveCardOffset: -@fiveCardSpacing;
+@sixCard: ~"calc("@sixColumn~" - "(@sixCardSpacing * 2)~")";
+@sixCardOffset: -@sixCardSpacing;
+@sevenCard: ~"calc("@sevenColumn~" - "(@sevenCardSpacing * 2)~")";
+@sevenCardOffset: -@sevenCardSpacing;
+@eightCard: ~"calc("@eightColumn~" - "(@sevenCardSpacing * 2)~")";
+@eightCardOffset: -@sevenCardSpacing;
+@nineCard: ~"calc("@nineColumn~" - "(@nineCardSpacing * 2)~")";
+@nineCardOffset: -@nineCardSpacing;
+@tenCard: ~"calc("@tenColumn~" - "(@tenCardSpacing * 2)~")";
+@tenCardOffset: -@tenCardSpacing;
+
+/* Stackable */
+@stackableRowSpacing: 1em;
+@stackableCardSpacing: 1em;
+@stackableMargin: ~"calc("@oneColumn~" - "(@stackableCardSpacing * 2)~")";
+
+/* Sizes */
+@medium: 1em;
+
+/* Colored */
+@coloredShadowDistance: 2px;
+
+/*******************************
+            Comments
+*******************************/
+
+
+/*-------------------
+       View
+--------------------*/
+
+@maxWidth: 650px;
+@margin: 1.5em 0em;
+
+/*-------------------
+      Elements
+--------------------*/
+
+/* Comment */
+@commentBackground: none;
+@commentMargin: 0.5em 0em 0em;
+@commentPadding: 0.5em 0em 0em;
+@commentDivider: none;
+@commentBorder: none;
+@commentLineHeight: 1.2;
+@firstCommentMargin: 0em;
+@firstCommentPadding: 0em;
+
+/* Nested Comment */
+@nestedCommentsMargin: 0em 0em 0.5em 0.5em;
+@nestedCommentsPadding: 1em 0em 1em 1em;
+
+@nestedCommentDivider: none;
+@nestedCommentBorder: none;
+@nestedCommentBackground: none;
+
+/* Avatar */
+@avatarDisplay: block;
+@avatarFloat: left;
+@avatarWidth: 2.5em;
+@avatarHeight: auto;
+@avatarSpacing: 1em;
+@avatarMargin: (@commentLineHeight - 1em) 0em 0em;
+@avatarBorderRadius: 0.25rem;
+
+/* Content */
+@contentMargin: @avatarWidth + @avatarSpacing;
+
+/* Author */
+@authorFontSize: 1em;
+@authorColor: @textColor;
+@authorHoverColor: @linkHoverColor;
+@authorFontWeight: bold;
+
+/* Metadata */
+@metadataDisplay: inline-block;
+@metadataFontSize: 0.875em;
+@metadataSpacing: 0.5em;
+@metadataContentSpacing: 0.5em;
+@metadataColor: @lightTextColor;
+
+/* Text */
+@textFontSize: 1em;
+@textMargin: 0.25em 0em 0.5em;
+@textWordWrap: break-word;
+@textLineHeight: 1.3;
+
+/* Actions */
+@actionFontSize: 0.875em;
+@actionContentDistance: 0.75em;
+@actionLinkColor: @unselectedTextColor;
+@actionLinkHoverColor: @hoveredTextColor;
+
+/* Reply */
+@replyDistance: 1em;
+@replyHeight: 12em;
+@replyFontSize: 1em;
+
+@commentReplyDistance: @replyDistance;
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Threaded */
+@threadedCommentMargin: -1.5em 0 -1em  (@avatarWidth / 2);
+@threadedCommentPadding: 3em 0em 2em 2.25em;
+@threadedCommentBoxShadow: -1px 0px 0px @borderColor;
+
+
+/* Minimal */
+@minimalActionPosition: absolute;
+@minimalActionTop: 0px;
+@minimalActionRight: 0px;
+@minimalActionLeft: auto;
+
+@minimalTransitionDelay: 0.1s;
+@minimalEasing: @defaultEasing;
+@minimalDuration: 0.2s;
+@minimalTransition: opacity @minimalDuration @minimalEasing;
+
+/* Sizes */
+@small: 0.9em;
+@medium: 1em;
+@large: 1.1em;
+@huge: 1.2em;
+/*******************************
+             Feed
+*******************************/
+
+/*-------------------
+        Feed
+--------------------*/
+
+@margin: 1em 0em;
+
+/*-------------------
+      Elements
+--------------------*/
+
+/* Event */
+@eventWidth: 100%;
+@eventPadding: @3px 0em;
+@eventMargin: 0em;
+@eventBackground: none;
+@eventDivider: none;
+
+/* Event Label */
+@labelWidth: 2.5em;
+@labelHeight: auto;
+@labelAlignSelf: stretch;
+@labelTextAlign: left;
+
+/* Icon Label */
+@iconLabelOpacity: 1;
+@iconLabelWidth: 100%;
+@iconLabelSize: 1.5em;
+@iconLabelPadding: 0.25em;
+@iconLabelBackground: none;
+@iconLabelBorderRadius: none;
+@iconLabelBorder: none;
+@iconLabelColor: rgba(0, 0, 0, 0.6);
+
+/* Image Label */
+@imageLabelWidth: 100%;
+@imageLabelHeight: auto;
+@imageLabelBorderRadius: @circularRadius;
+
+/* Content w/ Label */
+@labeledContentMargin: 0.5em 0em @relative5px @relativeLarge;
+@lastLabeledContentPadding: 0em;
+
+/* Content */
+@contentAlignSelf: stretch;
+@contentTextAlign: left;
+@contentWordWrap: break-word;
+
+/* Date */
+@dateMargin: -0.5rem 0em 0em;
+@datePadding: 0em;
+@dateColor: @lightTextColor;
+@dateFontSize: @relativeMedium;
+@dateFontWeight: normal;
+@dateFontStyle: normal;
+
+/* Summary */
+@summaryMargin: 0em;
+@summaryFontSize: @relativeMedium;
+@summaryFontWeight: bold;
+@summaryColor: @textColor;
+
+/* Summary Image */
+@summaryImageWidth: auto;
+@summaryImageHeight: 10em;
+@summaryImageMargin: -0.25em 0.25em 0em 0em;
+@summaryImageVerticalAlign: middle;
+@summaryImageBorderRadius: 0.25em;
+
+/* Summary Date */
+@summaryDateDisplay: inline-block;
+@summaryDateFloat: none;
+@summaryDateMargin: 0em 0em 0em 0.5em;
+@summaryDatePadding: 0em;
+@summaryDateFontSize: @relativeTiny;
+@summaryDateFontWeight: @dateFontWeight;
+@summaryDateFontStyle: @dateFontStyle;
+@summaryDateColor: @dateColor;
+
+/* User */
+@userFontWeight: bold;
+@userDistance: 0em;
+@userImageWidth: @summaryImageWidth;
+@userImageHeight: @summaryImageHeight;
+@userImageMargin: @summaryImageMargin;
+@userImageVerticalAlign: @summaryImageVerticalAlign;
+
+/* Extra Summary Data */
+@extraMargin: 0.5em 0em 0em;
+@extraBackground: none;
+@extraPadding: 0em;
+@extraColor: @textColor;
+
+/* Extra Images */
+@extraImageMargin: 0em 0.25em 0em 0em;
+@extraImageWidth: 6em;
+
+/* Extra Text */
+@extraTextPadding: 0em;
+@extraTextPointer: none;
+@extraTextFontSize: @relativeMedium;
+@extraTextLineHeight: @lineHeight;
+@extraTextMaxWidth: 500px;
+
+/* Metadata Group */
+@metadataDisplay: inline-block;
+@metadataFontSize: @relativeTiny;
+@metadataMargin: 0.5em 0em 0em;
+@metadataBackground: none;
+@metadataBorder: none;
+@metadataBorderRadius: 0;
+@metadataBoxShadow: none;
+@metadataPadding: 0em;
+@metadataColor: rgba(0, 0, 0, 0.6);
+
+@metadataElementSpacing: 0.75em;
+
+/* Like */
+@likeColor: '';
+@likeHoverColor: #FF2733;
+@likeActiveColor: #EF404A;
+@likeTransition: 0.2s color ease;
+
+/* Metadata Divider */
+@metadataDivider: '';
+@metadataDividerColor: rgba(0, 0, 0, 0.2);
+@metadataDividerOffset: -1em;
+
+@metadataActionCursor: pointer;
+@metadataActionOpacity: 1;
+@metadataActionColor: rgba(0, 0, 0, 0.5);
+@metadataActionTransition: color @defaultDuration @defaultEasing;
+
+@metadataActionHoverColor: @selectedTextColor;
+
+/*-------------------
+      Variations
+--------------------*/
+
+/*******************************
+             Item
+*******************************/
+
+/*-------------------
+         View
+--------------------*/
+
+/* Group */
+@groupMargin: 1.5em 0em;
+
+/* Item */
+@display: flex;
+@background: transparent;
+@borderRadius: 0rem;
+@minHeight: 0px;
+@padding: 0em;
+@width: 100%;
+@boxShadow: none;
+@border: none;
+@zIndex: '';
+@transition: box-shadow @defaultDuration @defaultEasing;
+
+/* Responsive */
+@itemSpacing: 1em;
+@imageWidth: 175px;
+@contentImageDistance: 1.5em;
+
+@tabletItemSpacing: 1em;
+@tabletImageWidth: 150px;
+@tabletContentImageDistance: 1em;
+
+@mobileItemSpacing: 2em;
+@mobileImageWidth: auto;
+@mobileImageMaxHeight: 250px;
+@mobileContentImageDistance: 1.5em;
+
+/*-------------------
+       Content
+--------------------*/
+
+/* Image */
+@imageDisplay: block;
+@imageFloat: none;
+@imageMaxHeight: '';
+@imageVerticalAlign: top;
+@imageMargin: 0em;
+@imagePadding: 0em;
+@imageBorder: none;
+@imageBorderRadius: 0.125rem;
+@imageBoxShadow: none;
+@imageBorder: none;
+
+/* Content */
+@contentDisplay: block;
+@contentVerticalAlign: top;
+
+@contentWidth: auto;
+@contentOffset: 0em;
+@contentBackground: none;
+@contentMargin: 0em;
+@contentPadding: 0em;
+@contentFontSize: 1em;
+@contentBorder: none;
+@contentBorderRadius: 0em;
+@contentBoxShadow: none;
+
+/* Header */
+@headerMargin: -@lineHeightOffset 0em 0em;
+@headerFontWeight: bold;
+@headerFontSize: @relativeBig;
+@headerColor: @darkTextColor;
+
+/* Metadata */
+@metaMargin: 0.5em 0em 0.5em;
+@metaFontSize: 1em;
+@metaLineHeight: 1em;
+@metaSpacing: 0.3em;
+@metaColor: rgba(0, 0, 0, 0.6);
+
+/* Icons */
+@actionOpacity: 0.75;
+@actionHoverOpacity: 1;
+@actionTransition: color @defaultDuration @defaultEasing;
+
+/* Actions */
+@favoriteColor: #FFB70A;
+@favoriteActiveColor: #FFE623;
+@likeColor: #FF2733;
+@likeActiveColor: #FF2733;
+
+/* Links */
+@headerLinkColor: @headerColor;
+@headerLinkHoverColor: @linkHoverColor;
+@metaLinkColor: @lightTextColor;
+@metaLinkHoverColor: @textColor;
+@contentLinkColor: '';
+@contentLinkHoverColor: '';
+@contentLinkTransition: color @defaultDuration @defaultEasing;
+
+
+/* Description */
+@descriptionDistance: 0.6em;
+@descriptionMaxWidth: auto;
+@descriptionFontSize: 1em;
+@descriptionLineHeight: @lineHeight;
+@descriptionColor: @textColor;
+
+/* Content Image */
+@contentImageWidth: '';
+@contentImageVerticalAlign: middle;
+
+/* Avatar Image */
+@avatarSize: @contentImageWidth;
+@avatarBorderRadius: @circularRadius;
+
+/* Paragraph */
+@paragraphDistance: 0.5em;
+
+/* Additional Content */
+@extraDivider: none;
+@extraHorizontalSpacing: 0.5rem;
+@extraRowSpacing: 0.5rem;
+
+@extraBackground: none;
+@extraDisplay: block;
+@extraPosition: relative;
+@extraMargin: (1rem - @extraRowSpacing) 0em 0em;
+@extraTop: 0em;
+@extraLeft: 0em;
+@extraWidth: 100%;
+@extraPadding: 0em 0em 0em;
+@extraBoxShadow: none;
+@extraColor: @lightTextColor;
+@extraTransition: color @defaultDuration @defaultEasing;
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Relaxed */
+@relaxedItemSpacing: 1.5em;
+@veryRelaxedItemSpacing: 2em;
+
+/* Divided */
+@dividedBorder: 1px solid @borderColor;
+@dividedMargin: 0em;
+@dividedPadding: 1em 0em;
+
+@dividedFirstLastMargin: 0em;
+@dividedFirstLastPadding: 0em;
+
+/* Sizes */
+@medium: 1em;
+/*******************************
+           Statistic
+*******************************/
+
+/*-------------------
+         View
+--------------------*/
+
+@margin: 1em 0em;
+@textAlign: center;
+@maxWidth: auto;
+
+/* Group */
+@horizontalSpacing: 1.5em;
+@rowSpacing: 2em;
+@groupMargin: 1em -@horizontalSpacing -@rowSpacing;
+
+/* Group Element */
+@elementMargin: 0em @horizontalSpacing @rowSpacing;
+@elementMaxWidth: @maxWidth;
+
+/*-------------------
+       Content
+--------------------*/
+
+/* Value */
+@valueFont: @pageFont;
+@valueFontWeight: normal;
+@valueLineHeight: 1em;
+@valueColor: @black;
+@valueTextTransform: uppercase;
+
+/* Label */
+@labelSize: @relativeMedium;
+@topLabelDistance: 0rem;
+@bottomLabelDistance: 0rem;
+@labelFont: @headerFont;
+@labelFontWeight: bold;
+@labelColor: @textColor;
+@labelLineHeight: @relativeLarge;
+@labelTextTransform: uppercase;
+
+/* Text */
+@textValueLineHeight: 1em;
+@textValueMinHeight: 2em;
+@textValueFontWeight: bold;
+
+/* Label Image */
+@imageHeight: 3rem;
+@imageVerticalAlign: baseline;
+
+/*-------------------
+      Types
+--------------------*/
+
+@horizontalGroupElementMargin: 1em 0em;
+@horizontalLabelDistance: 0.75em;
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Floated */
+@leftFloatedMargin: 0em 2em 1em 0em;
+@rightFloatedMargin: 0em 0em 1em 2em;
+
+/* Inverted */
+@invertedValueColor: @white;
+@invertedLabelColor: @invertedTextColor;
+
+/* Item Width */
+@itemGroupMargin: 0em 0em -@rowSpacing;
+@itemMargin: 0em 0em @rowSpacing;
+
+/* Size */
+@miniTextValueSize: 1rem;
+@miniValueSize: 1.5rem;
+@miniHorizontalValueSize: 1.5rem;
+
+@tinyTextValueSize: 1rem;
+@tinyValueSize: 2rem;
+@tinyHorizontalValueSize: 2rem;
+
+@smallTextValueSize: 1rem;
+@smallValueSize: 3rem;
+@smallHorizontalValueSize: 2rem;
+
+@textValueSize: 2rem;
+@valueSize: 4rem;
+@horizontalValueSize: 3rem;
+
+@largeTextValueSize: 2.5rem;
+@largeValueSize: 5rem;
+@largeHorizontalValueSize: 4rem;
+
+@hugeTextValueSize: 2.5rem;
+@hugeValueSize: 6rem;
+@hugeHorizontalValueSize: 5rem;
+/*******************************
+           Accordion
+*******************************/
+
+@boxShadow: none;
+
+/* Title */
+@titleFont: @headerFont;
+@titlePadding: 0.5em 0em;
+@titleFontSize: 1em;
+@titleColor: @textColor;
+
+/* Icon */
+@iconOpacity: 1;
+@iconFontSize: 1em;
+@iconFloat: none;
+@iconWidth: 1.25em;
+@iconHeight: 1em;
+@iconDisplay: inline-block;
+@iconMargin: 0em 0.25rem 0em 0rem;
+@iconPadding: 0em;
+@iconTransition:
+  transform @defaultDuration @defaultEasing,
+  opacity @defaultDuration @defaultEasing
+;
+@iconVerticalAlign: baseline;
+@iconTransform: none;
+
+/* Child Accordion */
+@childAccordionMargin: 1em 0em 0em;
+@childAccordionPadding: 0em;
+
+/* Content */
+@contentMargin: '';
+@contentPadding: 0.5em 0em 1em;
+
+/*-------------------
+       Coupling
+--------------------*/
+
+@menuTitlePadding: 0em;
+@menuIconFloat: right;
+@menuIconMargin: @lineHeightOffset 0em 0em 1em;
+@menuIconTransform: rotate(180deg);
+
+
+/*-------------------
+       States
+--------------------*/
+
+@activeIconTransform: rotate(90deg);
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Styled */
+@styledWidth: 600px;
+@styledBackground: @white;
+@styledBorderRadius: @defaultBorderRadius;
+@styledBoxShadow:
+  @subtleShadow,
+  0px 0px 0px 1px @borderColor
+;
+
+/* Content */
+@styledContentMargin: 0em;
+@styledContentPadding: 0.5em 1em 1.5em;
+
+/* Child Content */
+@styledChildContentMargin: 0em;
+@styledChildContentPadding: @styledContentPadding;
+
+/* Styled Title */
+@styledTitleMargin: 0em;
+@styledTitlePadding: 0.75em 1em;
+@styledTitleFontWeight: bold;
+@styledTitleColor: @unselectedTextColor;
+@styledTitleTransition: background-color @defaultDuration @defaultEasing;
+@styledTitleBorder: 1px solid @borderColor;
+@styledTitleTransition:
+  background @defaultDuration @defaultEasing,
+  color @defaultDuration @defaultEasing
+;
+
+/* Styled Title States */
+@styledTitleHoverBackground: transparent;
+@styledTitleHoverColor: @textColor;
+@styledActiveTitleBackground: transparent;
+@styledActiveTitleColor: @selectedTextColor;
+
+/* Styled Child Title States */
+@styledHoverChildTitleBackground: @styledTitleHoverBackground;
+@styledHoverChildTitleColor: @styledTitleHoverColor;
+@styledActiveChildTitleBackground: @styledActiveTitleBackground;
+@styledActiveChildTitleColor: @styledActiveTitleColor;
+
+/* Inverted */
+@invertedTitleColor: @invertedTextColor;
+
+
+/*******************************
+            Checkbox
+*******************************/
+
+@checkboxSize: 17px;
+@checkboxColor: @textColor;
+@checkboxLineHeight: @checkboxSize;
+
+
+/* Label */
+@labelDistance: 1.85714em; /* 26px @ 14/em */
+
+/* Checkbox */
+@checkboxBackground: @white;
+@checkboxBorder: 1px solid @solidBorderColor;
+@checkboxBorderRadius: @3px;
+@checkboxTransition:
+  border @defaultDuration @defaultEasing,
+  opacity @defaultDuration @defaultEasing,
+  transform @defaultDuration @defaultEasing,
+  box-shadow @defaultDuration @defaultEasing
+;
+
+/* Checkmark */
+@checkboxCheckFontSize: 14px;
+@checkboxCheckTop: 0px;
+@checkboxCheckLeft: 0px;
+@checkboxCheckSize: @checkboxSize;
+
+/* Label */
+@labelFontSize: @relativeMedium;
+@labelColor: @textColor;
+@labelTransition: color @defaultDuration @defaultEasing;
+
+/*-------------------
+        States
+--------------------*/
+
+/* Hover */
+@checkboxHoverBackground: @checkboxBackground;
+@checkboxHoverBorderColor: @selectedBorderColor;
+@labelHoverColor: @hoveredTextColor;
+
+/* Pressed */
+@checkboxPressedBackground: @offWhite;
+@checkboxPressedBorderColor: @selectedBorderColor;
+@checkboxPressedColor: @selectedTextColor;
+@labelPressedColor: @selectedTextColor;
+
+/* Focus */
+@checkboxFocusBackground: @white;
+@checkboxFocusBorderColor: @focusedFormMutedBorderColor;
+@checkboxFocusCheckColor: @selectedTextColor;
+@labelFocusColor: @selectedTextColor;
+
+/* Active */
+@labelActiveColor: @selectedTextColor;
+@checkboxActiveBackground: @white;
+@checkboxActiveBorderColor: @selectedBorderColor;
+@checkboxActiveCheckColor: @selectedTextColor;
+@checkboxActiveCheckOpacity: 1;
+
+/* Active Focus */
+@checkboxActiveFocusBackground: @white;
+@checkboxActiveFocusBorderColor: @checkboxFocusBorderColor;
+@checkboxActiveFocusCheckColor: @selectedTextColor;
+
+/* Indeterminate */
+@checkboxIndeterminateBackground: @checkboxActiveBackground;
+@checkboxIndeterminateBorderColor: @checkboxActiveBorderColor;
+@checkboxIndeterminateCheckOpacity: 1;
+@checkboxIndeterminateCheckColor: @checkboxActiveCheckColor;
+
+/* Disabled */
+@disabledCheckboxOpacity: 0.5;
+@disabledCheckboxLabelColor: rgba(0, 0, 0, 1);
+
+/*-------------------
+        Types
+--------------------*/
+
+/* Radio */
+/* Uses px to avoid rounding issues with circles */
+
+@radioSize: 15px;
+@radioTop: 1px;
+@radioLeft: 0px;
+@radioLabelDistance: @labelDistance;
+
+@bulletTop: 1px;
+@bulletLeft: 0px;
+@bulletScale: (7 / 15); /* 7px as unitless value from radio size */
+@bulletColor: @textColor;
+@bulletRadius: @circularRadius;
+
+@radioFocusBackground: @checkboxFocusBackground;
+@radioFocusBulletColor: @checkboxFocusCheckColor;
+
+@radioActiveBackground: @checkboxActiveBackground;
+@radioActiveBulletColor: @checkboxActiveCheckColor;
+
+@radioActiveFocusBackground: @checkboxActiveFocusBackground;
+@radioActiveFocusBulletColor: @checkboxActiveFocusCheckColor;
+
+/* Slider & Toggle Handle */
+@handleBackground: @white @subtleGradient;
+@handleBoxShadow:
+  @subtleShadow,
+  0px 0px 0px 1px @borderColor inset
+;
+
+/* Slider */
+@sliderHandleSize: 1.5rem;
+@sliderLineWidth: 3.5rem;
+@sliderTransitionDuration: 0.3s;
+
+@sliderHandleOffset: (1rem - @sliderHandleSize) / 2;
+@sliderHandleTransition: left @sliderTransitionDuration @defaultEasing;
+
+@sliderWidth: @sliderLineWidth;
+@sliderHeight: (@sliderHandleSize + @sliderHandleOffset);
+
+@sliderLineHeight: @3px;
+@sliderLineVerticalOffset: 0.4rem;
+@sliderLineColor: @transparentBlack;
+@sliderLineRadius: @circularRadius;
+@sliderLineTransition: background @sliderTransitionDuration @defaultEasing;
+
+@sliderTravelDistance: @sliderLineWidth - @sliderHandleSize;
+
+@sliderLabelDistance: @sliderLineWidth + 1rem;
+@sliderOffLabelColor: @unselectedTextColor;
+
+@sliderLabelLineHeight: 1rem;
+
+/* Slider States */
+@sliderHoverLaneBackground: @veryStrongTransparentBlack;
+@sliderHoverLabelColor: @hoveredTextColor;
+
+@sliderOnLineColor: @lightBlack;
+@sliderOnLabelColor: @selectedTextColor;
+
+@sliderOnFocusLineColor: @lightBlackFocus;
+@sliderOnFocusLabelColor: @sliderOnLabelColor;
+
+
+
+/* Toggle */
+@toggleLaneWidth: 3.5rem;
+@toggleHandleSize: 1.5rem;
+@toggleTransitionDuration: 0.2s;
+
+@toggleWidth: @toggleLaneWidth;
+@toggleHeight: @toggleHandleSize;
+
+@toggleHandleRadius: @circularRadius;
+@toggleHandleOffset: 0rem;
+@toggleHandleTransition:
+  background @sliderTransitionDuration @defaultEasing,
+  left @sliderTransitionDuration @defaultEasing
+;
+
+@toggleLaneBackground: @transparentBlack;
+@toggleLaneHeight: @toggleHandleSize;
+@toggleLaneVerticalOffset: 0rem;
+@toggleOffOffset: -0.05rem;
+@toggleOnOffset: (@toggleLaneWidth - @toggleHandleSize) + 0.15rem;
+
+@toggleLabelDistance: @toggleLaneWidth + 1rem;
+@toggleLabelLineHeight: 1.5rem;
+@toggleLabelOffset: 0.15em;
+
+
+@toggleFocusColor: @veryStrongTransparentBlack;
+@toggleHoverColor: @toggleFocusColor;
+
+@toggleOffLabelColor: @checkboxColor;
+
+@toggleOnLabelColor: @selectedTextColor;
+@toggleOnLaneColor: @primaryColor;
+
+@toggleOnFocusLaneColor: @primaryColorFocus;
+@toggleOnFocusLabelColor: @toggleOnLabelColor;
+
+
+
+/*-------------------
+      Variations
+--------------------*/
+
+/*******************************
+            Dimmer
+*******************************/
+
+@dimmablePosition: relative;
+@dimmerPosition: absolute;
+
+@backgroundColor: rgba(0, 0, 0 , 0.85);
+@lineHeight: 1;
+@perspective: 2000px;
+
+@duration: 0.5s;
+@transition:
+  background-color @duration linear
+;
+@zIndex: 1000;
+@textAlign: center;
+@verticalAlign: middle;
+@textColor: @white;
+@overflow: hidden;
+
+@blurredStartFilter: ~"blur(0px) grayscale(0)";
+@blurredEndFilter: ~"blur(5px) grayscale(0.7)";
+@blurredTransition: 800ms filter @defaultEasing;
+
+@blurredBackgroundColor: rgba(0, 0, 0, 0.6);
+@blurredInvertedBackgroundColor: rgba(255, 255, 255, 0.6);
+
+/* Hidden (Default) */
+@hiddenOpacity: 0;
+
+/* Content */
+@contentDisplay: table;
+@contentChildDisplay: table-cell;
+
+/* Visible */
+@visibleOpacity: 1;
+
+/*-------------------
+        Types
+--------------------*/
+
+/* Page Dimmer*/
+@transformStyle: '';
+@pageDimmerPosition: fixed;
+
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Inverted */
+@invertedBackgroundColor: rgba(255, 255, 255, 0.85);
+@invertedTextColor: @textColor;
+
+/* Simple */
+@simpleZIndex: 1;
+@simpleStartBackgroundColor: rgba(0, 0, 0, 0);
+@simpleEndBackgroundColor: @backgroundColor;
+@simpleInvertedStartBackgroundColor: rgba(255, 255, 255, 0);
+@simpleInvertedEndBackgroundColor: @invertedBackgroundColor;
+/*******************************
+            Dropdown
+*******************************/
+
+/*-------------------
+       Element
+--------------------*/
+
+@transition:
+  box-shadow @defaultDuration @defaultEasing,
+  width @defaultDuration @defaultEasing
+;
+@borderRadius: @defaultBorderRadius;
+
+@raisedShadow: 0px 2px 3px 0px @borderColor;
+
+/*-------------------
+       Content
+--------------------*/
+
+/* Icon */
+@dropdownIconSize: @relative12px;
+@dropdownIconMargin: 0em 0em 0em 1em;
+
+/* Current Text */
+@textTransition: none;
+
+/* Menu */
+@menuBackground: #FFFFFF;
+@menuMargin: 0em;
+@menuPadding: 0em 0em;
+@menuTop: 100%;
+@menuTextAlign: left;
+
+@menuBorderWidth: 1px;
+@menuBorderColor: @borderColor;
+@menuBorder: @menuBorderWidth solid @menuBorderColor;
+@menuBoxShadow: @raisedShadow;
+@menuBorderRadius: @borderRadius;
+@menuTransition: opacity @defaultDuration @defaultEasing;
+@menuMinWidth: ~"calc(100% + "(@menuBorderWidth * 2)~")";
+@menuZIndex: 11;
+
+/* Text */
+@textLineHeight: 1em;
+@textLineHeightOffset: (@textLineHeight - 1em);
+@textCursorSpacing: 1px;
+
+/* Menu Item */
+@itemFontSize: @medium;
+@itemTextAlign: left;
+@itemBorder: none;
+@itemHeight: auto;
+@itemDivider: none;
+@itemColor: @textColor;
+@itemVerticalPadding: @mini;
+@itemHorizontalPadding: @large;
+@itemPadding: @itemVerticalPadding @itemHorizontalPadding;
+@itemFontWeight: normal;
+@itemLineHeight: 1em;
+@itemLineHeightOffset: (@itemLineHeight - 1em);
+@itemTextTransform: none;
+@itemBoxShadow: none;
+
+/* Sub Menu */
+@subMenuTop: 0%;
+@subMenuLeft: 100%;
+@subMenuRight: auto;
+@subMenuDistanceAway: -0.5em;
+@subMenuMargin: 0em 0em 0em @subMenuDistanceAway;
+@subMenuBorderRadius: @borderRadius;
+@subMenuZIndex: 21;
+
+/* Menu Header */
+@menuHeaderColor: @darkTextColor;
+@menuHeaderFontSize: @relative11px;
+@menuHeaderFontWeight: bold;
+@menuHeaderTextTransform: uppercase;
+@menuHeaderMargin: 1rem 0rem 0.75rem;
+@menuHeaderPadding: 0em @itemHorizontalPadding;
+
+/* Menu Divider */
+@menuDividerMargin: 0.5em 0em;
+@menuDividerColor: @internalBorderColor;
+@menuDividerSize: 1px;
+@menuDividerBorder: @menuDividerSize solid @menuDividerColor;
+
+/* Menu Input */
+@menuInputMargin: @large @mini;
+@menuInputMinWidth: 10rem;
+@menuInputVerticalPadding: 0.5em;
+@menuInputHorizontalPadding: @inputHorizontalPadding;
+@menuInputPadding: @menuInputVerticalPadding @menuInputHorizontalPadding;
+
+/* Menu Image */
+@menuImageMaxHeight: 2em;
+
+/* Item Sub-Element */
+@itemElementFloat: none;
+@itemElementDistance: @mini;
+
+/* Sub-Menu Dropdown Icon */
+@itemDropdownIconDistance: 1em;
+@itemDropdownIconFloat: right;
+@itemDropdownIconMargin: @itemLineHeightOffset 0em 0em @itemDropdownIconDistance;
+
+/* Description */
+@itemDescriptionFloat: right;
+@itemDescriptionMargin: 0em 0em 0em 1em;
+@itemDescriptionColor: @lightTextColor;
+
+/* Message */
+@messagePadding: @selectionItemPadding;
+@messageFontWeight: normal;
+@messageColor: @unselectedTextColor;
+
+/* Floated Content */
+@floatedDistance: 1em;
+
+/*-------------------
+        Types
+--------------------*/
+
+/*------------
+   Selection
+--------------*/
+
+@selectionMinWidth: 14em;
+@selectionVerticalPadding: @inputVerticalPadding;
+@selectionHorizontalPadding: @inputHorizontalPadding;
+@selectionBorderEmWidth:  @relative1px;
+@selectionMinHeight: @inputLineHeight + (@selectionVerticalPadding * 2) - @selectionBorderEmWidth;
+@selectionBackground: @inputBackground;
+@selectionDisplay: inline-block;
+@selectionIconDistance: @inputHorizontalPadding + @glyphWidth;
+@selectionPadding: @selectionVerticalPadding @selectionIconDistance @selectionVerticalPadding @selectionHorizontalPadding;
+@selectionZIndex: 10;
+
+@selectionItemDivider: 1px solid @solidInternalBorderColor;
+@selectionMessagePadding: @selectionItemPadding;
+
+/* <select> */
+@selectBorder: 1px solid @borderColor;
+@selectPadding: 0.5em;
+@selectVisibility: visible;
+@selectHeight: 38px;
+
+@selectionTextColor: @textColor;
+
+@selectionTextUnderlayIconOpacity: @disabledOpacity;
+@selectionTextUnderlayColor: @inputPlaceholderFocusColor;
+
+@selectionBoxShadow: none;
+@selectionBorderColor: @borderColor;
+@selectionBorder: 1px solid @selectionBorderColor;
+@selectionBorderRadius: @borderRadius;
+
+@selectionIconOpacity: 0.8;
+@selectionIconZIndex: 3;
+@selectionIconHitbox: @selectionVerticalPadding;
+@selectionIconMargin: -@selectionIconHitbox;
+@selectionIconPadding: @selectionIconHitbox;
+@selectionIconTransition: opacity @defaultDuration @defaultEasing;
+
+@selectionMenuBorderRadius: 0em 0em @borderRadius @borderRadius;
+@selectionMenuBoxShadow: @raisedShadow;
+@selectionMenuItemBoxShadow: none;
+
+@selectionItemHorizontalPadding: @itemHorizontalPadding;
+@selectionItemVerticalPadding: @itemVerticalPadding;
+@selectionItemPadding: @selectionItemVerticalPadding @selectionItemHorizontalPadding;
+
+@selectionTransition: @transition;
+@selectionMenuTransition: @menuTransition;
+
+/* Responsive */
+@selectionMobileMaxItems: 3;
+@selectionTabletMaxItems: 4;
+@selectionComputerMaxItems: 6;
+@selectionWidescreenMaxItems: 8;
+
+/* Derived */
+@selectedBorderEMWidth: 0.1em; /* 1px / em size */
+@selectionItemHeight: (@selectionItemVerticalPadding * 2) + @itemLineHeight + @selectedBorderEMWidth;
+@selectionMobileMaxMenuHeight: (@selectionItemHeight * @selectionMobileMaxItems);
+@selectionTabletMaxMenuHeight: (@selectionItemHeight * @selectionTabletMaxItems);
+@selectionComputerMaxMenuHeight: (@selectionItemHeight * @selectionComputerMaxItems);
+@selectionWidescreenMaxMenuHeight: (@selectionItemHeight * @selectionWidescreenMaxItems);
+
+/* Hover */
+@selectionHoverBorderColor: @selectedBorderColor;
+@selectionHoverBoxShadow: none;
+
+/* Focus */
+@selectionFocusBorderColor: @focusedFormMutedBorderColor;
+@selectionFocusBoxShadow: none;
+@selectionFocusMenuBoxShadow: @raisedShadow;
+
+/* Visible */
+@selectionVisibleTextFontWeight: normal;
+@selectionVisibleTextColor: @hoveredTextColor;
+
+@selectionVisibleBorderColor: @focusedFormMutedBorderColor;
+@selectionVisibleBoxShadow: @raisedShadow;
+@selectionVisibleMenuBoxShadow: @raisedShadow;
+
+/* Visible Hover */
+@selectionActiveHoverBorderColor: @focusedFormMutedBorderColor;
+@selectionActiveHoverBoxShadow: @selectionVisibleBoxShadow;
+@selectionActiveHoverMenuBoxShadow: @selectionVisibleMenuBoxShadow;
+
+@selectionVisibleConnectingBorder: 0em;
+@selectionVisibleIconOpacity: 1;
+
+/*--------------
+     Search
+--------------*/
+
+@searchMinWidth: '';
+
+/* Search Selection */
+@searchSelectionLineHeight: @inputLineHeight;
+@searchSelectionLineHeightOffset: ((@searchSelectionLineHeight - 1em) / 2);
+@searchSelectionVerticalPadding: (@selectionVerticalPadding - @searchSelectionLineHeightOffset);
+@searchSelectionHorizontalPadding: @selectionHorizontalPadding;
+@searchSelectionInputPadding: @searchSelectionVerticalPadding @selectionIconDistance @searchSelectionVerticalPadding @searchSelectionHorizontalPadding;
+
+@searchMobileMaxMenuHeight: @selectionMobileMaxMenuHeight;
+@searchTabletMaxMenuHeight: @selectionTabletMaxMenuHeight;
+@searchComputerMaxMenuHeight: @selectionComputerMaxMenuHeight;
+@searchWidescreenMaxMenuHeight: @selectionWidescreenMaxMenuHeight;
+
+/* Inline */
+@inlineIconMargin: 0em @relative7px 0em @relative3px;
+@inlineTextColor: inherit;
+@inlineTextFontWeight: bold;
+@inlineMenuDistance: @relative3px;
+@inlineMenuBorderRadius: @borderRadius;
+
+
+/*--------------
+    Multiple
+--------------*/
+
+/* Split Actual Padding Between Child and Parent (allows for label spacing) */
+@multipleSelectionVerticalPadding: (@searchSelectionVerticalPadding * (1/3));
+@multipleSelectionLeftPadding: @relative5px;
+@multipleSelectionRightPadding: @selectionIconDistance;
+@multipleSelectionPadding: @multipleSelectionVerticalPadding @multipleSelectionRightPadding @multipleSelectionVerticalPadding @multipleSelectionLeftPadding;
+
+/* Child Elements */
+@multipleSelectionChildVerticalMargin: (@searchSelectionVerticalPadding * (2/3));
+@multipleSelectionChildLeftMargin: (@inputHorizontalPadding - @multipleSelectionLeftPadding);
+@multipleSelectionChildMargin: @multipleSelectionChildVerticalMargin 0em @multipleSelectionChildVerticalMargin @multipleSelectionChildLeftMargin;
+@multipleSelectionChildLineHeight: @relative17px;
+@multipleSelectionSearchStartWidth: (@glyphWidth * 2);
+
+/* Dropdown Icon */
+@multipleSelectionDropdownIconMargin: '';
+@multipleSelectionDropdownIconPadding: '';
+
+@multipleSelectionSearchAfterLabelDistance: @relative2px;
+
+/* Selection Label */
+@labelSize: @relativeMedium;
+@labelHorizontalMargin: @4px;
+@labelVerticalMargin: @2px;
+@labelMargin: @labelVerticalMargin @labelHorizontalMargin @labelVerticalMargin 0em;
+@labelBorderWidth: 1px;
+@labelBoxShadow: 0px 0px 0px @labelBorderWidth @borderColor inset;
+
+@labelVerticalPadding: @relative5px;
+@labelHorizontalPadding: @relativeMini;
+@labelPadding: @labelVerticalPadding @labelHorizontalPadding;
+
+/*-------------------
+       States
+--------------------*/
+
+/* Hovered */
+@hoveredItemBackground: @transparentBlack;
+@hoveredItemColor: @selectedTextColor;
+@hoveredZIndex: @menuZIndex + 2;
+
+/* Default Text */
+@defaultTextColor: @inputPlaceholderColor;
+@defaultTextFocusColor: @inputPlaceholderFocusColor;
+
+/* Loading */
+@loadingZIndex: -1;
+
+/* Active Menu Item */
+@activeItemZIndex: @menuZIndex + 1;
+@activeItemBackground: transparent;
+@activeItemBoxShadow: none;
+@activeItemFontWeight: bold;
+@activeItemColor: @selectedTextColor;
+
+/* Selected */
+@selectedBackground: @subtleTransparentBlack;
+@selectedColor: @selectedTextColor;
+
+/* Error */
+@errorLabelBackground: #EACBCB;
+@errorLabelColor: @errorTextColor;
+
+@errorItemTextColor: @errorTextColor;
+@errorItemHoverBackground: #FFF2F2;
+@errorItemActiveBackground: #FDCFCF;
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Scrolling */
+@scrollingMenuWidth: 100%;
+@scrollingMenuItemBorder: none;
+@scrollingMenuRightItemPadding: ~"calc("(@itemHorizontalPadding)~" + "(@scrollbarWidth)~")";
+
+@scrollingMobileMaxItems: 4;
+@scrollingTabletMaxItems: 6;
+@scrollingComputerMaxItems: 8;
+@scrollingWidescreenMaxItems: 12;
+
+@scrollingBorderEMWidth: 0em; /* 0px / em size */
+@scrollingItemHeight: (@itemVerticalPadding * 2) + @itemLineHeight + @scrollingBorderEMWidth;
+@scrollingMobileMaxMenuHeight: (@scrollingItemHeight * @scrollingMobileMaxItems);
+@scrollingTabletMaxMenuHeight: (@scrollingItemHeight * @scrollingTabletMaxItems);
+@scrollingComputerMaxMenuHeight: (@scrollingItemHeight * @scrollingComputerMaxItems);
+@scrollingWidescreenMaxMenuHeight: (@scrollingItemHeight * @selectionWidescreenMaxItems);
+
+/* Upward */
+@upwardSelectionVisibleBorderRadius: @selectionVisibleConnectingBorder @selectionVisibleConnectingBorder @borderRadius @borderRadius;
+@upwardMenuBoxShadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.08);
+@upwardSelectionMenuBoxShadow: 0px -2px 3px 0px rgba(0, 0, 0, 0.08);
+@upwardMenuBorderRadius: @borderRadius @borderRadius 0em 0em;
+@upwardSelectionHoverBoxShadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.05);
+@upwardSelectionVisibleBoxShadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.08);
+@upwardSelectionActiveHoverBoxShadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.05);
+@upwardSelectionActiveHoverMenuBoxShadow: 0px -2px 3px 0px rgba(0, 0, 0, 0.08);
+
+/* Flyout Direction */
+@leftMenuDropdownIconFloat: left;
+@leftMenuDropdownIconMargin: @itemLineHeightOffset @itemElementDistance 0em 0em;
+
+/* Left */
+@leftSubMenuBorderRadius: @borderRadius;
+
+/* Simple */
+@simpleTransitionDuration: @defaultDuration;
+@simpleTransition: opacity @simpleTransitionDuration @defaultEasing;
+
+/* Floating */
+@floatingMenuDistance: 0.5em;
+@floatingMenuBoxShadow: @floatingShadow;
+@floatingMenuBorderRadius: @borderRadius;
+
+/* Pointing */
+@pointingArrowOffset: -(@pointingArrowSize / 2);
+@pointingArrowDistanceFromEdge: 1em;
+
+@pointingArrowBackground: @white;
+@pointingArrowZIndex: 2;
+@pointingArrowBoxShadow: -@menuBorderWidth -@menuBorderWidth 0px @menuBorderWidth @menuBorderColor;
+@pointingArrowSize: @relative7px;
+
+@pointingMenuDistance: @mini;
+@pointingMenuBorderRadius: @borderRadius;
+@pointingArrowBoxShadow: -@menuBorderWidth -@menuBorderWidth 0px @menuBorderWidth @menuBorderColor;
+
+/* Pointing Upward */
+@pointingUpwardMenuBorderRadius: @borderRadius;
+@pointingUpwardArrowBoxShadow: @menuBorderWidth @menuBorderWidth 0px @menuBorderWidth @menuBorderColor;
+
+/*******************************
+             Video
+*******************************/
+
+/*-------------------
+       Element
+--------------------*/
+
+/* Simple */
+@background: @lightGrey;
+@transitionDuration: 0.5s;
+@transitionEasing: @defaultEasing;
+
+/* Placeholder */
+@placeholderUnderlay: @background;
+
+/* Placeholder Overlayed Background */
+@placeholderBackground: radial-gradient(transparent 45%, rgba(0, 0, 0, 0.3));
+@placeholderBackgroundOpacity: 0.5;
+@placeholderBackgroundTransition: opacity @transitionDuration @transitionEasing;
+
+/* Icon */
+@iconBackground: @veryStrongTransparentBlack;
+@iconSize: 6rem;
+@iconTransition:
+  opacity @transitionDuration @transitionEasing,
+  color @transitionDuration @transitionEasing
+;
+@iconColor: @white;
+@iconShadow:
+  0px 2px 10px rgba(34, 36, 38, 0.2)
+;
+@iconZIndex: 10;
+
+/*-------------------
+       States
+--------------------*/
+
+/* Hover */
+@hoverPlaceholderBackground: @placeholderBackground;
+@hoverPlaceholderBackgroundOpacity: 1;
+@hoverIconColor: @white;
+
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Aspect Ratios */
+@squareRatio: (1/1) * 100%;
+@widescreenRatio: (9/16) * 100%;
+@ultraWidescreenRatio: (9/21) * 100%;
+@standardRatio: (3/4) * 100%;
+/*******************************
+             Modal
+*******************************/
+
+@background: @white;
+@border: none;
+@zIndex: 1001;
+@borderRadius: @defaultBorderRadius;
+@transformOrigin: 50% 25%;
+@boxShadow:
+  1px 3px 3px 0px rgba(0, 0, 0, 0.2),
+  1px 3px 15px 2px rgba(0, 0, 0, 0.2)
+;
+
+/* Close Icon */
+@closeOpacity: 0.8;
+@closeSize: 1.25em;
+@closeColor: @white;
+
+@closeHitbox: 2.25rem;
+@closeDistance: 0.25rem;
+@closeHitBoxOffset: (@closeHitbox - 1rem) / 2;
+@closePadding: @closeHitBoxOffset 0rem 0rem 0rem;
+@closeTop: -(@closeDistance + @closeHitbox);
+@closeRight: -(@closeDistance + @closeHitbox);
+
+/* Header */
+@headerMargin: 0em;
+@headerVerticalPadding: 1.25rem;
+@headerHorizontalPadding: 1.5rem;
+@headerPadding: @headerVerticalPadding @headerHorizontalPadding;
+@headerBackground: @white;
+@headerColor: @darkTextColor;
+@headerFontSize: @huge;
+@headerBoxShadow: none;
+@headerFontWeight: bold;
+@headerFontFamily: @headerFont;
+@headerBorder: 1px solid @borderColor;
+
+/* Content */
+@contentFontSize: 1em;
+@contentPadding: 1.5rem;
+@contentLineHeight: 1.4;
+@contentBackground: #FFFFFF;
+
+/* Image / Description */
+@imageWidth: '';
+@imageIconSize: 8rem;
+@imageVerticalAlign: top;
+
+@descriptionDistance: 2em;
+@descriptionMinWidth: '';
+@descriptionWidth: auto;
+@descriptionVerticalAlign: top;
+
+/* Modal Actions */
+@actionBorder: 1px solid @borderColor;
+@actionBackground: @offWhite;
+@actionPadding: 1rem 1rem;
+@actionAlign: right;
+
+@buttonDistance: 0.75em;
+
+/* Inner Close Position (Tablet/Mobile) */
+@innerCloseTop: (@headerVerticalPadding - @closeHitBoxOffset + (@lineHeight - 1em));
+@innerCloseRight: 1rem;
+@innerCloseColor: @textColor;
+
+/* Mobile Positions */
+@mobileHeaderPadding: 0.75rem 1rem;
+@mobileContentPadding: 1rem;
+@mobileImagePadding: 0rem 0rem 1rem;
+@mobileDescriptionPadding: 1rem 0rem ;
+@mobileButtonDistance: 1rem;
+@mobileActionPadding: 1rem 1rem (1rem - @mobileButtonDistance);
+@mobileImageIconSize: 5rem;
+@mobileCloseTop: 0.5rem;
+@mobileCloseRight: 0.5rem;
+
+/* Responsive Widths */
+@mobileWidth: 95%;
+@tabletWidth: 88%;
+@computerWidth: 850px;
+@largeMonitorWidth: 900px;
+@widescreenMonitorWidth: 950px;
+
+@mobileMargin: 0em 0em 0em -(@mobileWidth / 2);
+@tabletMargin: 0em 0em 0em -(@tabletWidth / 2);
+@computerMargin: 0em 0em 0em -(@computerWidth / 2);
+@largeMonitorMargin: 0em 0em 0em -(@largeMonitorWidth / 2);
+@widescreenMonitorMargin: 0em 0em 0em -(@widescreenMonitorWidth / 2);
+
+@fullScreenWidth: 95%;
+@fullScreenOffset: (100% - @fullScreenWidth) / 2;
+@fullScreenMargin: 1em auto;
+
+/* Coupling */
+@invertedBoxShadow: 1px 3px 10px 2px rgba(0, 0, 0, 0.2);
+
+/*-------------------
+        Types
+--------------------*/
+
+/* Basic */
+@basicModalHeaderColor: @white;
+@basicModalColor: @white;
+@basicModalCloseTop: 1rem;
+@basicModalCloseRight: 1.5rem;
+@basicInnerCloseColor: @white;
+
+@basicInvertedModalColor: @textColor;
+@basicInvertedModalHeaderColor: @darkTextColor;
+
+/* Scrolling Margin */
+@scrollingMargin: 3.5rem;
+@mobileScrollingMargin: 1rem;
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Size Widths */
+@smallRatio: 0.8;
+@largeRatio: 1.2;
+
+/* Derived Responsive Sizes */
+@smallHeaderSize: 1.3em;
+@smallMobileWidth: @mobileWidth;
+@smallTabletWidth: (@tabletWidth * @smallRatio);
+@smallComputerWidth: (@computerWidth * @smallRatio);
+@smallLargeMonitorWidth: (@largeMonitorWidth * @smallRatio);
+@smallWidescreenMonitorWidth: (@widescreenMonitorWidth * @smallRatio);
+
+@smallMobileMargin: 0em 0em 0em -(@smallMobileWidth / 2);
+@smallTabletMargin: 0em 0em 0em -(@smallTabletWidth / 2);
+@smallComputerMargin: 0em 0em 0em -(@smallComputerWidth / 2);
+@smallLargeMonitorMargin: 0em 0em 0em -(@smallLargeMonitorWidth / 2);
+@smallWidescreenMonitorMargin: 0em 0em 0em -(@smallWidescreenMonitorWidth / 2);
+
+@largeHeaderSize: 1.6em;
+@largeMobileWidth: @mobileWidth;
+@largeTabletWidth: @tabletWidth;
+@largeComputerWidth: (@computerWidth * @largeRatio);
+@largeLargeMonitorWidth: (@largeMonitorWidth * @largeRatio);
+@largeWidescreenMonitorWidth: (@widescreenMonitorWidth * @largeRatio);
+
+@largeMobileMargin: 0em 0em 0em -(@largeMobileWidth / 2);
+@largeTabletMargin: 0em 0em 0em -(@largeTabletWidth / 2);
+@largeComputerMargin: 0em 0em 0em -(@largeComputerWidth / 2);
+@largeLargeMonitorMargin: 0em 0em 0em -(@largeLargeMonitorWidth / 2);
+@largeWidescreenMonitorMargin: 0em 0em 0em -(@largeWidescreenMonitorWidth / 2);
+/*******************************
+             Nag
+*******************************/
+
+/*--------------
+   Collection
+---------------*/
+
+@position: relative;
+@width: 100%;
+@zIndex: 999;
+@margin: 0em;
+
+@background: #555555;
+@opacity: 0.95;
+@minHeight: 0em;
+@padding: 0.75em 1em;
+@lineHeight: 1em;
+@boxShadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+
+@fontSize: 1rem;
+@textAlign: center;
+@color: @textColor;
+
+@transition: 0.2s background ease;
+
+
+/*--------------
+    Elements
+---------------*/
+
+/* Title */
+@titleColor: @white;
+@titleMargin: 0em 0.5em;
+
+@closeSize: 1em;
+@closeMargin: (-@closeSize / 2) 0em 0em;
+@closeTop: 50%;
+@closeRight: 1em;
+@closeColor: @white;
+@closeTransition: opacity 0.2s ease;
+@closeOpacity: 0.4;
+
+
+/*--------------
+      States
+---------------*/
+
+/* Hover */
+@nagHoverBackground: @background;
+@nagHoverOpacity: 1;
+
+@closeHoverOpacity: 1;
+
+/*--------------
+   Variations
+---------------*/
+
+/* Top / Bottom */
+@top: 0em;
+@bottom: 0em;
+@borderRadius: @defaultBorderRadius;
+@topBorderRadius: 0em 0em @borderRadius @borderRadius;
+@bottomBorderRadius: @borderRadius @borderRadius 0em 0em;
+
+/* Inverted */
+@invertedBackground: @darkWhite;
+
+/*--------------
+      Plural
+---------------*/
+
+@groupedBorderRadius: 0em;
+
+
+/*******************************
+             Popup
+*******************************/
+
+/*-------------------
+       Element
+--------------------*/
+
+@zIndex: 1900;
+@background: @white;
+
+@maxWidth: 250px;
+@borderColor: @solidBorderColor;
+@borderWidth: 1px;
+@boxShadow: @floatingShadow;
+@color: @textColor;
+
+@verticalPadding: 0.833em;
+@horizontalPadding: 1em;
+@fontWeight: normal;
+@fontStyle: normal;
+@borderRadius: @defaultBorderRadius;
+
+/*-------------------
+       Parts
+--------------------*/
+
+/* Placement */
+@arrowSize: @relative10px;
+@arrowWidth: 1em;
+@arrowDistanceFromEdge: 1em;
+@boxArrowOffset: 0em;
+@popupDistanceAway: @arrowSize;
+
+
+/* Header */
+@headerFontFamily: @headerFont;
+@headerFontSize: @relativeLarge;
+@headerDistance: @relative7px;
+@headerLineHeight: 1.2;
+
+/* Content Border */
+@border: @borderWidth solid @borderColor;
+
+/* Arrow */
+@arrowBackground: @white;
+@arrowZIndex: 2;
+@arrowJitter: 0.05em;
+@arrowOffset: -(@arrowSize / 2) + @arrowJitter;
+
+@arrowStroke: @borderWidth;
+@arrowColor: darken(@borderColor, 10);
+
+/* Arrow color by position */
+@arrowTopBackground: @arrowBackground;
+@arrowCenterBackground: @arrowBackground;
+@arrowBottomBackground: @arrowBackground;
+
+@arrowBoxShadow: @arrowStroke @arrowStroke 0px 0px @arrowColor;
+@leftArrowBoxShadow: @arrowStroke -@arrowStroke 0px 0px @arrowColor;
+@rightArrowBoxShadow: -@arrowStroke @arrowStroke 0px 0px @arrowColor;
+@bottomArrowBoxShadow: -@arrowStroke -@arrowStroke 0px 0px @arrowColor;
+
+/*-------------------
+       Types
+--------------------*/
+
+/* Tooltip */
+@tooltipBackground: @background;
+@tooltipBorderRadius: @borderRadius;
+@tooltipPadding: @verticalPadding @horizontalPadding;
+@tooltipFontWeight: @fontWeight;
+@tooltipFontStyle: @fontStyle;
+@tooltipColor: @color;
+@tooltipBorder: @border;
+@tooltipBoxShadow: @boxShadow;
+@tooltipMaxWidth: none;
+@tooltipFontSize: @medium;
+@tooltipLineHeight: @lineHeight;
+@tooltipDistanceAway: @relative7px;
+@tooltipZIndex: 1;
+@tooltipDuration: @defaultDuration;
+@tooltipEasing: @defaultEasing;
+
+/* Inverted */
+@tooltipInvertedBackground: @invertedBackground;
+@tooltipInvertedColor: @invertedColor;
+@tooltipInvertedBorder: @invertedBorder;
+@tooltipInvertedBoxShadow: @invertedBoxShadow;
+@tooltipInvertedHeaderBackground: @invertedHeaderBackground;
+@tooltipInvertedHeaderColor: @invertedHeaderColor;
+
+/* Arrow */
+@tooltipArrowVerticalOffset: -@2px;
+@tooltipArrowHorizontalOffset: -@1px;
+@tooltipArrowBoxShadow: @arrowBoxShadow;
+@tooltipArrowBackground: @arrowBackground;
+@tooltipArrowTopBackground: @arrowTopBackground;
+@tooltipArrowCenterBackground: @arrowCenterBackground;
+@tooltipArrowBottomBackground: @arrowBottomBackground;
+
+/*-------------------
+       Coupling
+--------------------*/
+
+/* Grid Inside Popup */
+@nestedGridMargin: -0.7rem -0.875rem; /* (padding * @medium) */
+@nestedGridWidth: ~"calc(100% + 1.75rem)";
+
+/*-------------------
+       States
+--------------------*/
+
+@loadingZIndex: -1;
+
+/*-------------------
+       Variations
+--------------------*/
+
+/* Wide */
+@wideWidth: 350px;
+@veryWideWidth: 550px;
+
+/* Inverted */
+@invertedBackground: @black;
+@invertedColor: @white;
+@invertedBorder: none;
+@invertedBoxShadow: none;
+
+@invertedHeaderBackground: none;
+@invertedHeaderColor: @white;
+@invertedArrowColor: @invertedBackground;
+
+/* Arrow color by position */
+@invertedArrowTopBackground: @invertedBackground;
+@invertedArrowCenterBackground: @invertedBackground;
+@invertedArrowBottomBackground: @invertedBackground;
+
+/*******************************
+            Progress
+*******************************/
+
+/*-------------------
+       Element
+--------------------*/
+
+@verticalSpacing: 1em;
+@margin: @verticalSpacing 0em (@labelHeight + @verticalSpacing);
+@firstMargin: 0em 0em (@labelHeight + @verticalSpacing);
+@lastMargin: 0em 0em (@labelHeight);
+
+@background: @strongTransparentBlack;
+@border: none;
+@boxShadow: none;
+@padding: 0em;
+@borderRadius: @defaultBorderRadius;
+
+/* Bar */
+@barPosition: relative;
+@barHeight: 1.75em;
+@barBackground: #888888;
+@barBorderRadius: @borderRadius;
+@barTransitionEasing: @defaultEasing;
+@barTransitionDuration: @defaultDuration;
+@barTransition:
+  width @barTransitionDuration @barTransitionEasing,
+  background-color @barTransitionDuration @barTransitionEasing
+;
+@barInitialWidth: 0%;
+@barMinWidth: 2em;
+
+/* Progress Bar Label */
+@progressWidth: auto;
+@progressSize: @relativeSmall;
+@progressPosition: absolute;
+@progressTop: 50%;
+@progressRight: 0.5em;
+@progressLeft: auto;
+@progressBottom: auto;
+@progressOffset: -0.5em;
+@progressColor: @invertedLightTextColor;
+@progressTextShadow: none;
+@progressFontWeight: bold;
+@progressTextAlign: left;
+
+/* Label */
+@labelWidth: 100%;
+@labelHeight: 1.5em;
+@labelSize: 1em;
+@labelPosition: absolute;
+@labelTop: 100%;
+@labelLeft: 0%;
+@labelRight: auto;
+@labelBottom: auto;
+@labelOffset: (@labelHeight - 1.3em);
+@labelColor: @textColor;
+@labelTextShadow: none;
+@labelFontWeight: bold;
+@labelTextAlign: center;
+@labelTransition: color 0.4s @defaultEasing;
+
+/*-------------------
+        Types
+--------------------*/
+
+@indicatingFirstColor: #D95C5C;
+@indicatingSecondColor: #EFBC72;
+@indicatingThirdColor: #E6BB48;
+@indicatingFourthColor: #DDC928;
+@indicatingFifthColor: #B4D95C;
+@indicatingSixthColor: #66DA81;
+
+@indicatingFirstLabelColor: @textColor;
+@indicatingSecondLabelColor: @textColor;
+@indicatingThirdLabelColor: @textColor;
+@indicatingFourthLabelColor: @textColor;
+@indicatingFifthLabelColor: @textColor;
+@indicatingSixthLabelColor: @textColor;
+
+/*-------------------
+        States
+--------------------*/
+
+/* Active */
+@activePulseColor: @white;
+@activePulseMaxOpacity: 0.3;
+@activePulseDuration: 2s;
+@activeMinWidth: @barMinWidth;
+
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Attached */
+@attachedBackground: transparent;
+@attachedHeight: 0.2rem;
+@attachedBorderRadius: @borderRadius;
+
+/* Inverted */
+@invertedBackground: @transparentWhite;
+@invertedBorder: none;
+@invertedBarBackground: @barBackground;
+@invertedProgressColor: @offWhite;
+@invertedLabelColor: @white;
+
+/* Sizing */
+@tinyBarHeight: 0.5em;
+@smallBarHeight: 1em;
+@largeBarHeight: 2.5em;
+@bigBarHeight: 3.5em;
+
+/*******************************
+             Rating
+*******************************/
+
+@margin: 0em @relativeMini;
+@whiteSpace: nowrap;
+@verticalAlign: baseline;
+
+@iconCursor: pointer;
+@iconWidth: 1.25em;
+@iconHeight: auto;
+@iconTransition:
+  opacity @defaultDuration @defaultEasing,
+  background @defaultDuration @defaultEasing,
+  text-shadow @defaultDuration @defaultEasing,
+  color @defaultDuration @defaultEasing
+;
+
+
+/*-------------------
+        Types
+--------------------*/
+
+/* Standard */
+@inactiveBackground: transparent;
+@inactiveColor: rgba(0, 0, 0, 0.15);
+
+@selectedBackground: @inactiveBackground;
+@selectedColor: @textColor;
+
+@activeBackground: @inactiveBackground;
+@activeColor: @darkTextColor;
+
+/* Star */
+@starIconWidth: @iconWidth;
+@starIconHeight: @iconHeight;
+@starShadowWidth: 1px;
+
+@starInactiveBackground: @inactiveBackground;
+@starInactiveColor: @inactiveColor;
+@starInactiveTextShadow: none;
+
+@starActiveBackground: @activeBackground;
+@starActiveColor: #FFE623;
+@starActiveShadowColor: #DDC507;
+@starActiveTextShadow:
+  0px -@starShadowWidth 0px @starActiveShadowColor,
+  -@starShadowWidth 0px 0px @starActiveShadowColor,
+  0px @starShadowWidth 0px @starActiveShadowColor,
+  @starShadowWidth 0px 0px @starActiveShadowColor
+;
+
+@starSelectedBackground: @selectedBackground;
+@starSelectedColor: #FFCC00;
+@starSelectedShadowColor: #E6A200;
+@starSelectedTextShadow:
+  0px -@starShadowWidth 0px @starSelectedShadowColor,
+  -@starShadowWidth 0px 0px @starSelectedShadowColor,
+  0px @starShadowWidth 0px @starSelectedShadowColor,
+  @starShadowWidth 0px 0px @starSelectedShadowColor
+;
+
+/* Heart */
+@heartIconWidth: 1.4em;
+@heartIconHeight: @iconHeight;
+@heartShadowWidth: 1px;
+
+@heartInactiveBackground: @inactiveBackground;
+@heartInactiveColor: @inactiveColor;
+@heartInactiveTextShadow: none;
+
+@heartActiveBackground: @activeBackground;
+@heartActiveColor: #FF6D75;
+@heartActiveShadowColor: #CD0707;
+@heartActiveTextShadow:
+  0px -@heartShadowWidth 0px @heartActiveShadowColor,
+  -@heartShadowWidth 0px 0px @heartActiveShadowColor,
+  0px @heartShadowWidth 0px @heartActiveShadowColor,
+  @heartShadowWidth 0px 0px @heartActiveShadowColor
+;
+
+@heartSelectedBackground: @selectedBackground;
+@heartSelectedColor: #FF3000;
+@heartSelectedShadowColor: #AA0101;
+@heartSelectedTextShadow:
+  0px -@heartShadowWidth 0px @heartSelectedShadowColor,
+  -@heartShadowWidth 0px 0px @heartSelectedShadowColor,
+  0px @heartShadowWidth 0px @heartSelectedShadowColor,
+  @heartShadowWidth 0px 0px @heartSelectedShadowColor
+;
+
+/*-------------------
+        States
+--------------------*/
+
+@interactiveActiveIconOpacity: 1;
+@interactiveSelectedIconOpacity: 1;
+
+/*-------------------
+      Variations
+--------------------*/
+
+@massive: 2rem;
+/*******************************
+            Search
+*******************************/
+
+/* Search Prompt */
+@promptBackground: @inputBackground;
+@promptVerticalPadding: @inputVerticalPadding;
+@promptHorizontalPadding: @inputHorizontalPadding;
+@promptLineHeight: @inputLineHeight;
+@promptFontSize: @relativeMedium;
+@promptPadding: (@promptVerticalPadding + ((1em - @promptLineHeight) / 2)) @promptHorizontalPadding;
+@promptBorder: 1px solid @borderColor;
+@promptBorderRadius: @circularRadius;
+@promptColor: @textColor;
+@promptTransition:
+  background-color @defaultDuration @defaultEasing,
+  color @defaultDuration @defaultEasing,
+  box-shadow @defaultDuration @defaultEasing,
+  border-color @defaultDuration @defaultEasing
+;
+@promptBoxShadow: 0em 0em 0em 0em transparent inset;
+
+/* Result Box */
+@resultsWidth: 18em;
+@resultsBackground: #FFFFFF;
+@resultsDistance: 0.5em;
+@resultsBorderRadius: @defaultBorderRadius;
+@resultsBorder: 1px solid @solidBorderColor;
+@resultsBoxShadow: @floatingShadow;
+
+/* Result */
+@resultFontSize: 1em;
+@resultVerticalPadding: @relativeTiny;
+@resultHorizontalPadding: @relativeLarge;
+@resultPadding: @resultVerticalPadding @resultHorizontalPadding;
+@resultTextColor: @textColor;
+@resultLineHeight: 1.33;
+@resultDivider: 1px solid @internalBorderColor;
+@resultLastDivider: none;
+
+/* Result Image */
+@resultImageFloat: right;
+@resultImageBackground: none;
+@resultImageWidth: 5em;
+@resultImageHeight: 3em;
+@resultImageBorderRadius: 0.25em;
+@resultImageMargin: 0em 6em 0em 0em;
+
+/* Result Content */
+@resultTitleFont: @headerFont;
+@resultTitleMargin: -@headerLineHeightOffset 0em 0em;
+@resultTitleFontWeight: bold;
+@resultTitleFontSize: @relativeMedium;
+@resultTitleColor: @darkTextColor;
+
+/* Description */
+@resultDescriptionFontSize: @relativeSmall;
+@resultDescriptionDistance: 0;
+@resultDescriptionColor: @lightTextColor;
+
+/* Price */
+@resultPriceFloat: right;
+@resultPriceColor: @green;
+
+/* Special Message */
+@messageVerticalPadding: 1em;
+@messageHorizontalPadding: 1em;
+@messageHeaderFontSize: @medium;
+@messageHeaderFontWeight: bold;
+@messageHeaderColor: @textColor;
+@messageDescriptionDistance: 0.25rem;
+@messageDescriptionFontSize: 1em;
+@messageDescriptionColor: @textColor;
+
+/* All Results Link */
+@actionBorder: none;
+@actionBackground: @darkWhite;
+@actionPadding: @relativeSmall @relativeMedium;
+@actionColor: @textColor;
+@actionFontWeight: bold;
+@actionAlign: center;
+
+
+/*******************************
+            States
+*******************************/
+
+/* Focus */
+@promptFocusBackground: @promptBackground;
+@promptFocusBorderColor: @selectedBorderColor;
+@promptFocusColor: @selectedTextColor;
+
+/* Hover */
+@resultHoverBackground: @offWhite;
+@actionHoverBackground: #E0E0E0;
+
+/* Loading */
+@invertedLoaderFillColor: rgba(0, 0, 0, 0.15);
+
+/* Active Category */
+@categoryActiveBackground: @darkWhite;
+@categoryNameActiveColor: @textColor;
+
+/* Active Result */
+@resultActiveBorderLeft: @internalBorderColor;
+@resultActiveBackground: @darkWhite;
+@resultActiveBoxShadow: none;
+@resultActiveTitleColor: @darkTextColor;
+@resultActiveDescriptionColor: @darkTextColor;
+@resultsZIndex: 998;
+
+
+/*******************************
+            Types
+*******************************/
+
+/* Selection */
+@selectionPromptBorderRadius: @defaultBorderRadius;
+
+@selectionCloseTop: 0em;
+@selectionCloseTransition:
+  color @defaultDuration @defaultEasing,
+  opacity @defaultDuration @defaultEasing
+;
+@selectionCloseRight: 0em;
+@selectionCloseIconOpacity: 0.8;
+@selectionCloseIconColor: '';
+@selectionCloseIconHoverOpacity: 1;
+@selectionCloseIconHoverColor: @red;
+
+@selectionCloseIconInputRight: 1.85714em;
+
+/* Category */
+@categoryBackground: @darkWhite;
+@categoryBoxShadow: none;
+@categoryDivider: 1px solid @internalBorderColor;
+@categoryTransition:
+  background @defaultDuration @defaultEasing,
+  border-color @defaultDuration @defaultEasing
+;
+
+@categoryResultsWidth: 28em;
+
+@categoryResultBackground: @white;
+@categoryResultLeftBorder: 1px solid @borderColor;
+@categoryResultDivider: @resultDivider;
+@categoryResultLastDivider: none;
+@categoryResultPadding: @resultPadding;
+@categoryResultTransition: @categoryTransition;
+
+@categoryNameWidth: 100px;
+@categoryNameBackground: transparent;
+@categoryNameFont: @pageFont;
+@categoryNameFontSize: 1em;
+@categoryNameFloat: left;
+@categoryNamePadding: 0.4em 1em;
+@categoryNameFontWeight: bold;
+@categoryNameColor: @lightTextColor;
+
+/*******************************
+             Shape
+*******************************/
+
+@display: inline-block;
+
+/* Animating */
+@perspective: 2000px;
+
+@duration: 0.6s;
+@easing: ease-in-out;
+
+@hiddenSideOpacity: 0.6;
+@animatingZIndex: 100;
+
+@transition:
+  transform @duration @easing,
+  left @duration @easing,
+  width @duration @easing,
+  height @duration @easing
+;
+@sideTransition: opacity @duration @easing;
+@backfaceVisibility: hidden;
+
+/* Side */
+@sideMargin: 0em;
+
+/*--------------
+      Types
+---------------*/
+
+/* Cube */
+@cubeSize: 15em;
+@cubeBackground: #E6E6E6;
+@cubePadding: 2em;
+@cubeTextColor: @textColor;
+@cubeBoxShadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+
+@cubeTextAlign: center;
+@cubeFontSize: 2em;
+
+/*******************************
+             Sidebar
+*******************************/
+
+/*-------------------
+       Content
+--------------------*/
+
+/* Animation */
+@perspective: 1500px;
+@duration: 500ms;
+@easing: @defaultEasing;
+
+/* Dimmer */
+@dimmerColor: rgba(0, 0, 0, 0.4);
+@dimmerTransition: opacity @duration;
+
+/* Color below page */
+@canvasBackground: @lightBlack;
+
+/* Shadow */
+@boxShadow: 0px 0px 20px @borderColor;
+@horizontalBoxShadow: @boxShadow;
+@verticalBoxShadow: @boxShadow;
+
+/* Layering */
+@bottomLayer: 1;
+@middleLayer: 2;
+@fixedLayer: 101;
+@topLayer: 102;
+@dimmerLayer: 1000;
+
+/*-------------------
+      Variations
+--------------------*/
+
+/* Width */
+@veryThinWidth: 60px;
+@thinWidth: 150px;
+@width: 260px;
+@wideWidth: 350px;
+@veryWideWidth: 475px;
+
+/* Height */
+@height: 36px;
+
+/*******************************
+            Sticky
+*******************************/
+
+@transitionDuration: @defaultDuration;
+@transition: none;
+@zIndex: 800;
+/*******************************
+              Tab
+*******************************/
+
+/* Loading */
+@loadingMinHeight: 250px;
+@loadingContentPosition: relative;
+@loadingContentOffset: -10000px;
+
+@loaderDistanceFromTop: 100px;
+@loaderSize: 2.5em;
+/*******************************
+          Transition
+*******************************/
+
+@transitionDefaultEasing: @defaultEasing;
+@transitionDefaultFill: both;
+@transitionDefaultDuration: 300ms;
+
+@use3DAcceleration: translateZ(0);
+@backfaceVisibility: hidden;

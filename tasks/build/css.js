@@ -61,13 +61,8 @@ module.exports = function(callback) {
 
   console.info('Building CSS');
 
-  if( !install.isSetup() ) {
-    console.error('Cannot build files. Run "gulp install" to set-up Semantic');
-    return;
-  }
-
   // unified css stream
-  stream = gulp.src(source.definitions + '/**/' + globs.components + '.less')
+  stream = gulp.src(['src/less/semantic.less'])
     .pipe(plumber(settings.plumber.less))
     .pipe(less(settings.less))
     .pipe(autoprefixer(settings.prefix))
