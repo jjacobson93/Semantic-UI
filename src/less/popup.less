@@ -30,44 +30,44 @@
 
   /* Fixes content being squished when inline (moz only) */
   min-width: min-content;
-  z-index: @zIndex;
+  z-index: @popup-zIndex;
 
-  border: @border;
-  line-height: @lineHeight;
-  max-width: @maxWidth;
-  background: @background;
+  border: @popup-border;
+  line-height: @nag-lineHeight;
+  max-width: @popup-maxWidth;
+  background: @popup-background;
 
-  padding: @verticalPadding @horizontalPadding;
-  font-weight: @fontWeight;
-  font-style: @fontStyle;
-  color: @color;
+  padding: @popup-verticalPadding @popup-horizontalPadding;
+  font-weight: @popup-fontWeight;
+  font-style: @popup-fontStyle;
+  color: @popup-color;
 
-  border-radius: @borderRadius;
-  box-shadow: @boxShadow;
+  border-radius: @popup-borderRadius;
+  box-shadow: @popup-boxShadow;
 }
 .ui.popup > .header {
   padding: 0em;
 
-  font-family: @headerFont;
-  font-size: @headerFontSize;
-  line-height: @headerLineHeight;
+  font-family: @site-headerFont;
+  font-size: @popup-headerFontSize;
+  line-height: @popup-headerLineHeight;
   font-weight: bold;
 }
 .ui.popup > .header + .content {
-  padding-top: @headerDistance;
+  padding-top: @popup-headerDistance;
 }
 
 .ui.popup:before {
   position: absolute;
   content: '';
-  width: @arrowSize;
-  height: @arrowSize;
+  width: @popup-arrowSize;
+  height: @popup-arrowSize;
 
-  background: @arrowBackground;
+  background: @popup-arrowBackground;
   transform: rotate(45deg);
 
-  z-index: @arrowZIndex;
-  box-shadow: @arrowBoxShadow;
+  z-index: @popup-arrowZIndex;
+  box-shadow: @popup-arrowBoxShadow;
 }
 
 /*******************************
@@ -88,15 +88,15 @@
   pointer-events: none;
   position: absolute;
   content: '';
-  font-size: @medium;
-  width: @arrowSize;
-  height: @arrowSize;
+  font-size: @item-medium;
+  width: @popup-arrowSize;
+  height: @popup-arrowSize;
 
-  background: @tooltipArrowBackground;
+  background: @popup-tooltipArrowBackground;
   transform: rotate(45deg);
 
-  z-index: @arrowZIndex;
-  box-shadow: @tooltipArrowBoxShadow;
+  z-index: @popup-arrowZIndex;
+  box-shadow: @popup-tooltipArrowBoxShadow;
 }
 
 /* Popup */
@@ -108,21 +108,21 @@
   text-align: left;
   white-space: nowrap;
 
-  font-size: @tooltipFontSize;
+  font-size: @popup-tooltipFontSize;
 
-  border: @tooltipBorder;
-  line-height: @tooltipLineHeight;
-  max-width: @tooltipMaxWidth;
-  background: @tooltipBackground;
+  border: @popup-tooltipBorder;
+  line-height: @popup-tooltipLineHeight;
+  max-width: @popup-tooltipMaxWidth;
+  background: @popup-tooltipBackground;
 
-  padding: @tooltipPadding;
-  font-weight: @tooltipFontWeight;
-  font-style: @tooltipFontStyle;
-  color: @tooltipColor;
+  padding: @popup-tooltipPadding;
+  font-weight: @popup-tooltipFontWeight;
+  font-style: @popup-tooltipFontStyle;
+  color: @popup-tooltipColor;
 
-  border-radius: @tooltipBorderRadius;
-  box-shadow: @tooltipBoxShadow;
-  z-index: @tooltipZIndex;
+  border-radius: @popup-tooltipBorderRadius;
+  box-shadow: @popup-tooltipBoxShadow;
+  z-index: @popup-tooltipZIndex;
 }
 
 /* Default Position (Top Center) */
@@ -131,15 +131,15 @@
   right: auto;
   bottom: 100%;
   left: 50%;
-  background: @tooltipArrowBottomBackground;
-  margin-left: @tooltipArrowHorizontalOffset;
-  margin-bottom: -@tooltipArrowVerticalOffset;
+  background: @popup-tooltipArrowBottomBackground;
+  margin-left: @popup-tooltipArrowHorizontalOffset;
+  margin-bottom: -@popup-tooltipArrowVerticalOffset;
 }
 [data-tooltip]:not([data-position]):after {
   left: 50%;
   transform: translateX(-50%);
   bottom: 100%;
-  margin-bottom: @tooltipDistanceAway;
+  margin-bottom: @popup-tooltipDistanceAway;
 }
 
 /* Animation */
@@ -153,14 +153,14 @@
   transform: rotate(45deg) scale(0) !important;
   transform-origin: center top;
   transition:
-    all @tooltipDuration @tooltipEasing
+    all @popup-tooltipDuration @popup-tooltipEasing
   ;
 }
 [data-tooltip]:after {
   opacity: 1;
   transform-origin: center bottom;
   transition:
-    all @tooltipDuration @tooltipEasing
+    all @popup-tooltipDuration @popup-tooltipEasing
   ;
 }
 [data-tooltip]:hover:before,
@@ -216,19 +216,19 @@
 
 /* Arrow Position */
 [data-tooltip][data-inverted]:before {
-  background: @invertedArrowBottomBackground;
+  background: @popup-invertedArrowBottomBackground;
 }
 
 /* Popup  */
 [data-tooltip][data-inverted]:after {
-  background: @tooltipInvertedBackground;
-  color: @tooltipInvertedColor;
-  border: @tooltipInvertedBorder;
-  box-shadow: @tooltipInvertedBoxShadow;
+  background: @popup-tooltipInvertedBackground;
+  color: @popup-tooltipInvertedColor;
+  border: @popup-tooltipInvertedBorder;
+  box-shadow: @popup-tooltipInvertedBoxShadow;
 }
 [data-tooltip][data-inverted]:after .header {
-  background-color: @tooltipInvertedHeaderBackground;
-  color: @tooltipInvertedHeaderColor;
+  background-color: @popup-tooltipInvertedHeaderBackground;
+  color: @popup-tooltipInvertedHeaderColor;
 }
 
 /*--------------
@@ -242,16 +242,16 @@
   left: 50%;
   bottom: 100%;
   transform: translateX(-50%);
-  margin-bottom: @tooltipDistanceAway;
+  margin-bottom: @popup-tooltipDistanceAway;
 }
 [data-position="top center"][data-tooltip]:before {
   top: auto;
   right: auto;
   bottom: 100%;
   left: 50%;
-  background: @tooltipArrowTopBackground;
-  margin-left: @tooltipArrowHorizontalOffset;
-  margin-bottom: -@tooltipArrowVerticalOffset;
+  background: @popup-tooltipArrowTopBackground;
+  margin-left: @popup-tooltipArrowHorizontalOffset;
+  margin-bottom: -@popup-tooltipArrowVerticalOffset;
 }
 
 /* Top Left */
@@ -260,15 +260,15 @@
   right: auto;
   left: 0;
   bottom: 100%;
-  margin-bottom: @tooltipDistanceAway;
+  margin-bottom: @popup-tooltipDistanceAway;
 }
 [data-position="top left"][data-tooltip]:before {
   top: auto;
   right: auto;
   bottom: 100%;
-  left: @arrowDistanceFromEdge;
-  margin-left: @tooltipArrowHorizontalOffset;
-  margin-bottom: -@tooltipArrowVerticalOffset;
+  left: @popup-arrowDistanceFromEdge;
+  margin-left: @popup-tooltipArrowHorizontalOffset;
+  margin-bottom: -@popup-tooltipArrowVerticalOffset;
 }
 
 /* Top Right */
@@ -277,15 +277,15 @@
   left: auto;
   right: 0;
   bottom: 100%;
-  margin-bottom: @tooltipDistanceAway;
+  margin-bottom: @popup-tooltipDistanceAway;
 }
 [data-position="top right"][data-tooltip]:before {
   top: auto;
   left: auto;
   bottom: 100%;
-  right: @arrowDistanceFromEdge;
-  margin-left: @tooltipArrowHorizontalOffset;
-  margin-bottom: -@tooltipArrowVerticalOffset;
+  right: @popup-arrowDistanceFromEdge;
+  margin-left: @popup-tooltipArrowHorizontalOffset;
+  margin-bottom: -@popup-tooltipArrowVerticalOffset;
 }
 
 
@@ -296,107 +296,107 @@
   left: 50%;
   top: 100%;
   transform: translateX(-50%);
-  margin-top: @tooltipDistanceAway;
+  margin-top: @popup-tooltipDistanceAway;
 }
 [data-position="bottom center"][data-tooltip]:before {
   bottom: auto;
   right: auto;
   top: 100%;
   left: 50%;
-  margin-left: @tooltipArrowHorizontalOffset;
-  margin-top: -@tooltipArrowVerticalOffset;
+  margin-left: @popup-tooltipArrowHorizontalOffset;
+  margin-top: -@popup-tooltipArrowVerticalOffset;
 }
 
 /* Bottom Left */
 [data-position="bottom left"][data-tooltip]:after {
   left: 0;
   top: 100%;
-  margin-top: @tooltipDistanceAway;
+  margin-top: @popup-tooltipDistanceAway;
 }
 [data-position="bottom left"][data-tooltip]:before {
   bottom: auto;
   right: auto;
   top: 100%;
-  left: @arrowDistanceFromEdge;
-  margin-left: @tooltipArrowHorizontalOffset;
-  margin-top: -@tooltipArrowVerticalOffset;
+  left: @popup-arrowDistanceFromEdge;
+  margin-left: @popup-tooltipArrowHorizontalOffset;
+  margin-top: -@popup-tooltipArrowVerticalOffset;
 }
 
 /* Bottom Right */
 [data-position="bottom right"][data-tooltip]:after {
   right: 0;
   top: 100%;
-  margin-top: @tooltipDistanceAway;
+  margin-top: @popup-tooltipDistanceAway;
 }
 [data-position="bottom right"][data-tooltip]:before {
   bottom: auto;
   left: auto;
   top: 100%;
-  right: @arrowDistanceFromEdge;
-  margin-left: @tooltipArrowVerticalOffset;
-  margin-top: -@tooltipArrowHorizontalOffset;
+  right: @popup-arrowDistanceFromEdge;
+  margin-left: @popup-tooltipArrowVerticalOffset;
+  margin-top: -@popup-tooltipArrowHorizontalOffset;
 }
 
 /* Left Center */
 [data-position="left center"][data-tooltip]:after {
   right: 100%;
   top: 50%;
-  margin-right: @tooltipDistanceAway;
+  margin-right: @popup-tooltipDistanceAway;
   transform: translateY(-50%);
 }
 [data-position="left center"][data-tooltip]:before {
   right: 100%;
   top: 50%;
-  margin-top: @tooltipArrowVerticalOffset;
-  margin-right: @tooltipArrowHorizontalOffset;
+  margin-top: @popup-tooltipArrowVerticalOffset;
+  margin-right: @popup-tooltipArrowHorizontalOffset;
 }
 
 /* Right Center */
 [data-position="right center"][data-tooltip]:after {
   left: 100%;
   top: 50%;
-  margin-left: @tooltipDistanceAway;
+  margin-left: @popup-tooltipDistanceAway;
   transform: translateY(-50%);
 }
 [data-position="right center"][data-tooltip]:before {
   left: 100%;
   top: 50%;
-  margin-top: @tooltipArrowHorizontalOffset;
-  margin-left: -@tooltipArrowVerticalOffset;
+  margin-top: @popup-tooltipArrowHorizontalOffset;
+  margin-left: -@popup-tooltipArrowVerticalOffset;
 }
 
 /* Arrow */
 [data-position~="bottom"][data-tooltip]:before {
-  background: @arrowTopBackground;
-  box-shadow: @bottomArrowBoxShadow;
+  background: @popup-arrowTopBackground;
+  box-shadow: @popup-bottomArrowBoxShadow;
 }
 [data-position="left center"][data-tooltip]:before {
-  background: @arrowCenterBackground;
-  box-shadow: @leftArrowBoxShadow;
+  background: @popup-arrowCenterBackground;
+  box-shadow: @popup-leftArrowBoxShadow;
 }
 [data-position="right center"][data-tooltip]:before {
-  background: @arrowCenterBackground;
-  box-shadow: @rightArrowBoxShadow;
+  background: @popup-arrowCenterBackground;
+  box-shadow: @popup-rightArrowBoxShadow;
 }
 [data-position~="top"][data-tooltip]:before {
-  background: @arrowBottomBackground;
+  background: @popup-arrowBottomBackground;
 }
 
 /* Inverted Arrow Color */
 [data-inverted][data-position~="bottom"][data-tooltip]:before {
-  background: @invertedArrowTopBackground;
-  box-shadow: @bottomArrowBoxShadow;
+  background: @popup-invertedArrowTopBackground;
+  box-shadow: @popup-bottomArrowBoxShadow;
 }
 [data-inverted][data-position="left center"][data-tooltip]:before {
-  background: @invertedArrowCenterBackground;
-  box-shadow: @leftArrowBoxShadow;
+  background: @popup-invertedArrowCenterBackground;
+  box-shadow: @popup-leftArrowBoxShadow;
 }
 [data-inverted][data-position="right center"][data-tooltip]:before {
-  background: @invertedArrowCenterBackground;
-  box-shadow: @rightArrowBoxShadow;
+  background: @popup-invertedArrowCenterBackground;
+  box-shadow: @popup-rightArrowBoxShadow;
 }
 [data-inverted][data-position~="top"][data-tooltip]:before {
-  background: @invertedArrowBottomBackground;
+  background: @popup-invertedArrowBottomBackground;
 }
 
 [data-position~="bottom"][data-tooltip]:before {
@@ -428,7 +428,7 @@
 
 /* Extending from Top */
 .ui.top.popup {
-  margin: 0em 0em @popupDistanceAway;
+  margin: 0em 0em @popup-popupDistanceAway;
 }
 .ui.top.left.popup {
   transform-origin: left bottom;
@@ -442,17 +442,17 @@
 
 /* Extending from Vertical Center */
 .ui.left.center.popup {
-  margin: 0em @popupDistanceAway 0em 0em;
+  margin: 0em @popup-popupDistanceAway 0em 0em;
   transform-origin: right 50%;
 }
 .ui.right.center.popup {
-  margin: 0em 0em 0em @popupDistanceAway;
+  margin: 0em 0em 0em @popup-popupDistanceAway;
   transform-origin: left 50%;
 }
 
 /* Extending from Bottom */
 .ui.bottom.popup {
-  margin: @popupDistanceAway 0em 0em;
+  margin: @popup-popupDistanceAway 0em 0em;
 }
 .ui.bottom.left.popup {
   transform-origin: left top;
@@ -470,66 +470,66 @@
 
 /*--- Below ---*/
 .ui.bottom.center.popup:before {
-  margin-left: @arrowOffset;
-  top: @arrowOffset;
+  margin-left: @popup-arrowOffset;
+  top: @popup-arrowOffset;
   left: 50%;
   right: auto;
   bottom: auto;
-  box-shadow: @bottomArrowBoxShadow;
+  box-shadow: @popup-bottomArrowBoxShadow;
 }
 
 .ui.bottom.left.popup {
-  margin-left: @boxArrowOffset;
+  margin-left: @popup-boxArrowOffset;
 }
 /*rtl:rename*/
 .ui.bottom.left.popup:before {
-  top: @arrowOffset;
-  left: @arrowDistanceFromEdge;
+  top: @popup-arrowOffset;
+  left: @popup-arrowDistanceFromEdge;
   right: auto;
   bottom: auto;
   margin-left: 0em;
-  box-shadow: @bottomArrowBoxShadow;
+  box-shadow: @popup-bottomArrowBoxShadow;
 }
 
 .ui.bottom.right.popup {
-  margin-right: @boxArrowOffset;
+  margin-right: @popup-boxArrowOffset;
 }
 /*rtl:rename*/
 .ui.bottom.right.popup:before {
-  top: @arrowOffset;
-  right: @arrowDistanceFromEdge;
+  top: @popup-arrowOffset;
+  right: @popup-arrowDistanceFromEdge;
   bottom: auto;
   left: auto;
   margin-left: 0em;
-  box-shadow: @bottomArrowBoxShadow;
+  box-shadow: @popup-bottomArrowBoxShadow;
 }
 
 /*--- Above ---*/
 .ui.top.center.popup:before {
   top: auto;
   right: auto;
-  bottom: @arrowOffset;
+  bottom: @popup-arrowOffset;
   left: 50%;
-  margin-left: @arrowOffset;
+  margin-left: @popup-arrowOffset;
 }
 .ui.top.left.popup {
-  margin-left: @boxArrowOffset;
+  margin-left: @popup-boxArrowOffset;
 }
 /*rtl:rename*/
 .ui.top.left.popup:before {
-  bottom: @arrowOffset;
-  left: @arrowDistanceFromEdge;
+  bottom: @popup-arrowOffset;
+  left: @popup-arrowDistanceFromEdge;
   top: auto;
   right: auto;
   margin-left: 0em;
 }
 .ui.top.right.popup {
-  margin-right: @boxArrowOffset;
+  margin-right: @popup-boxArrowOffset;
 }
 /*rtl:rename*/
 .ui.top.right.popup:before {
-  bottom: @arrowOffset;
-  right: @arrowDistanceFromEdge;
+  bottom: @popup-arrowOffset;
+  right: @popup-arrowDistanceFromEdge;
   top: auto;
   left: auto;
   margin-left: 0em;
@@ -539,46 +539,46 @@
 /*rtl:rename*/
 .ui.left.center.popup:before {
   top: 50%;
-  right: @arrowOffset;
+  right: @popup-arrowOffset;
   bottom: auto;
   left: auto;
-  margin-top: @arrowOffset;
-  box-shadow: @leftArrowBoxShadow;
+  margin-top: @popup-arrowOffset;
+  box-shadow: @popup-leftArrowBoxShadow;
 }
 
 /*--- Right Center  ---*/
 /*rtl:rename*/
 .ui.right.center.popup:before {
   top: 50%;
-  left: @arrowOffset;
+  left: @popup-arrowOffset;
   bottom: auto;
   right: auto;
-  margin-top: @arrowOffset;
-  box-shadow: @rightArrowBoxShadow;
+  margin-top: @popup-arrowOffset;
+  box-shadow: @popup-rightArrowBoxShadow;
 }
 
 /* Arrow Color By Location */
 .ui.bottom.popup:before {
-  background: @arrowTopBackground;
+  background: @popup-arrowTopBackground;
 }
 .ui.right.center.popup:before,
 .ui.left.center.popup:before {
-  background: @arrowCenterBackground;
+  background: @popup-arrowCenterBackground;
 }
 .ui.top.popup:before {
-  background: @arrowBottomBackground;
+  background: @popup-arrowBottomBackground;
 }
 
 /* Inverted Arrow Color */
 .ui.inverted.bottom.popup:before {
-  background: @invertedArrowTopBackground;
+  background: @popup-invertedArrowTopBackground;
 }
 .ui.inverted.right.center.popup:before,
 .ui.inverted.left.center.popup:before {
-  background: @invertedArrowCenterBackground;
+  background: @popup-invertedArrowCenterBackground;
 }
 .ui.inverted.top.popup:before {
-  background: @invertedArrowBottomBackground;
+  background: @popup-invertedArrowBottomBackground;
 }
 
 
@@ -588,8 +588,8 @@
 
 /* Immediate Nested Grid */
 .ui.popup > .ui.grid:not(.padded) {
-  width: @nestedGridWidth;
-  margin: @nestedGridMargin;
+  width: @popup-nestedGridWidth;
+  margin: @popup-nestedGridMargin;
 }
 
 /*******************************
@@ -599,7 +599,7 @@
 .ui.loading.popup {
   display: block;
   visibility: hidden;
-  z-index: @loadingZIndex;
+  z-index: @popup-loadingZIndex;
 }
 
 .ui.animating.popup,
@@ -631,16 +631,16 @@
 ---------------*/
 
 .ui.wide.popup {
-  max-width: @wideWidth;
+  max-width: @popup-wideWidth;
 }
 .ui[class*="very wide"].popup {
-  max-width: @veryWideWidth;
+  max-width: @popup-veryWideWidth;
 }
 
-@media only screen and (max-width: @largestMobileScreen) {
+@media only screen and (max-width: @site-largestMobileScreen) {
   .ui.wide.popup,
   .ui[class*="very wide"].popup {
-    max-width: @maxWidth;
+    max-width: @popup-maxWidth;
   }
 }
 
@@ -661,17 +661,17 @@
 
 /* Inverted colors  */
 .ui.inverted.popup {
-  background: @invertedBackground;
-  color: @invertedColor;
-  border: @invertedBorder;
-  box-shadow: @invertedBoxShadow;
+  background: @popup-invertedBackground;
+  color: @popup-invertedColor;
+  border: @popup-invertedBorder;
+  box-shadow: @popup-invertedBoxShadow;
 }
 .ui.inverted.popup .header {
-  background-color: @invertedHeaderBackground;
-  color: @invertedHeaderColor;
+  background-color: @popup-invertedHeaderBackground;
+  color: @popup-invertedHeaderColor;
 }
 .ui.inverted.popup:before {
-  background-color: @invertedArrowColor;
+  background-color: @popup-invertedArrowColor;
   box-shadow: none !important;
 }
 
@@ -689,22 +689,22 @@
 ---------------*/
 
 .ui.mini.popup {
-  font-size: @mini;
+  font-size: @menu-mini;
 }
 .ui.tiny.popup {
-  font-size: @tiny;
+  font-size: @menu-tiny;
 }
 .ui.small.popup {
-  font-size: @small;
+  font-size: @comment-small;
 }
 .ui.popup {
-  font-size: @medium;
+  font-size: @item-medium;
 }
 .ui.large.popup {
-  font-size: @large;
+  font-size: @comment-large;
 }
 .ui.huge.popup {
-  font-size: @huge;
+  font-size: @comment-huge;
 }
 
 

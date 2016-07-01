@@ -25,9 +25,9 @@
 .ui.shape {
   position: relative;
   vertical-align: top;
-  display: @display;
-  perspective: @perspective;
-  transition: @transition;
+  display: @shape-display;
+  perspective: @shape-perspective;
+  transition: @shape-transition;
 }
 
 .ui.shape .sides {
@@ -38,8 +38,8 @@
   opacity: 1;
   width: 100%;
 
-  margin: @sideMargin !important;
-  backface-visibility: @backfaceVisibility;
+  margin: @shape-sideMargin !important;
+  backface-visibility: @shape-backfaceVisibility;
 }
 
 .ui.shape .side {
@@ -55,27 +55,27 @@
 *******************************/
 
 .ui.cube.shape .side {
-  min-width: @cubeSize;
-  height: @cubeSize;
+  min-width: @shape-cubeSize;
+  height: @shape-cubeSize;
 
-  padding: @cubePadding;
+  padding: @shape-cubePadding;
 
-  background-color: @cubeBackground;
-  color: @cubeTextColor;
-  box-shadow: @cubeBoxShadow;
+  background-color: @shape-cubeBackground;
+  color: @shape-cubeTextColor;
+  box-shadow: @shape-cubeBoxShadow;
 }
 .ui.cube.shape .side > .content {
   width: 100%;
   height: 100%;
   display: table;
 
-  text-align: @cubeTextAlign;
+  text-align: @shape-cubeTextAlign;
   user-select: text;
 }
 .ui.cube.shape .side > .content > div {
   display: table-cell;
   vertical-align: middle;
-  font-size: @cubeFontSize;
+  font-size: @shape-cubeFontSize;
 }
 
 /*******************************
@@ -117,10 +117,10 @@
   top: 0px;
   left: 0px;
   display: block;
-  z-index: @animatingZIndex;
+  z-index: @shape-animatingZIndex;
 }
 .ui.shape .hidden.side {
-  opacity: @hiddenSideOpacity;
+  opacity: @shape-hiddenSideOpacity;
 }
 
 
@@ -132,10 +132,10 @@
   position: absolute;
 }
 .ui.shape.animating .sides {
-  transition: @transition;
+  transition: @shape-transition;
 }
 .ui.shape.animating .side {
-  transition: @sideTransition;
+  transition: @shape-sideTransition;
 }
 
 /*--------------

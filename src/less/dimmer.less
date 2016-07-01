@@ -21,45 +21,45 @@
 *******************************/
 
 .dimmable:not(.body) {
-  position: @dimmablePosition;
+  position: @dimmer-dimmablePosition;
 }
 
 .ui.dimmer {
   display: none;
-  position: @dimmerPosition;
+  position: @dimmer-dimmerPosition;
   top: 0em !important;
   left: 0em !important;
 
   width: 100%;
   height: 100%;
 
-  text-align: @textAlign;
-  vertical-align: @verticalAlign;
+  text-align: @dimmer-textAlign;
+  vertical-align: @dimmer-verticalAlign;
 
-  background-color: @backgroundColor;
-  opacity: @hiddenOpacity;
-  line-height: @lineHeight;
+  background-color: @dimmer-backgroundColor;
+  opacity: @dimmer-hiddenOpacity;
+  line-height: @dimmer-lineHeight;
 
   animation-fill-mode: both;
-  animation-duration: @duration;
-  transition: @transition;
+  animation-duration: @dimmer-duration;
+  transition: @dimmer-transition;
 
   user-select: none;
   will-change: opacity;
-  z-index: @zIndex;
+  z-index: @dimmer-zIndex;
 }
 
 /* Dimmer Content */
 .ui.dimmer > .content {
   width: 100%;
   height: 100%;
-  display: @contentDisplay;
+  display: @dimmer-contentDisplay;
   user-select: text;
 }
 .ui.dimmer > .content > * {
-  display: @contentChildDisplay;
-  vertical-align: @verticalAlign;
-  color: @textColor;
+  display: @dimmer-contentChildDisplay;
+  vertical-align: @dimmer-verticalAlign;
+  color: @dimmer-textColor;
 }
 
 
@@ -74,14 +74,14 @@
 
 .animating.dimmable:not(body),
 .dimmed.dimmable:not(body) {
-  overflow: @overflow;
+  overflow: @dimmer-overflow;
 }
 
 .dimmed.dimmable > .ui.animating.dimmer,
 .dimmed.dimmable > .ui.visible.dimmer,
 .ui.active.dimmer {
   display: block;
-  opacity: @visibleOpacity;
+  opacity: @dimmer-visibleOpacity;
 }
 
 .ui.disabled.dimmer {
@@ -98,9 +98,9 @@
 ---------------*/
 
 .ui.page.dimmer {
-  position: @pageDimmerPosition;
-  transform-style: @transformStyle;
-  perspective: @perspective;
+  position: @dimmer-pageDimmerPosition;
+  transform-style: @dimmer-transformStyle;
+  perspective: @dimmer-perspective;
   transform-origin: center center;
 }
 
@@ -118,19 +118,19 @@ body.dimmable > .dimmer {
 ---------------*/
 
 .blurring.dimmable > :not(.dimmer) {
-  filter: @blurredStartFilter;
-  transition: @blurredTransition;
+  filter: @dimmer-blurredStartFilter;
+  transition: @dimmer-blurredTransition;
 }
 .blurring.dimmed.dimmable > :not(.dimmer) {
-  filter: @blurredEndFilter;
+  filter: @dimmer-blurredEndFilter;
 }
 
 /* Dimmer Color */
 .blurring.dimmable > .dimmer {
-  background-color: @blurredBackgroundColor;
+  background-color: @dimmer-blurredBackgroundColor;
 }
 .blurring.dimmable > .inverted.dimmer {
-  background-color: @blurredInvertedBackgroundColor;
+  background-color: @dimmer-blurredInvertedBackgroundColor;
 }
 
 /*--------------
@@ -149,10 +149,10 @@ body.dimmable > .dimmer {
 ---------------*/
 
 .ui.inverted.dimmer {
-  background-color: @invertedBackgroundColor;
+  background-color: @dimmer-invertedBackgroundColor;
 }
 .ui.inverted.dimmer > .content > * {
-  color: @textColor;
+  color: @dimmer-textColor;
 }
 
 /*--------------
@@ -167,21 +167,21 @@ body.dimmable > .dimmer {
   width: 0%;
   height: 0%;
   z-index: -100;
-  background-color: @simpleStartBackgroundColor;
+  background-color: @dimmer-simpleStartBackgroundColor;
 }
 .dimmed.dimmable > .ui.simple.dimmer {
   overflow: visible;
   opacity: 1;
   width: 100%;
   height: 100%;
-  background-color: @simpleEndBackgroundColor;
-  z-index: @simpleZIndex;
+  background-color: @dimmer-simpleEndBackgroundColor;
+  z-index: @dimmer-simpleZIndex;
 }
 
 .ui.simple.inverted.dimmer {
-  background-color: @simpleInvertedStartBackgroundColor;
+  background-color: @dimmer-simpleInvertedStartBackgroundColor;
 }
 .dimmed.dimmable > .ui.simple.inverted.dimmer {
-  background-color: @simpleInvertedEndBackgroundColor;
+  background-color: @dimmer-simpleInvertedEndBackgroundColor;
 }
 

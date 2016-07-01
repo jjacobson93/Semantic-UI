@@ -23,8 +23,8 @@
 
 .ui.ad {
   display: block;
-  overflow: @overflow;
-  margin: @margin;
+  overflow: @ad-overflow;
+  margin: @ad-margin;
 }
 
 .ui.ad:first-child {
@@ -224,7 +224,7 @@
   display: none;
 }
 
-@media only screen and (max-width : @largestMobileScreen) {
+@media only screen and (max-width : @site-largestMobileScreen) {
   .ui.mobile.ad {
     display: block;
   }
@@ -242,7 +242,7 @@
 
 .ui.test.ad {
   position: relative;
-  background: @testBackground;
+  background: @ad-testBackground;
 }
 .ui.test.ad:after {
   position: absolute;
@@ -252,13 +252,13 @@
   text-align: center;
   transform: translateX(-50%) translateY(-50%);
 
-  content: @testText;
-  color: @testColor;
-  font-size: @testFontSize;
-  font-weight: @testFontWeight;
+  content: @ad-testText;
+  color: @ad-testColor;
+  font-size: @ad-testFontSize;
+  font-weight: @ad-testFontWeight;
 }
 .ui.mobile.test.ad:after {
-  font-size: @testMobileFontSize;
+  font-size: @ad-testMobileFontSize;
 }
 .ui.test.ad[data-text]:after {
   content: attr(data-text);

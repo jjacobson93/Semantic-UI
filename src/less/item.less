@@ -25,18 +25,18 @@
 ---------------*/
 
 .ui.items > .item {
-  display: @display;
-  margin: @itemSpacing 0em;
-  width: @width;
-  min-height: @minHeight;
-  background: @background;
-  padding: @padding;
+  display: @item-display;
+  margin: @item-itemSpacing 0em;
+  width: @item-width;
+  min-height: @item-minHeight;
+  background: @item-background;
+  padding: @item-padding;
 
-  border: @border;
-  border-radius: @borderRadius;
-  box-shadow: @boxShadow;
-  transition: @transition;
-  z-index: @zIndex;
+  border: @item-border;
+  border-radius: @item-borderRadius;
+  box-shadow: @item-boxShadow;
+  transition: @item-transition;
+  z-index: @item-zIndex;
 }
 .ui.items > .item a {
   cursor: pointer;
@@ -47,7 +47,7 @@
 ---------------*/
 
 .ui.items {
-  margin: @groupMargin;
+  margin: @item-groupMargin;
 }
 
 .ui.items:first-child {
@@ -85,23 +85,23 @@
 .ui.items > .item > .image {
   position: relative;
   flex: 0 0 auto;
-  display: @imageDisplay;
-  float: @imageFloat;
-  margin: @imageMargin;
-  padding: @imagePadding;
-  max-height: @imageMaxHeight;
-  align-self: @imageVerticalAlign;
+  display: @item-imageDisplay;
+  float: @item-imageFloat;
+  margin: @item-imageMargin;
+  padding: @item-imagePadding;
+  max-height: @item-imageMaxHeight;
+  align-self: @item-imageVerticalAlign;
 }
 .ui.items > .item > .image > img {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: @imageBorderRadius;
-  border: @imageBorder;
+  border-radius: @item-imageBorderRadius;
+  border: @item-imageBorder;
 }
 
 .ui.items > .item > .image:only-child > img {
-  border-radius: @borderRadius;
+  border-radius: @item-borderRadius;
 }
 
 
@@ -112,13 +112,13 @@
 .ui.items > .item > .content {
   display: block;
   flex: 1 1 auto;
-  background: @contentBackground;
-  margin: @contentMargin;
-  padding: @contentPadding;
-  box-shadow: @contentBoxShadow;
-  font-size: @contentFontSize;
-  border: @contentBorder;
-  border-radius: @contentBorderRadius;
+  background: @item-contentBackground;
+  margin: @item-contentMargin;
+  padding: @item-contentPadding;
+  box-shadow: @item-contentBoxShadow;
+  font-size: @item-contentFontSize;
+  border: @item-contentBorder;
+  border-radius: @item-contentBorderRadius;
 }
 .ui.items > .item > .content:after {
   display: block;
@@ -131,23 +131,23 @@
 
 .ui.items > .item > .image + .content {
   min-width: 0;
-  width: @contentWidth;
-  display: @contentDisplay;
-  margin-left: @contentOffset;
-  align-self: @contentVerticalAlign;
-  padding-left: @contentImageDistance;
+  width: @item-contentWidth;
+  display: @item-contentDisplay;
+  margin-left: @item-contentOffset;
+  align-self: @item-contentVerticalAlign;
+  padding-left: @item-contentImageDistance;
 }
 
 .ui.items > .item > .content > .header {
   display: inline-block;
-  margin: @headerMargin;
-  font-family: @headerFont;
-  font-weight: @headerFontWeight;
-  color: @headerColor;
+  margin: @item-headerMargin;
+  font-family: @site-headerFont;
+  font-weight: @site-headerFontWeight;
+  color: @item-headerColor;
 }
 /* Default Header Size */
 .ui.items > .item > .content > .header:not(.ui) {
-  font-size: @headerFontSize;
+  font-size: @item-headerFontSize;
 }
 
 /*--------------
@@ -167,14 +167,14 @@
 ---------------*/
 
 .ui.items > .item .content img {
-  align-self: @contentImageVerticalAlign;
-  width: @contentImageWidth;
+  align-self: @item-contentImageVerticalAlign;
+  width: @item-contentImageWidth;
 }
 .ui.items > .item img.avatar,
 .ui.items > .item .avatar img {
-  width: @avatarSize;
-  height: @avatarSize;
-  border-radius: @avatarBorderRadius;
+  width: @item-avatarSize;
+  height: @item-avatarSize;
+  border-radius: @item-avatarBorderRadius;
 }
 
 
@@ -183,11 +183,11 @@
 ---------------*/
 
 .ui.items > .item > .content > .description {
-  margin-top: @descriptionDistance;
-  max-width: @descriptionMaxWidth;
-  font-size: @descriptionFontSize;
-  line-height: @descriptionLineHeight;
-  color: @descriptionColor;
+  margin-top: @item-descriptionDistance;
+  max-width: @item-descriptionMaxWidth;
+  font-size: @item-descriptionFontSize;
+  line-height: @item-descriptionLineHeight;
+  color: @item-descriptionColor;
 }
 
 /*--------------
@@ -195,7 +195,7 @@
 ---------------*/
 
 .ui.items > .item > .content p {
-  margin: 0em 0em @paragraphDistance;
+  margin: 0em 0em @item-paragraphDistance;
 }
 .ui.items > .item > .content p:last-child {
   margin-bottom: 0em;
@@ -206,13 +206,13 @@
 ---------------*/
 
 .ui.items > .item .meta {
-  margin: @metaMargin;
-  font-size: @metaFontSize;
-  line-height: @metaLineHeight;
-  color: @metaColor;
+  margin: @item-metaMargin;
+  font-size: @item-metaFontSize;
+  line-height: @item-metaLineHeight;
+  color: @item-metaColor;
 }
 .ui.items > .item .meta * {
-  margin-right: @metaSpacing;
+  margin-right: @item-metaSpacing;
 }
 .ui.items > .item .meta :last-child {
   margin-right: 0em;
@@ -220,7 +220,7 @@
 
 .ui.items > .item .meta [class*="right floated"] {
   margin-right: 0em;
-  margin-left: @metaSpacing;
+  margin-left: @item-metaSpacing;
 }
 
 /*--------------
@@ -229,27 +229,27 @@
 
 /* Generic */
 .ui.items > .item > .content a:not(.ui) {
-  color: @contentLinkColor;
-  transition: @contentLinkTransition;
+  color: @item-contentLinkColor;
+  transition: @item-contentLinkTransition;
 }
 .ui.items > .item > .content a:not(.ui):hover {
-  color: @contentLinkHoverColor;
+  color: @item-contentLinkHoverColor;
 }
 
 /* Header */
 .ui.items > .item > .content > a.header {
-  color: @headerLinkColor;
+  color: @item-headerLinkColor;
 }
 .ui.items > .item > .content > a.header:hover {
-  color: @headerLinkHoverColor;
+  color: @item-headerLinkHoverColor;
 }
 
 /* Meta */
 .ui.items > .item .meta > a:not(.ui) {
-  color: @metaLinkColor;
+  color: @item-metaLinkColor;
 }
 .ui.items > .item .meta > a:not(.ui):hover {
-  color: @metaLinkHoverColor;
+  color: @item-metaLinkHoverColor;
 }
 
 
@@ -263,15 +263,15 @@
 /* Icon */
 .ui.items > .item > .content .favorite.icon {
   cursor: pointer;
-  opacity: @actionOpacity;
-  transition: @actionTransition;
+  opacity: @item-actionOpacity;
+  transition: @item-actionTransition;
 }
 .ui.items > .item > .content .favorite.icon:hover {
-  opacity: @actionHoverOpacity;
-  color: @favoriteColor;
+  opacity: @item-actionHoverOpacity;
+  color: @item-favoriteColor;
 }
 .ui.items > .item > .content .active.favorite.icon {
-  color: @favoriteActiveColor;
+  color: @item-favoriteActiveColor;
 }
 
 /*-----Like----- */
@@ -279,15 +279,15 @@
 /* Icon */
 .ui.items > .item > .content .like.icon {
   cursor: pointer;
-  opacity: @actionOpacity;
-  transition: @actionTransition;
+  opacity: @item-actionOpacity;
+  transition: @item-actionTransition;
 }
 .ui.items > .item > .content .like.icon:hover {
-  opacity: @actionHoverOpacity;
-  color: @likeColor;
+  opacity: @item-actionHoverOpacity;
+  color: @item-likeColor;
 }
 .ui.items > .item > .content .active.like.icon {
-  color: @likeActiveColor;
+  color: @item-likeActiveColor;
 }
 
 /*----------------
@@ -295,24 +295,24 @@
 -----------------*/
 
 .ui.items > .item .extra {
-  display: @extraDisplay;
-  position: @extraPosition;
-  background: @extraBackground;
-  margin: @extraMargin;
-  width: @extraWidth;
-  padding: @extraPadding;
-  top: @extraTop;
-  left: @extraLeft;
-  color: @extraColor;
-  box-shadow: @extraBoxShadow;
-  transition: @extraTransition;
-  border-top: @extraDivider;
+  display: @item-extraDisplay;
+  position: @item-extraPosition;
+  background: @item-extraBackground;
+  margin: @item-extraMargin;
+  width: @item-extraWidth;
+  padding: @item-extraPadding;
+  top: @item-extraTop;
+  left: @item-extraLeft;
+  color: @item-extraColor;
+  box-shadow: @item-extraBoxShadow;
+  transition: @item-extraTransition;
+  border-top: @item-extraDivider;
 }
 .ui.items > .item .extra > * {
-  margin: (@extraRowSpacing / 2) @extraHorizontalSpacing (@extraRowSpacing / 2) 0em;
+  margin: (@item-extraRowSpacing / 2) @item-extraHorizontalSpacing (@item-extraRowSpacing / 2) 0em;
 }
 .ui.items > .item .extra > [class*="right floated"] {
-  margin: (@extraRowSpacing / 2) 0em (@extraRowSpacing / 2) @extraHorizontalSpacing;
+  margin: (@item-extraRowSpacing / 2) 0em (@item-extraRowSpacing / 2) @item-extraHorizontalSpacing;
 }
 
 .ui.items > .item .extra:after {
@@ -331,30 +331,30 @@
 
 /* Default Image Width */
 .ui.items > .item > .image:not(.ui) {
-  width: @imageWidth;
+  width: @item-imageWidth;
 }
 
 
 /* Tablet Only */
-@media only screen and (min-width: @tabletBreakpoint) and (max-width: @largestTabletScreen) {
+@media only screen and (min-width: @site-tabletBreakpoint) and (max-width: @site-largestTabletScreen) {
   .ui.items > .item {
-    margin: @tabletItemSpacing 0em;
+    margin: @item-tabletItemSpacing 0em;
   }
   .ui.items > .item > .image:not(.ui) {
-    width: @tabletImageWidth;
+    width: @item-tabletImageWidth;
   }
   .ui.items > .item > .image + .content {
     display: block;
-    padding: 0em 0em 0em @tabletContentImageDistance;
+    padding: 0em 0em 0em @item-tabletContentImageDistance;
   }
 
 }
 
 /* Mobile Only */
-@media only screen and (max-width: @largestMobileScreen) {
+@media only screen and (max-width: @site-largestMobileScreen) {
   .ui.items > .item {
     flex-direction: column;
-    margin: @mobileItemSpacing 0em;
+    margin: @item-mobileItemSpacing 0em;
   }
   .ui.items > .item > .image {
     display: block;
@@ -364,12 +364,12 @@
   .ui.items > .item > .image,
   .ui.items > .item > .image > img {
     max-width: 100% !important;
-    width: @mobileImageWidth !important;
-    max-height: @mobileImageMaxHeight !important;
+    width: @item-mobileImageWidth !important;
+    max-height: @item-mobileImageMaxHeight !important;
   }
   .ui.items > .item > .image + .content {
     display: block;
-    padding: @mobileContentImageDistance 0em 0em;
+    padding: @item-mobileContentImageDistance 0em 0em;
   }
 
 }
@@ -400,10 +400,10 @@
 ---------------*/
 
 .ui.relaxed.items > .item {
-  margin: @relaxedItemSpacing 0em;
+  margin: @item-relaxedItemSpacing 0em;
 }
 .ui[class*="very relaxed"].items > .item {
-  margin: @veryRelaxedItemSpacing 0em;
+  margin: @item-veryRelaxedItemSpacing 0em;
 }
 
 
@@ -412,28 +412,28 @@
 --------------------*/
 
 .ui.divided.items > .item {
-  border-top: @dividedBorder;
-  margin: @dividedMargin;
-  padding: @dividedPadding;
+  border-top: @item-dividedBorder;
+  margin: @item-dividedMargin;
+  padding: @item-dividedPadding;
 }
 .ui.divided.items > .item:first-child {
   border-top: none;
-  margin-top: @dividedFirstLastMargin !important;
-  padding-top: @dividedFirstLastPadding !important;
+  margin-top: @item-dividedFirstLastMargin !important;
+  padding-top: @item-dividedFirstLastPadding !important;
 }
 .ui.divided.items > .item:last-child {
-  margin-bottom: @dividedFirstLastMargin !important;
-  padding-bottom: @dividedFirstLastPadding !important;
+  margin-bottom: @item-dividedFirstLastMargin !important;
+  padding-bottom: @item-dividedFirstLastPadding !important;
 }
 
 /* Relaxed Divided */
 .ui.relaxed.divided.items > .item {
   margin: 0em;
-  padding: @relaxedItemSpacing 0em;
+  padding: @item-relaxedItemSpacing 0em;
 }
 .ui[class*="very relaxed"].divided.items > .item {
   margin: 0em;
-  padding: @veryRelaxedItemSpacing 0em;
+  padding: @item-veryRelaxedItemSpacing 0em;
 }
 
 
@@ -448,7 +448,7 @@
 
 .ui.items a.item:hover .content .header,
 .ui.link.items > .item:hover .content .header {
-  color: @headerLinkHoverColor;
+  color: @item-headerLinkHoverColor;
 }
 
 
@@ -457,6 +457,6 @@
 ---------------*/
 
 .ui.items > .item {
-  font-size: @medium;
+  font-size: @item-medium;
 }
 

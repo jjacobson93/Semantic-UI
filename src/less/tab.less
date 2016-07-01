@@ -46,46 +46,46 @@
   position: relative;
   overflow: hidden;
   display: block;
-  min-height: @loadingMinHeight;
+  min-height: @tab-loadingMinHeight;
 }
 .ui.tab.loading * {
-  position: @loadingContentPosition !important;
-  left: @loadingContentOffset !important;
+  position: @tab-loadingContentPosition !important;
+  left: @tab-loadingContentOffset !important;
 }
 
 .ui.tab.loading:before,
 .ui.tab.loading.segment:before {
   position: absolute;
   content: '';
-  top: @loaderDistanceFromTop;
+  top: @tab-loaderDistanceFromTop;
   left: 50%;
 
-  margin: @loaderMargin;
-  width: @loaderSize;
-  height: @loaderSize;
+  margin: @site-loaderMargin;
+  width: @tab-loaderSize;
+  height: @tab-loaderSize;
 
-  border-radius: @circularRadius;
-  border: @loaderLineWidth solid @loaderFillColor;
+  border-radius: @site-circularRadius;
+  border: @site-loaderLineWidth solid @site-loaderFillColor;
 }
 .ui.tab.loading:after,
 .ui.tab.loading.segment:after {
   position: absolute;
   content: '';
-  top: @loaderDistanceFromTop;
+  top: @tab-loaderDistanceFromTop;
   left: 50%;
 
-  margin: @loaderMargin;
-  width: @loaderSize;
-  height: @loaderSize;
+  margin: @site-loaderMargin;
+  width: @tab-loaderSize;
+  height: @tab-loaderSize;
 
-  animation: button-spin @loaderSpeed linear;
+  animation: button-spin @site-loaderSpeed linear;
   animation-iteration-count: infinite;
 
-  border-radius: @circularRadius;
+  border-radius: @site-circularRadius;
 
-  border-color: @loaderLineColor transparent transparent;
+  border-color: @site-loaderLineColor transparent transparent;
   border-style: solid;
-  border-width: @loaderLineWidth;
+  border-width: @site-loaderLineWidth;
 
   box-shadow: 0px 0px 0px 1px transparent;
 }

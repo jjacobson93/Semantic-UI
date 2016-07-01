@@ -27,20 +27,20 @@ body {
 }
 
 html {
-  font-size: @emSize;
+  font-size: @site-emSize;
 }
 
 body {
   margin: 0px;
   padding: 0px;
-  overflow-x: @pageOverflowX;
-  min-width: @pageMinWidth;
-  background: @pageBackground;
-  font-family: @pageFont;
-  font-size: @fontSize;
-  line-height: @lineHeight;
-  color: @textColor;
-  font-smoothing: @fontSmoothing;
+  overflow-x: @site-pageOverflowX;
+  min-width: @site-pageMinWidth;
+  background: @site-pageBackground;
+  font-family: @site-pageFont;
+  font-size: @site-fontSize;
+  line-height: @site-lineHeight;
+  color: @site-textColor;
+  font-smoothing: @site-fontSmoothing;
 }
 
 
@@ -54,28 +54,28 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: @headerFont;
-  line-height: @headerLineHeight;
-  margin: @headerMargin;
-  font-weight: @headerFontWeight;
+  font-family: @site-headerFont;
+  line-height: @site-headerLineHeight;
+  margin: @site-headerMargin;
+  font-weight: @site-headerFontWeight;
   padding: 0em;
 }
 
 h1 {
   min-height: 1rem;
-  font-size: @h1;
+  font-size: @site-h1;
 }
 h2 {
-  font-size: @h2;
+  font-size: @site-h2;
 }
 h3 {
-  font-size: @h3;
+  font-size: @site-h3;
 }
 h4 {
-  font-size: @h4;
+  font-size: @site-h4;
 }
 h5 {
-  font-size: @h5;
+  font-size: @site-h5;
 }
 
 h1:first-child,
@@ -100,8 +100,8 @@ h5:last-child {
 *******************************/
 
 p {
-  margin: @paragraphMargin;
-  line-height: @paragraphLineHeight;
+  margin: @site-paragraphMargin;
+  line-height: @site-paragraphLineHeight;
 }
 p:first-child {
   margin-top: 0em;
@@ -115,12 +115,12 @@ p:last-child {
 --------------------*/
 
 a {
-  color: @linkColor;
-  text-decoration: @linkUnderline;
+  color: @site-linkColor;
+  text-decoration: @site-linkUnderline;
 }
 a:hover {
-  color: @linkHoverColor;
-  text-decoration: @linkHoverUnderline;
+  color: @site-linkHoverColor;
+  text-decoration: @site-linkHoverUnderline;
 }
 
 
@@ -130,33 +130,33 @@ a:hover {
 
 /* Site */
 ::-webkit-selection {
-  background-color: @highlightBackground;
-  color: @highlightColor;
+  background-color: @site-highlightBackground;
+  color: @site-highlightColor;
 }
 ::-moz-selection {
-  background-color: @highlightBackground;
-  color: @highlightColor;
+  background-color: @site-highlightBackground;
+  color: @site-highlightColor;
 }
 ::selection {
-  background-color: @highlightBackground;
-  color: @highlightColor;
+  background-color: @site-highlightBackground;
+  color: @site-highlightColor;
 }
 
 /* Form */
 textarea::-webkit-selection,
 input::-webkit-selection {
-  background-color: @inputHighlightBackground;
-  color: @inputHighlightColor;
+  background-color: @site-inputHighlightBackground;
+  color: @site-inputHighlightColor;
 }
 textarea::-moz-selection,
 input::-moz-selection {
-  background-color: @inputHighlightBackground;
-  color: @inputHighlightColor;
+  background-color: @site-inputHighlightBackground;
+  color: @site-inputHighlightColor;
 }
 textarea::selection,
 input::selection {
-  background-color: @inputHighlightBackground;
-  color: @inputHighlightColor;
+  background-color: @site-inputHighlightBackground;
+  color: @site-inputHighlightColor;
 }
 
 

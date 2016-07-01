@@ -21,7 +21,7 @@
 *******************************/
 
 .ui.feed {
-  margin: @margin;
+  margin: @feed-margin;
 }
 .ui.feed:first-child {
   margin-top: 0em;
@@ -39,11 +39,11 @@
 .ui.feed > .event {
   display: flex;
   flex-direction: row;
-  width: @eventWidth;
-  padding: @eventPadding;
-  margin: @eventMargin;
-  background: @eventBackground;
-  border-top: @eventDivider;
+  width: @feed-eventWidth;
+  padding: @feed-eventPadding;
+  margin: @feed-eventMargin;
+  background: @feed-eventBackground;
+  border-top: @feed-eventDivider;
 }
 .ui.feed > .event:first-child {
   border-top: 0px;
@@ -57,28 +57,28 @@
 .ui.feed > .event > .label {
   display: block;
   flex: 0 0 auto;
-  width: @labelWidth;
-  height: @labelHeight;
-  align-self: @labelAlignSelf;
-  text-align: @labelTextAlign;
+  width: @feed-labelWidth;
+  height: @feed-labelHeight;
+  align-self: @feed-labelAlignSelf;
+  text-align: @feed-labelTextAlign;
 }
 .ui.feed > .event > .label .icon {
-  opacity: @iconLabelOpacity;
-  font-size: @iconLabelSize;
-  width: @iconLabelWidth;
-  padding: @iconLabelPadding;
-  background: @iconLabelBackground;
-  border: @iconLabelBorder;
-  border-radius: @iconLabelBorderRadius;
-  color: @iconLabelColor;
+  opacity: @feed-iconLabelOpacity;
+  font-size: @feed-iconLabelSize;
+  width: @feed-iconLabelWidth;
+  padding: @feed-iconLabelPadding;
+  background: @feed-iconLabelBackground;
+  border: @feed-iconLabelBorder;
+  border-radius: @feed-iconLabelBorderRadius;
+  color: @feed-iconLabelColor;
 }
 .ui.feed > .event > .label img {
-  width: @imageLabelWidth;
-  height: @imageLabelHeight;
-  border-radius: @imageLabelBorderRadius;
+  width: @feed-imageLabelWidth;
+  height: @feed-imageLabelHeight;
+  border-radius: @feed-imageLabelBorderRadius;
 }
 .ui.feed > .event > .label + .content {
-  margin: @labeledContentMargin;
+  margin: @feed-labeledContentMargin;
 }
 
 /*--------------
@@ -89,12 +89,12 @@
 .ui.feed > .event > .content {
   display: block;
   flex: 1 1 auto;
-  align-self: @contentAlignSelf;
-  text-align: @contentTextAlign;
-  word-wrap: @contentWordWrap;
+  align-self: @feed-contentAlignSelf;
+  text-align: @feed-contentTextAlign;
+  word-wrap: @feed-contentWordWrap;
 }
 .ui.feed > .event:last-child > .content {
-  padding-bottom: @lastLabeledContentPadding;
+  padding-bottom: @feed-lastLabeledContentPadding;
 }
 
 /* Link */
@@ -107,13 +107,13 @@
 ---------------*/
 
 .ui.feed > .event > .content .date {
-  margin: @dateMargin;
-  padding: @datePadding;
-  color: @dateColor;
-  font-weight: @dateFontWeight;
-  font-size: @dateFontSize;
-  font-style: @dateFontStyle;
-  color: @dateColor;
+  margin: @feed-dateMargin;
+  padding: @feed-datePadding;
+  color: @feed-dateColor;
+  font-weight: @feed-dateFontWeight;
+  font-size: @feed-dateFontSize;
+  font-style: @feed-dateFontStyle;
+  color: @feed-dateColor;
 }
 
 /*--------------
@@ -121,20 +121,20 @@
 ---------------*/
 
 .ui.feed > .event > .content .summary {
-  margin: @summaryMargin;
-  font-size: @summaryFontSize;
-  font-weight: @summaryFontWeight;
-  color: @summaryColor;
+  margin: @feed-summaryMargin;
+  font-size: @feed-summaryFontSize;
+  font-weight: @feed-summaryFontWeight;
+  color: @feed-summaryColor;
 }
 
 /* Summary Image */
 .ui.feed > .event > .content .summary img {
   display: inline-block;
-  width: @summaryImageWidth;
-  height: @summaryImageHeight;
-  margin: @summaryImageMargin;
-  border-radius: @summaryImageBorderRadius;
-  vertical-align: @summaryImageVerticalAlign;
+  width: @feed-summaryImageWidth;
+  height: @feed-summaryImageHeight;
+  margin: @feed-summaryImageMargin;
+  border-radius: @feed-summaryImageBorderRadius;
+  vertical-align: @feed-summaryImageVerticalAlign;
 }
 /*--------------
       User
@@ -142,15 +142,15 @@
 
 .ui.feed > .event > .content .user {
   display: inline-block;
-  font-weight: @userFontWeight;
-  margin-right: @userDistance;
+  font-weight: @feed-userFontWeight;
+  margin-right: @feed-userDistance;
   vertical-align: baseline;
 }
 .ui.feed > .event > .content .user img {
-  margin: @userImageMargin;
-  width: @userImageWidth;
-  height: @userImageHeight;
-  vertical-align: @userImageVerticalAlign;
+  margin: @feed-userImageMargin;
+  width: @feed-userImageWidth;
+  height: @feed-userImageHeight;
+  vertical-align: @feed-userImageVerticalAlign;
 }
 /*--------------
    Inline Date
@@ -158,14 +158,14 @@
 
 /* Date inside Summary */
 .ui.feed > .event > .content .summary > .date {
-  display: @summaryDateDisplay;
-  float: @summaryDateFloat;
-  font-weight: @summaryDateFontWeight;
-  font-size: @summaryDateFontSize;
-  font-style: @summaryDateFontStyle;
-  margin: @summaryDateMargin;
-  padding: @summaryDatePadding;
-  color: @summaryDateColor;
+  display: @feed-summaryDateDisplay;
+  float: @feed-summaryDateFloat;
+  font-weight: @feed-summaryDateFontWeight;
+  font-size: @feed-summaryDateFontSize;
+  font-style: @feed-summaryDateFontStyle;
+  margin: @feed-summaryDateMargin;
+  padding: @feed-summaryDatePadding;
+  color: @feed-summaryDateColor;
 }
 
 /*--------------
@@ -173,26 +173,26 @@
 ---------------*/
 
 .ui.feed > .event > .content .extra {
-  margin: @extraMargin;
-  background: @extraBackground;
-  padding: @extraPadding;
-  color: @extraColor;
+  margin: @feed-extraMargin;
+  background: @feed-extraBackground;
+  padding: @feed-extraPadding;
+  color: @feed-extraColor;
 }
 
 /* Images */
 .ui.feed > .event > .content .extra.images img {
   display: inline-block;
-  margin: @extraImageMargin;
-  width: @extraImageWidth;
+  margin: @feed-extraImageMargin;
+  width: @feed-extraImageWidth;
 }
 
 /* Text */
 .ui.feed > .event > .content .extra.text {
-  padding: @extraTextPadding;
-  border-left: @extraTextPointer;
-  font-size: @extraTextFontSize;
-  max-width: @extraTextMaxWidth;
-  line-height: @extraTextLineHeight;
+  padding: @feed-extraTextPadding;
+  border-left: @feed-extraTextPointer;
+  font-size: @feed-extraTextFontSize;
+  max-width: @feed-extraTextMaxWidth;
+  line-height: @feed-extraTextLineHeight;
 }
 
 /*--------------
@@ -200,40 +200,40 @@
 ---------------*/
 
 .ui.feed > .event > .content .meta {
-  display: @metadataDisplay;
-  font-size: @metadataFontSize;
-  margin: @metadataMargin;
-  background: @metadataBackground;
-  border: @metadataBorder;
-  border-radius: @metadataBorderRadius;
-  box-shadow: @metadataBoxShadow;
-  padding: @metadataPadding;
-  color: @metadataColor;
+  display: @feed-metadataDisplay;
+  font-size: @feed-metadataFontSize;
+  margin: @feed-metadataMargin;
+  background: @feed-metadataBackground;
+  border: @feed-metadataBorder;
+  border-radius: @feed-metadataBorderRadius;
+  box-shadow: @feed-metadataBoxShadow;
+  padding: @feed-metadataPadding;
+  color: @feed-metadataColor;
 }
 
 .ui.feed > .event > .content .meta > * {
   position: relative;
-  margin-left: @metadataElementSpacing;
+  margin-left: @feed-metadataElementSpacing;
 }
 .ui.feed > .event > .content .meta > *:after {
-  content: @metadataDivider;
-  color: @metadataDividerColor;
+  content: @feed-metadataDivider;
+  color: @feed-metadataDividerColor;
   top: 0em;
-  left: @metadataDividerOffset;
+  left: @feed-metadataDividerOffset;
   opacity: 1;
   position: absolute;
   vertical-align: top;
 }
 
 .ui.feed > .event > .content .meta .like {
-  color: @likeColor;
-  transition: @likeTransition;
+  color: @feed-likeColor;
+  transition: @feed-likeTransition;
 }
 .ui.feed > .event > .content .meta .like:hover .icon {
-  color: @likeHoverColor;
+  color: @feed-likeHoverColor;
 }
 .ui.feed > .event > .content .meta .active.like .icon {
-  color: @likeActiveColor;
+  color: @feed-likeActiveColor;
 }
 
 /* First element */
@@ -247,15 +247,15 @@
 /* Action */
 .ui.feed > .event > .content .meta a,
 .ui.feed > .event > .content .meta > .icon {
-  cursor: @metadataActionCursor;
-  opacity: @metadataActionOpacity;
-  color: @metadataActionColor;
-  transition: @metadataActionTransition;
+  cursor: @feed-metadataActionCursor;
+  opacity: @feed-metadataActionOpacity;
+  color: @feed-metadataActionColor;
+  transition: @feed-metadataActionTransition;
 }
 .ui.feed > .event > .content .meta a:hover,
 .ui.feed > .event > .content .meta a:hover .icon,
 .ui.feed > .event > .content .meta > .icon:hover {
-  color: @metadataActionHoverColor;
+  color: @feed-metadataActionHoverColor;
 }
 
 
@@ -265,12 +265,12 @@
 *******************************/
 
 .ui.small.feed {
-  font-size: @small;
+  font-size: @comment-small;
 }
 .ui.feed {
-  font-size: @medium;
+  font-size: @comment-medium;
 }
 .ui.large.feed {
-  font-size: @large;
+  font-size: @comment-large;
 }
 

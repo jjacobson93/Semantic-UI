@@ -40,7 +40,7 @@
   border-radius: 0em !important;
   margin: 0em !important;
   overflow-y: auto !important;
-  z-index: @topLayer;
+  z-index: @sidebar-topLayer;
 }
 
 /* GPU Layers for Child Elements */
@@ -93,7 +93,7 @@
 
 /* Whole Page */
 body.pushable {
-  background: @canvasBackground !important;
+  background: @sidebar-canvasBackground !important;
 }
 
 /* Page Context */
@@ -115,9 +115,9 @@ body.pushable {
   position: fixed;
   backface-visibility: hidden;
 
-  transition: transform @duration @easing;
+  transition: transform @sidebar-duration @sidebar-easing;
   will-change: transform;
-  z-index: @fixedLayer;
+  z-index: @sidebar-fixedLayer;
 }
 
 /*--------------
@@ -129,12 +129,12 @@ body.pushable {
   backface-visibility: hidden;
   overflow: hidden;
   min-height: 100%;
-  transition: transform @duration @easing;
-  z-index: @middleLayer;
+  transition: transform @sidebar-duration @sidebar-easing;
+  z-index: @sidebar-middleLayer;
 }
 
 body.pushable > .pusher {
-  background: @pageBackground;
+  background: @site-pageBackground;
 }
 
 /* Pusher should inherit background from context */
@@ -151,12 +151,12 @@ body.pushable > .pusher {
   top: 0px;
   right: 0px;
   content: '';
-  background-color: @dimmerColor;
+  background-color: @sidebar-dimmerColor;
   overflow: hidden;
   opacity: 0;
-  transition: @dimmerTransition;
+  transition: @sidebar-dimmerTransition;
   will-change: opacity;
-  z-index: @dimmerLayer;
+  z-index: @sidebar-dimmerLayer;
 }
 
 /*--------------
@@ -201,29 +201,29 @@ body.pushable > .pusher {
 /* Shadow Direction */
 .ui.left.visible.sidebar,
 .ui.right.visible.sidebar {
-  box-shadow: @horizontalBoxShadow;
+  box-shadow: @sidebar-horizontalBoxShadow;
 }
 .ui.top.visible.sidebar,
 .ui.bottom.visible.sidebar {
-  box-shadow: @verticalBoxShadow;
+  box-shadow: @sidebar-verticalBoxShadow;
 }
 
 /* Visible On Load */
 .ui.visible.left.sidebar ~ .fixed,
 .ui.visible.left.sidebar ~ .pusher {
-  transform: translate3d(@width, 0, 0);
+  transform: translate3d(@sidebar-width, 0, 0);
 }
 .ui.visible.right.sidebar ~ .fixed,
 .ui.visible.right.sidebar ~ .pusher {
-  transform: translate3d(-@width, 0, 0);
+  transform: translate3d(-@sidebar-width, 0, 0);
 }
 .ui.visible.top.sidebar ~ .fixed,
 .ui.visible.top.sidebar ~ .pusher {
-  transform: translate3d(0, @height, 0);
+  transform: translate3d(0, @sidebar-height, 0);
 }
 .ui.visible.bottom.sidebar ~ .fixed,
 .ui.visible.bottom.sidebar ~ .pusher {
-  transform: translate3d(0, -@height, 0);
+  transform: translate3d(0, -@sidebar-height, 0);
 }
 
 /* opposite sides visible forces content overlay */
@@ -264,59 +264,59 @@ html.ios body {
 /* Left / Right */
 .ui.thin.left.sidebar,
 .ui.thin.right.sidebar {
-  width: @thinWidth;
+  width: @sidebar-thinWidth;
 }
 .ui[class*="very thin"].left.sidebar,
 .ui[class*="very thin"].right.sidebar {
-  width: @veryThinWidth;
+  width: @sidebar-veryThinWidth;
 }
 .ui.left.sidebar,
 .ui.right.sidebar {
-  width: @width;
+  width: @sidebar-width;
 }
 .ui.wide.left.sidebar,
 .ui.wide.right.sidebar {
-  width: @wideWidth;
+  width: @sidebar-wideWidth;
 }
 .ui[class*="very wide"].left.sidebar,
 .ui[class*="very wide"].right.sidebar {
-  width: @veryWideWidth;
+  width: @sidebar-veryWideWidth;
 }
 
 /* Left Visible */
 .ui.visible.thin.left.sidebar ~ .fixed,
 .ui.visible.thin.left.sidebar ~ .pusher {
-  transform: translate3d(@thinWidth, 0, 0);
+  transform: translate3d(@sidebar-thinWidth, 0, 0);
 }
 .ui.visible[class*="very thin"].left.sidebar ~ .fixed,
 .ui.visible[class*="very thin"].left.sidebar ~ .pusher {
-  transform: translate3d(@veryThinWidth, 0, 0);
+  transform: translate3d(@sidebar-veryThinWidth, 0, 0);
 }
 .ui.visible.wide.left.sidebar ~ .fixed,
 .ui.visible.wide.left.sidebar ~ .pusher {
-  transform: translate3d(@wideWidth, 0, 0);
+  transform: translate3d(@sidebar-wideWidth, 0, 0);
 }
 .ui.visible[class*="very wide"].left.sidebar ~ .fixed,
 .ui.visible[class*="very wide"].left.sidebar ~ .pusher {
-  transform: translate3d(@veryWideWidth, 0, 0);
+  transform: translate3d(@sidebar-veryWideWidth, 0, 0);
 }
 
 /* Right Visible */
 .ui.visible.thin.right.sidebar ~ .fixed,
 .ui.visible.thin.right.sidebar ~ .pusher {
-  transform: translate3d(-@thinWidth, 0, 0);
+  transform: translate3d(-@sidebar-thinWidth, 0, 0);
 }
 .ui.visible[class*="very thin"].right.sidebar ~ .fixed,
 .ui.visible[class*="very thin"].right.sidebar ~ .pusher {
-  transform: translate3d(-@veryThinWidth, 0, 0);
+  transform: translate3d(-@sidebar-veryThinWidth, 0, 0);
 }
 .ui.visible.wide.right.sidebar ~ .fixed,
 .ui.visible.wide.right.sidebar ~ .pusher {
-  transform: translate3d(-@wideWidth, 0, 0);
+  transform: translate3d(-@sidebar-wideWidth, 0, 0);
 }
 .ui.visible[class*="very wide"].right.sidebar ~ .fixed,
 .ui.visible[class*="very wide"].right.sidebar ~ .pusher {
-  transform: translate3d(-@veryWideWidth, 0, 0);
+  transform: translate3d(-@sidebar-veryWideWidth, 0, 0);
 }
 
 
@@ -331,7 +331,7 @@ html.ios body {
 
 /* Set-up */
 .ui.overlay.sidebar {
-  z-index: @topLayer;
+  z-index: @sidebar-topLayer;
 }
 
 /* Initial */
@@ -351,7 +351,7 @@ html.ios body {
 /* Animation */
 .animating.ui.overlay.sidebar,
 .ui.visible.overlay.sidebar {
-  transition: transform @duration @easing;
+  transition: transform @sidebar-duration @sidebar-easing;
 }
 
 /* End - Sidebar */
@@ -382,8 +382,8 @@ html.ios body {
 
 /* Initial */
 .ui.push.sidebar {
-  transition: transform @duration @easing;
-  z-index: @topLayer;
+  transition: transform @sidebar-duration @sidebar-easing;
+  z-index: @sidebar-topLayer;
 }
 
 /* Sidebar - Initial */
@@ -413,13 +413,13 @@ html.ios body {
 /* Initial */
 .ui.uncover.sidebar {
   transform: translate3d(0, 0, 0);
-  z-index: @bottomLayer;
+  z-index: @sidebar-bottomLayer;
 }
 
 /* End */
 .ui.visible.uncover.sidebar {
   transform: translate3d(0, 0, 0);
-  transition: transform @duration @easing;
+  transition: transform @sidebar-duration @sidebar-easing;
 }
 
 
@@ -429,7 +429,7 @@ html.ios body {
 
 /* Initial */
 .ui.slide.along.sidebar {
-  z-index: @bottomLayer;
+  z-index: @sidebar-bottomLayer;
 }
 
 /* Sidebar - Initial */
@@ -448,7 +448,7 @@ html.ios body {
 
 /* Animation */
 .ui.animating.slide.along.sidebar {
-  transition: transform @duration @easing;
+  transition: transform @sidebar-duration @sidebar-easing;
 }
 
 /* End */
@@ -463,7 +463,7 @@ html.ios body {
 
 /* Initial */
 .ui.slide.out.sidebar {
-  z-index: @bottomLayer;
+  z-index: @sidebar-bottomLayer;
 }
 
 /* Sidebar - Initial */
@@ -482,7 +482,7 @@ html.ios body {
 
 /* Animation */
 .ui.animating.slide.out.sidebar {
-  transition: transform @duration @easing;
+  transition: transform @sidebar-duration @sidebar-easing;
 }
 
 /* End */
@@ -496,8 +496,8 @@ html.ios body {
 
 /* Initial */
 .ui.scale.down.sidebar {
-  transition: transform @duration @easing;
-  z-index: @topLayer;
+  transition: transform @sidebar-duration @sidebar-easing;
+  z-index: @sidebar-topLayer;
 }
 
 /* Sidebar - Initial  */
@@ -530,7 +530,7 @@ html.ios body {
 
 /* Animation */
 .ui.animating.scale.down > .visible.ui.sidebar {
-  transition: transform @duration @easing;
+  transition: transform @sidebar-duration @sidebar-easing;
 }
 .ui.visible.scale.down.sidebar ~ .pusher,
 .ui.animating.scale.down.sidebar ~ .pusher {

@@ -27,8 +27,8 @@
 ---------------*/
 
 .ui.comments {
-  margin: @margin;
-  max-width: @maxWidth;
+  margin: @comment-margin;
+  max-width: @comment-maxWidth;
 }
 
 .ui.comments:first-child {
@@ -44,16 +44,16 @@
 
 .ui.comments .comment {
   position: relative;
-  background: @commentBackground;
-  margin: @commentMargin;
-  padding: @commentPadding;
-  border: @commentBorder;
-  border-top: @commentDivider;
-  line-height: @commentLineHeight;
+  background: @comment-commentBackground;
+  margin: @comment-commentMargin;
+  padding: @comment-commentPadding;
+  border: @comment-commentBorder;
+  border-top: @comment-commentDivider;
+  line-height: @comment-commentLineHeight;
 }
 .ui.comments .comment:first-child {
-  margin-top: @firstCommentMargin;
-  padding-top: @firstCommentPadding;
+  margin-top: @comment-firstCommentMargin;
+  padding-top: @comment-firstCommentPadding;
 }
 
 
@@ -62,8 +62,8 @@
 ---------------------*/
 
 .ui.comments .comment .comments {
-  margin: @nestedCommentsMargin;
-  padding: @nestedCommentsPadding;
+  margin: @comment-nestedCommentsMargin;
+  padding: @comment-nestedCommentsPadding;
 }
 .ui.comments .comment .comments:before{
   position: absolute;
@@ -71,9 +71,9 @@
   left: 0px;
 }
 .ui.comments .comment .comments .comment {
-  border: @nestedCommentBorder;
-  border-top: @nestedCommentDivider;
-  background: @nestedCommentBackground;
+  border: @comment-nestedCommentBorder;
+  border-top: @comment-nestedCommentDivider;
+  background: @comment-nestedCommentBackground;
 }
 
 /*--------------
@@ -81,11 +81,11 @@
 ---------------*/
 
 .ui.comments .comment .avatar {
-  display: @avatarDisplay;
-  width: @avatarWidth;
-  height: @avatarHeight;
-  float: @avatarFloat;
-  margin: @avatarMargin;
+  display: @comment-avatarDisplay;
+  width: @comment-avatarWidth;
+  height: @comment-avatarHeight;
+  float: @comment-avatarFloat;
+  margin: @comment-avatarMargin;
 }
 .ui.comments .comment img.avatar,
 .ui.comments .comment .avatar img {
@@ -93,7 +93,7 @@
   margin: 0em auto;
   width: 100%;
   height: 100%;
-  border-radius: @avatarBorderRadius;
+  border-radius: @comment-avatarBorderRadius;
 }
 
 /*--------------
@@ -105,7 +105,7 @@
 }
 /* If there is an avatar move content over */
 .ui.comments .comment > .avatar ~ .content {
-  margin-left: @contentMargin;
+  margin-left: @comment-contentMargin;
 }
 
 /*--------------
@@ -113,15 +113,15 @@
 ---------------*/
 
 .ui.comments .comment .author {
-  font-size: @authorFontSize;
-  color: @authorColor;
-  font-weight: @authorFontWeight;
+  font-size: @comment-authorFontSize;
+  color: @comment-authorColor;
+  font-weight: @comment-authorFontWeight;
 }
 .ui.comments .comment a.author {
   cursor: pointer;
 }
 .ui.comments .comment a.author:hover {
-  color: @authorHoverColor;
+  color: @comment-authorHoverColor;
 }
 
 /*--------------
@@ -129,14 +129,14 @@
 ---------------*/
 
 .ui.comments .comment .metadata {
-  display: @metadataDisplay;
-  margin-left: @metadataSpacing;
-  color: @metadataColor;
-  font-size: @metadataFontSize;
+  display: @comment-metadataDisplay;
+  margin-left: @comment-metadataSpacing;
+  color: @comment-metadataColor;
+  font-size: @comment-metadataFontSize;
 }
 .ui.comments .comment .metadata > * {
   display: inline-block;
-  margin: 0em @metadataContentSpacing 0em 0em;
+  margin: 0em @comment-metadataContentSpacing 0em 0em;
 }
 .ui.comments .comment .metadata > :last-child {
   margin-right: 0em;
@@ -147,11 +147,11 @@
 ---------------------*/
 
 .ui.comments .comment .text {
-  margin: @textMargin;
-  font-size: @textFontSize;
-  word-wrap: @textWordWrap;
-  color: @textColor;
-  line-height: @textLineHeight;
+  margin: @comment-textMargin;
+  font-size: @comment-textFontSize;
+  word-wrap: @comment-textWordWrap;
+  color: @button-textColor;
+  line-height: @comment-textLineHeight;
 }
 
 
@@ -160,20 +160,20 @@
 ---------------------*/
 
 .ui.comments .comment .actions {
-  font-size: @actionFontSize;
+  font-size: @comment-actionFontSize;
 }
 .ui.comments .comment .actions a {
   cursor: pointer;
   display: inline-block;
-  margin: 0em @actionContentDistance 0em 0em;
-  color: @actionLinkColor;
+  margin: 0em @comment-actionContentDistance 0em 0em;
+  color: @comment-actionLinkColor;
 }
 .ui.comments .comment .actions a:last-child {
   margin-right: 0em;
 }
 .ui.comments .comment .actions a.active,
 .ui.comments .comment .actions a:hover {
-  color: @actionLinkHoverColor;
+  color: @comment-actionLinkHoverColor;
 }
 
 /*--------------------
@@ -181,15 +181,15 @@
 ---------------------*/
 
 .ui.comments > .reply.form {
-  margin-top: @replyDistance;
+  margin-top: @comment-replyDistance;
 }
 .ui.comments .comment .reply.form {
   width: 100%;
-  margin-top: @commentReplyDistance;
+  margin-top: @comment-commentReplyDistance;
 }
 .ui.comments .reply.form textarea {
-  font-size: @replyFontSize;
-  height: @replyHeight;
+  font-size: @comment-replyFontSize;
+  height: @comment-replyHeight;
 }
 
 /*******************************
@@ -212,9 +212,9 @@
 ---------------------*/
 
 .ui.threaded.comments .comment .comments {
-  margin: @threadedCommentMargin;
-  padding: @threadedCommentPadding;
-  box-shadow: @threadedCommentBoxShadow;
+  margin: @comment-threadedCommentMargin;
+  padding: @comment-threadedCommentPadding;
+  box-shadow: @comment-threadedCommentBoxShadow;
 }
 
 /*--------------------
@@ -223,12 +223,12 @@
 
 .ui.minimal.comments .comment .actions {
   opacity: 0;
-  position: @minimalActionPosition;
-  top: @minimalActionTop;
-  right: @minimalActionRight;
-  left: @minimalActionLeft;
-  transition: @minimalTransition;
-  transition-delay: @minimalTransitionDelay;
+  position: @comment-minimalActionPosition;
+  top: @comment-minimalActionTop;
+  right: @comment-minimalActionRight;
+  left: @comment-minimalActionLeft;
+  transition: @comment-minimalTransition;
+  transition-delay: @comment-minimalTransitionDelay;
 }
 .ui.minimal.comments .comment > .content:hover > .actions {
   opacity: 1;
@@ -239,15 +239,15 @@
 ---------------------*/
 
 .ui.small.comments {
-  font-size: @small;
+  font-size: @comment-small;
 }
 .ui.comments {
-  font-size: @medium;
+  font-size: @comment-medium;
 }
 .ui.large.comments {
-  font-size: @large;
+  font-size: @comment-large;
 }
 .ui.huge.comments {
-  font-size: @huge;
+  font-size: @comment-huge;
 }
 

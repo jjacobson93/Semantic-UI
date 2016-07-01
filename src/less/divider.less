@@ -22,15 +22,15 @@
 *******************************/
 
 .ui.divider {
-  margin: @margin;
+  margin: @divider-margin;
 
   line-height: 1;
   height: 0em;
 
-  font-weight: @fontWeight;
-  text-transform: @textTransform;
-  letter-spacing: @letterSpacing;
-  color: @color;
+  font-weight: @divider-fontWeight;
+  text-transform: @divider-textTransform;
+  letter-spacing: @divider-letterSpacing;
+  color: @divider-color;
 
   user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -41,8 +41,8 @@
 ---------------*/
 
 .ui.divider:not(.vertical):not(.horizontal) {
-  border-top: @shadowWidth solid @shadowColor;
-  border-bottom: @highlightWidth solid @highlightColor;
+  border-top: @divider-shadowWidth solid @divider-shadowColor;
+  border-bottom: @divider-highlightWidth solid @divider-highlightColor;
 }
 
 /*--------------
@@ -64,7 +64,7 @@
   white-space: nowrap;
 
   height: auto;
-  margin: @horizontalMargin;
+  margin: @divider-horizontalMargin;
   line-height: 1;
   text-align: center;
 }
@@ -80,10 +80,10 @@
 }
 
 .ui.horizontal.divider:before {
-  background-position: right @horizontalDividerMargin top 50%;
+  background-position: right @divider-horizontalDividerMargin top 50%;
 }
 .ui.horizontal.divider:after {
-  background-position: left @horizontalDividerMargin top 50%;
+  background-position: left @divider-horizontalDividerMargin top 50%;
 }
 
 /*--------------
@@ -113,11 +113,11 @@
   content: '';
   z-index: 3;
 
-  border-left: @shadowWidth solid @shadowColor;
-  border-right: @highlightWidth solid @highlightColor;
+  border-left: @divider-shadowWidth solid @divider-shadowColor;
+  border-right: @divider-highlightWidth solid @divider-highlightColor;
 
   width: 0%;
-  height: @verticalDividerHeight;
+  height: @divider-verticalDividerHeight;
 }
 
 .ui.vertical.divider:before {
@@ -129,14 +129,14 @@
 }
 
 /* Inside grid */
-@media only screen and (max-width : @largestMobileScreen) {
+@media only screen and (max-width : @site-largestMobileScreen) {
 
   .ui.stackable.grid .ui.vertical.divider,
   .ui.grid .stackable.row .ui.vertical.divider {
     display: table;
     white-space: nowrap;
     height: auto;
-    margin: @horizontalMargin;
+    margin: @divider-horizontalMargin;
     overflow: hidden;
     line-height: 1;
     text-align: center;
@@ -164,11 +164,11 @@
 
   .ui.stackable.grid .ui.vertical.divider:before,
   .ui.grid .stackable.row .ui.vertical.divider:before {
-    background-position: right @horizontalDividerMargin top 50%;
+    background-position: right @divider-horizontalDividerMargin top 50%;
   }
   .ui.stackable.grid .ui.vertical.divider:after,
   .ui.grid .stackable.row .ui.vertical.divider:after {
-    background-position: left @horizontalDividerMargin top 50%;
+    background-position: left @divider-horizontalDividerMargin top 50%;
   }
 }
 
@@ -177,8 +177,8 @@
 ---------------*/
 
 .ui.divider > .icon {
-  margin: @dividerIconMargin;
-  font-size: @dividerIconSize;
+  margin: @divider-dividerIconMargin;
+  font-size: @divider-dividerIconSize;
   height: 1em;
   vertical-align: middle;
 }
@@ -206,15 +206,15 @@
 .ui.divider.inverted,
 .ui.vertical.inverted.divider,
 .ui.horizontal.inverted.divider {
-  color: @invertedTextColor;
+  color: @divider-invertedTextColor;
 }
 .ui.divider.inverted,
 .ui.divider.inverted:after,
 .ui.divider.inverted:before {
-  border-top-color: @invertedShadowColor !important;
-  border-left-color: @invertedShadowColor !important;
-  border-bottom-color: @invertedHighlightColor !important;
-  border-right-color: @invertedHighlightColor !important;
+  border-top-color: @divider-invertedShadowColor !important;
+  border-left-color: @divider-invertedShadowColor !important;
+  border-bottom-color: @divider-invertedHighlightColor !important;
+  border-right-color: @divider-invertedHighlightColor !important;
 }
 
 /*--------------
@@ -238,8 +238,8 @@
 ---------------*/
 
 .ui.section.divider {
-  margin-top: @sectionMargin;
-  margin-bottom: @sectionMargin;
+  margin-top: @divider-sectionMargin;
+  margin-bottom: @divider-sectionMargin;
 }
 
 /*--------------
@@ -247,7 +247,7 @@
 ---------------*/
 
 .ui.divider {
-  font-size: @medium;
+  font-size: @divider-medium;
 }
 
 

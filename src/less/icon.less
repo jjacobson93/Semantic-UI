@@ -24,8 +24,8 @@
 
 @font-face {
   font-family: 'Icons';
-  src: @fallbackSRC;
-  src: @src;
+  src: @icon-fallbackSRC;
+  src: @icon-src;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -35,12 +35,12 @@
 
 i.icon {
   display: inline-block;
-  opacity: @opacity;
+  opacity: @icon-opacity;
 
-  margin: 0em @distanceFromText 0em 0em;
+  margin: 0em @icon-distanceFromText 0em 0em;
 
-  width: @width;
-  height: @height;
+  width: @icon-width;
+  height: @icon-height;
 
   font-family: 'Icons';
   font-style: normal;
@@ -70,7 +70,7 @@ i.icon:before {
 i.icon.loading {
   height: 1em;
   line-height: 1;
-  animation: icon-loading @loadingDuration linear infinite;
+  animation: icon-loading @icon-loadingDuration linear infinite;
 }
 @keyframes icon-loading {
  from {
@@ -98,7 +98,7 @@ i.emphasized.icon {
 }
 
 i.disabled.icon {
-  opacity: @disabledOpacity !important;
+  opacity: @site-disabledOpacity !important;
 }
 
 
@@ -122,8 +122,8 @@ i.fitted.icon {
 
 i.link.icon {
   cursor: pointer;
-  opacity: @linkOpacity;
-  transition: opacity @defaultDuration @defaultEasing;
+  opacity: @icon-linkOpacity;
+  transition: opacity @site-defaultDuration @site-defaultEasing;
 }
 i.link.icon:hover {
   opacity: 1 !important;
@@ -137,11 +137,11 @@ i.circular.icon {
   border-radius: 500em !important;
   line-height: 1 !important;
 
-  padding: @circularPadding !important;
-  box-shadow: @circularShadow;
+  padding: @icon-circularPadding !important;
+  box-shadow: @icon-circularShadow;
 
-  width: @circularSize !important;
-  height: @circularSize !important;
+  width: @icon-circularSize !important;
+  height: @icon-circularSize !important;
 }
 i.circular.inverted.icon {
   border: none;
@@ -183,10 +183,10 @@ i.bordered.icon {
   line-height: 1;
   vertical-align: baseline;
 
-  width: @borderedSize;
-  height: @borderedSize;
-  padding: @borderedVerticalPadding @borderedHorizontalPadding !important;
-  box-shadow: @borderedShadow;
+  width: @icon-borderedSize;
+  height: @icon-borderedSize;
+  padding: @icon-borderedVerticalPadding @icon-borderedHorizontalPadding !important;
+  box-shadow: @icon-borderedShadow;
 }
 i.bordered.inverted.icon {
   border: none;
@@ -200,12 +200,12 @@ i.bordered.inverted.icon {
 /* Inverted Shapes */
 i.inverted.bordered.icon,
 i.inverted.circular.icon {
-  background-color: @black !important;
-  color: @white !important;
+  background-color: @site-black !important;
+  color: @site-white !important;
 }
 
 i.inverted.icon {
-  color: @white;
+  color: @site-white;
 }
 
 
@@ -215,171 +215,171 @@ i.inverted.icon {
 
 /* Red */
 i.red.icon {
-  color: @red !important;
+  color: @site-red !important;
 }
 i.inverted.red.icon {
-  color: @lightRed !important;
+  color: @site-lightRed !important;
 }
 i.inverted.bordered.red.icon,
 i.inverted.circular.red.icon {
-  background-color: @red !important;
-  color: @white !important;
+  background-color: @site-red !important;
+  color: @site-white !important;
 }
 
 /* Orange */
 i.orange.icon {
-  color: @orange !important;
+  color: @site-orange !important;
 }
 i.inverted.orange.icon {
-  color: @lightOrange !important;
+  color: @site-lightOrange !important;
 }
 i.inverted.bordered.orange.icon,
 i.inverted.circular.orange.icon {
-  background-color: @orange !important;
-  color: @white !important;
+  background-color: @site-orange !important;
+  color: @site-white !important;
 }
 
 /* Yellow */
 i.yellow.icon {
-  color: @yellow !important;
+  color: @site-yellow !important;
 }
 i.inverted.yellow.icon {
-  color: @lightYellow !important;
+  color: @site-lightYellow !important;
 }
 i.inverted.bordered.yellow.icon,
 i.inverted.circular.yellow.icon {
-  background-color: @yellow !important;
-  color: @white !important;
+  background-color: @site-yellow !important;
+  color: @site-white !important;
 }
 
 /* Olive */
 i.olive.icon {
-  color: @olive !important;
+  color: @site-olive !important;
 }
 i.inverted.olive.icon {
-  color: @lightOlive !important;
+  color: @site-lightOlive !important;
 }
 i.inverted.bordered.olive.icon,
 i.inverted.circular.olive.icon {
-  background-color: @olive !important;
-  color: @white !important;
+  background-color: @site-olive !important;
+  color: @site-white !important;
 }
 
 /* Green */
 i.green.icon {
-  color: @green !important;
+  color: @site-green !important;
 }
 i.inverted.green.icon {
-  color: @lightGreen !important;
+  color: @site-lightGreen !important;
 }
 i.inverted.bordered.green.icon,
 i.inverted.circular.green.icon {
-  background-color: @green !important;
-  color: @white !important;
+  background-color: @site-green !important;
+  color: @site-white !important;
 }
 
 /* Teal */
 i.teal.icon {
-  color: @teal !important;
+  color: @site-teal !important;
 }
 i.inverted.teal.icon {
-  color: @lightTeal !important;
+  color: @site-lightTeal !important;
 }
 i.inverted.bordered.teal.icon,
 i.inverted.circular.teal.icon {
-  background-color: @teal !important;
-  color: @white !important;
+  background-color: @site-teal !important;
+  color: @site-white !important;
 }
 
 /* Blue */
 i.blue.icon {
-  color: @blue !important;
+  color: @site-blue !important;
 }
 i.inverted.blue.icon {
-  color: @lightBlue !important;
+  color: @site-lightBlue !important;
 }
 i.inverted.bordered.blue.icon,
 i.inverted.circular.blue.icon {
-  background-color: @blue !important;
-  color: @white !important;
+  background-color: @site-blue !important;
+  color: @site-white !important;
 }
 
 /* Violet */
 i.violet.icon {
-  color: @violet !important;
+  color: @site-violet !important;
 }
 i.inverted.violet.icon {
-  color: @lightViolet !important;
+  color: @site-lightViolet !important;
 }
 i.inverted.bordered.violet.icon,
 i.inverted.circular.violet.icon {
-  background-color: @violet !important;
-  color: @white !important;
+  background-color: @site-violet !important;
+  color: @site-white !important;
 }
 
 /* Purple */
 i.purple.icon {
-  color: @purple !important;
+  color: @site-purple !important;
 }
 i.inverted.purple.icon {
-  color: @lightPurple !important;
+  color: @site-lightPurple !important;
 }
 i.inverted.bordered.purple.icon,
 i.inverted.circular.purple.icon {
-  background-color: @purple !important;
-  color: @white !important;
+  background-color: @site-purple !important;
+  color: @site-white !important;
 }
 
 /* Pink */
 i.pink.icon {
-  color: @pink !important;
+  color: @site-pink !important;
 }
 i.inverted.pink.icon {
-  color: @lightPink !important;
+  color: @site-lightPink !important;
 }
 i.inverted.bordered.pink.icon,
 i.inverted.circular.pink.icon {
-  background-color: @pink !important;
-  color: @white !important;
+  background-color: @site-pink !important;
+  color: @site-white !important;
 }
 
 /* Brown */
 i.brown.icon {
-  color: @brown !important;
+  color: @site-brown !important;
 }
 i.inverted.brown.icon {
-  color: @lightBrown !important;
+  color: @site-lightBrown !important;
 }
 i.inverted.bordered.brown.icon,
 i.inverted.circular.brown.icon {
-  background-color: @brown !important;
-  color: @white !important;
+  background-color: @site-brown !important;
+  color: @site-white !important;
 }
 
 /* Grey */
 i.grey.icon {
-  color: @grey !important;
+  color: @site-grey !important;
 }
 i.inverted.grey.icon {
-  color: @lightGrey !important;
+  color: @site-lightGrey !important;
 }
 i.inverted.bordered.grey.icon,
 i.inverted.circular.grey.icon {
-  background-color: @grey !important;
-  color: @white !important;
+  background-color: @site-grey !important;
+  color: @site-white !important;
 }
 
 /* Black */
 i.black.icon {
-  color: @black !important;
+  color: @site-black !important;
 }
 i.inverted.black.icon {
-  color: @lightBlack !important;
+  color: @site-lightBlack !important;
 }
 i.inverted.bordered.black.icon,
 i.inverted.circular.black.icon {
-  background-color: @black !important;
-  color: @white !important;
+  background-color: @site-black !important;
+  color: @site-white !important;
 }
 
 /*-------------------
@@ -389,45 +389,45 @@ i.inverted.circular.black.icon {
 i.mini.icon,
 i.mini.icons {
   line-height: 1;
-  font-size: @mini;
+  font-size: @icon-mini;
 }
 i.tiny.icon,
 i.tiny.icons {
   line-height: 1;
-  font-size: @tiny;
+  font-size: @icon-tiny;
 }
 i.small.icon,
 i.small.icons {
   line-height: 1;
-  font-size: @small;
+  font-size: @icon-small;
 }
 i.icon,
 i.icons {
-  font-size: @medium;
+  font-size: @icon-medium;
 }
 i.large.icon,
 i.large.icons {
   line-height: 1;
   vertical-align: middle;
-  font-size: @large;
+  font-size: @icon-large;
 }
 i.big.icon,
 i.big.icons {
   line-height: 1;
   vertical-align: middle;
-  font-size: @big;
+  font-size: @icon-big;
 }
 i.huge.icon,
 i.huge.icons {
   line-height: 1;
   vertical-align: middle;
-  font-size: @huge;
+  font-size: @icon-huge;
 }
 i.massive.icon,
 i.massive.icons {
   line-height: 1;
   vertical-align: middle;
-  font-size: @massive;
+  font-size: @icon-massive;
 }
 
 /*******************************
@@ -455,7 +455,7 @@ i.icons .icon:first-child {
   height: auto;
   vertical-align: top;
   transform: none;
-  margin-right: @distanceFromText;
+  margin-right: @icon-distanceFromText;
 }
 
 /* Corner Icon */
@@ -465,11 +465,11 @@ i.icons .corner.icon {
   right: 0;
   bottom: 0;
   transform: none;
-  font-size: @cornerIconSize;
-  text-shadow: @cornerIconShadow;
+  font-size: @icon-cornerIconSize;
+  text-shadow: @icon-cornerIconShadow;
 }
 
 i.icons .inverted.corner.icon {
-  text-shadow: @cornerIconInvertedShadow;
+  text-shadow: @icon-cornerIconInvertedShadow;
 }
 

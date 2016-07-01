@@ -23,9 +23,9 @@
 ul.ui.list,
 ol.ui.list,
 .ui.list {
-  list-style-type: @listStyleType;
-  margin: @margin;
-  padding: @verticalPadding @horizontalPadding;
+  list-style-type: @list-listStyleType;
+  margin: @list-margin;
+  padding: @list-verticalPadding @list-horizontalPadding;
 }
 
 ul.ui.list:first-child,
@@ -53,11 +53,11 @@ ol.ui.list li,
 .ui.list .list > .item {
   display: list-item;
   table-layout: fixed;
-  list-style-type: @listStyleType;
-  list-style-position: @listStylePosition;
+  list-style-type: @list-listStyleType;
+  list-style-position: @list-listStylePosition;
 
-  padding: @itemPadding;
-  line-height: @itemLineHeight;
+  padding: @list-itemPadding;
+  line-height: @list-itemLineHeight;
 }
 
 ul.ui.list > li:first-child:after,
@@ -90,15 +90,15 @@ ol.ui.list ol,
 .ui.list .list {
   clear: both;
   margin: 0em;
-  padding: @childListPadding;
+  padding: @list-childListPadding;
 }
 
 /* Child Item */
 ul.ui.list ul li,
 ol.ui.list ol li,
 .ui.list .list > .item {
-  padding: @childItemPadding;
-  line-height: @childItemLineHeight;
+  padding: @list-childItemPadding;
+  line-height: @list-childItemLineHeight;
 }
 
 
@@ -107,15 +107,15 @@ ol.ui.list ol li,
 .ui.list > .item > i.icon {
   display: table-cell;
   margin: 0em;
-  padding-top: @iconOffset;
-  padding-right: @iconDistance;
-  vertical-align: @iconContentVerticalAlign;
-  transition: @iconTransition;
+  padding-top: @list-iconOffset;
+  padding-right: @list-iconDistance;
+  vertical-align: @list-iconContentVerticalAlign;
+  transition: @list-iconTransition;
 }
 .ui.list .list > .item > i.icon:only-child,
 .ui.list > .item > i.icon:only-child {
   display: inline-block;
-  vertical-align: @iconVerticalAlign;
+  vertical-align: @list-iconVerticalAlign;
 }
 
 
@@ -125,15 +125,15 @@ ol.ui.list ol li,
   display: table-cell;
   background-color: transparent;
   margin: 0em;
-  vertical-align: @imageAlign;
+  vertical-align: @list-imageAlign;
 }
 .ui.list .list > .item > .image:not(:only-child):not(img),
 .ui.list > .item > .image:not(:only-child):not(img) {
-  padding-right: @imageDistance;
+  padding-right: @list-imageDistance;
 }
 .ui.list .list > .item > .image img,
 .ui.list > .item > .image img {
-  vertical-align: @imageAlign;
+  vertical-align: @list-imageAlign;
 }
 
 .ui.list .list > .item > img.image,
@@ -146,15 +146,15 @@ ol.ui.list ol li,
 /* Content */
 .ui.list .list > .item > .content,
 .ui.list > .item > .content {
-  line-height: @contentLineHeight;
+  line-height: @list-contentLineHeight;
 }
 .ui.list .list > .item > .image + .content,
 .ui.list .list > .item > .icon + .content,
 .ui.list > .item > .image + .content,
 .ui.list > .item > .icon + .content {
   display: table-cell;
-  padding: 0em 0em 0em @contentDistance;
-  vertical-align: @contentVerticalAlign;
+  padding: 0em 0em 0em @list-contentDistance;
+  vertical-align: @list-contentVerticalAlign;
 }
 .ui.list .list > .item > img.image + .content,
 .ui.list > .item > img.image + .content {
@@ -171,16 +171,16 @@ ol.ui.list ol li,
 .ui.list > .item .header {
   display: block;
   margin: 0em;
-  font-family: @itemHeaderFontFamily;
-  font-weight: @itemHeaderFontWeight;
-  color: @itemHeaderColor;
+  font-family: @list-itemHeaderFontFamily;
+  font-weight: @list-itemHeaderFontWeight;
+  color: @list-itemHeaderColor;
 }
 
 /* Description */
 .ui.list .list > .item .description,
 .ui.list > .item .description {
   display: block;
-  color: @itemDescriptionColor;
+  color: @list-itemDescriptionColor;
 }
 
 /* Child Link */
@@ -193,28 +193,28 @@ ol.ui.list ol li,
 .ui.list .list > a.item,
 .ui.list > a.item {
   cursor: pointer;
-  color: @itemLinkColor;
+  color: @list-itemLinkColor;
 }
 .ui.list .list > a.item:hover,
 .ui.list > a.item:hover {
-  color: @itemLinkHoverColor;
+  color: @list-itemLinkHoverColor;
 }
 
 /* Linked Item Icons */
 .ui.list .list > a.item i.icon,
 .ui.list > a.item i.icon {
-  color: @itemLinkIconColor;
+  color: @list-itemLinkIconColor;
 }
 
 /* Header Link */
 .ui.list .list > .item a.header,
 .ui.list > .item a.header {
   cursor: pointer;
-  color: @itemHeaderLinkColor !important;
+  color: @list-itemHeaderLinkColor !important;
 }
 .ui.list .list > .item a.header:hover,
 .ui.list > .item a.header:hover {
-  color: @itemHeaderLinkHoverColor !important;
+  color: @list-itemHeaderLinkHoverColor !important;
 }
 
 /* Floated Content */
@@ -228,12 +228,12 @@ ol.ui.list ol li,
 .ui.list .list > .item [class*="left floated"],
 .ui.list > .item [class*="left floated"] {
   float: left;
-  margin: @leftFloatMargin;
+  margin: @list-leftFloatMargin;
 }
 .ui.list .list > .item [class*="right floated"],
 .ui.list > .item [class*="right floated"] {
   float: right;
-  margin: @rightFloatMargin;
+  margin: @list-rightFloatMargin;
 }
 
 /*******************************
@@ -246,11 +246,11 @@ ol.ui.list ol li,
   table-layout: fixed;
   background-color: transparent;
 
-  list-style-type: @listStyleType;
-  list-style-position: @listStylePosition;
+  list-style-type: @list-listStyleType;
+  list-style-position: @list-listStylePosition;
 
-  padding: @itemVerticalPadding @itemHorizontalPadding;
-  line-height: @itemLineHeight;
+  padding: @list-itemVerticalPadding @list-itemHorizontalPadding;
+  line-height: @list-itemLineHeight;
 }
 .ui.menu .ui.list .list > .item:before,
 .ui.menu .ui.list > .item:before {
@@ -281,7 +281,7 @@ ol.ui.list ol li,
 }
 .ui.horizontal.list > .item {
   display: inline-block;
-  margin-left: @horizontalSpacing;
+  margin-left: @list-horizontalSpacing;
   font-size: 1rem;
 }
 .ui.horizontal.list:not(.celled) > .item:first-child {
@@ -299,20 +299,20 @@ ol.ui.list ol li,
 .ui.horizontal.list .list > .item > .icon,
 .ui.horizontal.list > .item > .content,
 .ui.horizontal.list .list > .item > .content {
-  vertical-align: @horizontalVerticalAlign;
+  vertical-align: @list-horizontalVerticalAlign;
 }
 
 /* Padding on all elements */
 .ui.horizontal.list > .item:first-child,
 .ui.horizontal.list > .item:last-child {
-  padding-top: @itemVerticalPadding;
-  padding-bottom: @itemVerticalPadding;
+  padding-top: @list-itemVerticalPadding;
+  padding-bottom: @list-itemVerticalPadding;
 }
 
 /* Horizontal List */
 .ui.horizontal.list > .item > i.icon {
   margin: 0em;
-  padding: 0em @horizontalIconDistance 0em 0em;
+  padding: 0em @list-horizontalIconDistance 0em 0em;
 }
 .ui.horizontal.list > .item > .icon,
 .ui.horizontal.list > .item > .icon + .content {
@@ -332,11 +332,11 @@ ol.ui.list ol li,
 .ui.list .list > .disabled.item,
 .ui.list > .disabled.item {
   pointer-events: none;
-  color: @disabledColor !important;
+  color: @list-disabledColor !important;
 }
 .ui.inverted.list .list > .disabled.item,
 .ui.inverted.list > .disabled.item {
-  color: @invertedDisabledColor !important;
+  color: @list-invertedDisabledColor !important;
 }
 
 /*-------------------
@@ -345,7 +345,7 @@ ol.ui.list ol li,
 
 .ui.list .list > a.item:hover .icon,
 .ui.list > a.item:hover .icon {
-  color: @itemLinkIconHoverColor;
+  color: @list-itemLinkIconHoverColor;
 }
 
 
@@ -359,35 +359,35 @@ ol.ui.list ol li,
 
 .ui.inverted.list .list > a.item > .icon,
 .ui.inverted.list > a.item > .icon {
-  color: @invertedIconLinkColor;
+  color: @list-invertedIconLinkColor;
 }
 .ui.inverted.list .list > .item .header,
 .ui.inverted.list > .item .header {
-  color: @invertedHeaderColor;
+  color: @list-invertedHeaderColor;
 }
 .ui.inverted.list .list > .item .description,
 .ui.inverted.list > .item .description {
-  color: @invertedDescriptionColor;
+  color: @list-invertedDescriptionColor;
 }
 
 /* Item Link */
 .ui.inverted.list .list > a.item,
 .ui.inverted.list > a.item {
   cursor: pointer;
-  color: @invertedItemLinkColor;
+  color: @list-invertedItemLinkColor;
 }
 .ui.inverted.list .list > a.item:hover,
 .ui.inverted.list > a.item:hover {
-  color: @invertedItemLinkHoverColor;
+  color: @list-invertedItemLinkHoverColor;
 }
 
 
 /* Linking Content */
 .ui.inverted.list .item a:not(.ui) {
-  color: @invertedItemLinkColor !important;
+  color: @list-invertedItemLinkColor !important;
 }
 .ui.inverted.list .item a:not(.ui):hover {
-  color: @invertedItemLinkHoverColor !important;
+  color: @list-invertedItemLinkHoverColor !important;
 }
 
 /*-------------------
@@ -417,39 +417,39 @@ ol.ui.list ol li,
 .ui.link.list .item,
 .ui.link.list a.item,
 .ui.link.list .item a:not(.ui) {
-  color: @linkListItemColor;
-  transition: @linkListTransition;
+  color: @list-linkListItemColor;
+  transition: @list-linkListTransition;
 }
 .ui.link.list a.item:hover,
 .ui.link.list .item a:not(.ui):hover {
-  color: @linkListItemHoverColor;
+  color: @list-linkListItemHoverColor;
 }
 .ui.link.list a.item:active,
 .ui.link.list .item a:not(.ui):active {
-  color: @linkListItemDownColor;
+  color: @list-linkListItemDownColor;
 }
 .ui.link.list .active.item,
 .ui.link.list .active.item a:not(.ui) {
-  color: @linkListItemActiveColor;
+  color: @list-linkListItemActiveColor;
 }
 
 /* Inverted */
 .ui.inverted.link.list .item,
 .ui.inverted.link.list a.item,
 .ui.inverted.link.list .item a:not(.ui) {
-  color: @invertedLinkListItemColor;
+  color: @list-invertedLinkListItemColor;
 }
 .ui.inverted.link.list a.item:hover,
 .ui.inverted.link.list .item a:not(.ui):hover {
-  color: @invertedLinkListItemHoverColor;
+  color: @list-invertedLinkListItemHoverColor;
 }
 .ui.inverted.link.list a.item:active,
 .ui.inverted.link.list .item a:not(.ui):active {
-  color: @invertedLinkListItemDownColor;
+  color: @list-invertedLinkListItemDownColor;
 }
 .ui.inverted.link.list a.active.item,
 .ui.inverted.link.list .active.item a:not(.ui) {
-  color: @invertedLinkListItemActiveColor;
+  color: @list-invertedLinkListItemActiveColor;
 }
 
 /*-------------------
@@ -459,12 +459,12 @@ ol.ui.list ol li,
 .ui.selection.list .list > .item,
 .ui.selection.list > .item {
   cursor: pointer;
-  background: @selectionListBackground;
-  padding: @selectionListItemVerticalPadding @selectionListItemHorizontalPadding;
-  margin: @selectionListItemMargin;
-  color: @selectionListColor;
-  border-radius: @selectionListItemBorderRadius;
-  transition: @selectionListTransition;
+  background: @list-selectionListBackground;
+  padding: @list-selectionListItemVerticalPadding @list-selectionListItemHorizontalPadding;
+  margin: @list-selectionListItemMargin;
+  color: @list-selectionListColor;
+  border-radius: @list-selectionListItemBorderRadius;
+  transition: @list-selectionListTransition;
 }
 .ui.selection.list .list > .item:last-child,
 .ui.selection.list > .item:last-child {
@@ -472,40 +472,40 @@ ol.ui.list ol li,
 }
 .ui.selection.list.list >  .item:hover,
 .ui.selection.list > .item:hover {
-  background: @selectionListHoverBackground;
-  color: @selectionListHoverColor;
+  background: @list-selectionListHoverBackground;
+  color: @list-selectionListHoverColor;
 }
 .ui.selection.list .list > .item:active,
 .ui.selection.list > .item:active {
-  background: @selectionListDownBackground;
-  color: @selectionListDownColor;
+  background: @list-selectionListDownBackground;
+  color: @list-selectionListDownColor;
 }
 .ui.selection.list .list > .item.active,
 .ui.selection.list > .item.active {
-  background: @selectionListActiveBackground;
-  color: @selectionListActiveColor;
+  background: @list-selectionListActiveBackground;
+  color: @list-selectionListActiveColor;
 }
 
 /* Inverted */
 .ui.inverted.selection.list > .item,
 .ui.inverted.selection.list > .item {
-  background: @invertedSelectionListBackground;
-  color: @invertedSelectionListColor;
+  background: @list-invertedSelectionListBackground;
+  color: @list-invertedSelectionListColor;
 }
 .ui.inverted.selection.list > .item:hover,
 .ui.inverted.selection.list > .item:hover {
-  background: @invertedSelectionListHoverBackground;
-  color: @invertedSelectionListHoverColor;
+  background: @list-invertedSelectionListHoverBackground;
+  color: @list-invertedSelectionListHoverColor;
 }
 .ui.inverted.selection.list > .item:active,
 .ui.inverted.selection.list > .item:active {
-  background: @invertedSelectionListDownBackground;
-  color: @invertedSelectionListDownColor;
+  background: @list-invertedSelectionListDownBackground;
+  color: @list-invertedSelectionListDownColor;
 }
 .ui.inverted.selection.list > .item.active,
 .ui.inverted.selection.list > .item.active {
-  background: @invertedSelectionListActiveBackground;
-  color: @invertedSelectionListActiveColor;
+  background: @list-invertedSelectionListActiveBackground;
+  color: @list-invertedSelectionListActiveColor;
 }
 
 /* Celled / Divided Selection List */
@@ -521,10 +521,10 @@ ol.ui.list ol li,
 --------------------*/
 
 .ui.animated.list > .item {
-  transition: @animatedListTransition;
+  transition: @list-animatedListTransition;
 }
 .ui.animated.list:not(.horizontal) > .item:hover {
-  padding-left: @animatedListIndent;
+  padding-left: @list-animatedListIndent;
 }
 
 /*-------------------
@@ -537,8 +537,8 @@ ol.ui.list ol li,
 }
 .ui.fitted.selection.list .list > .item,
 .ui.fitted.selection.list > .item {
-  margin-left: -@selectionListItemHorizontalPadding;
-  margin-right: -@selectionListItemHorizontalPadding;
+  margin-left: -@list-selectionListItemHorizontalPadding;
+  margin-right: -@list-selectionListItemHorizontalPadding;
 }
 
 /*-------------------
@@ -547,7 +547,7 @@ ol.ui.list ol li,
 
 ul.ui.list,
 .ui.bulleted.list {
-  margin-left: @bulletDistance;
+  margin-left: @list-bulletDistance;
 }
 ul.ui.list li,
 .ui.bulleted.list .list > .item,
@@ -563,22 +563,22 @@ ul.ui.list li:before,
   top: auto;
   left: auto;
   font-weight: normal;
-  margin-left: @bulletOffset;
-  content: @bulletCharacter;
-  opacity: @bulletOpacity;
-  color: @bulletColor;
-  vertical-align: @bulletVerticalAlign;
+  margin-left: @list-bulletOffset;
+  content: @list-bulletCharacter;
+  opacity: @list-bulletOpacity;
+  color: @list-bulletColor;
+  vertical-align: @list-bulletVerticalAlign;
 }
 
 ul.ui.list li:before,
 .ui.bulleted.list .list > a.item:before,
 .ui.bulleted.list > a.item:before {
-  color: @bulletLinkColor;
+  color: @list-bulletLinkColor;
 }
 
 ul.ui.list ul,
 .ui.bulleted.list .list {
-  padding-left: @bulletChildDistance;
+  padding-left: @list-bulletChildDistance;
 }
 
 /* Horizontal Bulleted */
@@ -588,7 +588,7 @@ ul.ui.horizontal.bulleted.list,
 }
 ul.ui.horizontal.bulleted.list li,
 .ui.horizontal.bulleted.list > .item {
-  margin-left: @horizontalBulletSpacing;
+  margin-left: @list-horizontalBulletSpacing;
 }
 ul.ui.horizontal.bulleted.list li:first-child,
 .ui.horizontal.bulleted.list > .item:first-child {
@@ -596,7 +596,7 @@ ul.ui.horizontal.bulleted.list li:first-child,
 }
 ul.ui.horizontal.bulleted.list li::before,
 .ui.horizontal.bulleted.list > .item::before {
-  color: @horizontalBulletColor;
+  color: @list-horizontalBulletColor;
 }
 ul.ui.horizontal.bulleted.list li:first-child::before,
 .ui.horizontal.bulleted.list > .item:first-child::before {
@@ -612,7 +612,7 @@ ol.ui.list,
 .ui.ordered.list .list,
 ol.ui.list ol {
   counter-reset: ordered;
-  margin-left: @orderedCountDistance;
+  margin-left: @list-orderedCountDistance;
   list-style-type: none;
 }
 ol.ui.list li,
@@ -629,19 +629,19 @@ ol.ui.list li:before,
   left: auto;
   user-select: none;
   pointer-events: none;
-  margin-left: -(@orderedCountDistance);
-  counter-increment: @orderedCountName;
-  content: @orderedCountContent;
-  text-align: @orderedCountTextAlign;
-  color: @orderedCountColor;
-  vertical-align: @orderedCountVerticalAlign;
-  opacity: @orderedCountOpacity;
+  margin-left: -(@list-orderedCountDistance);
+  counter-increment: @list-orderedCountName;
+  content: @list-orderedCountContent;
+  text-align: @list-orderedCountTextAlign;
+  color: @list-orderedCountColor;
+  vertical-align: @list-orderedCountVerticalAlign;
+  opacity: @list-orderedCountOpacity;
 }
 
 ol.ui.inverted.list li:before,
 .ui.ordered.inverted.list .list > .item:before,
 .ui.ordered.inverted.list > .item:before {
-  color: @orderedInvertedCountColor;
+  color: @list-orderedInvertedCountColor;
 }
 
 /* Value */
@@ -656,11 +656,11 @@ ol.ui.list li[value]:before {
 /* Child Lists */
 ol.ui.list ol,
 .ui.ordered.list .list {
-  margin-left: @orderedChildCountDistance;
+  margin-left: @list-orderedChildCountDistance;
 }
 ol.ui.list ol li:before,
 .ui.ordered.list .list > .item:before {
-  margin-left: @orderedChildCountOffset;
+  margin-left: @list-orderedChildCountOffset;
 }
 
 /* Horizontal Ordered */
@@ -672,7 +672,7 @@ ol.ui.horizontal.list li:before,
 .ui.ordered.horizontal.list .list > .item:before,
 .ui.ordered.horizontal.list > .item:before {
   position: static;
-  margin: 0em @horizontalOrderedCountDistance 0em 0em;
+  margin: 0em @list-horizontalOrderedCountDistance 0em 0em;
 }
 
 /*-------------------
@@ -680,13 +680,13 @@ ol.ui.horizontal.list li:before,
 --------------------*/
 
 .ui.divided.list > .item {
-  border-top: @dividedBorder;
+  border-top: @list-dividedBorder;
 }
 .ui.divided.list .list > .item {
-  border-top: @dividedChildListBorder;
+  border-top: @list-dividedChildListBorder;
 }
 .ui.divided.list .item .list > .item {
-  border-top: @dividedChildItemBorder;
+  border-top: @list-dividedChildItemBorder;
 }
 .ui.divided.list .list > .item:first-child,
 .ui.divided.list > .item:first-child {
@@ -695,7 +695,7 @@ ol.ui.horizontal.list li:before,
 
 /* Sub Menu */
 .ui.divided.list:not(.horizontal) .list > .item:first-child {
-  border-top-width: @dividedBorderWidth;
+  border-top-width: @list-dividedBorderWidth;
 }
 
 /* Divided bulleted */
@@ -705,7 +705,7 @@ ol.ui.horizontal.list li:before,
   padding-left: 0em;
 }
 .ui.divided.bulleted.list > .item:not(.horizontal) {
-  padding-left: @bulletDistance;
+  padding-left: @list-bulletDistance;
 }
 
 /* Divided Ordered */
@@ -714,15 +714,15 @@ ol.ui.horizontal.list li:before,
 }
 .ui.divided.ordered.list .list > .item,
 .ui.divided.ordered.list > .item {
-  padding-left: @orderedCountDistance;
+  padding-left: @list-orderedCountDistance;
 }
 .ui.divided.ordered.list .item .list {
   margin-left: 0em;
   margin-right: 0em;
-  padding-bottom: @itemVerticalPadding;
+  padding-bottom: @list-itemVerticalPadding;
 }
 .ui.divided.ordered.list .item .list > .item {
-  padding-left: @orderedChildCountDistance;
+  padding-left: @list-orderedChildCountDistance;
 }
 
 /* Divided Selection */
@@ -737,16 +737,16 @@ ol.ui.horizontal.list li:before,
   margin-left: 0em;
 }
 .ui.divided.horizontal.list > .item:not(:first-child) {
-  padding-left: @horizontalDividedSpacing;
+  padding-left: @list-horizontalDividedSpacing;
 }
 .ui.divided.horizontal.list > .item:not(:last-child) {
-  padding-right: @horizontalDividedSpacing;
+  padding-right: @list-horizontalDividedSpacing;
 }
 .ui.divided.horizontal.list > .item {
   border-top: none;
-  border-left: @dividedBorder;
+  border-left: @list-dividedBorder;
   margin: 0em;
-  line-height: @horizontalDividedLineHeight;
+  line-height: @list-horizontalDividedLineHeight;
 }
 .ui.horizontal.divided.list > .item:first-child {
   border-left: none;
@@ -755,7 +755,7 @@ ol.ui.horizontal.list li:before,
 .ui.divided.inverted.list > .item,
 .ui.divided.inverted.list > .list,
 .ui.divided.inverted.horizontal.list > .item {
-  border-color: @dividedInvertedBorderColor;
+  border-color: @list-dividedInvertedBorderColor;
 }
 
 
@@ -765,19 +765,19 @@ ol.ui.horizontal.list li:before,
 
 .ui.celled.list > .item,
 .ui.celled.list > .list {
-  border-top: @celledBorder;
-  padding-left: @celledHorizontalPadding;
-  padding-right: @celledHorizontalPadding;
+  border-top: @list-celledBorder;
+  padding-left: @list-celledHorizontalPadding;
+  padding-right: @list-celledHorizontalPadding;
 }
 .ui.celled.list > .item:last-child {
-  border-bottom: @celledBorder;
+  border-bottom: @list-celledBorder;
 }
 
 /* Padding on all elements */
 .ui.celled.list > .item:first-child,
 .ui.celled.list > .item:last-child {
-  padding-top: @itemVerticalPadding;
-  padding-bottom: @itemVerticalPadding;
+  padding-top: @list-itemVerticalPadding;
+  padding-bottom: @list-itemVerticalPadding;
 }
 
 /* Sub Menu */
@@ -794,12 +794,12 @@ ol.ui.horizontal.list li:before,
 }
 .ui.celled.bulleted.list .list > .item,
 .ui.celled.bulleted.list > .item {
-  padding-left: (@bulletDistance);
+  padding-left: (@list-bulletDistance);
 }
 .ui.celled.bulleted.list .item .list {
-  margin-left: -(@bulletDistance);
-  margin-right: -(@bulletDistance);
-  padding-bottom: @itemVerticalPadding;
+  margin-left: -(@list-bulletDistance);
+  margin-right: -(@list-bulletDistance);
+  padding-bottom: @list-itemVerticalPadding;
 }
 
 /* Celled Ordered */
@@ -808,15 +808,15 @@ ol.ui.horizontal.list li:before,
 }
 .ui.celled.ordered.list .list > .item,
 .ui.celled.ordered.list > .item {
-  padding-left: @orderedCountDistance;
+  padding-left: @list-orderedCountDistance;
 }
 .ui.celled.ordered.list .item .list {
   margin-left: 0em;
   margin-right: 0em;
-  padding-bottom: @itemVerticalPadding;
+  padding-bottom: @list-itemVerticalPadding;
 }
 .ui.celled.ordered.list .list > .item {
-  padding-left: @orderedChildCountDistance;
+  padding-left: @list-orderedChildCountDistance;
 }
 
 /* Celled Horizontal */
@@ -826,27 +826,27 @@ ol.ui.horizontal.list li:before,
 .ui.horizontal.celled.list .list > .item,
 .ui.horizontal.celled.list > .item {
   border-top: none;
-  border-left: @celledBorder;
+  border-left: @list-celledBorder;
   margin: 0em;
-  padding-left: @horizontalCelledSpacing;
-  padding-right: @horizontalCelledSpacing;
+  padding-left: @list-horizontalCelledSpacing;
+  padding-right: @list-horizontalCelledSpacing;
 
-  line-height: @horizontalCelledLineHeight;
+  line-height: @list-horizontalCelledLineHeight;
 }
 .ui.horizontal.celled.list .list > .item:last-child,
 .ui.horizontal.celled.list > .item:last-child {
   border-bottom: none;
-  border-right: @celledBorder;
+  border-right: @list-celledBorder;
 }
 
 /* Inverted */
 .ui.celled.inverted.list > .item,
 .ui.celled.inverted.list > .list {
-  border-color: @celledInvertedBorder;
+  border-color: @list-celledInvertedBorder;
 }
 .ui.celled.inverted.horizontal.list .list > .item,
 .ui.celled.inverted.horizontal.list > .item {
-  border-color: @celledInvertedBorder;
+  border-color: @list-celledInvertedBorder;
 }
 
 /*-------------------
@@ -854,34 +854,34 @@ ol.ui.horizontal.list li:before,
 --------------------*/
 
 .ui.relaxed.list:not(.horizontal) > .item:not(:first-child) {
-  padding-top: @relaxedItemVerticalPadding;
+  padding-top: @list-relaxedItemVerticalPadding;
 }
 .ui.relaxed.list:not(.horizontal) > .item:not(:last-child) {
-  padding-bottom: @relaxedItemVerticalPadding;
+  padding-bottom: @list-relaxedItemVerticalPadding;
 }
 .ui.horizontal.relaxed.list .list > .item:not(:first-child),
 .ui.horizontal.relaxed.list > .item:not(:first-child) {
-  padding-left: @relaxedHorizontalPadding;
+  padding-left: @list-relaxedHorizontalPadding;
 }
 .ui.horizontal.relaxed.list .list > .item:not(:last-child),
 .ui.horizontal.relaxed.list > .item:not(:last-child) {
-  padding-right: @relaxedHorizontalPadding;
+  padding-right: @list-relaxedHorizontalPadding;
 }
 
 /* Very Relaxed */
 .ui[class*="very relaxed"].list:not(.horizontal) > .item:not(:first-child) {
-  padding-top: @veryRelaxedItemVerticalPadding;
+  padding-top: @list-veryRelaxedItemVerticalPadding;
 }
 .ui[class*="very relaxed"].list:not(.horizontal) > .item:not(:last-child) {
-  padding-bottom: @veryRelaxedItemVerticalPadding;
+  padding-bottom: @list-veryRelaxedItemVerticalPadding;
 }
 .ui.horizontal[class*="very relaxed"].list .list > .item:not(:first-child),
 .ui.horizontal[class*="very relaxed"].list > .item:not(:first-child) {
-  padding-left: @veryRelaxedHorizontalPadding;
+  padding-left: @list-veryRelaxedHorizontalPadding;
 }
 .ui.horizontal[class*="very relaxed"].list .list > .item:not(:last-child),
 .ui.horizontal[class*="very relaxed"].list > .item:not(:last-child) {
-  padding-right: @veryRelaxedHorizontalPadding;
+  padding-right: @list-veryRelaxedHorizontalPadding;
 }
 
 /*-------------------
@@ -889,61 +889,61 @@ ol.ui.horizontal.list li:before,
 --------------------*/
 
 .ui.mini.list {
-  font-size: @relativeMini;
+  font-size: @site-relativeMini;
 }
 .ui.tiny.list {
-  font-size: @relativeTiny;
+  font-size: @site-relativeTiny;
 }
 .ui.small.list {
-  font-size: @relativeSmall;
+  font-size: @site-relativeSmall;
 }
 .ui.list {
-  font-size: @relativeMedium;
+  font-size: @site-relativeMedium;
 }
 .ui.large.list {
-  font-size: @relativeLarge;
+  font-size: @site-relativeLarge;
 }
 .ui.big.list {
-  font-size: @relativeBig;
+  font-size: @site-relativeBig;
 }
 .ui.huge.list {
-  font-size: @relativeHuge;
+  font-size: @site-relativeHuge;
 }
 .ui.massive.list {
-  font-size: @relativeMassive;
+  font-size: @site-relativeMassive;
 }
 
 .ui.mini.horizontal.list .list > .item,
 .ui.mini.horizontal.list > .item {
-  font-size: @mini;
+  font-size: @label-mini;
 }
 .ui.tiny.horizontal.list .list > .item,
 .ui.tiny.horizontal.list > .item {
-  font-size: @tiny;
+  font-size: @label-tiny;
 }
 .ui.small.horizontal.list .list > .item,
 .ui.small.horizontal.list > .item {
-  font-size: @small;
+  font-size: @label-small;
 }
 .ui.horizontal.list .list > .item,
 .ui.horizontal.list > .item {
-  font-size: @medium;
+  font-size: @label-medium;
 }
 .ui.large.horizontal.list .list > .item,
 .ui.large.horizontal.list > .item {
-  font-size: @large;
+  font-size: @label-large;
 }
 .ui.big.horizontal.list .list > .item,
 .ui.big.horizontal.list > .item {
-  font-size: @big;
+  font-size: @label-big;
 }
 .ui.huge.horizontal.list .list > .item,
 .ui.huge.horizontal.list > .item {
-  font-size: @huge;
+  font-size: @label-huge;
 }
 .ui.massive.horizontal.list .list > .item,
 .ui.massive.horizontal.list > .item {
-  font-size: @massive;
+  font-size: @label-massive;
 }
 
 

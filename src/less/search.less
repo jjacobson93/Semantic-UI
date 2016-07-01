@@ -35,19 +35,19 @@
   font-style: normal;
   font-weight: normal;
 
-  line-height: @promptLineHeight;
-  padding: @promptPadding;
-  font-size: @promptFontSize;
+  line-height: @search-promptLineHeight;
+  padding: @search-promptPadding;
+  font-size: @search-promptFontSize;
 
-  background: @promptBackground;
-  border: @promptBorder;
-  color: @promptColor;
-  box-shadow: @promptBoxShadow;
-  transition: @promptTransition;
+  background: @search-promptBackground;
+  border: @search-promptBorder;
+  color: @search-promptColor;
+  box-shadow: @search-promptBoxShadow;
+  transition: @search-promptTransition;
 }
 
 .ui.search .prompt {
-  border-radius: @promptBorderRadius;
+  border-radius: @search-promptBorderRadius;
 }
 
 
@@ -72,21 +72,21 @@
   transform-origin: center top;
   white-space: normal;
 
-  background: @resultsBackground;
+  background: @search-resultsBackground;
 
-  margin-top: @resultsDistance;
-  width: @resultsWidth;
+  margin-top: @search-resultsDistance;
+  width: @search-resultsWidth;
 
-  border-radius: @resultsBorderRadius;
-  box-shadow: @resultsBoxShadow;
-  border: @resultsBorder;
-  z-index: @resultsZIndex;
+  border-radius: @search-resultsBorderRadius;
+  box-shadow: @search-resultsBoxShadow;
+  border: @search-resultsBorder;
+  z-index: @search-resultsZIndex;
 }
 .ui.search > .results > :first-child {
-  border-radius: @resultsBorderRadius @resultsBorderRadius 0em 0em;
+  border-radius: @search-resultsBorderRadius @search-resultsBorderRadius 0em 0em;
 }
 .ui.search > .results > :last-child {
-  border-radius: 0em 0em @resultsBorderRadius @resultsBorderRadius;
+  border-radius: 0em 0em @search-resultsBorderRadius @search-resultsBorderRadius;
 }
 
 /*--------------
@@ -97,24 +97,24 @@
   cursor: pointer;
   display: block;
   overflow: hidden;
-  font-size: @resultFontSize;
-  padding: @resultPadding;
-  color: @resultTextColor;
-  line-height: @resultLineHeight;
-  border-bottom: @resultDivider;
+  font-size: @search-resultFontSize;
+  padding: @search-resultPadding;
+  color: @search-resultTextColor;
+  line-height: @search-resultLineHeight;
+  border-bottom: @search-resultDivider;
 }
 .ui.search > .results .result:last-child {
-  border-bottom: @resultLastDivider !important;
+  border-bottom: @search-resultLastDivider !important;
 }
 
 /* Image */
 .ui.search > .results .result .image {
-  float: @resultImageFloat;
+  float: @search-resultImageFloat;
   overflow: hidden;
-  background: @resultImageBackground;
-  width: @resultImageWidth;
-  height: @resultImageHeight;
-  border-radius: @resultImageBorderRadius;
+  background: @search-resultImageBackground;
+  width: @search-resultImageWidth;
+  height: @search-resultImageHeight;
+  border-radius: @search-resultImageBorderRadius;
 }
 .ui.search > .results .result .image img {
   display: block;
@@ -127,24 +127,24 @@
 ---------------*/
 
 .ui.search > .results .result .image + .content {
-  margin: @resultImageMargin;
+  margin: @search-resultImageMargin;
 }
 
 .ui.search > .results .result .title {
-  margin: @resultTitleMargin;
-  font-family: @resultTitleFont;
-  font-weight: @resultTitleFontWeight;
-  font-size: @resultTitleFontSize;
-  color: @resultTitleColor;
+  margin: @search-resultTitleMargin;
+  font-family: @search-resultTitleFont;
+  font-weight: @search-resultTitleFontWeight;
+  font-size: @search-resultTitleFontSize;
+  color: @search-resultTitleColor;
 }
 .ui.search > .results .result .description {
-  margin-top: @resultDescriptionDistance;
-  font-size: @resultDescriptionFontSize;
-  color: @resultDescriptionColor;
+  margin-top: @search-resultDescriptionDistance;
+  font-size: @search-resultDescriptionFontSize;
+  color: @search-resultDescriptionColor;
 }
 .ui.search > .results .result .price {
-  float: @resultPriceFloat;
-  color: @resultPriceColor;
+  float: @search-resultPriceFloat;
+  color: @search-resultPriceColor;
 }
 
 /*--------------
@@ -152,29 +152,29 @@
 ---------------*/
 
 .ui.search > .results > .message {
-  padding: @messageVerticalPadding @messageHorizontalPadding;
+  padding: @search-messageVerticalPadding @search-messageHorizontalPadding;
 }
 .ui.search > .results > .message .header {
-  font-family: @headerFont;
-  font-size: @messageHeaderFontSize;
-  font-weight: @messageHeaderFontWeight;
-  color: @messageHeaderColor;
+  font-family: @site-headerFont;
+  font-size: @search-messageHeaderFontSize;
+  font-weight: @search-messageHeaderFontWeight;
+  color: @search-messageHeaderColor;
 }
 .ui.search > .results > .message .description {
-  margin-top: @messageDescriptionDistance;
-  font-size: @messageDescriptionFontSize;
-  color: @messageDescriptionColor;
+  margin-top: @search-messageDescriptionDistance;
+  font-size: @search-messageDescriptionFontSize;
+  color: @search-messageDescriptionColor;
 }
 
 /* View All Results */
 .ui.search > .results > .action {
   display: block;
-  border-top: @actionBorder;
-  background: @actionBackground;
-  padding: @actionPadding;
-  color: @actionColor;
-  font-weight: @actionFontWeight;
-  text-align: @actionAlign;
+  border-top: @search-actionBorder;
+  background: @search-actionBackground;
+  padding: @search-actionPadding;
+  color: @search-actionColor;
+  font-weight: @search-actionFontWeight;
+  text-align: @search-actionAlign;
 }
 
 
@@ -187,9 +187,9 @@
 ---------------------*/
 
 .ui.search > .prompt:focus {
-  border-color: @promptFocusBorderColor;
-  background: @promptFocusBackground;
-  color: @promptFocusColor;
+  border-color: @search-promptFocusBorderColor;
+  background: @search-promptFocusBackground;
+  color: @search-promptFocusColor;
 }
 
 /*--------------------
@@ -202,12 +202,12 @@
   top: 50%;
   left: 50%;
 
-  margin: @loaderMargin;
-  width: @loaderSize;
-  height: @loaderSize;
+  margin: @site-loaderMargin;
+  width: @form-loaderSize;
+  height: @form-loaderSize;
 
-  border-radius: @circularRadius;
-  border: @loaderLineWidth solid @loaderFillColor;
+  border-radius: @site-circularRadius;
+  border: @site-loaderLineWidth solid @site-loaderFillColor;
 }
 .ui.loading.search .input > i.icon:after {
   position: absolute;
@@ -215,18 +215,18 @@
   top: 50%;
   left: 50%;
 
-  margin: @loaderMargin;
-  width: @loaderSize;
-  height: @loaderSize;
+  margin: @site-loaderMargin;
+  width: @form-loaderSize;
+  height: @form-loaderSize;
 
-  animation: button-spin @loaderSpeed linear;
+  animation: button-spin @site-loaderSpeed linear;
   animation-iteration-count: infinite;
 
-  border-radius: @circularRadius;
+  border-radius: @site-circularRadius;
 
-  border-color: @loaderLineColor transparent transparent;
+  border-color: @site-loaderLineColor transparent transparent;
   border-style: solid;
-  border-width: @loaderLineWidth;
+  border-width: @site-loaderLineWidth;
 
   box-shadow: 0px 0px 0px 1px transparent;
 }
@@ -238,10 +238,10 @@
 
 .ui.search > .results .result:hover,
 .ui.category.search > .results .category .result:hover {
-  background: @resultHoverBackground;
+  background: @search-resultHoverBackground;
 }
 .ui.search .action:hover {
-  background: @actionHoverBackground;
+  background: @search-actionHoverBackground;
 }
 
 /*--------------
@@ -249,24 +249,24 @@
 ---------------*/
 
 .ui.category.search > .results .category.active {
-  background: @categoryActiveBackground;
+  background: @search-categoryActiveBackground;
 }
 .ui.category.search > .results .category.active > .name {
-  color: @categoryNameActiveColor;
+  color: @search-categoryNameActiveColor;
 }
 
 .ui.search > .results .result.active,
 .ui.category.search > .results .category .result.active {
   position: relative;
-  border-left-color: @resultActiveBorderLeft;
-  background: @resultActiveBackground;
-  box-shadow: @resultActiveBoxShadow;
+  border-left-color: @search-resultActiveBorderLeft;
+  background: @search-resultActiveBackground;
+  box-shadow: @search-resultActiveBoxShadow;
 }
 .ui.search > .results .result.active .title {
-  color: @resultActiveTitleColor;
+  color: @search-resultActiveTitleColor;
 }
 .ui.search > .results .result.active .description {
-  color: @resultActiveDescriptionColor;
+  color: @search-resultActiveDescriptionColor;
 }
 
 /*******************************
@@ -278,7 +278,7 @@
 ---------------*/
 
 .ui.search.selection .prompt {
-  border-radius: @selectionPromptBorderRadius;
+  border-radius: @search-selectionPromptBorderRadius;
 }
 
 /* Remove input */
@@ -287,22 +287,22 @@
   position: absolute;
   left: auto;
   opacity: 0;
-  color: @selectionCloseIconColor;
-  top: @selectionCloseTop;
-  right: @selectionCloseRight;
-  transition: @selectionCloseTransition;
+  color: @search-selectionCloseIconColor;
+  top: @search-selectionCloseTop;
+  right: @search-selectionCloseRight;
+  transition: @search-selectionCloseTransition;
 }
 .ui.search.selection > .icon.input > .active.remove.icon {
   cursor: pointer;
-  opacity: @selectionCloseIconOpacity;
+  opacity: @search-selectionCloseIconOpacity;
   pointer-events: auto;
 }
 .ui.search.selection > .icon.input:not([class*="left icon"]) > .icon ~ .remove.icon {
-  right: @selectionCloseIconInputRight;
+  right: @search-selectionCloseIconInputRight;
 }
 .ui.search.selection > .icon.input > .remove.icon:hover {
-  opacity: @selectionCloseIconHoverOpacity;
-  color: @selectionCloseIconHoverColor;
+  opacity: @search-selectionCloseIconHoverOpacity;
+  color: @search-selectionCloseIconHoverColor;
 }
 
 
@@ -311,15 +311,15 @@
 ---------------*/
 
 .ui.category.search .results {
-  width: @categoryResultsWidth;
+  width: @search-categoryResultsWidth;
 }
 
 /* Category */
 .ui.category.search > .results .category {
-  background: @categoryBackground;
-  box-shadow: @categoryBoxShadow;
-  border-bottom: @categoryDivider;
-  transition: @categoryTransition;
+  background: @search-categoryBackground;
+  box-shadow: @search-categoryBoxShadow;
+  border-bottom: @search-categoryDivider;
+  transition: @search-categoryTransition;
 }
 
 /* Last Category */
@@ -329,36 +329,36 @@
 
 /* First / Last */
 .ui.category.search > .results .category:first-child .name + .result {
-  border-radius: 0em @resultsBorderRadius 0em 0em;
+  border-radius: 0em @search-resultsBorderRadius 0em 0em;
 }
 .ui.category.search > .results .category:last-child .result:last-child {
-  border-radius: 0em 0em @resultsBorderRadius 0em;
+  border-radius: 0em 0em @search-resultsBorderRadius 0em;
 }
 
 /* Category Result */
 .ui.category.search > .results .category .result {
-  background: @categoryResultBackground;
-  margin-left: @categoryNameWidth;
-  border-left: @categoryResultLeftBorder;
-  border-bottom: @categoryResultDivider;
-  transition: @categoryResultTransition;
-  padding: @categoryResultPadding;
+  background: @search-categoryResultBackground;
+  margin-left: @search-categoryNameWidth;
+  border-left: @search-categoryResultLeftBorder;
+  border-bottom: @search-categoryResultDivider;
+  transition: @search-categoryResultTransition;
+  padding: @search-categoryResultPadding;
 }
 .ui.category.search > .results .category:last-child .result:last-child {
-  border-bottom: @categoryResultLastDivider;
+  border-bottom: @search-categoryResultLastDivider;
 }
 
 /* Category Result Name */
 .ui.category.search > .results .category > .name {
-  width: @categoryNameWidth;
-  background: @categoryNameBackground;
-  font-family: @categoryNameFont;
-  font-size: @categoryNameFontSize;
-  float: @categoryNameFontSize;
-  float: @categoryNameFloat;
-  padding: @categoryNamePadding;
-  font-weight: @categoryNameFontWeight;
-  color: @categoryNameColor;
+  width: @search-categoryNameWidth;
+  background: @search-categoryNameBackground;
+  font-family: @search-categoryNameFont;
+  font-size: @search-categoryNameFontSize;
+  float: @search-categoryNameFontSize;
+  float: @search-categoryNameFloat;
+  padding: @search-categoryNamePadding;
+  font-weight: @search-categoryNameFontWeight;
+  color: @search-categoryNameColor;
 }
 
 /*******************************
@@ -392,24 +392,24 @@
 ---------------*/
 
 .ui.mini.search {
-  font-size: @relativeMini;
+  font-size: @site-relativeMini;
 }
 .ui.small.search {
-  font-size: @relativeSmall;
+  font-size: @site-relativeSmall;
 }
 .ui.search {
-  font-size: @relativeMedium;
+  font-size: @site-relativeMedium;
 }
 .ui.large.search {
-  font-size: @relativeLarge;
+  font-size: @site-relativeLarge;
 }
 .ui.big.search {
-  font-size: @relativeBig;
+  font-size: @site-relativeBig;
 }
 .ui.huge.search {
-  font-size: @relativeHuge;
+  font-size: @site-relativeHuge;
 }
 .ui.massive.search {
-  font-size: @relativeMassive;
+  font-size: @site-relativeMassive;
 }
 

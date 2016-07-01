@@ -27,7 +27,7 @@
   display: inline-block;
   vertical-align: middle;
   max-width: 100%;
-  background-color: @placeholderColor;
+  background-color: @image-placeholderColor;
 }
 
 img.ui.image {
@@ -60,7 +60,7 @@ img.ui.image {
 .ui.disabled.images,
 .ui.disabled.image {
   cursor: default;
-  opacity: @disabledOpacity;
+  opacity: @site-disabledOpacity;
 }
 
 
@@ -113,7 +113,7 @@ img.ui.image {
 .ui.rounded.image,
 .ui.rounded.images .image > *,
 .ui.rounded.image > * {
-  border-radius: @roundedBorderRadius;
+  border-radius: @image-roundedBorderRadius;
 }
 
 /*--------------
@@ -126,7 +126,7 @@ img.ui.image {
 .ui.bordered.image img,
 .ui.bordered.image svg,
 img.ui.bordered.image {
-  border: @imageBorder;
+  border: @image-imageBorder;
 }
 
 /*--------------
@@ -142,9 +142,9 @@ img.ui.bordered.image {
 .ui.circular.image,
 .ui.circular.images .image > *,
 .ui.circular.image > * {
-  -webkit-border-radius: @circularRadius;
-  -moz-border-radius: @circularRadius;
-  border-radius: @circularRadius;
+  -webkit-border-radius: @site-circularRadius;
+  -moz-border-radius: @site-circularRadius;
+  border-radius: @site-circularRadius;
 }
 
 /*--------------
@@ -173,15 +173,15 @@ img.ui.bordered.image {
 .ui.avatar.image img,
 .ui.avatar.image svg,
 .ui.avatar.image {
-  margin-right: @avatarMargin;
+  margin-right: @image-avatarMargin;
 
   display: inline-block;
-  width: @avatarSize;
-  height: @avatarSize;
+  width: @image-avatarSize;
+  height: @image-avatarSize;
 
-  -webkit-border-radius: @circularRadius;
-  -moz-border-radius: @circularRadius;
-  border-radius: @circularRadius;
+  -webkit-border-radius: @site-circularRadius;
+  -moz-border-radius: @site-circularRadius;
+  border-radius: @site-circularRadius;
 }
 
 /*-------------------
@@ -190,18 +190,18 @@ img.ui.bordered.image {
 
 .ui.spaced.image {
   display: inline-block !important;
-  margin-left: @spacedDistance;
-  margin-right: @spacedDistance;
+  margin-left: @image-spacedDistance;
+  margin-right: @image-spacedDistance;
 }
 
 .ui[class*="left spaced"].image {
-  margin-left: @spacedDistance;
+  margin-left: @image-spacedDistance;
   margin-right: 0em;
 }
 
 .ui[class*="right spaced"].image {
   margin-left: 0em;
-  margin-right: @spacedDistance;
+  margin-right: @image-spacedDistance;
 }
 
 /*-------------------
@@ -211,15 +211,15 @@ img.ui.bordered.image {
 .ui.floated.image,
 .ui.floated.images {
   float: left;
-  margin-right: @floatedHorizontalMargin;
-  margin-bottom: @floatedVerticalMargin;
+  margin-right: @image-floatedHorizontalMargin;
+  margin-bottom: @image-floatedVerticalMargin;
 }
 .ui.right.floated.images,
 .ui.right.floated.image {
   float: right;
   margin-right: 0em;
-  margin-bottom: @floatedVerticalMargin;
-  margin-left: @floatedHorizontalMargin;
+  margin-bottom: @image-floatedVerticalMargin;
+  margin-left: @image-floatedHorizontalMargin;
 }
 
 .ui.floated.images:last-child,
@@ -242,65 +242,65 @@ img.ui.bordered.image {
 .ui.mini.images img,
 .ui.mini.images svg,
 .ui.mini.image {
-  width: @miniWidth;
+  width: @image-miniWidth;
   height: auto;
-  font-size: @mini;
+  font-size: @icon-mini;
 }
 .ui.tiny.images .image,
 .ui.tiny.images img,
 .ui.tiny.images svg,
 .ui.tiny.image {
-  width: @tinyWidth;
+  width: @image-tinyWidth;
   height: auto;
-  font-size: @tiny;
+  font-size: @icon-tiny;
 }
 .ui.small.images .image,
 .ui.small.images img,
 .ui.small.images svg,
 .ui.small.image {
-  width: @smallWidth;
+  width: @image-smallWidth;
   height: auto;
-  font-size: @small;
+  font-size: @icon-small;
 }
 .ui.medium.images .image,
 .ui.medium.images img,
 .ui.medium.images svg,
 .ui.medium.image {
-  width: @mediumWidth;
+  width: @image-mediumWidth;
   height: auto;
-  font-size: @medium;
+  font-size: @icon-medium;
 }
 .ui.large.images .image,
 .ui.large.images img,
 .ui.large.images svg,
 .ui.large.image {
-  width: @largeWidth;
+  width: @image-largeWidth;
   height: auto;
-  font-size: @large;
+  font-size: @icon-large;
 }
 .ui.big.images .image,
 .ui.big.images img,
 .ui.big.images svg,
 .ui.big.image {
-  width: @bigWidth;
+  width: @image-bigWidth;
   height: auto;
-  font-size: @big;
+  font-size: @icon-big;
 }
 .ui.huge.images .image,
 .ui.huge.images img,
 .ui.huge.images svg,
 .ui.huge.image {
-  width: @hugeWidth;
+  width: @image-hugeWidth;
   height: auto;
-  font-size: @huge;
+  font-size: @icon-huge;
 }
 .ui.massive.images .image,
 .ui.massive.images img,
 .ui.massive.images svg,
 .ui.massive.image {
-  width: @massiveWidth;
+  width: @image-massiveWidth;
   height: auto;
-  font-size: @massive;
+  font-size: @icon-massive;
 }
 
 
@@ -310,13 +310,13 @@ img.ui.bordered.image {
 
 .ui.images {
   font-size: 0em;
-  margin: 0em -@imageHorizontalMargin 0rem;
+  margin: 0em -@image-imageHorizontalMargin 0rem;
 }
 
 .ui.images .image,
 .ui.images img,
 .ui.images svg {
   display: inline-block;
-  margin: 0em @imageHorizontalMargin @imageVerticalMargin;
+  margin: 0em @image-imageHorizontalMargin @image-imageVerticalMargin;
 }
 

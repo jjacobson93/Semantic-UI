@@ -22,12 +22,12 @@
 
 .ui.segment {
   position: relative;
-  background: @background;
-  box-shadow: @boxShadow;
-  margin: @margin;
-  padding: @padding;
-  border-radius: @borderRadius;
-  border: @border;
+  background: @segment-background;
+  box-shadow: @segment-boxShadow;
+  margin: @segment-margin;
+  padding: @segment-padding;
+  border-radius: @segment-borderRadius;
+  border: @segment-border;
 }
 
 .ui.segment:first-child {
@@ -48,7 +48,7 @@
   border-radius: 0px;
   box-shadow: none;
   border: none;
-  border-bottom: @borderWidth solid @borderColor;
+  border-bottom: @segment-borderWidth solid @site-borderColor;
 }
 .ui.vertical.segment:last-child {
   border-bottom: none;
@@ -61,7 +61,7 @@
 
 /* Header */
 .ui.inverted.segment > .ui.header {
-  color: @white;
+  color: @site-white;
 }
 
 /* Label */
@@ -86,22 +86,22 @@
 .ui.page.grid.segment,
 .ui.grid > .row > .ui.segment.column,
 .ui.grid > .ui.segment.column {
-  padding-top: @pageGridMargin;
-  padding-bottom: @pageGridMargin;
+  padding-top: @segment-pageGridMargin;
+  padding-bottom: @segment-pageGridMargin;
 }
 .ui.grid.segment {
-  margin: @margin;
-  border-radius: @borderRadius;
+  margin: @segment-margin;
+  border-radius: @segment-borderRadius;
 }
 
 /* Table */
 .ui.basic.table.segment {
-  background: @background;
-  border: @border;
-  box-shadow: @boxShadow;
+  background: @segment-background;
+  border: @segment-border;
+  box-shadow: @segment-boxShadow;
 }
 .ui[class*="very basic"].table.segment {
-  padding: @padding;
+  padding: @segment-padding;
 }
 
 
@@ -115,9 +115,9 @@
 
 .ui.piled.segments,
 .ui.piled.segment {
-  margin: @piledMargin 0em;
-  box-shadow: @piledBoxShadow;
-  z-index: @piledZIndex;
+  margin: @segment-piledMargin 0em;
+  box-shadow: @segment-piledBoxShadow;
+  z-index: @segment-piledZIndex;
 }
 .ui.piled.segment:first-child {
   margin-top: 0em;
@@ -129,7 +129,7 @@
 .ui.piled.segments:before,
 .ui.piled.segment:after,
 .ui.piled.segment:before {
-  background-color: @white;
+  background-color: @site-white;
   visibility: visible;
   content: '';
   display: block;
@@ -137,25 +137,25 @@
   left: 0px;
   position: absolute;
   width: 100%;
-  border: @piledBorder;
-  box-shadow: @piledBoxShadow;
+  border: @segment-piledBorder;
+  box-shadow: @segment-piledBoxShadow;
 }
 .ui.piled.segments:before,
 .ui.piled.segment:before {
-  transform: rotate(-@piledDegrees);
+  transform: rotate(-@segment-piledDegrees);
   top: 0;
   z-index: -2;
 }
 .ui.piled.segments:after,
 .ui.piled.segment:after {
-  transform: rotate(@piledDegrees);
+  transform: rotate(@segment-piledDegrees);
   top: 0;
   z-index: -1;
 }
 
 /* Piled Attached */
 .ui[class*="top attached"].piled.segment {
-  margin-top: @piledMargin;
+  margin-top: @segment-piledMargin;
   margin-bottom: 0em;
 }
 .ui.piled.segment[class*="top attached"]:first-child {
@@ -163,7 +163,7 @@
 }
 .ui.piled.segment[class*="bottom attached"] {
   margin-top: 0em;
-  margin-bottom: @piledMargin;
+  margin-bottom: @segment-piledMargin;
 }
 .ui.piled.segment[class*="bottom attached"]:last-child {
   margin-bottom: 0em;
@@ -174,7 +174,7 @@
 --------------------*/
 
 .ui.stacked.segment {
-  padding-bottom: @stackedPadding;
+  padding-bottom: @segment-stackedPadding;
 }
 .ui.stacked.segments:before,
 .ui.stacked.segments:after,
@@ -182,14 +182,14 @@
 .ui.stacked.segment:after {
   content: '';
   position: absolute;
-  bottom: -(@stackedHeight / 2);
+  bottom: -(@segment-stackedHeight / 2);
   left: 0%;
 
-  border-top: 1px solid @borderColor;
-  background: @stackedPageBackground;
+  border-top: 1px solid @site-borderColor;
+  background: @segment-stackedPageBackground;
 
   width: 100%;
-  height: @stackedHeight;
+  height: @segment-stackedHeight;
   visibility: visible;
 }
 .ui.stacked.segments:before,
@@ -209,8 +209,8 @@
 .ui.stacked.inverted.segments:after,
 .ui.stacked.inverted.segment:before,
 .ui.stacked.inverted.segment:after {
-  background-color: @subtleTransparentBlack;
-  border-top: 1px solid @selectedBorderColor;
+  background-color: @site-subtleTransparentBlack;
+  border-top: 1px solid @site-selectedBorderColor;
 }
 
 /*-------------------
@@ -218,11 +218,11 @@
 --------------------*/
 
 .ui.padded.segment {
-  padding: @paddedSegmentPadding;
+  padding: @segment-paddedSegmentPadding;
 }
 
 .ui[class*="very padded"].segment {
-  padding: @veryPaddedSegmentPadding;
+  padding: @segment-veryPaddedSegmentPadding;
 }
 
 /*-------------------
@@ -249,7 +249,7 @@
 
 .ui.circular.segment {
   display: table-cell;
-  padding: @circularPadding;
+  padding: @segment-circularPadding;
   text-align: center;
   vertical-align: middle;
   border-radius: 500em;
@@ -261,7 +261,7 @@
 
 .ui.raised.segments,
 .ui.raised.segment {
-  box-shadow: @raisedBoxShadow;
+  box-shadow: @segment-raisedBoxShadow;
 }
 
 
@@ -273,10 +273,10 @@
 .ui.segments {
   flex-direction: column;
   position: relative;
-  margin: @groupedMargin;
-  border: @groupedBorder;
-  box-shadow: @groupedBoxShadow;
-  border-radius: @groupedBorderRadius;
+  margin: @segment-groupedMargin;
+  border: @segment-groupedBorder;
+  box-shadow: @segment-groupedBoxShadow;
+  border-radius: @segment-groupedBorderRadius;
 }
 .ui.segments:first-child {
   margin-top: 0em;
@@ -291,44 +291,44 @@
   top: 0px;
   bottom: 0px;
   border-radius: 0px;
-  margin: @groupedSegmentMargin;
-  width: @groupedSegmentWidth;
-  box-shadow: @groupedSegmentBoxShadow;
-  border: @groupedSegmentBorder;
-  border-top: @groupedSegmentDivider;
+  margin: @segment-groupedSegmentMargin;
+  width: @segment-groupedSegmentWidth;
+  box-shadow: @segment-groupedSegmentBoxShadow;
+  border: @segment-groupedSegmentBorder;
+  border-top: @segment-groupedSegmentDivider;
 }
 
 .ui.segments:not(.horizontal) > .segment:first-child {
-  top: @attachedTopOffset;
+  top: @segment-attachedTopOffset;
   bottom: 0px;
   border-top: none;
   margin-top: 0em;
   bottom: 0px;
   margin-bottom: 0em;
-  top: @attachedTopOffset;
-  border-radius: @borderRadius @borderRadius 0em 0em;
+  top: @segment-attachedTopOffset;
+  border-radius: @segment-borderRadius @segment-borderRadius 0em 0em;
 }
 
 /* Bottom */
 .ui.segments:not(.horizontal) > .segment:last-child {
-  top: @attachedBottomOffset;
+  top: @segment-attachedBottomOffset;
   bottom: 0px;
   margin-top: 0em;
   margin-bottom: 0em;
-  box-shadow: @attachedBottomBoxShadow;
-  border-radius: 0em 0em @borderRadius @borderRadius;
+  box-shadow: @segment-attachedBottomBoxShadow;
+  border-radius: 0em 0em @segment-borderRadius @segment-borderRadius;
 }
 
 /* Only */
 .ui.segments:not(.horizontal) > .segment:only-child {
-  border-radius: @borderRadius;
+  border-radius: @segment-borderRadius;
 }
 
 
 /* Nested Group */
 .ui.segments > .ui.segments {
-  border-top: @groupedSegmentDivider;
-  margin: @nestedGroupMargin;
+  border-top: @segment-groupedSegmentDivider;
+  margin: @segment-nestedGroupMargin;
 }
 .ui.segments > .segments:first-child {
   border-top: none;
@@ -344,11 +344,11 @@
   background-color: transparent;
   border-radius: 0px;
   padding: 0em;
-  background-color: @background;
-  box-shadow: @boxShadow;
-  margin: @margin;
-  border-radius: @borderRadius;
-  border: @border;
+  background-color: @segment-background;
+  box-shadow: @segment-boxShadow;
+  margin: @segment-margin;
+  border-radius: @segment-borderRadius;
+  border: @segment-border;
 }
 
 /* Nested Horizontal Group */
@@ -358,7 +358,7 @@
   border-radius: 0px;
   border: none;
   box-shadow: none;
-  border-top: @groupedSegmentDivider;
+  border-top: @segment-groupedSegmentDivider;
 }
 
 /* Horizontal Segment */
@@ -371,7 +371,7 @@
   border-radius: 0px;
   border: none;
   box-shadow: none;
-  border-left: @borderWidth solid @borderColor;
+  border-left: @segment-borderWidth solid @site-borderColor;
 }
 
 /* Border Fixes */
@@ -392,8 +392,8 @@
 ---------------*/
 
 .ui.disabled.segment {
-  opacity: @disabledOpacity;
-  color: @disabledTextColor;
+  opacity: @site-disabledOpacity;
+  color: @site-disabledTextColor;
 }
 
 /*--------------
@@ -413,11 +413,11 @@
   content: '';
   top: 0%;
   left: 0%;
-  background: @loaderDimmerColor;
+  background: @segment-loaderDimmerColor;
   width: 100%;
   height: 100%;
-  border-radius: @borderRadius;
-  z-index: @loaderDimmerZIndex;
+  border-radius: @segment-borderRadius;
+  z-index: @segment-loaderDimmerZIndex;
 }
 .ui.loading.segment:after {
   position: absolute;
@@ -425,22 +425,22 @@
   top: 50%;
   left: 50%;
 
-  margin: @loaderMargin;
-  width: @loaderSize;
-  height: @loaderSize;
+  margin: @site-loaderMargin;
+  width: @segment-loaderSize;
+  height: @segment-loaderSize;
 
-  animation: segment-spin @loaderSpeed linear;
+  animation: segment-spin @site-loaderSpeed linear;
   animation-iteration-count: infinite;
 
-  border-radius: @circularRadius;
+  border-radius: @site-circularRadius;
 
-  border-color: @loaderLineColor @loaderFillColor @loaderFillColor @loaderFillColor;
+  border-color: @site-loaderLineColor @site-loaderFillColor @site-loaderFillColor @site-loaderFillColor;
   border-style: solid;
-  border-width: @loaderLineWidth;
+  border-width: @site-loaderLineWidth;
 
   box-shadow: 0px 0px 0px 1px transparent;
   visibility: visible;
-  z-index: @loaderLineZIndex;
+  z-index: @segment-loaderLineZIndex;
 }
 
 @keyframes segment-spin {
@@ -463,10 +463,10 @@
 --------------------*/
 
 .ui.basic.segment {
-  background: @basicBackground;
-  box-shadow: @basicBoxShadow;
-  border: @basicBorder;
-  border-radius: @basicBorderRadius;
+  background: @segment-basicBackground;
+  box-shadow: @segment-basicBoxShadow;
+  border: @segment-basicBorder;
+  border-radius: @segment-basicBorderRadius;
 }
 
 /*-------------------
@@ -487,119 +487,119 @@
 
 /* Red */
 .ui.red.segment:not(.inverted) {
-  border-top: @coloredBorderSize solid @red;
+  border-top: @segment-coloredBorderSize solid @site-red;
 }
 .ui.inverted.red.segment {
-  background-color: @red !important;
-  color: @white !important;
+  background-color: @site-red !important;
+  color: @site-white !important;
 }
 
 /* Orange */
 .ui.orange.segment:not(.inverted) {
-  border-top: @coloredBorderSize solid @orange;
+  border-top: @segment-coloredBorderSize solid @site-orange;
 }
 .ui.inverted.orange.segment {
-  background-color: @orange !important;
-  color: @white !important;
+  background-color: @site-orange !important;
+  color: @site-white !important;
 }
 
 /* Yellow */
 .ui.yellow.segment:not(.inverted) {
-  border-top: @coloredBorderSize solid @yellow;
+  border-top: @segment-coloredBorderSize solid @site-yellow;
 }
 .ui.inverted.yellow.segment {
-  background-color: @yellow !important;
-  color: @white !important;
+  background-color: @site-yellow !important;
+  color: @site-white !important;
 }
 
 /* Olive */
 .ui.olive.segment:not(.inverted) {
-  border-top: @coloredBorderSize solid @olive;
+  border-top: @segment-coloredBorderSize solid @site-olive;
 }
 .ui.inverted.olive.segment {
-  background-color: @olive !important;
-  color: @white !important;
+  background-color: @site-olive !important;
+  color: @site-white !important;
 }
 
 /* Green */
 .ui.green.segment:not(.inverted) {
-  border-top: @coloredBorderSize solid @green;
+  border-top: @segment-coloredBorderSize solid @site-green;
 }
 .ui.inverted.green.segment {
-  background-color: @green !important;
-  color: @white !important;
+  background-color: @site-green !important;
+  color: @site-white !important;
 }
 
 /* Teal */
 .ui.teal.segment:not(.inverted) {
-  border-top: @coloredBorderSize solid @teal;
+  border-top: @segment-coloredBorderSize solid @site-teal;
 }
 .ui.inverted.teal.segment {
-  background-color: @teal !important;
-  color: @white !important;
+  background-color: @site-teal !important;
+  color: @site-white !important;
 }
 
 /* Blue */
 .ui.blue.segment:not(.inverted) {
-  border-top: @coloredBorderSize solid @blue;
+  border-top: @segment-coloredBorderSize solid @site-blue;
 }
 .ui.inverted.blue.segment {
-  background-color: @blue !important;
-  color: @white !important;
+  background-color: @site-blue !important;
+  color: @site-white !important;
 }
 
 /* Violet */
 .ui.violet.segment:not(.inverted) {
-  border-top: @coloredBorderSize solid @violet;
+  border-top: @segment-coloredBorderSize solid @site-violet;
 }
 .ui.inverted.violet.segment {
-  background-color: @violet !important;
-  color: @white !important;
+  background-color: @site-violet !important;
+  color: @site-white !important;
 }
 
 /* Purple */
 .ui.purple.segment:not(.inverted) {
-  border-top: @coloredBorderSize solid @purple;
+  border-top: @segment-coloredBorderSize solid @site-purple;
 }
 .ui.inverted.purple.segment {
-  background-color: @purple !important;
-  color: @white !important;
+  background-color: @site-purple !important;
+  color: @site-white !important;
 }
 
 /* Pink */
 .ui.pink.segment:not(.inverted) {
-  border-top: @coloredBorderSize solid @pink;
+  border-top: @segment-coloredBorderSize solid @site-pink;
 }
 .ui.inverted.pink.segment {
-  background-color: @pink !important;
-  color: @white !important;
+  background-color: @site-pink !important;
+  color: @site-white !important;
 }
 
 /* Brown */
 .ui.brown.segment:not(.inverted) {
-  border-top: @coloredBorderSize solid @brown;
+  border-top: @segment-coloredBorderSize solid @site-brown;
 }
 .ui.inverted.brown.segment {
-  background-color: @brown !important;
-  color: @white !important;
+  background-color: @site-brown !important;
+  color: @site-white !important;
 }
 
 /* Grey */
 .ui.grey.segment:not(.inverted) {
-  border-top: @coloredBorderSize solid @grey;
+  border-top: @segment-coloredBorderSize solid @site-grey;
 }
 .ui.inverted.grey.segment {
-  background-color: @grey !important;
-  color: @white !important;
+  background-color: @site-grey !important;
+  color: @site-white !important;
 }
 
 /* Black */
 .ui.black.segment:not(.inverted) {
-  border-top: @coloredBorderSize solid @black;
+  border-top: @segment-coloredBorderSize solid @site-black;
 }
 .ui.inverted.black.segment {
-  background-color: @black !important;
-  color: @white !important;
+  background-color: @site-black !important;
+  color: @site-white !important;
 }
 
 /*-------------------
@@ -623,11 +623,11 @@
 .ui.floated.segment,
 .ui[class*="left floated"].segment {
   float: left;
-  margin-right: @floatedDistance;
+  margin-right: @segment-floatedDistance;
 }
 .ui[class*="right floated"].segment {
   float: right;
-  margin-left: @floatedDistance;
+  margin-left: @segment-floatedDistance;
 }
 
 
@@ -641,21 +641,21 @@
 }
 .ui.inverted.segment,
 .ui.primary.inverted.segment {
-  background: @invertedBackground;
-  color: @invertedTextColor;
+  background: @segment-invertedBackground;
+  color: @divider-invertedTextColor;
 }
 
 /* Nested */
 .ui.inverted.segment .segment {
-  color: @textColor;
+  color: @button-textColor;
 }
 .ui.inverted.segment .inverted.segment {
-  color: @invertedTextColor;
+  color: @divider-invertedTextColor;
 }
 
 /* Attached */
 .ui.inverted.attached.segment {
-  border-color: @solidWhiteBorderColor;
+  border-color: @site-solidWhiteBorderColor;
 }
 
 /*-------------------
@@ -664,22 +664,22 @@
 
 /* Secondary */
 .ui.secondary.segment {
-  background: @secondaryBackground;
-  color: @secondaryColor;
+  background: @segment-secondaryBackground;
+  color: @segment-secondaryColor;
 }
 .ui.secondary.inverted.segment {
-  background: @secondaryInvertedBackground;
-  color: @secondaryInvertedColor;
+  background: @segment-secondaryInvertedBackground;
+  color: @segment-secondaryInvertedColor;
 }
 
 /* Tertiary */
 .ui.tertiary.segment {
-  background: @tertiaryBackground;
-  color: @tertiaryColor;
+  background: @segment-tertiaryBackground;
+  color: @segment-tertiaryColor;
 }
 .ui.tertiary.inverted.segment {
-  background: @tertiaryInvertedBackground;
-  color: @tertiaryInvertedColor;
+  background: @segment-tertiaryInvertedBackground;
+  color: @segment-tertiaryInvertedColor;
 }
 
 
@@ -692,11 +692,11 @@
   top: 0px;
   bottom: 0px;
   border-radius: 0px;
-  margin: 0em @attachedHorizontalOffset;
-  width: @attachedWidth;
-  max-width: @attachedWidth;
-  box-shadow: @attachedBoxShadow;
-  border: @attachedBorder;
+  margin: 0em @segment-attachedHorizontalOffset;
+  width: @segment-attachedWidth;
+  max-width: @segment-attachedWidth;
+  box-shadow: @segment-attachedBoxShadow;
+  border: @segment-attachedBorder;
 }
 .ui.attached:not(.message) + .ui.attached.segment:not(.top) {
   border-top: none;
@@ -706,9 +706,9 @@
 .ui[class*="top attached"].segment {
   bottom: 0px;
   margin-bottom: 0em;
-  top: @attachedTopOffset;
-  margin-top: @verticalMargin;
-  border-radius: @borderRadius @borderRadius 0em 0em;
+  top: @segment-attachedTopOffset;
+  margin-top: @segment-verticalMargin;
+  border-radius: @segment-borderRadius @segment-borderRadius 0em 0em;
 }
 .ui.segment[class*="top attached"]:first-child {
   margin-top: 0em;
@@ -718,10 +718,10 @@
 .ui.segment[class*="bottom attached"] {
   bottom: 0px;
   margin-top: 0em;
-  top: @attachedBottomOffset;
-  margin-bottom: @verticalMargin;
-  box-shadow: @attachedBottomBoxShadow;
-  border-radius: 0em 0em @borderRadius @borderRadius;
+  top: @segment-attachedBottomOffset;
+  margin-bottom: @segment-verticalMargin;
+  box-shadow: @segment-attachedBottomBoxShadow;
+  border-radius: 0em 0em @segment-borderRadius @segment-borderRadius;
 }
 .ui.segment[class*="bottom attached"]:last-child {
   margin-bottom: 0em;
@@ -733,34 +733,34 @@
 
 .ui.mini.segments .segment,
 .ui.mini.segment {
-  font-size: @mini;
+  font-size: @loader-mini;
 }
 .ui.tiny.segments .segment,
 .ui.tiny.segment {
-  font-size: @tiny;
+  font-size: @loader-tiny;
 }
 .ui.small.segments .segment,
 .ui.small.segment {
-  font-size: @small;
+  font-size: @loader-small;
 }
 .ui.segments .segment,
 .ui.segment {
-  font-size: @medium;
+  font-size: @loader-medium;
 }
 .ui.large.segments .segment,
 .ui.large.segment {
-  font-size: @large;
+  font-size: @loader-large;
 }
 .ui.big.segments .segment,
 .ui.big.segment {
-  font-size: @big;
+  font-size: @loader-big;
 }
 .ui.huge.segments .segment,
 .ui.huge.segment {
-  font-size: @huge;
+  font-size: @loader-huge;
 }
 .ui.massive.segments .segment,
 .ui.massive.segment {
-  font-size: @massive;
+  font-size: @loader-massive;
 }
 

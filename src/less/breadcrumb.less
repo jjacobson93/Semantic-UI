@@ -22,9 +22,9 @@
 
 .ui.breadcrumb {
   line-height: 1;
-  display: @display;
-  margin: @verticalMargin 0em;
-  vertical-align: @verticalAlign;
+  display: @breadcrumb-display;
+  margin: @breadcrumb-verticalMargin 0em;
+  vertical-align: @breadcrumb-verticalAlign;
 }
 .ui.breadcrumb:first-child {
   margin-top: 0em;
@@ -40,27 +40,27 @@
 /* Divider */
 .ui.breadcrumb .divider {
   display: inline-block;
-  opacity: @dividerOpacity;
-  margin: 0em @dividerSpacing 0em;
+  opacity: @breadcrumb-dividerOpacity;
+  margin: 0em @breadcrumb-dividerSpacing 0em;
 
-  font-size: @dividerSize;
-  color: @dividerColor;
-  vertical-align: @dividerVerticalAlign;
+  font-size: @breadcrumb-dividerSize;
+  color: @breadcrumb-dividerColor;
+  vertical-align: @breadcrumb-dividerVerticalAlign;
 }
 
 /* Link */
 .ui.breadcrumb a {
-  color: @linkColor;
+  color: @site-linkColor;
 }
 .ui.breadcrumb a:hover {
-  color: @linkHoverColor;
+  color: @site-linkHoverColor;
 }
 
 
 /* Icon Divider */
 .ui.breadcrumb .icon.divider {
-  font-size: @iconDividerSize;
-  vertical-align: @iconDividerVerticalAlign;
+  font-size: @breadcrumb-iconDividerSize;
+  vertical-align: @breadcrumb-iconDividerVerticalAlign;
 }
 
 /* Section */
@@ -69,14 +69,14 @@
 }
 .ui.breadcrumb .section {
   display: inline-block;
-  margin: @sectionMargin;
-  padding: @sectionPadding;
+  margin: @breadcrumb-sectionMargin;
+  padding: @breadcrumb-sectionPadding;
 }
 
 /* Loose Coupling */
 .ui.breadcrumb.segment {
   display: inline-block;
-  padding: @segmentPadding;
+  padding: @breadcrumb-segmentPadding;
 }
 
 /*******************************
@@ -84,7 +84,7 @@
 *******************************/
 
 .ui.breadcrumb .active.section {
-  font-weight: @activeFontWeight;
+  font-weight: @breadcrumb-activeFontWeight;
 }
 
 
@@ -93,27 +93,27 @@
 *******************************/
 
 .ui.mini.breadcrumb {
-  font-size: @mini;
+  font-size: @loader-mini;
 }
 .ui.tiny.breadcrumb {
-  font-size: @tiny;
+  font-size: @loader-tiny;
 }
 .ui.small.breadcrumb {
-  font-size: @small;
+  font-size: @loader-small;
 }
 .ui.breadcrumb {
-  font-size: @medium;
+  font-size: @loader-medium;
 }
 .ui.large.breadcrumb {
-  font-size: @large;
+  font-size: @loader-large;
 }
 .ui.big.breadcrumb {
-  font-size: @big;
+  font-size: @loader-big;
 }
 .ui.huge.breadcrumb {
-  font-size: @huge;
+  font-size: @loader-huge;
 }
 .ui.massive.breadcrumb {
-  font-size: @massive;
+  font-size: @loader-massive;
 }
 

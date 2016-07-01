@@ -23,28 +23,28 @@
 
 .ui.nag {
   display: none;
-  opacity: @opacity;
-  position: @position;
+  opacity: @nag-opacity;
+  position: @nag-position;
 
-  top: @top;
+  top: @nag-top;
   left: 0px;
-  z-index: @zIndex;
+  z-index: @nag-zIndex;
 
-  min-height: @minHeight;
-  width: @width;
+  min-height: @nag-minHeight;
+  width: @nag-width;
 
-  margin: @margin;
-  padding: @padding;
+  margin: @nag-margin;
+  padding: @nag-padding;
 
-  background: @background;
-  box-shadow: @boxShadow;
+  background: @nag-background;
+  box-shadow: @nag-boxShadow;
 
-  font-size: @fontSize;
-  text-align: @textAlign;
-  color: @color;
+  font-size: @nag-fontSize;
+  text-align: @nag-textAlign;
+  color: @nag-color;
 
-  border-radius: @topBorderRadius;
-  transition: @transition;
+  border-radius: @nag-topBorderRadius;
+  transition: @nag-transition;
 }
 
 a.ui.nag {
@@ -53,24 +53,24 @@ a.ui.nag {
 
 .ui.nag > .title {
   display: inline-block;
-  margin: @titleMargin;
-  color: @titleColor;
+  margin: @nag-titleMargin;
+  color: @nag-titleColor;
 }
 
 
 .ui.nag > .close.icon {
   cursor: pointer;
-  opacity: @closeOpacity;
+  opacity: @nag-closeOpacity;
 
   position: absolute;
-  top: @closeTop;
-  right: @closeRight;
+  top: @nag-closeTop;
+  right: @nag-closeRight;
 
-  font-size: @closeSize;
+  font-size: @nag-closeSize;
 
-  margin: @closeMargin;
-  color: @closeColor;
-  transition: @closeTransition;
+  margin: @nag-closeMargin;
+  color: @nag-closeColor;
+  transition: @nag-closeTransition;
 }
 
 
@@ -81,12 +81,12 @@ a.ui.nag {
 
 /* Hover */
 .ui.nag:hover {
-  background: @nagHoverBackground;
-  opacity: @nagHoverOpacity;
+  background: @nag-nagHoverBackground;
+  opacity: @nag-nagHoverOpacity;
 }
 
 .ui.nag .close:hover {
-  opacity: @closeHoverOpacity;
+  opacity: @nag-closeHoverOpacity;
 }
 
 
@@ -118,9 +118,9 @@ a.ui.nag {
 
 .ui.bottom.nags,
 .ui.bottom.nag {
-  border-radius: @bottomBorderRadius;
+  border-radius: @nag-bottomBorderRadius;
   top: auto;
-  bottom: @bottom;
+  bottom: @nag-bottom;
 }
 
 /*--------------
@@ -129,14 +129,14 @@ a.ui.nag {
 
 .ui.inverted.nags .nag,
 .ui.inverted.nag {
-  background-color: @invertedBackground;
-  color: @darkTextColor;
+  background-color: @nag-invertedBackground;
+  color: @site-darkTextColor;
 }
 .ui.inverted.nags .nag .close,
 .ui.inverted.nags .nag .title,
 .ui.inverted.nag .close,
 .ui.inverted.nag .title {
-  color: @lightTextColor;
+  color: @site-lightTextColor;
 }
 
 
@@ -145,12 +145,12 @@ a.ui.nag {
 *******************************/
 
 .ui.nags .nag {
-  border-radius: @groupedBorderRadius !important;
+  border-radius: @segment-groupedBorderRadius !important;
 }
 .ui.nags .nag:last-child {
-  border-radius: @topBorderRadius;
+  border-radius: @nag-topBorderRadius;
 }
 .ui.bottom.nags .nag:last-child {
-  border-radius: @bottomBorderRadius;
+  border-radius: @nag-bottomBorderRadius;
 }
 

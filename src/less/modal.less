@@ -24,31 +24,31 @@
 .ui.modal {
   display: none;
   position: fixed;
-  z-index: @zIndex;
+  z-index: @modal-zIndex;
 
   top: 50%;
   left: 50%;
   text-align: left;
 
-  background: @background;
-  border: @border;
-  box-shadow: @boxShadow;
-  transform-origin: @transformOrigin;
+  background: @modal-background;
+  border: @modal-border;
+  box-shadow: @modal-boxShadow;
+  transform-origin: @modal-transformOrigin;
 
-  border-radius: @borderRadius;
+  border-radius: @modal-borderRadius;
   user-select: text;
   will-change: top, left, margin, transform, opacity;
 }
 
 .ui.modal > :first-child:not(.icon),
 .ui.modal > .icon:first-child + * {
-  border-top-left-radius: @borderRadius;
-  border-top-right-radius: @borderRadius;
+  border-top-left-radius: @modal-borderRadius;
+  border-top-right-radius: @modal-borderRadius;
 }
 
 .ui.modal > :last-child {
-  border-bottom-left-radius: @borderRadius;
-  border-bottom-right-radius: @borderRadius;
+  border-bottom-left-radius: @modal-borderRadius;
+  border-bottom-right-radius: @modal-borderRadius;
 }
 
 /*******************************
@@ -62,17 +62,17 @@
 .ui.modal > .close {
   cursor: pointer;
   position: absolute;
-  top: @closeTop;
-  right: @closeRight;
+  top: @modal-closeTop;
+  right: @modal-closeRight;
   z-index: 1;
 
-  opacity: @closeOpacity;
-  font-size: @closeSize;
-  color: @closeColor;
+  opacity: @modal-closeOpacity;
+  font-size: @modal-closeSize;
+  color: @modal-closeColor;
 
-  width: @closeHitbox;
-  height: @closeHitbox;
-  padding: @closePadding;
+  width: @modal-closeHitbox;
+  height: @modal-closeHitbox;
+  padding: @modal-closePadding;
 }
 .ui.modal > .close:hover {
   opacity: 1;
@@ -84,19 +84,19 @@
 
 .ui.modal > .header {
   display: block;
-  font-family: @headerFontFamily;
-  background: @headerBackground;
-  margin: @headerMargin;
-  padding: @headerPadding;
-  box-shadow: @headerBoxShadow;
+  font-family: @modal-headerFontFamily;
+  background: @modal-headerBackground;
+  margin: @modal-headerMargin;
+  padding: @modal-headerPadding;
+  box-shadow: @modal-headerBoxShadow;
 
-  color: @headerColor;
-  border-bottom: @headerBorder;
+  color: @modal-headerColor;
+  border-bottom: @modal-headerBorder;
 }
 .ui.modal > .header:not(.ui) {
-  font-size: @headerFontSize;
-  line-height: @headerLineHeight;
-  font-weight: @headerFontWeight;
+  font-size: @modal-headerFontSize;
+  line-height: @site-headerLineHeight;
+  font-weight: @site-headerFontWeight;
 }
 
 /*--------------
@@ -106,10 +106,10 @@
 .ui.modal > .content {
   display: block;
   width: 100%;
-  font-size: @contentFontSize;
-  line-height: @contentLineHeight;
-  padding: @contentPadding;
-  background: @contentBackground;
+  font-size: @modal-contentFontSize;
+  line-height: @modal-contentLineHeight;
+  padding: @modal-contentPadding;
+  background: @modal-contentBackground;
 }
 .ui.modal > .image.content {
   display: flex;
@@ -120,8 +120,8 @@
 .ui.modal > .content > .image {
   display: block;
   flex: 0 1 auto;
-  width: @imageWidth;
-  align-self: @imageVerticalAlign;
+  width: @modal-imageWidth;
+  align-self: @modal-imageVerticalAlign;
 }
 .ui.modal > [class*="top aligned"] {
   align-self: top;
@@ -138,15 +138,15 @@
   display: block;
   flex: 1 0 auto;
   min-width: 0px;
-  align-self: @descriptionVerticalAlign;
+  align-self: @modal-descriptionVerticalAlign;
 }
 
 .ui.modal > .content > .icon + .description,
 .ui.modal > .content > .image + .description {
   flex: 0 1 auto;
-  min-width: @descriptionMinWidth;
-  width: @descriptionWidth;
-  padding-left: @descriptionDistance;
+  min-width: @modal-descriptionMinWidth;
+  width: @modal-descriptionWidth;
+  padding-left: @modal-descriptionDistance;
 }
 
 /*rtl:ignore*/
@@ -155,7 +155,7 @@
   opacity: 1;
   width: auto;
   line-height: 1;
-  font-size: @imageIconSize;
+  font-size: @modal-imageIconSize;
 }
 
 /*--------------
@@ -163,13 +163,13 @@
 ---------------*/
 
 .ui.modal > .actions {
-  background: @actionBackground;
-  padding: @actionPadding;
-  border-top: @actionBorder;
-  text-align: @actionAlign;
+  background: @modal-actionBackground;
+  padding: @modal-actionPadding;
+  border-top: @modal-actionBorder;
+  text-align: @modal-actionAlign;
 }
 .ui.modal .actions > .button {
-  margin-left: @buttonDistance;
+  margin-left: @modal-buttonDistance;
 }
 
 /*-------------------
@@ -177,63 +177,63 @@
 --------------------*/
 
 /* Modal Width */
-@media only screen and (max-width : @largestMobileScreen) {
+@media only screen and (max-width : @site-largestMobileScreen) {
   .ui.modal {
-    width: @mobileWidth;
-    margin: @mobileMargin;
+    width: @modal-mobileWidth;
+    margin: @modal-mobileMargin;
   }
 }
-@media only screen and (min-width : @tabletBreakpoint) {
+@media only screen and (min-width : @site-tabletBreakpoint) {
   .ui.modal {
-    width: @tabletWidth;
-    margin: @tabletMargin;
+    width: @modal-tabletWidth;
+    margin: @modal-tabletMargin;
   }
 }
-@media only screen and (min-width : @computerBreakpoint) {
+@media only screen and (min-width : @site-computerBreakpoint) {
   .ui.modal {
-    width: @computerWidth;
-    margin: @computerMargin;
+    width: @modal-computerWidth;
+    margin: @modal-computerMargin;
   }
 }
-@media only screen and (min-width : @largeMonitorBreakpoint) {
+@media only screen and (min-width : @site-largeMonitorBreakpoint) {
   .ui.modal {
-    width: @largeMonitorWidth;
-    margin: @largeMonitorMargin;
+    width: @modal-largeMonitorWidth;
+    margin: @modal-largeMonitorMargin;
   }
 }
-@media only screen and (min-width : @widescreenMonitorBreakpoint) {
+@media only screen and (min-width : @site-widescreenMonitorBreakpoint) {
   .ui.modal {
-    width: @widescreenMonitorWidth;
-    margin: @widescreenMonitorMargin;
+    width: @modal-widescreenMonitorWidth;
+    margin: @modal-widescreenMonitorMargin;
   }
 }
 
 /* Tablet and Mobile */
-@media only screen and (max-width : @largestTabletScreen) {
+@media only screen and (max-width : @site-largestTabletScreen) {
   .ui.modal > .header {
-    padding-right: @closeHitbox;
+    padding-right: @modal-closeHitbox;
   }
   .ui.modal > .close {
-    top: @innerCloseTop;
-    right: @innerCloseRight;
-    color: @innerCloseColor;
+    top: @modal-innerCloseTop;
+    right: @modal-innerCloseRight;
+    color: @modal-innerCloseColor;
   }
 }
 
 /* Mobile */
-@media only screen and (max-width : @largestMobileScreen) {
+@media only screen and (max-width : @site-largestMobileScreen) {
 
   .ui.modal > .header {
-    padding: @mobileHeaderPadding !important;
-    padding-right: @closeHitbox !important;
+    padding: @modal-mobileHeaderPadding !important;
+    padding-right: @modal-closeHitbox !important;
   }
   .ui.modal > .content {
     display: block;
-    padding: @mobileContentPadding !important;
+    padding: @modal-mobileContentPadding !important;
   }
   .ui.modal > .close {
-    top: @mobileCloseTop !important;
-    right: @mobileCloseRight !important;
+    top: @modal-mobileCloseTop !important;
+    right: @modal-mobileCloseRight !important;
   }
 
   /*rtl:ignore*/
@@ -245,10 +245,10 @@
     max-width: 100%;
     margin: 0em auto !important;
     text-align: center;
-    padding: @mobileImagePadding !important;
+    padding: @modal-mobileImagePadding !important;
   }
   .ui.modal > .content > .image > i.icon {
-    font-size: @mobileImageIconSize;
+    font-size: @modal-mobileImageIconSize;
     text-align: center;
   }
 
@@ -257,17 +257,17 @@
     display: block;
     width: 100% !important;
     margin: 0em !important;
-    padding: @mobileDescriptionPadding !important;
+    padding: @modal-mobileDescriptionPadding !important;
     box-shadow: none;
   }
 
   /* Let Buttons Stack */
   .ui.modal > .actions {
-    padding: @mobileActionPadding !important;
+    padding: @modal-mobileActionPadding !important;
   }
   .ui.modal .actions > .buttons,
   .ui.modal .actions > .button {
-    margin-bottom: @mobileButtonDistance;
+    margin-bottom: @modal-mobileButtonDistance;
   }
 }
 
@@ -276,7 +276,7 @@
 ---------------*/
 
 .ui.inverted.dimmer > .ui.modal {
-  box-shadow: @invertedBoxShadow;
+  box-shadow: @modal-invertedBoxShadow;
 }
 
 /*******************************
@@ -288,7 +288,7 @@
   border: none;
   border-radius: 0em;
   box-shadow: none !important;
-  color: @basicModalColor;
+  color: @modal-basicModalColor;
 }
 .ui.basic.modal > .header,
 .ui.basic.modal > .content,
@@ -296,24 +296,24 @@
   background-color: transparent;
 }
 .ui.basic.modal > .header {
-  color: @basicModalHeaderColor;
+  color: @modal-basicModalHeaderColor;
 }
 .ui.basic.modal > .close {
-  top: @basicModalCloseTop;
-  right: @basicModalCloseRight;
+  top: @modal-basicModalCloseTop;
+  right: @modal-basicModalCloseRight;
 }
 
 .ui.inverted.dimmer > .basic.modal {
-  color: @basicInvertedModalColor;
+  color: @modal-basicInvertedModalColor;
 }
 .ui.inverted.dimmer > .ui.basic.modal > .header {
-  color: @basicInvertedModalHeaderColor;
+  color: @modal-basicInvertedModalHeaderColor;
 }
 
 /* Tablet and Mobile */
-@media only screen and (max-width : @largestTabletScreen) {
+@media only screen and (max-width : @site-largestTabletScreen) {
   .ui.basic.modal > .close {
-    color: @basicInnerCloseColor;
+    color: @modal-basicInnerCloseColor;
   }
 }
 
@@ -347,7 +347,7 @@
 }
 .modals.dimmer .ui.scrolling.modal {
   position: static !important;
-  margin: @scrollingMargin auto !important;
+  margin: @modal-scrollingMargin auto !important;
 }
 
 /* undetached scrolling */
@@ -361,7 +361,7 @@
 .scrolling.undetached.dimmable .ui.scrolling.modal {
   position: absolute;
   left: 50%;
-  margin-top: @scrollingMargin !important;
+  margin-top: @modal-scrollingMargin !important;
 }
 
 /* Coupling with Sidebar */
@@ -369,10 +369,10 @@
   z-index: auto;
 }
 
-@media only screen and (max-width : @largestTabletScreen) {
+@media only screen and (max-width : @site-largestTabletScreen) {
   .modals.dimmer .ui.scrolling.modal {
-    margin-top: @mobileScrollingMargin !important;
-    margin-bottom: @mobileScrollingMargin !important;
+    margin-top: @modal-mobileScrollingMargin !important;
+    margin-bottom: @modal-mobileScrollingMargin !important;
   }
 }
 
@@ -382,20 +382,20 @@
 ---------------*/
 
 .ui.fullscreen.modal {
-  width: @fullScreenWidth !important;
-  left: @fullScreenOffset !important;
-  margin: @fullScreenMargin;
+  width: @modal-fullScreenWidth !important;
+  left: @modal-fullScreenOffset !important;
+  margin: @modal-fullScreenMargin;
 }
 .ui.fullscreen.scrolling.modal {
   left: 0em !important;
 }
 .ui.fullscreen.modal > .header {
-  padding-right: @closeHitbox;
+  padding-right: @modal-closeHitbox;
 }
 .ui.fullscreen.modal > .close {
-  top: @innerCloseTop;
-  right: @innerCloseRight;
-  color: @innerCloseColor;
+  top: @modal-innerCloseTop;
+  right: @modal-innerCloseRight;
+  color: @modal-innerCloseColor;
 }
 
 
@@ -404,78 +404,78 @@
 ---------------*/
 
 .ui.modal {
-  font-size: @medium;
+  font-size: @item-medium;
 }
 
 /* Small */
 .ui.small.modal > .header:not(.ui) {
-  font-size: @smallHeaderSize;
+  font-size: @modal-smallHeaderSize;
 }
 
 /* Small Modal Width */
-@media only screen and (max-width : @largestMobileScreen) {
+@media only screen and (max-width : @site-largestMobileScreen) {
   .ui.small.modal {
-    width: @smallMobileWidth;
-    margin: @smallMobileMargin;
+    width: @modal-smallMobileWidth;
+    margin: @modal-smallMobileMargin;
   }
 }
-@media only screen and (min-width : @tabletBreakpoint) {
+@media only screen and (min-width : @site-tabletBreakpoint) {
   .ui.small.modal {
-    width: @smallTabletWidth;
-    margin: @smallTabletMargin;
+    width: @modal-smallTabletWidth;
+    margin: @modal-smallTabletMargin;
   }
 }
-@media only screen and (min-width : @computerBreakpoint) {
+@media only screen and (min-width : @site-computerBreakpoint) {
   .ui.small.modal {
-    width: @smallComputerWidth;
-    margin: @smallComputerMargin;
+    width: @modal-smallComputerWidth;
+    margin: @modal-smallComputerMargin;
   }
 }
-@media only screen and (min-width : @largeMonitorBreakpoint) {
+@media only screen and (min-width : @site-largeMonitorBreakpoint) {
   .ui.small.modal {
-    width: @smallLargeMonitorWidth;
-    margin: @smallLargeMonitorMargin;
+    width: @modal-smallLargeMonitorWidth;
+    margin: @modal-smallLargeMonitorMargin;
   }
 }
-@media only screen and (min-width : @widescreenMonitorBreakpoint) {
+@media only screen and (min-width : @site-widescreenMonitorBreakpoint) {
   .ui.small.modal {
-    width: @smallWidescreenMonitorWidth;
-    margin: @smallWidescreenMonitorMargin;
+    width: @modal-smallWidescreenMonitorWidth;
+    margin: @modal-smallWidescreenMonitorMargin;
   }
 }
 
 /* Large Modal Width */
 .ui.large.modal > .header {
-  font-size: @largeHeaderSize;
+  font-size: @modal-largeHeaderSize;
 }
-@media only screen and (max-width : @largestMobileScreen) {
+@media only screen and (max-width : @site-largestMobileScreen) {
   .ui.large.modal {
-    width: @largeMobileWidth;
-    margin: @largeMobileMargin;
+    width: @modal-largeMobileWidth;
+    margin: @modal-largeMobileMargin;
   }
 }
-@media only screen and (min-width : @tabletBreakpoint) {
+@media only screen and (min-width : @site-tabletBreakpoint) {
   .ui.large.modal {
-    width: @largeTabletWidth;
-    margin: @largeTabletMargin;
+    width: @modal-largeTabletWidth;
+    margin: @modal-largeTabletMargin;
   }
 }
-@media only screen and (min-width : @computerBreakpoint) {
+@media only screen and (min-width : @site-computerBreakpoint) {
   .ui.large.modal {
-    width: @largeComputerWidth;
-    margin: @largeComputerMargin;
+    width: @modal-largeComputerWidth;
+    margin: @modal-largeComputerMargin;
   }
 }
-@media only screen and (min-width : @largeMonitorBreakpoint) {
+@media only screen and (min-width : @site-largeMonitorBreakpoint) {
   .ui.large.modal {
-    width: @largeLargeMonitorWidth;
-    margin: @largeLargeMonitorMargin;
+    width: @modal-largeLargeMonitorWidth;
+    margin: @modal-largeLargeMonitorMargin;
   }
 }
-@media only screen and (min-width : @widescreenMonitorBreakpoint) {
+@media only screen and (min-width : @site-widescreenMonitorBreakpoint) {
   .ui.large.modal {
-    width: @largeWidescreenMonitorWidth;
-    margin: @largeWidescreenMonitorMargin;
+    width: @modal-largeWidescreenMonitorWidth;
+    margin: @modal-largeWidescreenMonitorMargin;
   }
 }
 

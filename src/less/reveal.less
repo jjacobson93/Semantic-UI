@@ -30,18 +30,18 @@
   position: absolute !important;
   top: 0em !important;
   left: 0em !important;
-  z-index: @topZIndex !important;
-  transition: @transition;
+  z-index: @reveal-topZIndex !important;
+  transition: @reveal-transition;
 }
 .ui.reveal > .hidden.content {
   position: relative !important;
-  z-index: @bottomZIndex !important;
+  z-index: @reveal-bottomZIndex !important;
 }
 
 /* Make sure hovered element is on top of other reveal */
 .ui.active.reveal .visible.content,
 .ui.reveal:hover .visible.content {
-  z-index: @activeZIndex !important;
+  z-index: @reveal-activeZIndex !important;
 }
 
 
@@ -66,7 +66,7 @@
   float: left;
 
   margin: 0em;
-  transition: @slideTransition;
+  transition: @reveal-slideTransition;
 }
 
 .ui.slide.reveal > .visible.content {
@@ -155,7 +155,7 @@
   float: left;
 
   margin: 0em;
-  transition: @moveTransition;
+  transition: @reveal-moveTransition;
 }
 
 .ui.move.reveal > .visible.content {
@@ -190,7 +190,7 @@
 ---------------*/
 
 .ui.rotate.reveal > .visible.content {
-  transition-duration: @transitionDuration;
+  transition-duration: @reveal-transitionDuration;
   transform: rotate(0deg);
 }
 
@@ -202,7 +202,7 @@
 .ui.rotate.reveal:hover > .visible.content,
 .ui.rotate.right.active.reveal > .visible.content,
 .ui.rotate.right.reveal:hover > .visible.content {
-  transform: rotate(@rotateDegrees);
+  transform: rotate(@reveal-rotateDegrees);
 }
 
 .ui.rotate.left.reveal > .visible.content {
@@ -210,7 +210,7 @@
 }
 .ui.rotate.left.active.reveal > .visible.content,
 .ui.rotate.left.reveal:hover > .visible.content {
-  transform: rotate(-@rotateDegrees);
+  transform: rotate(-@reveal-rotateDegrees);
 }
 
 /*******************************
@@ -258,6 +258,6 @@
 ---------------*/
 
 .ui.reveal > .content {
-  font-size: @medium !important;
+  font-size: @loader-medium !important;
 }
 

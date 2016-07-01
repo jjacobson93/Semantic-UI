@@ -23,8 +23,8 @@
 
 .ui.rating {
   display: inline-flex;
-  white-space: @whiteSpace;
-  vertical-align: @verticalAlign;
+  white-space: @rating-whiteSpace;
+  vertical-align: @rating-verticalAlign;
 }
 .ui.rating:last-child {
   margin-right: 0em;
@@ -38,10 +38,10 @@
   font-weight: normal;
   font-style: normal;
   flex: 1 0 auto;
-  cursor: @iconCursor;
-  width: @iconWidth;
-  height: @iconHeight;
-  transition: @iconTransition;
+  cursor: @rating-iconCursor;
+  width: @rating-iconWidth;
+  height: @rating-iconHeight;
+  transition: @rating-iconTransition;
 }
 
 
@@ -56,21 +56,21 @@
 
 /* Inactive Icon */
 .ui.rating .icon {
-  background: @inactiveBackground;
-  color: @inactiveColor;
+  background: @rating-inactiveBackground;
+  color: @rating-inactiveColor;
 }
 
 /* Active Icon */
 .ui.rating .active.icon {
-  background: @activeBackground;
-  color: @activeColor;
+  background: @rating-activeBackground;
+  color: @rating-activeColor;
 }
 
 /* Selected Icon */
 .ui.rating .icon.selected,
 .ui.rating .icon.selected.active {
-  background: @selectedBackground;
-  color: @selectedColor;
+  background: @rating-selectedBackground;
+  color: @rating-selectedColor;
 }
 
 
@@ -80,26 +80,26 @@
 
 /* Inactive */
 .ui.star.rating .icon {
-  width: @starIconWidth;
-  height: @starIconHeight;
-  background: @starInactiveBackground;
-  color: @starInactiveColor;
-  text-shadow: @starInactiveTextShadow;
+  width: @rating-starIconWidth;
+  height: @rating-starIconHeight;
+  background: @rating-starInactiveBackground;
+  color: @rating-starInactiveColor;
+  text-shadow: @rating-starInactiveTextShadow;
 }
 
 /* Active Star */
 .ui.star.rating .active.icon {
-  background: @starActiveBackground !important;
-  color: @starActiveColor !important;
-  text-shadow: @starActiveTextShadow !important;
+  background: @rating-starActiveBackground !important;
+  color: @rating-starActiveColor !important;
+  text-shadow: @rating-starActiveTextShadow !important;
 }
 
 /* Selected Star */
 .ui.star.rating .icon.selected,
 .ui.star.rating .icon.selected.active {
-  background: @starSelectedBackground !important;
-  color: @starSelectedColor !important;
-  text-shadow: @starSelectedTextShadow !important;
+  background: @rating-starSelectedBackground !important;
+  color: @rating-starSelectedColor !important;
+  text-shadow: @rating-starSelectedTextShadow !important;
 }
 
 
@@ -108,26 +108,26 @@
 --------------------*/
 
 .ui.heart.rating .icon {
-  width: @heartIconWidth;
-  height: @heartIconHeight;
-  background: @heartInactiveBackground;
-  color: @heartInactiveColor;
-  text-shadow: @heartInactiveTextShadow !important;
+  width: @rating-heartIconWidth;
+  height: @rating-heartIconHeight;
+  background: @rating-heartInactiveBackground;
+  color: @rating-heartInactiveColor;
+  text-shadow: @rating-heartInactiveTextShadow !important;
 }
 
 /* Active Heart */
 .ui.heart.rating .active.icon {
-  background: @heartActiveBackground !important;
-  color: @heartActiveColor !important;
-  text-shadow: @heartActiveTextShadow !important;
+  background: @rating-heartActiveBackground !important;
+  color: @rating-heartActiveColor !important;
+  text-shadow: @rating-heartActiveTextShadow !important;
 }
 
 /* Selected Heart */
 .ui.heart.rating .icon.selected,
 .ui.heart.rating .icon.selected.active {
-  background: @heartSelectedBackground !important;
-  color: @heartSelectedColor !important;
-  text-shadow: @heartSelectedTextShadow !important;
+  background: @rating-heartSelectedBackground !important;
+  color: @rating-heartSelectedColor !important;
+  text-shadow: @rating-heartSelectedTextShadow !important;
 }
 
 
@@ -151,11 +151,11 @@
 
 /* Selected Rating */
 .ui.rating.selected .active.icon {
-  opacity: @interactiveActiveIconOpacity;
+  opacity: @rating-interactiveActiveIconOpacity;
 }
 .ui.rating.selected .icon.selected,
 .ui.rating .icon.selected {
-  opacity: @interactiveSelectedIconOpacity;
+  opacity: @rating-interactiveSelectedIconOpacity;
 }
 
 
@@ -165,25 +165,25 @@
 *******************************/
 
 .ui.mini.rating {
-  font-size: @mini;
+  font-size: @menu-mini;
 }
 .ui.tiny.rating {
-  font-size: @tiny;
+  font-size: @menu-tiny;
 }
 .ui.small.rating {
-  font-size: @small;
+  font-size: @comment-small;
 }
 .ui.rating {
-  font-size: @medium;
+  font-size: @item-medium;
 }
 .ui.large.rating {
-  font-size: @large;
+  font-size: @comment-large;
 }
 .ui.huge.rating {
-  font-size: @huge;
+  font-size: @comment-huge;
 }
 .ui.massive.rating {
-  font-size: @massive;
+  font-size: @rating-massive;
 }
 
 
