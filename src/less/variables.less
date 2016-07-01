@@ -15,7 +15,10 @@
 @site-headerFont        : @site-fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 @site-pageFont          : @site-fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 
-@site-googleFontName    : @site-fontName;
+@site-normalFontWeight  : normal;
+@site-boldFontWeight    : bold;
+
+@site-googleFontName    : escape(@site-fontName);
 @site-importGoogleFonts : true;
 @site-googleFontSizes   : '400,700,400italic,700italic';
 @site-googleSubset      : 'latin';
@@ -60,7 +63,7 @@
   Page Heading
 ---------------*/
 
-@site-headerFontWeight : bold;
+@site-headerFontWeight : @site-boldFontWeight;
 @site-headerLineHeight : 1.2857em;
 
 @site-h1 : 2rem;
@@ -962,7 +965,7 @@
 @button-textTransform: none;
 @button-tapColor: transparent;
 @button-fontFamily: @site-pageFont;
-@button-fontWeight: bold;
+@button-fontWeight: @site-boldFontWeight;
 @button-textColor: rgba(0, 0, 0, 0.6);
 @button-textShadow: none;
 @button-invertedTextShadow: @button-textShadow;
@@ -1093,7 +1096,7 @@
 @button-orBackgroundColor: @site-white;
 @button-orTextShadow: @button-invertedTextShadow;
 @button-orTextStyle: normal;
-@button-orTextWeight: bold;
+@button-orTextWeight: @site-boldFontWeight;
 @button-orTextColor: @site-lightTextColor;
 
 
@@ -1138,7 +1141,7 @@
 @button-basicColoredBorderSize: 1px;
 
 @button-basicBackground: transparent none;
-@button-basicFontWeight: normal;
+@button-basicFontWeight: @site-normalFontWeight;
 @button-basicBorder: 1px solid @site-borderColor;
 @button-basicBoxShadow: 0px 0px 0px @button-basicBorderSize @site-borderColor inset;
 @button-basicLoadingColor: @site-offWhite;
@@ -1373,7 +1376,7 @@
 
 /* Text */
 @divider-letterSpacing: 0.05em;
-@divider-fontWeight: bold;
+@divider-fontWeight: @site-boldFontWeight;
 @divider-color: @site-darkTextColor;
 @divider-textTransform: uppercase;
 
@@ -1447,7 +1450,7 @@
 /* Sub Heading */
 @header-subHeadingDistance: @site-2px;
 @header-subHeadingFontSize: @site-relativeTiny;
-@header-subHeadingFontWeight: bold;
+@header-subHeadingFontWeight: @site-boldFontWeight;
 @header-subHeadingTextTransform: uppercase;
 @header-subHeadingColor: '';
 
@@ -1801,7 +1804,7 @@
 @label-horizontalPadding: 0.833em;
 @label-borderRadius: @site-absoluteBorderRadius;
 @label-textTransform: none;
-@label-fontWeight: bold;
+@label-fontWeight: @site-boldFontWeight;
 @label-borderWidth: 1px;
 @label-border: 0px solid transparent;
 
@@ -1830,7 +1833,7 @@
 @label-imageHeight: (1em + @label-verticalPadding * 2);
 
 /* Detail */
-@label-detailFontWeight: bold;
+@label-detailFontWeight: @site-boldFontWeight;
 @label-detailOpacity: 0.8;
 @label-detailIconDistance: 0.25em;
 @label-detailMargin: 1em;
@@ -1993,7 +1996,7 @@
 
 /* Corner Text */
 @label-cornerTextWidth: 3em;
-@label-cornerTextWeight: bold;
+@label-cornerTextWeight: @site-boldFontWeight;
 @label-cornerTextSize: 1em;
 
 /* Horizontal */
@@ -2092,7 +2095,7 @@
 
 /* Header */
 @list-itemHeaderFontFamily: @site-headerFont;
-@list-itemHeaderFontWeight: bold;
+@list-itemHeaderFontWeight: @site-boldFontWeight;
 @list-itemHeaderColor: @site-textColor;
 
 /* Description */
@@ -2577,14 +2580,14 @@
 
 /* Title */
 @step-titleFontFamily: @site-headerFont;
-@step-titleFontWeight: bold;
+@step-titleFontWeight: @site-boldFontWeight;
 @step-titleFontSize: @site-relativeLarge;
 @step-titleColor: @site-darkTextColor;
 
 /* Description */
 @step-descriptionDistance: 0.25em;
 @step-descriptionFontSize: @site-relativeSmall;
-@step-descriptionFontWeight: normal;
+@step-descriptionFontWeight: @site-normalFontWeight;
 @step-descriptionColor: @site-textColor;
 
 
@@ -2628,7 +2631,7 @@
 @step-attachedWidth: ~"calc(100% + "-@step-attachedHorizontalOffset * 2~")";
 
 @step-orderedFontFamily: inherit;
-@step-orderedFontWeight: bold;
+@step-orderedFontWeight: @site-boldFontWeight;
 
 /*-------------------
        States
@@ -2691,7 +2694,7 @@
        States
 --------------------*/
 
-@breadcrumb-activeFontWeight: bold;
+@breadcrumb-activeFontWeight: @site-boldFontWeight;
 /*******************************
              Form
 *******************************/
@@ -2717,7 +2720,7 @@
 @form-labelDistance: @site-4px;
 @form-labelMargin: 0em 0em @form-labelDistance 0em;
 @form-labelFontSize: @site-relativeSmall;
-@form-labelFontWeight: bold;
+@form-labelFontWeight: @site-boldFontWeight;
 @form-labelTextTransform: none;
 @form-labelColor: @site-textColor;
 
@@ -3006,7 +3009,7 @@
 @menu-background: #FFFFFF;
 @menu-fontFamily: @site-pageFont;
 @menu-itemBackground: none;
-@menu-fontWeight: normal;
+@menu-fontWeight: @site-normalFontWeight;
 @menu-borderWidth: 1px;
 @menu-border: @menu-borderWidth solid @site-borderColor;
 @menu-boxShadow: @site-subtleShadow;
@@ -3022,7 +3025,7 @@
   box-shadow @site-defaultDuration @site-defaultEasing,
   color @site-defaultDuration @site-defaultEasing
 ;
-@menu-itemFontWeight: normal;
+@menu-itemFontWeight: @site-normalFontWeight;
 @menu-itemTextColor: @site-textColor;
 
 /* Divider */
@@ -3057,7 +3060,7 @@
 
 /* Header */
 @menu-headerBackground: '';
-@menu-headerWeight: bold;
+@menu-headerWeight: @site-boldFontWeight;
 @menu-headerTextTransform: normal;
 
 /* Vertical Icon */
@@ -3067,7 +3070,7 @@
 /* Vertical Header */
 @menu-verticalHeaderMargin: 0em 0em 0.5em;
 @menu-verticalHeaderFontSize: @site-relativeMedium;
-@menu-verticalHeaderFontWeight: bold;
+@menu-verticalHeaderFontWeight: @site-boldFontWeight;
 
 /* Pointing Arrow */
 @menu-arrowSize: @site-relative8px;
@@ -3129,7 +3132,7 @@
 @menu-dropdownItemBackground: transparent;
 @menu-dropdownItemColor: @site-textColor;
 @menu-dropdownItemTextTransform: none;
-@menu-dropdownItemFontWeight: normal;
+@menu-dropdownItemFontWeight: @site-normalFontWeight;
 @menu-dropdownItemBoxShadow: none;
 @menu-dropdownItemTransition: none;
 
@@ -3162,7 +3165,7 @@
 /* Active Item */
 @menu-activeItemBackground: @site-transparentBlack;
 @menu-activeItemTextColor: @site-selectedTextColor;
-@menu-activeItemFontWeight: normal;
+@menu-activeItemFontWeight: @site-normalFontWeight;
 @menu-activeIconOpacity: 1;
 @menu-activeItemBoxShadow: none;
 
@@ -3177,12 +3180,12 @@
 /* Active Dropdown */
 @menu-dropdownActiveItemBackground: @site-subtleTransparentBlack;
 @menu-dropdownActiveItemColor: @site-selectedTextColor;
-@menu-dropdownActiveItemFontWeight: bold;
+@menu-dropdownActiveItemFontWeight: @site-boldFontWeight;
 
 /* Active Sub Menu */
 @menu-subMenuActiveBackground: transparent;
 @menu-subMenuActiveTextColor: @menu-activeItemTextColor;
-@menu-subMenuActiveFontWeight: bold;
+@menu-subMenuActiveFontWeight: @site-boldFontWeight;
 
 
 /*--------------
@@ -3245,7 +3248,7 @@
 
 @menu-secondaryPointingActiveBorderColor: @site-black;
 @menu-secondaryPointingActiveTextColor: @site-selectedTextColor;
-@menu-secondaryPointingActiveFontWeight: bold;
+@menu-secondaryPointingActiveFontWeight: @site-boldFontWeight;
 
 @menu-secondaryPointingActiveDropdownBorderColor: transparent;
 
@@ -3279,7 +3282,7 @@
 @menu-tieredActiveMenuBackground: #FCFCFC;
 
 @menu-tieredSubMenuTextTransform: normal;
-@menu-tieredSubMenuFontWeight: normal;
+@menu-tieredSubMenuFontWeight: @site-normalFontWeight;
 
 @menu-tieredSubMenuColor: @site-lightTextColor;
 
@@ -3319,7 +3322,7 @@
 @menu-tabularActiveBackground: none @site-white;
 @menu-tabularActiveColor: @site-selectedTextColor;
 @menu-tabularActiveBoxShadow: none;
-@menu-tabularActiveWeight: bold;
+@menu-tabularActiveWeight: @site-boldFontWeight;
 
 
 
@@ -3339,7 +3342,7 @@
 @menu-textMenuItemSpacing: @site-relative7px;
 @menu-textMenuMargin: @site-relativeMedium -(@menu-textMenuItemSpacing);
 @menu-textMenuItemColor: @site-mutedTextColor;
-@menu-textMenuItemFontWeight: normal;
+@menu-textMenuItemFontWeight: @site-normalFontWeight;
 @menu-textMenuItemMargin: 0em 0em;
 @menu-textMenuItemPadding: @site-relative5px @menu-textMenuItemSpacing;
 @menu-textMenuItemTransition: opacity @site-defaultDuration @site-defaultEasing;
@@ -3348,12 +3351,12 @@
 @menu-textMenuSubMenuItemMargin: 0em;
 @menu-textMenuSubMenuItemPadding: @site-relative7px 0em;
 
-@menu-textMenuActiveItemFontWeight: normal;
+@menu-textMenuActiveItemFontWeight: @site-normalFontWeight;
 @menu-textMenuActiveItemColor: @site-selectedTextColor;
 
 @menu-textMenuHeaderSize: @site-relativeSmall;
 @menu-textMenuHeaderColor: @site-darkTextColor;
-@menu-textMenuHeaderFontWeight: bold;
+@menu-textMenuHeaderFontWeight: @site-boldFontWeight;
 @menu-textMenuHeaderTextTransform: uppercase;
 
 @menu-textVerticalMenuMargin: @site-relativeMedium 0em;
@@ -3484,7 +3487,7 @@
 
 /* Header */
 @message-headerFontSize: @site-relativeLarge;
-@message-headerFontWeight: bold;
+@message-headerFontWeight: @site-boldFontWeight;
 @message-headerDisplay: block;
 @message-headerDistance: 0rem;
 @message-headerMargin: -@site-headerLineHeightOffset 0em @message-headerDistance 0em;
@@ -3657,7 +3660,7 @@
 @table-headerVerticalPadding: @site-relativeSmall;
 @table-headerHorizontalPadding: @table-cellHorizontalPadding;
 @table-headerFontStyle: none;
-@table-headerFontWeight: bold;
+@table-headerFontWeight: @site-boldFontWeight;
 @table-headerTextTransform: none;
 @table-headerBoxShadow: none;
 
@@ -3672,7 +3675,7 @@
 @table-footerVerticalPadding: @table-cellVerticalPadding;
 @table-footerHorizontalPadding: @table-cellHorizontalPadding;
 @table-footerFontStyle: normal;
-@table-footerFontWeight: normal;
+@table-footerFontWeight: @site-normalFontWeight;
 @table-footerTextTransform: none;
 
 /* Responsive Size */
@@ -3693,14 +3696,14 @@
 
 @table-definitionHeaderBackground: transparent;
 @table-definitionHeaderColor: @site-unselectedTextColor;
-@table-definitionHeaderFontWeight: normal;
+@table-definitionHeaderFontWeight: @site-normalFontWeight;
 
 @table-definitionFooterBackground: @table-definitionHeaderBackground;
 @table-definitionFooterColor: @table-definitionHeaderColor;
 @table-definitionFooterFontWeight: @table-definitionHeaderFontWeight;
 
 @table-definitionColumnBackground: @site-subtleTransparentBlack;
-@table-definitionColumnFontWeight: bold;
+@table-definitionColumnFontWeight: @site-boldFontWeight;
 @table-definitionColumnColor: @site-selectedTextColor;
 @table-definitionColumnFontSize: @site-relativeMedium;
 @table-definitionColumnTextTransform: '';
@@ -3823,7 +3826,7 @@
 
 @table-invertedDefinitionColumnBackground: @site-subtleTransparentWhite;
 @table-invertedDefinitionColumnColor: @site-invertedSelectedTextColor;
-@table-invertedDefinitionColumnFontWeight: bold;
+@table-invertedDefinitionColumnFontWeight: @site-boldFontWeight;
 
 /* Basic */
 @table-basicTableBackground: transparent;
@@ -3864,7 +3867,7 @@
 
 @ad-testBackground: @site-lightBlack;
 @ad-testColor: @site-white;
-@ad-testFontWeight: bold;
+@ad-testFontWeight: @site-boldFontWeight;
 @ad-testText: 'Ad';
 @ad-testFontSize: @site-relativeMedium;
 @ad-testMobileFontSize: @site-relativeTiny;
@@ -3941,7 +3944,7 @@
 
 /* Header */
 @card-headerMargin: '';
-@card-headerFontWeight: bold;
+@card-headerFontWeight: @site-boldFontWeight;
 @card-headerFontSize: @site-relativeBig;
 @card-headerLineHeightOffset: -(@site-lineHeight - 1em) / 2;
 @card-headerColor: @site-darkTextColor;
@@ -4139,7 +4142,7 @@
 @comment-authorFontSize: 1em;
 @comment-authorColor: @site-textColor;
 @comment-authorHoverColor: @site-linkHoverColor;
-@comment-authorFontWeight: bold;
+@comment-authorFontWeight: @site-boldFontWeight;
 
 /* Metadata */
 @comment-metadataDisplay: inline-block;
@@ -4249,13 +4252,13 @@
 @feed-datePadding: 0em;
 @feed-dateColor: @site-lightTextColor;
 @feed-dateFontSize: @site-relativeMedium;
-@feed-dateFontWeight: normal;
+@feed-dateFontWeight: @site-normalFontWeight;
 @feed-dateFontStyle: normal;
 
 /* Summary */
 @feed-summaryMargin: 0em;
 @feed-summaryFontSize: @site-relativeMedium;
-@feed-summaryFontWeight: bold;
+@feed-summaryFontWeight: @site-boldFontWeight;
 @feed-summaryColor: @site-textColor;
 
 /* Summary Image */
@@ -4276,7 +4279,7 @@
 @feed-summaryDateColor: @feed-dateColor;
 
 /* User */
-@feed-userFontWeight: bold;
+@feed-userFontWeight: @site-boldFontWeight;
 @feed-userDistance: 0em;
 @feed-userImageWidth: @feed-summaryImageWidth;
 @feed-userImageHeight: @feed-summaryImageHeight;
@@ -4404,7 +4407,7 @@
 
 /* Header */
 @item-headerMargin: -@site-lineHeightOffset 0em 0em;
-@item-headerFontWeight: bold;
+@item-headerFontWeight: @site-boldFontWeight;
 @item-headerFontSize: @site-relativeBig;
 @item-headerColor: @site-darkTextColor;
 
@@ -4516,7 +4519,7 @@
 
 /* Value */
 @statistic-valueFont: @site-pageFont;
-@statistic-valueFontWeight: normal;
+@statistic-valueFontWeight: @site-normalFontWeight;
 @statistic-valueLineHeight: 1em;
 @statistic-valueColor: @site-black;
 @statistic-valueTextTransform: uppercase;
@@ -4526,7 +4529,7 @@
 @statistic-topLabelDistance: 0rem;
 @statistic-bottomLabelDistance: 0rem;
 @statistic-labelFont: @site-headerFont;
-@statistic-labelFontWeight: bold;
+@statistic-labelFontWeight: @site-boldFontWeight;
 @statistic-labelColor: @site-textColor;
 @statistic-labelLineHeight: @site-relativeLarge;
 @statistic-labelTextTransform: uppercase;
@@ -4534,7 +4537,7 @@
 /* Text */
 @statistic-textValueLineHeight: 1em;
 @statistic-textValueMinHeight: 2em;
-@statistic-textValueFontWeight: bold;
+@statistic-textValueFontWeight: @site-boldFontWeight;
 
 /* Label Image */
 @statistic-imageHeight: 3rem;
@@ -4663,7 +4666,7 @@
 /* Styled Title */
 @accordion-styledTitleMargin: 0em;
 @accordion-styledTitlePadding: 0.75em 1em;
-@accordion-styledTitleFontWeight: bold;
+@accordion-styledTitleFontWeight: @site-boldFontWeight;
 @accordion-styledTitleColor: @site-unselectedTextColor;
 @accordion-styledTitleTransition: background-color @site-defaultDuration @site-defaultEasing;
 @accordion-styledTitleBorder: 1px solid @site-borderColor;
@@ -4997,7 +5000,7 @@
 @dropdown-itemVerticalPadding: @site-mini;
 @dropdown-itemHorizontalPadding: @site-large;
 @dropdown-itemPadding: @dropdown-itemVerticalPadding @dropdown-itemHorizontalPadding;
-@dropdown-itemFontWeight: normal;
+@dropdown-itemFontWeight: @site-normalFontWeight;
 @dropdown-itemLineHeight: 1em;
 @dropdown-itemLineHeightOffset: (@dropdown-itemLineHeight - 1em);
 @dropdown-itemTextTransform: none;
@@ -5015,7 +5018,7 @@
 /* Menu Header */
 @dropdown-menuHeaderColor: @site-darkTextColor;
 @dropdown-menuHeaderFontSize: @site-relative11px;
-@dropdown-menuHeaderFontWeight: bold;
+@dropdown-menuHeaderFontWeight: @site-boldFontWeight;
 @dropdown-menuHeaderTextTransform: uppercase;
 @dropdown-menuHeaderMargin: 1rem 0rem 0.75rem;
 @dropdown-menuHeaderPadding: 0em @dropdown-itemHorizontalPadding;
@@ -5052,7 +5055,7 @@
 
 /* Message */
 @dropdown-messagePadding: @dropdown-selectionItemPadding;
-@dropdown-messageFontWeight: normal;
+@dropdown-messageFontWeight: @site-normalFontWeight;
 @dropdown-messageColor: @site-unselectedTextColor;
 
 /* Floated Content */
@@ -5138,7 +5141,7 @@
 @dropdown-selectionFocusMenuBoxShadow: @dropdown-raisedShadow;
 
 /* Visible */
-@dropdown-selectionVisibleTextFontWeight: normal;
+@dropdown-selectionVisibleTextFontWeight: @site-normalFontWeight;
 @dropdown-selectionVisibleTextColor: @site-hoveredTextColor;
 
 @dropdown-selectionVisibleBorderColor: @site-focusedFormMutedBorderColor;
@@ -5174,7 +5177,7 @@
 /* Inline */
 @dropdown-inlineIconMargin: 0em @site-relative7px 0em @site-relative3px;
 @dropdown-inlineTextColor: inherit;
-@dropdown-inlineTextFontWeight: bold;
+@dropdown-inlineTextFontWeight: @site-boldFontWeight;
 @dropdown-inlineMenuDistance: @site-relative3px;
 @dropdown-inlineMenuBorderRadius: @dropdown-borderRadius;
 
@@ -5234,7 +5237,7 @@
 @dropdown-activeItemZIndex: @dropdown-menuZIndex + 1;
 @dropdown-activeItemBackground: transparent;
 @dropdown-activeItemBoxShadow: none;
-@dropdown-activeItemFontWeight: bold;
+@dropdown-activeItemFontWeight: @site-boldFontWeight;
 @dropdown-activeItemColor: @site-selectedTextColor;
 
 /* Selected */
@@ -5401,7 +5404,7 @@
 @modal-headerColor: @site-darkTextColor;
 @modal-headerFontSize: @site-huge;
 @modal-headerBoxShadow: none;
-@modal-headerFontWeight: bold;
+@modal-headerFontWeight: @site-boldFontWeight;
 @modal-headerFontFamily: @site-headerFont;
 @modal-headerBorder: 1px solid @site-borderColor;
 
@@ -5611,7 +5614,7 @@
 
 @popup-verticalPadding: 0.833em;
 @popup-horizontalPadding: 1em;
-@popup-fontWeight: normal;
+@popup-fontWeight: @site-normalFontWeight;
 @popup-fontStyle: normal;
 @popup-borderRadius: @site-defaultBorderRadius;
 
@@ -5774,7 +5777,7 @@
 @progress-progressOffset: -0.5em;
 @progress-progressColor: @site-invertedLightTextColor;
 @progress-progressTextShadow: none;
-@progress-progressFontWeight: bold;
+@progress-progressFontWeight: @site-boldFontWeight;
 @progress-progressTextAlign: left;
 
 /* Label */
@@ -5789,7 +5792,7 @@
 @progress-labelOffset: (@progress-labelHeight - 1.3em);
 @progress-labelColor: @site-textColor;
 @progress-labelTextShadow: none;
-@progress-labelFontWeight: bold;
+@progress-labelFontWeight: @site-boldFontWeight;
 @progress-labelTextAlign: center;
 @progress-labelTransition: color 0.4s @site-defaultEasing;
 
@@ -5998,7 +6001,7 @@
 /* Result Content */
 @search-resultTitleFont: @site-headerFont;
 @search-resultTitleMargin: -@site-headerLineHeightOffset 0em 0em;
-@search-resultTitleFontWeight: bold;
+@search-resultTitleFontWeight: @site-boldFontWeight;
 @search-resultTitleFontSize: @site-relativeMedium;
 @search-resultTitleColor: @site-darkTextColor;
 
@@ -6015,7 +6018,7 @@
 @search-messageVerticalPadding: 1em;
 @search-messageHorizontalPadding: 1em;
 @search-messageHeaderFontSize: @site-medium;
-@search-messageHeaderFontWeight: bold;
+@search-messageHeaderFontWeight: @site-boldFontWeight;
 @search-messageHeaderColor: @site-textColor;
 @search-messageDescriptionDistance: 0.25rem;
 @search-messageDescriptionFontSize: 1em;
@@ -6026,7 +6029,7 @@
 @search-actionBackground: @site-darkWhite;
 @search-actionPadding: @site-relativeSmall @site-relativeMedium;
 @search-actionColor: @site-textColor;
-@search-actionFontWeight: bold;
+@search-actionFontWeight: @site-boldFontWeight;
 @search-actionAlign: center;
 
 
@@ -6103,7 +6106,7 @@
 @search-categoryNameFontSize: 1em;
 @search-categoryNameFloat: left;
 @search-categoryNamePadding: 0.4em 1em;
-@search-categoryNameFontWeight: bold;
+@search-categoryNameFontWeight: @site-boldFontWeight;
 @search-categoryNameColor: @site-lightTextColor;
 
 /*******************************
